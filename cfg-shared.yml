@@ -1,0 +1,90 @@
+version: v1
+configs:
+- { name: "SEAMAN_PORT", type: "s", required: true, sample: "8080" }
+- { name: "SEAMAN_TIMEZONE_NAME", type: "s", required: true, sample: UTC+0 }
+- { name: "SEAMAN_TIMEZONE_OFFSET", type: "n", required: true, sample: 0 }
+- { name: "SEAMAN_MONITORING", type: "b", required: true, sample: true }
+- { name: "SEAMAN_PRODUCER_ASYNC", type: "b", required: true, sample: true }
+- { name: "PAM_PARALLELTASK_ENABLED", alias: "PAM4_PARALLELTASK_ENABLED", type: "b", required: true, sample: true }
+- { name: "PAM_ELS_VERSION", alias: "PAM4_ELS_VERSION", type: "s", required: true, sample: "6.8" }
+- { name: "PAM_SECRET", alias: "PAM4_SECRET", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_ADMINEMAIL_SENDER", alias: "PAM4_ADMINEMAIL_SENDER", type: "s", required: true, sample: pam@pushandmotion.com }
+- { name: "PAM_ADMINEMAIL_SENDERNAME", alias: "PAM4_ADMINEMAIL_SENDERNAME", type: "s", required: true, sample: PAM Admin }
+- { name: "PAM_TIMEOFDAY_OFFSET", alias: "PAM4_TIMEOFDAY_OFFSET", type: "n", required: true, sample: 7 }
+- { name: "PAM_TIMEOFDAY_LOCATIONNAME", alias: "PAM4_TIMEOFDAY_LOCATIONNAME", type: "s", required: true, sample: UTC+7 }
+- { name: "PAM_DATADIR", alias: "PAM4_DATADIR", type: "s", required: true, sample: /data }
+- { name: "PAM_INDEXER_ENDPOINTS", alias: "PAM4_INDEXER_ENDPOINTS", type: "s", required: true, sample: "http://els1:9200,http://els2:9200,http://els3:9200" }
+- { name: "PAM_INDEXER_SNIFF", alias: "PAM4_INDEXER_SNIFF", type: "b", required: true, sample: false }
+- { name: "PAM_INDEXER_GZIP", alias: "PAM4_INDEXER_GZIP", type: "b", required: true, sample: true }
+- { name: "ECOM_HOST", type: "s", required: true, sample: https://stg-ecom.pams.ai }
+- { name: "PAM_CONNECT_API_ENDPOINT", alias: "PAM4_CONNECT_API_ENDPOINT", type: "s", required: true, sample: https://stg.pams.ai }
+- { name: "PAM_CONNECT_API_APPID", alias: "PAM4_CONNECT_API_APPID", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_CONNECT_API_SECRET", alias: "PAM4_CONNECT_API_SECRET", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_CONNECT_API_TIMEOUT", alias: "PAM4_CONNECT_API_TIMEOUT", type: "n", required: true, sample: 5 }
+- { name: "PAM_CACHER_ENDPOINT", alias: "PAM4_CACHER_ENDPOINT", type: "s", required: true, sample: redis:6379 }
+- { name: "PAM_CACHER_PASSWORD", alias: "PAM4_CACHER_PASSWORD", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_CACHER_DB", alias: "PAM4_CACHER_DB", type: "n", required: true, sample: 0 }
+- { name: "PAM_CONSUMER_ENDPOINT", alias: "PAM4_CONSUMER_ENDPOINT", type: "s", required: true, sample: "kfk1:9092,kfk2:9092,kfk3:9092" }
+- { name: "PAM_PRODUCER_ENDPOINT", alias: "PAM4_PRODUCER_ENDPOINT", type: "s", required: true, sample: "kfk1:9092,kfk2:9092,kfk3:9092" }
+- { name: "PAM_ALLOW_DOMAINS", alias: "PAM4_ALLOW_DOMAINS", type: "s", required: true, sample: "localhost:8080,localhost:8000" }
+- { name: "PAM_ALLOW_HEADERS", alias: "PAM4_ALLOW_HEADERS", type: "s", required: true, sample: "Authorization,Authorization-Guest,Origin" }
+- { name: "PAM_PERSISTER_ENDPOINT", alias: "PAM4_PERSISTER_ENDPOINT", type: "s", required: true, sample: maria-connect }
+- { name: "PAM_PERSISTER_PORT", alias: "PAM4_PERSISTER_PORT", type: "n", required: true, sample: 3306 }
+- { name: "PAM_PERSISTER_DB", alias: "PAM4_PERSISTER_DB", type: "s", required: true, sample: my_database }
+- { name: "PAM_PERSISTER_USERNAME", alias: "PAM4_PERSISTER_USERNAME", type: "s", required: true, sample: my_user }
+- { name: "PAM_PERSISTER_PASSWORD", alias: "PAM4_PERSISTER_PASSWORD", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_PERSISTER_CHARSET", alias: "PAM4_PERSISTER_CHARSET", type: "s", required: true, sample: utf8mb4 }
+- { name: "PAM_CMS_PERSISTER_ENDPOINT", alias: "PAM4_CMS_PERSISTER_ENDPOINT", type: "s", required: true, sample: maria-cms }
+- { name: "PAM_CMS_PERSISTER_PORT", alias: "PAM4_CMS_PERSISTER_PORT", type: "n", required: true, sample: 3306 }
+- { name: "PAM_CMS_PERSISTER_DB", alias: "PAM4_CMS_PERSISTER_DB", type: "s", required: true, sample: my_database }
+- { name: "PAM_CMS_PERSISTER_USERNAME", alias: "PAM4_CMS_PERSISTER_USERNAME", type: "s", required: true, sample: my_user }
+- { name: "PAM_CMS_PERSISTER_PASSWORD", alias: "PAM4_CMS_PERSISTER_PASSWORD", type: "s", required: true,sample: my_password }
+- { name: "PAM_CMS_PERSISTER_CHARSET", alias: "PAM4_CMS_PERSISTER_CHARSET", type: "s", required: true,  sample: utf8mb4 }
+- { name: "PAM_DEFAULT_PAGELIMIT", alias: "PAM4_DEFAULT_PAGELIMIT", type: "n", required: true, sample: 50 }
+- { name: "PAM_MAX_PAGELIMIT", alias: "PAM4_MAX_PAGELIMIT", type: "n", required: true, sample: 500 }
+- { name: "PAM_MAILER_SERVER", alias: "PAM4_MAILER_SERVER", type: "s", required: true, sample: smtp.mailpam.com }
+- { name: "PAM_MAILER_PORT", alias: "PAM4_MAILER_PORT", type: "s", required: true, sample: 30587 }
+- { name: "PAM_MAILER_USER", alias: "PAM4_MAILER_USER", type: "s", required: true, sample: pushandmotion }
+- { name: "PAM_MAILER_PASSWORD", alias: "PAM4_MAILER_PASSWORD", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_FILESTORE_ENDPOINT", alias: "PAM4_FILESTORE_ENDPOINT", type: "s", required: true, sample: s3-ap-southeast-1.amazonaws.com }
+- { name: "PAM_FILESTORE_ACCESSKEY", alias: "PAM4_FILESTORE_ACCESSKEY", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_FILESTORE_SECRET", alias: "PAM4_FILESTORE_SECRET", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_FILESTORE_ISHTTPS", alias: "PAM4_FILESTORE_ISHTTPS", type: "b", required: true, sample: true }
+- { name: "PAM_FILESTORE_BUCKETNAME", alias: "PAM4_FILESTORE_BUCKETNAME", type: "s", required: true, sample: pam-staging }
+- { name: "PAM_FILESTORE_TIMEOUT", alias: "PAM4_FILESTORE_TIMEOUT", type: "n", required: true, sample: 3 }
+- { name: "PAM_PROFILER_VERSION", alias: "PAM4_PROFILER_VERSION", type: "s", required: true, sample: 6.0 }
+- { name: "PAM_PROFILER_PROJECT", alias: "PAM4_PROFILER_PROJECT", type: "s", required: true, sample: pam6-245009 }
+- { name: "GOOGLE_APPLICATION_CREDENTIALS", type: "s", required: true, sample: /profiler/profiler.json }
+- { name: "PAM_MQ_PARTITIONS", alias: "PAM4_MQ_PARTITIONS", type: "n", required: true, sample: 50 }
+- { name: "PAM_MQ_REPLICATIONS", alias: "PAM4_MQ_REPLICATIONS", type: "n", required: true }
+- { name: "PAM_K8S_ENABLED", alias: "PAM4_K8S_ENABLED", type: "b", required: true, sample: true }
+- { name: "SENTRY_ENDPOINT", type: "s", required: true, sample: https://9ec6f43a79884c8fa55c11634cd65c6d@logs.pams.ai/2 }
+- { name: "PAM_HASH_SECRET", alias: "PAM4_HASH_SECRET", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_NLP_API_ENDPOINT", alias: "PAM4_NLP_API_ENDPOINT", type: "s", required: true, sample: http://pam-nlp:80 }
+- { name: "PAM_NLP_API_APPID", alias: "PAM4_NLP_API_APPID", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_NLP_API_SECRET", alias: "PAM4_NLP_API_SECRET", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_NLP_API_TIMEOUT", alias: "PAM4_NLP_API_TIMEOUT", type: "n", required: true, sample: 3 }
+- { name: "PAM_ENCRYPTOR_PASSWORD", alias: "PAM4_ENCRYPTOR_PASSWORD", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_1", alias: "PAM4_ENCRYPTOR_CONFIGS_1", type: "s", required: false, sample: "members,mobile,false,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_2", alias: "PAM4_ENCRYPTOR_CONFIGS_2", type: "s", required: false, sample: "members,firstname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_3", alias: "PAM4_ENCRYPTOR_CONFIGS_3", type: "s", required: false, sample: "members,lastname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_4", alias: "PAM4_ENCRYPTOR_CONFIGS_4", type: "s", required: false, sample: "members,member_card_no,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_5", alias: "PAM4_ENCRYPTOR_CONFIGS_5", type: "s", required: false, sample: "contacts,mobile,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_6", alias: "PAM4_ENCRYPTOR_CONFIGS_6", type: "s", required: false, sample: "contacts,firstname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_7", alias: "PAM4_ENCRYPTOR_CONFIGS_7", type: "s", required: false, sample: "contacts,lastname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_8", alias: "PAM4_ENCRYPTOR_CONFIGS_8", type: "s", required: false, sample: "contacts,attrs.mobile,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_9", alias: "PAM4_ENCRYPTOR_CONFIGS_9", type: "s", required: false, sample: "contacts,attrs.firstname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_10", alias: "PAM4_ENCRYPTOR_CONFIGS_10", type: "s", required: false, sample: "contacts,attrs.lastname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_11", alias: "PAM4_ENCRYPTOR_CONFIGS_11", type: "s", required: false, sample: "contacts,attrs.third_party_id,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_12", alias: "PAM4_ENCRYPTOR_CONFIGS_12", type: "s", required: false, sample: "contacts,typed_attrs.mobile,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_13", alias: "PAM4_ENCRYPTOR_CONFIGS_13", type: "s", required: false, sample: "contacts,typed_attrs.firstname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_14", alias: "PAM4_ENCRYPTOR_CONFIGS_14", type: "s", required: false, sample: "contacts,typed_attrs.lastname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_15", alias: "PAM4_ENCRYPTOR_CONFIGS_15", type: "s", required: false, sample: "contacts,typed_attrs.third_party_id,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_16", alias: "PAM4_ENCRYPTOR_CONFIGS_16", type: "s", required: false, sample: "contacts,infobip-tesco,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_17", alias: "PAM4_ENCRYPTOR_CONFIGS_17", type: "s", required: false, sample: "contacts,attrs.infobip-tesco,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_18", alias: "PAM4_ENCRYPTOR_CONFIGS_18", type: "s", required: false, sample: "voucher_barcode_*,barcode,true,15,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_19", alias: "PAM4_ENCRYPTOR_CONFIGS_19", type: "s", required: false, sample: "delivers,contact_media,true,7,prefix" }
+- { name: "ECOM_AUTHENTICATION", type: "b", required: true, sample: true }
+- { name: "PAM_SHORT_LINK_BASE_URL", alias: "PAM4_SHORT_LINK_BASE_URL", type: "s", required: true, sample: shorturl.ai }
+- { name: "PAM_ENABLE_ELSDBPROXY", alias: "PAM4_ENABLE_ELSDBPROXY", type: "b", required: true, sample: true }
+- { name: "PAM_ELSDBPROXY_SERVERS", alias: "PAM4_ELSDBPROXY_SERVERS", type: "s", required: true, sample: elsdb1:9305 }
