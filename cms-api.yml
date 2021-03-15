@@ -45,7 +45,7 @@ spec:
           periodSeconds: 30
           timeoutSeconds: 30
           failureThreshold: 10
-        env: [ {name: PAM4_ENV, value: <env>}<envs>]
+        env: [ {name: PAM4_ENV, value: <env>} <envs>]
         ports:
         - name: cmsapi8080
           containerPort: 8080
