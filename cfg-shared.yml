@@ -8,7 +8,7 @@ configs:
 - { name: "PAM_PARALLELTASK_ENABLED", alias: "PAM4_PARALLELTASK_ENABLED", type: "b", required: true, sample: true }
 - { name: "PAM_ELS_VERSION", alias: "PAM4_ELS_VERSION", type: "s", required: true, sample: "6.8" }
 - { name: "PAM_SECRET", alias: "PAM4_SECRET", type: "s", required: true, sample: "UUID" }
-- { name: "PAM_ADMINEMAIL_SENDER", alias: "PAM4_ADMINEMAIL_SENDER", type: "s", required: true, sample: pam@pushandmotion.com }
+- { name: "PAM_ADMINEMAIL_SENDER", alias: "PAM4_ADMINEMAIL_SENDER", type: "s", required: true, sample: contact@3dsinteractive.com }
 - { name: "PAM_ADMINEMAIL_SENDERNAME", alias: "PAM4_ADMINEMAIL_SENDERNAME", type: "s", required: true, sample: PAM Admin }
 - { name: "PAM_TIMEOFDAY_OFFSET", alias: "PAM4_TIMEOFDAY_OFFSET", type: "n", required: true, sample: 7 }
 - { name: "PAM_TIMEOFDAY_LOCATIONNAME", alias: "PAM4_TIMEOFDAY_LOCATIONNAME", type: "s", required: true, sample: UTC+7 }
