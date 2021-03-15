@@ -42,13 +42,7 @@ spec:
           periodSeconds: 30
           timeoutSeconds: 30
           failureThreshold: 10
-        env:
-        - name: PAM4_ENV
-          value: <env>
-        - name: DEBUG
-          value: "true"
-        - name: PAM4_PROFILER_NAME
-          value: pam-<env>
+        env: [ {name: PAM4_ENV, value: <env>}, {name: DEBUG, value: "true"}, {name: PAM4_PROFILER_NAME, value: pam-<env>}<envs>]
         ports:
         - name: builder8080
           containerPort: 8080
