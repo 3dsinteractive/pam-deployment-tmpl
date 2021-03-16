@@ -1,2 +1,23 @@
 version: v1
 configs:
+- { name: "PAM_SHIPPING_PROVIDER_KERRY_ENDPOINT", alias: "PAM4_SHIPPING_PROVIDER_KERRY_ENDPOINT", type: "s", required: true, sample: "https://poc-it.th.kerryexpress.com/ediwebapi_uat" }
+- { name: "PAM_SHIPPING_PROVIDER_KERRY_APP_ID", alias: "PAM4_SHIPPING_PROVIDER_KERRY_APP_ID", type: "s", required: true, sample: "[NAME]" }
+- { name: "PAM_SHIPPING_PROVIDER_KERRY_APP_KEY", alias: "PAM4_SHIPPING_PROVIDER_KERRY_APP_KEY", type: "s", required: true, sample: "[UUID]" }
+- { name: "PAM_ORDER_EMAIL_INFO_EVENT", alias: "PAM4_ORDER_EMAIL_INFO_EVENT", type: "b", required: true, sample: "true" }
+- { name: "ECOM_PAYMENT_EGHL_SERVICE_ID", type: "s", required: true, sample: "sit" }
+- { name: "ECOM_PAYMENT_EGHL_PAYMENT_URL", type: "s", required: true, sample: "https://test2pay.ghl.com/ipgsg/payment.aspx" }
+- { name: "ECOM_PAYMENT_EGHL_PASSWORD", type: "s", required: true, sample: "[UUID]" }
+- { name: "PAM_ORDER_EXPIRED_IN_TIME_MINUTE", alias: "PAM4_ORDER_EXPIRED_IN_TIME_MINUTE", type: "n", required: true, sample: "60" }
+- { name: "ECOM_PAYMENT_OMISE_PUBLIC_KEY", type: "s", required: true, sample: "[UUID]" }
+- { name: "ECOM_PAYMENT_OMISE_SECRET_KEY", type: "s", required: true, sample: "[UUID]" }
+- { name: "PAM_SCHEDULE_TRENDING_SUGGEST_HR", alias: "PAM4_SCHEDULE_TRENDING_SUGGEST_HR", type: "n", required: true, sample: "1" }
+- { name: "ECOM_VALIDATE_STOCK", type: "b", required: true, sample: "true" }
+- { name: "ECOM_SEND_POINT_TO_EXTERNAL", type: "b", required: true, sample: "false" }
+- { name: "ECOM_SEEDER_2C2P_IPP", type: "b", required: true, sample: "true" }
+- { name: "ECOM_PRODUCT_IS_CALCULATE_POINT", type: "b", required: true, sample: "true" }
+- { name: "ECOM_ENABLE_DISPLAY_RELATED_PRODUCT", type: "b", required: true, sample: "true" }
+- { name: "ECOM_LANDING_VERIFIED_URL", type: "s", required: true, sample: "https://stg-ecom-bdb.pams.ai" }
+- { name: "ECOM_IS_FLASHSALE_PRODUCT_ENABLED", type: "s", required: true, sample: "true" }
+- { name: "ECOM_ORDER_CODE_TYPE", type: "s", required: true, sample: "INCREMENT_PERIOD_DAY" }
+- { name: "ECOM_ORDER_PREFIX_CODE", type: "s", required: true, sample: "ONL" }
+- { name: "ECOM_ORDER_CODE_LENGTH", type: "n", required: true, sample: "14" }
