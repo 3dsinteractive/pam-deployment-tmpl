@@ -1,0 +1,5 @@
+version: v1
+mkt: ["connect", "builder", "sender", "msgscheduler", "elsdb"]
+ecom: []
+coupon: []
+cmsapi: ["cms-api"]
