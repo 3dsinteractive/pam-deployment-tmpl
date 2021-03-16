@@ -1,4 +1,3 @@
-version: v1
 cfg-shared: ["connect", "builder", "sender", "msgscheduler", "elsdb"]
 cfg-mkt: ["connect", "builder", "sender", "msgscheduler", "elsdb"]
 cfg-ecom: []
