@@ -1,5 +1,5 @@
-cfg-shared: ["connect", "builder", "sender", "msgscheduler", "elsdb"]
+cfg-shared: ["connect", "builder", "sender", "msgscheduler", "elsdb", "ecom"]
 cfg-mkt: ["connect", "builder", "sender", "msgscheduler", "elsdb"]
-cfg-ecom: []
+cfg-ecom: ["ecom"]
 cfg-coupon: []
 cfg-cms-api: ["cms-api"]
