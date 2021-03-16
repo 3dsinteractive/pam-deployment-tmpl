@@ -56,17 +56,6 @@ spec:
           limits:
             memory: <maxMem>
             cpu: <maxCpu>
-        volumeMounts:
-        - name: vol-env
-          mountPath: /.env
-          subPath: .env
-      volumes:
-      - name: vol-env
-        configMap:
-          name: env-cms-api
-          items:
-          - key: .env
-            path: .env
 ---
 apiVersion: v1
 kind: Service
