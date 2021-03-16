@@ -20,5 +20,5 @@ configs:
 - { name: "PAM4_X_SECRET", type: "s", required: true, sample: "SECRET" }
 - { name: "PAM4_INFORM", type: "s", required: true, sample: "true" }
 - { name: "PAM4_RELEASE", type: "s", required: true, sample: "staging" }
-- { name: "PAM4_SENTRY_ENDPOINT", type: "s", required: true, sample: "https://676925c56ee84b959ad079ff42039644@logs.pams.ai/6" }
+- { name: "PAM4_SENTRY_ENDPOINT", type: "s", required: true, sample: "https://676925c5039644@logs.pams.ai/6" }
 - { name: "PAM4_MAX_ACTIVE_TRIGGERS", type: "n", required: true, sample: "100" }
