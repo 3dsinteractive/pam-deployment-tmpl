@@ -1,6 +1,6 @@
 version: v1
-mkt: ["connect", "builder", "sender", "msgscheduler", "elsdb"]
-ecom: []
-coupon: []
-cmsapi: ["cms-api"]
-noshared: ["cms-api"]
+cfg-shared: ["connect", "builder", "sender", "msgscheduler", "elsdb"]
+cfg-mkt: ["connect", "builder", "sender", "msgscheduler", "elsdb"]
+cfg-ecom: []
+cfg-coupon: []
+cfg-cms-api: ["cms-api"]
