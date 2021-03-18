@@ -88,3 +88,4 @@ configs:
 - { name: "PAM_SHORT_LINK_BASE_URL", alias: "PAM4_SHORT_LINK_BASE_URL", type: "s", required: true, sample: shorturl.ai }
 - { name: "PAM_ENABLE_ELSDBPROXY", alias: "PAM4_ENABLE_ELSDBPROXY", type: "b", required: true, sample: true }
 - { name: "PAM_ELSDBPROXY_SERVERS", alias: "PAM4_ELSDBPROXY_SERVERS", type: "s", required: true, sample: elsdb1:9305 }
+- { name: "PAM_CMS_API_ENDPOINT", alias: "PAM4_CMS_API_ENDPOINT", type: "s", required: true, sample: "https://stg-mkt.pams.ai/api" }
