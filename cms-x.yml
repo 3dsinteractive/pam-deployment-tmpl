@@ -45,7 +45,7 @@ spec:
           timeoutSeconds: 30
           failureThreshold: 10
         ports:
-        - name: pamxcms8000
+        - name: cmsx8000
           containerPort: 8000
         resources:
           requests:
@@ -54,6 +54,14 @@ spec:
           limits:
             memory: <maxMem>
             cpu: <maxCpu>
+        volumeMounts:
+        - name: vol-vhost-config
+          mountPath: /opt/bitnami/nginx/conf/vhosts/my_vhost.conf
+          subPath: vhost.conf
+      volumes:
+      - name: vol-vhost-config
+        configMap:
+          name: cms-front-vhost
 ---
 apiVersion: v1
 kind: Service
