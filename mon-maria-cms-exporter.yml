@@ -28,7 +28,7 @@ spec:
         args: ["--collect.auto_increment.columns", "--no-collect.info_schema.innodb_cmp", "--no-collect.info_schema.innodb_cmpmem", "--no-collect.slave_status"]
         env:
         - name: DATA_SOURCE_NAME
-          value: "my_user:my_password@(maria-cms:3306)/my_database"
+          value: "my_user:<password>@(maria-cms:3306)/my_database"
         resources:
           requests:
             memory: 100Mi

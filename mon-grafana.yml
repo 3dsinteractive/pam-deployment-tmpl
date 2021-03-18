@@ -50,7 +50,7 @@ spec:
           initialDelaySeconds: 30
           timeoutSeconds: 1
           periodSeconds: 30
-          failureThreshold: 5
+          failureThreshold: 10
         volumeMounts:
           - name: dashboards-vol
             mountPath: /var/lib/grafana/dashboards

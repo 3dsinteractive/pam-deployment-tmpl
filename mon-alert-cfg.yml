@@ -83,7 +83,7 @@ data:
     receivers:
     - name: 'pam-alert'
       slack_configs:
-      - api_url: https://hooks.slack.com/services/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
+      - api_url: <slackHookAlert>
         channel: '#pam-alert'
         send_resolved: true
         title: |-
@@ -111,7 +111,7 @@ data:
     
     - name: 'pam-alert-critical'
       slack_configs:
-      - api_url: https://hooks.slack.com/services/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
+      - api_url: <slackHookCritical>
         channel: '#pam-alert-critical'
         send_resolved: true
         title: |-

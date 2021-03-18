@@ -28,14 +28,14 @@ spec:
         args: ["--collect.auto_increment.columns", "--no-collect.info_schema.innodb_cmp", "--no-collect.info_schema.innodb_cmpmem", "--no-collect.slave_status"]
         env:
         - name: DATA_SOURCE_NAME
-          value: "my_user:my_password@(maria-connect:3306)/my_database"
+          value: "my_user:<password>@(maria-connect:3306)/my_database"
         resources:
           requests:
-            memory: 100Mi
-            cpu: 50m
+            memory: <minMem>
+            cpu: <minCpu>
           limits:
-            memory: 500Mi
-            cpu: 300m
+            memory: <maxMem>
+            cpu: <maxCpu>
         livenessProbe:
           tcpSocket:
             port: 9104
@@ -48,7 +48,7 @@ spec:
           initialDelaySeconds: 5
           timeoutSeconds: 1
           periodSeconds: 30
-          failureThreshold: 5
+          failureThreshold: 10
         ports:
         - containerPort: 9104
           name: exporter9104
