@@ -83,6 +83,8 @@ spec:
                 name: grafana-dashboard-pam-summary
             - configMap:
                 name: grafana-dashboard-golang
+            - configMap:
+                name: grafana-dashboard-alerts
         - name: storage-vol
           emptyDir: {}
         - name: dashboards-provider-vol
