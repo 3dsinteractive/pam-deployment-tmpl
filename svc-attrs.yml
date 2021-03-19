@@ -1,15 +1,12 @@
 version: v1
 attrs:
-- { name: "name", alias: "name", doublequote: false, replace: false}
-- { name: "namespace", alias: "namespace", doublequote: false, replace: true}
+# Dynamic variable must set replace = true
 - { name: "replicas", alias: "replicas", doublequote: false, replace: true}
-- { name: "image", alias: "image", doublequote: true, replace: false}
 - { name: "env", alias: "env", doublequote: true, replace: true}
 - { name: "minMem", alias: "minMem", doublequote: false, replace: true}
 - { name: "maxMem", alias: "maxMem", doublequote: false, replace: true}
 - { name: "minCpu", alias: "minCpu", doublequote: false, replace: true}
 - { name: "maxCpu", alias: "maxCpu", doublequote: false, replace: true}
-- { name: "envs", alias: "envs", doublequote: false, replace: false}
 - { name: "nodeLabel", alias: "nodeLabel", doublequote: false, replace: true}
 - { name: "password", alias: "password", doublequote: false, replace: true}
 - { name: "datasource", alias: "datasource", doublequote: false, replace: true}
@@ -17,3 +14,8 @@ attrs:
 - { name: "monitorServices", alias: "monitorServices", doublequote: false, replace: true}
 - { name: "slackHookAlert", alias: "slackHookAlert", doublequote: false, replace: true}
 - { name: "slackHookCritical", alias: "slackHookCritical", doublequote: false, replace: true}
+# Custom variable must set replace = false
+- { name: "name", alias: "name", doublequote: false, replace: false}
+- { name: "namespace", alias: "namespace", doublequote: false, replace: false}
+- { name: "image", alias: "image", doublequote: true, replace: false}
+- { name: "envs", alias: "envs", doublequote: false, replace: false}
