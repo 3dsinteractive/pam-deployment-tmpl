@@ -1,19 +1,19 @@
 version: v1
 attrs:
-- { name: "name", alias: "name", doublequote: false}
-- { name: "namespace", alias: "namespace", doublequote: false}
-- { name: "replicas", alias: "replicas", doublequote: false}
+- { name: "name", alias: "name", doublequote: false, replace: true}
+- { name: "namespace", alias: "namespace", doublequote: false, replace: true}
+- { name: "replicas", alias: "replicas", doublequote: false, replace: true}
 - { name: "image", alias: "image", doublequote: true, replace: false}
-- { name: "env", alias: "env", doublequote: true}
-- { name: "minMem", alias: "minMem", doublequote: false}
-- { name: "maxMem", alias: "maxMem", doublequote: false}
-- { name: "minCpu", alias: "minCpu", doublequote: false}
-- { name: "maxCpu", alias: "maxCpu", doublequote: false}
+- { name: "env", alias: "env", doublequote: true, replace: true}
+- { name: "minMem", alias: "minMem", doublequote: false, replace: true}
+- { name: "maxMem", alias: "maxMem", doublequote: false, replace: true}
+- { name: "minCpu", alias: "minCpu", doublequote: false, replace: true}
+- { name: "maxCpu", alias: "maxCpu", doublequote: false, replace: true}
 - { name: "envs", alias: "envs", doublequote: false, replace: false}
-- { name: "nodeLabel", alias: "nodeLabel", doublequote: false}
-- { name: "password", alias: "password", doublequote: false}
-- { name: "datasource", alias: "datasource", doublequote: false}
-- { name: "promURL", alias: "promURL", doublequote: false}
-- { name: "monitorServices", alias: "monitorServices", doublequote: false}
-- { name: "slackHookAlert", alias: "slackHookAlert", doublequote: false}
-- { name: "slackHookCritical", alias: "slackHookCritical", doublequote: false}
+- { name: "nodeLabel", alias: "nodeLabel", doublequote: false, replace: true}
+- { name: "password", alias: "password", doublequote: false, replace: true}
+- { name: "datasource", alias: "datasource", doublequote: false, replace: true}
+- { name: "promURL", alias: "promURL", doublequote: false, replace: true}
+- { name: "monitorServices", alias: "monitorServices", doublequote: false, replace: true}
+- { name: "slackHookAlert", alias: "slackHookAlert", doublequote: false, replace: true}
+- { name: "slackHookCritical", alias: "slackHookCritical", doublequote: false, replace: true}
