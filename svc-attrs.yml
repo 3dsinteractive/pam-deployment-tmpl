@@ -14,6 +14,8 @@ attrs:
 - { name: "monitorServices", alias: "monitorServices", doublequote: false, replace: true}
 - { name: "slackHookAlert", alias: "slackHookAlert", doublequote: false, replace: true}
 - { name: "slackHookCritical", alias: "slackHookCritical", doublequote: false, replace: true}
+- { name: "topicsInclude", alias: "topicsInclude", doublequote: false, replace: true}
+- { name: "topicsExclude", alias: "topicsExclude", doublequote: false, replace: true}
 # Custom variable must set replace = false
 - { name: "name", alias: "name", doublequote: false, replace: false}
 - { name: "namespace", alias: "namespace", doublequote: false, replace: false}
