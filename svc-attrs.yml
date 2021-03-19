@@ -1,6 +1,6 @@
 version: v1
 attrs:
-- { name: "name", alias: "name", doublequote: false, replace: true}
+- { name: "name", alias: "name", doublequote: false, replace: false}
 - { name: "namespace", alias: "namespace", doublequote: false, replace: true}
 - { name: "replicas", alias: "replicas", doublequote: false, replace: true}
 - { name: "image", alias: "image", doublequote: true, replace: false}
