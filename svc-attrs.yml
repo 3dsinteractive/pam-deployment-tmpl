@@ -1,19 +1,19 @@
 version: v1
 attrs:
-- { name: "name", alias: "name", doubleqoute: false}
-- { name: "namespace", alias: "namespace", doubleqoute: false}
-- { name: "replicas", alias: "replicas", doubleqoute: false}
-- { name: "image", alias: "image", doubleqoute: true, replace: false}
-- { name: "env", alias: "env", doubleqoute: true}
-- { name: "minMem", alias: "minMem", doubleqoute: false}
-- { name: "maxMem", alias: "maxMem", doubleqoute: false}
-- { name: "minCpu", alias: "minCpu", doubleqoute: false}
-- { name: "maxCpu", alias: "maxCpu", doubleqoute: false}
-- { name: "envs", alias: "envs", doubleqoute: false, replace: false}
-- { name: "nodeLabel", alias: "nodeLabel", doubleqoute: false}
-- { name: "password", alias: "password", doubleqoute: false}
-- { name: "datasource", alias: "datasource", doubleqoute: false}
-- { name: "promURL", alias: "promURL", doubleqoute: false}
-- { name: "monitorServices", alias: "monitorServices", doubleqoute: false}
+- { name: "name", alias: "name", doublequote: false}
+- { name: "namespace", alias: "namespace", doublequote: false}
+- { name: "replicas", alias: "replicas", doublequote: false}
+- { name: "image", alias: "image", doublequote: true, replace: false}
+- { name: "env", alias: "env", doublequote: true}
+- { name: "minMem", alias: "minMem", doublequote: false}
+- { name: "maxMem", alias: "maxMem", doublequote: false}
+- { name: "minCpu", alias: "minCpu", doublequote: false}
+- { name: "maxCpu", alias: "maxCpu", doublequote: false}
+- { name: "envs", alias: "envs", doublequote: false, replace: false}
+- { name: "nodeLabel", alias: "nodeLabel", doublequote: false}
+- { name: "password", alias: "password", doublequote: false}
+- { name: "datasource", alias: "datasource", doublequote: false}
+- { name: "promURL", alias: "promURL", doublequote: false}
+- { name: "monitorServices", alias: "monitorServices", doublequote: false}
 - { name: "slackHookAlert", alias: "slackHookAlert", doublequote: false}
 - { name: "slackHookCritical", alias: "slackHookCritical", doublequote: false}
