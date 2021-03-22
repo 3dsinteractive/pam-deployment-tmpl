@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: <name>
+  namespace: <namespace>
+spec:
+  ttlSecondsAfterFinished: 1200
+  template:
+    spec:
+      imagePullSecrets:
+      - name: dockerlogin
+      restartPolicy: Never
+      containers:
+      - name: <name>
+        image: 3dsinteractive/pam4-migrate:<namespace>-6.0.<timestamp>
+        imagePullPolicy: Always
+        env: [ {name: PAM4_ENV, value: prod}, {name: DEBUG, value: "true"} <envs>]

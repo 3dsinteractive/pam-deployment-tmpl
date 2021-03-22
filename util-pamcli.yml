@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  nodeSelector:
+    env: c1
+    role: worker
+  priorityClassName: class-monitor
+  imagePullSecrets:
+  - name: dockerlogin
+  containers:
+    - name: <name>
+      image: 3dsinteractive/pamcli:<timestamp>
+      stdin: true
+      tty: true
+      imagePullPolicy: Always
+      env: [{name: DEBUG, value: "true"} <envs>]
+      resources:
+        requests:
+          memory: <minMem>
+          cpu: <minCpu>
+        limits:
+          memory: <maxMem>
+          cpu: <maxCpu>
