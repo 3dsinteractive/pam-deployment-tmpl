@@ -1,4 +1,4 @@
-cfg-shared: ["connect", "builder", "sender", "msgscheduler", "elsdb", "ecom", "migrate-connect", "migrate-seeder", "pamcli"]
+cfg-shared: ["connect", "builder", "sender", "msgscheduler", "elsdb", "ecom", "migrate-connect", "migrate-seeder", "util-pamcli"]
 cfg-mkt: ["connect", "builder", "sender", "msgscheduler", "elsdb"]
 cfg-ecom: ["ecom"]
 cfg-coupon: []
