@@ -21,3 +21,4 @@ attrs:
 - { name: "namespace", alias: "namespace", doublequote: false, replace: false}
 - { name: "image", alias: "image", doublequote: true, replace: false}
 - { name: "envs", alias: "envs", doublequote: false, replace: false}
+- { name: "timestamp", alias: "timestamp", doublequote: false, replace: false}
