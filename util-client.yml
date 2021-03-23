@@ -10,6 +10,8 @@ spec:
     env: c1
     role: worker
   priorityClassName: class-monitor
+  imagePullSecrets:
+  - name: dockerlogin
   containers:
     - name: <name>
       image: 3dsinteractive/util:1.0
