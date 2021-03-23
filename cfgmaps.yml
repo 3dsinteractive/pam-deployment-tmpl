@@ -1,5 +1,5 @@
 cfg-shared: ["connect", "builder", "sender", "msgscheduler", "elsdb", "ecom", "migrate-connect", "migrate-seeder", "util-pamcli"]
-cfg-mkt: ["connect", "builder", "sender", "msgscheduler", "elsdb"]
-cfg-ecom: ["ecom"]
+cfg-mkt: ["connect", "builder", "sender", "msgscheduler", "elsdb", "migrate-connect", "migrate-seeder", "util-pamcli"]
+cfg-ecom: ["ecom", "migrate-connect", "migrate-seeder", "util-pamcli"]
 cfg-coupon: []
 cfg-cms-api: ["cms-api"]
