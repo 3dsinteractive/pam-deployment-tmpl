@@ -1,24 +1,29 @@
 version: v1
 attrs:
 # Dynamic variable must set replace = true
-- { name: "replicas", alias: "replicas", doublequote: false, replace: true}
-- { name: "env", alias: "env", doublequote: true, replace: true}
-- { name: "minMem", alias: "minMem", doublequote: false, replace: true}
-- { name: "maxMem", alias: "maxMem", doublequote: false, replace: true}
-- { name: "minCpu", alias: "minCpu", doublequote: false, replace: true}
-- { name: "maxCpu", alias: "maxCpu", doublequote: false, replace: true}
-- { name: "nodeLabel", alias: "nodeLabel", doublequote: false, replace: true}
-- { name: "password", alias: "password", doublequote: false, replace: true}
-- { name: "datasource", alias: "datasource", doublequote: false, replace: true}
-- { name: "promURL", alias: "promURL", doublequote: false, replace: true}
-- { name: "monitorServices", alias: "monitorServices", doublequote: false, replace: true}
-- { name: "slackHookAlert", alias: "slackHookAlert", doublequote: false, replace: true}
-- { name: "slackHookCritical", alias: "slackHookCritical", doublequote: false, replace: true}
-- { name: "topicsInclude", alias: "topicsInclude", doublequote: false, replace: true}
-- { name: "topicsExclude", alias: "topicsExclude", doublequote: false, replace: true}
+- { name: "replicas", alias: "replicas", doublequote: false, replace: true }
+- { name: "env", alias: "env", doublequote: true, replace: true }
+- { name: "minMem", alias: "minMem", doublequote: false, replace: true }
+- { name: "maxMem", alias: "maxMem", doublequote: false, replace: true }
+- { name: "minCpu", alias: "minCpu", doublequote: false, replace: true }
+- { name: "maxCpu", alias: "maxCpu", doublequote: false, replace: true }
+- { name: "nodeLabel", alias: "nodeLabel", doublequote: false, replace: true }
+- { name: "password", alias: "password", doublequote: false, replace: true }
+- { name: "datasource", alias: "datasource", doublequote: false, replace: true }
+- { name: "promURL", alias: "promURL", doublequote: false, replace: true }
+- { name: "monitorServices", alias: "monitorServices", doublequote: false, replace: true }
+- { name: "slackHookAlert", alias: "slackHookAlert", doublequote: false, replace: true }
+- { name: "slackHookCritical", alias: "slackHookCritical", doublequote: false, replace: true }
+- { name: "topicsInclude", alias: "topicsInclude", doublequote: false, replace: true }
+- { name: "topicsExclude", alias: "topicsExclude", doublequote: false, replace: true }
+# Use in demo-server
+- { name: "endpoint", alias: "endpoint", doublequote: true, replace: true }
+- { name: "users", alias: "users", doublequote: true, replace: true }
+- { name: "customerDatabase", alias: "customerDatabase", doublequote: true, replace: true }
+- { name: "authToken", alias: "authToken", doublequote: true, replace: true }
 # Custom variable must set replace = false
-- { name: "name", alias: "name", doublequote: false, replace: false}
-- { name: "namespace", alias: "namespace", doublequote: false, replace: false}
-- { name: "image", alias: "image", doublequote: true, replace: false}
-- { name: "envs", alias: "envs", doublequote: false, replace: false}
-- { name: "timestamp", alias: "timestamp", doublequote: false, replace: false}
+- { name: "name", alias: "name", doublequote: false, replace: false }
+- { name: "namespace", alias: "namespace", doublequote: false, replace: false }
+- { name: "image", alias: "image", doublequote: true, replace: false }
+- { name: "envs", alias: "envs", doublequote: false, replace: false }
+- { name: "timestamp", alias: "timestamp", doublequote: false, replace: false }
