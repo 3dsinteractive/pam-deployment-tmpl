@@ -1177,7 +1177,7 @@ data:
           "steppedLine": false,
           "targets": [
             {
-              "expr": "topk(100, (sum(rate(seaman_indexer_process_time_seconds_sum{method=\"get\"}[5m])) by (endpoint) * 1000) / \n(sum(rate(seaman_indexer_request_total{method=\"get\"}[5m])) by (endpoint,method_group) ))",
+              "expr": "topk(100, (sum(rate(seaman_indexer_process_time_seconds_sum{method=\"get\"}[5m])) by (endpoint,method_group) * 1000) / \n(sum(rate(seaman_indexer_request_total{method=\"get\"}[5m])) by (endpoint,method_group) ))",
               "legendFormat": "{{endpoint}} ({{method_group}})",
               "refId": "A"
             }
