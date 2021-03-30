@@ -78,3 +78,4 @@ configs:
 - { name: "PAM_ENABLE_PDPA_FEATURE", alias: "PAM_ENABLE_PDPA_FEATURE", type: "b", required: true, sample: "true" }
 - { name: "ENABLE_CONSENT", alias: "ENABLE_CONSENT", type: "b", required: true, sample: "true" }
 - { name: "PAM_ENABLE_NEW_PAM_CMS", alias: "PAM4_ENABLE_NEW_PAM_CMS", type: "b", required: true, sample: "true" }
+- { name: "PAM_EVAL_CONTACT_TRIGGERS_CONSUMER_SIZE_FACTOR", type: "n", required: true, sample: "2" }
