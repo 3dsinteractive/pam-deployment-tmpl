@@ -92,3 +92,4 @@ configs:
 - { name: "PAM_CONNECT_API_INTERNAL", alias: "PAM_CONNECT_API_INTERNAL", type: "s", required: false, sample: "http://connect-api:8080" }
 - { name: "PAM_BUILDER_API_INTERNAL", alias: "PAM_BUILDER_API_INTERNAL", type: "s", required: false, sample: "http://builder-api:8080" }
 - { name: "PAM_SENDER_API_INTERNAL", alias: "PAM_SENDER_API_INTERNAL", type: "s", required: false, sample: "http://sender-api:8080" }
+- { name: "PAM_MKT_BACKEND_API_INTERNAL", alias: "PAM_MKT_BACKEND_API_INTERNAL", type: "s", required: false, sample: "http://mkt-backend-api:8080" }
