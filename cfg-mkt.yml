@@ -79,3 +79,14 @@ configs:
 - { name: "ENABLE_CONSENT", alias: "ENABLE_CONSENT", type: "b", required: true, sample: "true" }
 - { name: "PAM_ENABLE_NEW_PAM_CMS", alias: "PAM4_ENABLE_NEW_PAM_CMS", type: "b", required: true, sample: "true" }
 - { name: "PAM_EVAL_CONTACT_TRIGGERS_CONSUMER_SIZE_FACTOR", type: "n", required: true, sample: "2" }
+- { name: "PAM_DAILY_REFRESH_SEGMENT_PARALLEL_TOTAL", alias: "PAM_DAILY_REFRESH_SEGMENT_PARALLEL_TOTAL", type: "n", required: false, sample: 10 }
+- { name: "PAM_DAILY_REFRESH_SEGMENT_0", alias: "PAM_DAILY_REFRESH_SEGMENT_0", type: "s", required: false, sample: "triggerid1,triggerid2,triggerid3" }
+- { name: "PAM_DAILY_REFRESH_SEGMENT_1", alias: "PAM_DAILY_REFRESH_SEGMENT_1", type: "s", required: false, sample: "triggerid1,triggerid2,triggerid3" }
+- { name: "PAM_DAILY_REFRESH_SEGMENT_2", alias: "PAM_DAILY_REFRESH_SEGMENT_2", type: "s", required: false, sample: "triggerid1,triggerid2,triggerid3" }
+- { name: "PAM_DAILY_REFRESH_SEGMENT_3", alias: "PAM_DAILY_REFRESH_SEGMENT_3", type: "s", required: false, sample: "triggerid1,triggerid2,triggerid3" }
+- { name: "PAM_DAILY_REFRESH_SEGMENT_4", alias: "PAM_DAILY_REFRESH_SEGMENT_4", type: "s", required: false, sample: "triggerid1,triggerid2,triggerid3" }
+- { name: "PAM_DAILY_REFRESH_SEGMENT_5", alias: "PAM_DAILY_REFRESH_SEGMENT_5", type: "s", required: false, sample: "triggerid1,triggerid2,triggerid3" }
+- { name: "PAM_DAILY_REFRESH_SEGMENT_6", alias: "PAM_DAILY_REFRESH_SEGMENT_6", type: "s", required: false, sample: "triggerid1,triggerid2,triggerid3" }
+- { name: "PAM_DAILY_REFRESH_SEGMENT_7", alias: "PAM_DAILY_REFRESH_SEGMENT_7", type: "s", required: false, sample: "triggerid1,triggerid2,triggerid3" }
+- { name: "PAM_DAILY_REFRESH_SEGMENT_8", alias: "PAM_DAILY_REFRESH_SEGMENT_8", type: "s", required: false, sample: "triggerid1,triggerid2,triggerid3" }
+- { name: "PAM_DAILY_REFRESH_SEGMENT_9", alias: "PAM_DAILY_REFRESH_SEGMENT_9", type: "s", required: false, sample: "triggerid1,triggerid2,triggerid3" }
