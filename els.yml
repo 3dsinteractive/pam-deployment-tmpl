@@ -91,3 +91,22 @@ spec:
       - name: vol-data
         persistentVolumeClaim:
           claimName: pvc-<name>
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  selector:
+    name: <name>
+  ports:
+  - name: els9300
+    port: 9300
+    protocol: TCP
+  - name: els9200
+    port: 9200
+    protocol: TCP
+  clusterIP: None
