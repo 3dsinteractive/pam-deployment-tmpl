@@ -21,3 +21,4 @@ configs:
 - { name: "ECOM_ORDER_CODE_TYPE", type: "s", required: true, sample: "INCREMENT_PERIOD_DAY" }
 - { name: "ECOM_ORDER_PREFIX_CODE", type: "s", required: true, sample: "ONL" }
 - { name: "ECOM_ORDER_CODE_LENGTH", type: "n", required: true, sample: "14" }
+- { name: "ECOM_ADDRESS_DATABASE_VERSION", type: "s", required: false, sample: "version2" }
