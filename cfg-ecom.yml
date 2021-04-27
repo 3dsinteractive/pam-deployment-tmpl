@@ -24,3 +24,9 @@ configs:
 - { name: "ECOM_ADDRESS_DATABASE_VERSION", type: "s", required: false, sample: "version2" }
 - { name: "ECOM_PAYMENT_2C2P_MERCHANT_ID", type: "s", required: false, sample: "764111111111111" }
 - { name: "ECOM_PAYMENT_2C2P_SECRET_KEY", type: "s", required: false, sample: "V4SZ0C5OlxAq" }
+- { name: "ECOM_PRODUCT_CREATE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_CREATE_EXCEL_COLUMN_HEADER", type: "s", required: true, sample: "[{\"column_name\":\"Product Code\",\"is_required\":false,\"field_name\":\"product_code\"}]" }
+- { name: "ECOM_PRODUCT_UPDATE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_UPDATE_EXCEL_COLUMN_HEADER", type: "s", required: true, sample: "[{\"column_name\":\"*Product ID (Do not change)\",\"is_required\":true,\"field_name\":\"product_id\"}]" }
+- { name: "ECOM_PRODUCT_SKU_EXCEL_COLUMN_HEADER", alias: "PRODUCT_SKU_EXCEL_COLUMN_HEADER", type: "s", required: true, sample: "[{\"column_name\":\"*Product ID (Do not change)\",\"is_required\":true,\"field_name\":\"product_id\"}]" }
+- { name: "ECOM_PRODUCT_PRICE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_PRICE_EXCEL_COLUMN_HEADER", type: "s", required: true, sample: "[{\"column_name\":\"sku\",\"is_required\":true,\"field_name\":\"item_no\",\"col_header_name\":\"A\"}]" }
+- { name: "ECOM_PRODUCT_PRICE_TEMP_HEADER", alias: "PRODUCT_PRICE_TEMP_HEADER", type: "s", required: true, sample: "{\"item_no\":\"sku\", \"cust_price_grp\":\"\", \"price_code\":\"price code\"}" }
+- { name: "ECOM_ENABLE_NEW_ECOM_CMS_API", alias: "ECOM_ENABLE_NEW_ECOM_CMS_API", type: "b", required: true, sample: "true" }
