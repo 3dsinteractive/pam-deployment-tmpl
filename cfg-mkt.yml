@@ -84,3 +84,4 @@ configs:
 - { name: "PAM_TRACKER_TODAY_INDEX_SHARDS", alias: "PAM_TRACKER_TODAY_INDEX_SHARDS", type: "n", required: false, sample: "3" }
 - { name: "PAM_TRACKER_TODAY_INDEX_REPLICAS", alias: "PAM_TRACKER_TODAY_INDEX_REPLICAS", type: "n", required: false, sample: "0" }
 - { name: "PAM_ENABLE_TRACKER_TODAY", alias: "PAM_ENABLE_TRACKER_TODAY", type: "b", required: false, sample: "true" }
+- { name: "SENDER_MACRO_KIOS_SERVICE_ID", alias: "SENDER_MACRO_KIOS_SERVICE_ID", type: "s", required: false, sample: "JMC001" }
