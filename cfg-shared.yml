@@ -89,8 +89,8 @@ configs:
 - { name: "PAM_ENABLE_ELSDBPROXY", alias: "PAM4_ENABLE_ELSDBPROXY", type: "b", required: true, sample: true }
 - { name: "PAM_ELSDBPROXY_SERVERS", alias: "PAM4_ELSDBPROXY_SERVERS", type: "s", required: true, sample: elsdb1:9305 }
 - { name: "PAM_CMS_API_ENDPOINT", alias: "PAM4_CMS_API_ENDPOINT", type: "s", required: true, sample: "https://stg-mkt.pams.ai/api" }
-- { name: "PAM_CONNECT_API_INTERNAL", alias: "PAM_CONNECT_API_INTERNAL", type: "s", required: false, sample: "http://connect-api:8080" }
-- { name: "PAM_BUILDER_API_INTERNAL", alias: "PAM_BUILDER_API_INTERNAL", type: "s", required: false, sample: "http://builder-api:8080" }
-- { name: "PAM_SENDER_API_INTERNAL", alias: "PAM_SENDER_API_INTERNAL", type: "s", required: false, sample: "http://sender-api:8080" }
-- { name: "PAM_MKT_BACKEND_API_INTERNAL", alias: "PAM_MKT_BACKEND_API_INTERNAL", type: "s", required: false, sample: "http://mkt-backend-api:8080" }
+- { name: "PAM_CONNECT_API_INTERNAL", alias: "PAM_CONNECT_API_INTERNAL", type: "s", required: true, sample: "http://connect-api:8080" }
+- { name: "PAM_BUILDER_API_INTERNAL", alias: "PAM_BUILDER_API_INTERNAL", type: "s", required: true, sample: "http://builder-api:8080" }
+- { name: "PAM_SENDER_API_INTERNAL", alias: "PAM_SENDER_API_INTERNAL", type: "s", required: true, sample: "http://sender-api:8080" }
+- { name: "PAM_MKT_BACKEND_API_INTERNAL", alias: "PAM_MKT_BACKEND_API_INTERNAL", type: "s", required: true, sample: "http://mkt-backend-api:8080" }
 - { name: "PAM_ENABLE_PTASK_MANAGER", alias: "PAM_ENABLE_PTASK_MANAGER", type: "b", required: false, sample: true }
