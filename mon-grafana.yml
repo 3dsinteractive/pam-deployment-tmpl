@@ -72,6 +72,8 @@ spec:
             - configMap:
                 name: grafana-dashboard-els
             - configMap:
+                name: grafana-dashboard-els-query
+            - configMap:
                 name: grafana-dashboard-kfk
             - configMap:
                 name: grafana-dashboard-redis
