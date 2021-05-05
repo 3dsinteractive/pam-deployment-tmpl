@@ -47,10 +47,6 @@ configs:
 - { name: "PAM_SCHEDULE_CAMPAIGNNOTENGAGE_TRIGGERS", alias: "PAM4_SCHEDULE_CAMPAIGNNOTENGAGE_TRIGGERS", type: "n", required: true, sample: "1800" }
 - { name: "PAM_SCHEDULE_PRODUCTS_TRENDS", alias: "PAM4_SCHEDULE_PRODUCTS_TRENDS", type: "n", required: true, sample: "3600" }
 - { name: "PAM_SCHEDULE_DAILY_TRACKERS", alias: "PAM4_SCHEDULE_DAILY_TRACKERS", type: "n", required: true, sample: "3600" }
-- { name: "PAM_IMAGE_PTRACKER_EVAL_CONTAINERS", alias: "PAM4_IMAGE_PTRACKER_EVAL_CONTAINERS", type: "n", required: true, sample: "1" }
-- { name: "PAM_IMAGE_ETRACKER_EVAL_CONTAINERS", alias: "PAM4_IMAGE_ETRACKER_EVAL_CONTAINERS", type: "n", required: true, sample: "1" }
-- { name: "PAM_IMAGE_TRIGGER_EVAL_CONTAINERS", alias: "PAM4_IMAGE_TRIGGER_EVAL_CONTAINERS", type: "n", required: true, sample: "1" }
-- { name: "PAM_IMAGE_APPUSH_CONTAINERS", alias: "PAM4_IMAGE_APPUSH_CONTAINERS", type: "n", required: true, sample: "3" }
 - { name: "PAM_PUSH_TO_CONTACT_CREATED_PARTITIONS", alias: "PAM4_PUSH_TO_CONTACT_CREATED_PARTITIONS", type: "n", required: true, sample: "50" }
 - { name: "PAM_PUSH_TO_CONTACT_CREATED_REPLICAS", alias: "PAM4_PUSH_TO_CONTACT_CREATED_REPLICAS", type: "n", required: true, sample: "2" }
 - { name: "PAM_TRACKER_INDEX_SHARDS", alias: "PAM4_TRACKER_INDEX_SHARDS", type: "n", required: true, sample: "3" }
@@ -86,3 +82,4 @@ configs:
 - { name: "PAM_ENABLE_TRACKER_TODAY", alias: "PAM_ENABLE_TRACKER_TODAY", type: "b", required: false, sample: "true" }
 - { name: "SENDER_MACRO_KIOS_SERVICE_ID", alias: "SENDER_MACRO_KIOS_SERVICE_ID", type: "s", required: false, sample: "JMC001" }
 - { name: "PAM_EVAL_WORKERS_MAX_LIMIT", alias: "PAM_EVAL_WORKERS_MAX_LIMIT", type: "n", required: false, sample: 5 }
+- { name: "PAM_SENDER_WORKERS_MAX_LIMIT", alias: "PAM4_IMAGE_APPUSH_CONTAINERS", type: "n", required: true, sample: "3" }
