@@ -85,3 +85,4 @@ configs:
 - { name: "PAM_TRACKER_TODAY_INDEX_REPLICAS", alias: "PAM_TRACKER_TODAY_INDEX_REPLICAS", type: "n", required: false, sample: "0" }
 - { name: "PAM_ENABLE_TRACKER_TODAY", alias: "PAM_ENABLE_TRACKER_TODAY", type: "b", required: false, sample: "true" }
 - { name: "SENDER_MACRO_KIOS_SERVICE_ID", alias: "SENDER_MACRO_KIOS_SERVICE_ID", type: "s", required: false, sample: "JMC001" }
+- { name: "PAM_EVAL_WORKERS_MAX_LIMIT", alias: "PAM_EVAL_WORKERS_MAX_LIMIT", type: "n", required: false, sample: 5 }
