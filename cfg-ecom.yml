@@ -34,3 +34,4 @@ configs:
 - { name: "ECOM_PAYMENT_BBL_MERCHANT_API_ID", type: "s", required: false, sample: ""}
 - { name: "ECOM_PAYMENT_BBL_MERCHANT_API_PASSWORD", type: "s", required: false, sample: ""}
 - { name: "ECOM_PAYMENT_BBL_API_ENDPOINT", type: "s", required: false, sample: ""}
+- { name: "ECOM_ENABLE_IPP", type: "b", required: false, sample: "true" }
