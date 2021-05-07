@@ -35,3 +35,9 @@ configs:
 - { name: "ECOM_PAYMENT_BBL_MERCHANT_API_PASSWORD", type: "s", required: false, sample: ""}
 - { name: "ECOM_PAYMENT_BBL_API_ENDPOINT", type: "s", required: false, sample: ""}
 - { name: "ECOM_ENABLE_IPP", type: "b", required: false, sample: "true" }
+- { name: "PAM_IGNOREGEN_MEMBER_CARD_NO", type: "b", required: false, sample: "true" }
+- { name: "MEMBER_REGISTER_INITIAL_VALUE", type: "b", required: false, sample: "true" }
+- { name: "THIRD_PARTY_POINT_UPDATE", type: "b", required: false, sample: "true" }
+- { name: "THIRD_PARTY_VERIFIED_OTP", type: "b", required: false, sample: "true" }
+- { name: "PAM_CACHE_EXPIRE_TIME_ALLOW_REQUEST_IPADDRESS", type: "n", required: false, sample: "30" }
+- { name: "PAM_CUSTOMER_NAME", type: "s", required: false, sample: "jaymart" }
