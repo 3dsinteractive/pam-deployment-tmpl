@@ -23,7 +23,11 @@ data:
     - '/etc/alert-rules/*.rules'
 
     scrape_configs:
-    
+    - job_name: prometheus
+      static_configs:
+        - targets: 
+          - "prom1:9090"
+
     - job_name: metrics-server
       metrics_path: /metrics
       scheme: http
@@ -58,12 +62,14 @@ data:
         replacement: $1
         action: replace
 
-    - job_name: 'kube-state-metrics'
+    - job_name: kube-state-metrics
       static_configs:
         - targets: 
           - "kube-state-metrics:8080"
 
     - job_name: redis-metric
+      scrape_interval: 60s
+      scrape_timeout: 30s
       metrics_path: /metrics
       scheme: http
       tls_config:
@@ -98,6 +104,8 @@ data:
         action: replace
     
     - job_name: els-metric
+      scrape_interval: 60s
+      scrape_timeout: 30s
       metrics_path: /metrics
       scheme: http
       tls_config:
@@ -133,7 +141,7 @@ data:
 
     - job_name: kafka-metric
       metrics_path: /metrics
-      scrape_interval: 120s
+      scrape_interval: 180s
       scrape_timeout: 60s
       scheme: http
       tls_config:
@@ -168,6 +176,8 @@ data:
         action: replace
 
     - job_name: maria-connect-metric
+      scrape_interval: 60s
+      scrape_timeout: 30s
       metrics_path: /metrics
       scheme: http
       tls_config:
