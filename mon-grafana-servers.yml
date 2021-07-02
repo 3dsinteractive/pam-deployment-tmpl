@@ -943,7 +943,7 @@ data:
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum by (instance) (irate(node_network_receive_bytes_total{job=~\"prometheus-node-exporter\"}[5m]))*8",
+              "expr": "sum by (instance) (irate(node_network_receive_bytes_total{job=~\"prometheus-node-exporter\"}[5m]))",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{instance}} - recv",
@@ -951,7 +951,7 @@ data:
               "step": 240
             },
             {
-              "expr": "sum by (instance) (irate(node_network_transmit_bytes_total{job=~\"prometheus-node-exporter\"}[5m]))*8",
+              "expr": "sum by (instance) (irate(node_network_transmit_bytes_total{job=~\"prometheus-node-exporter\"}[5m]))",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{instance}} - send",
