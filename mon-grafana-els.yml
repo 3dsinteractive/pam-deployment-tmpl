@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: grafana-dashboard-els-query
+  name: grafana-dashboard-els
   namespace: <namespace>
   labels:
     app: monitor
-    name: grafana-dashboard-els-query
+    name: grafana-dashboard-els
 data:
   els.json: |
     {
