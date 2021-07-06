@@ -45,3 +45,8 @@ configs:
 - { name: "ECOM_VALIDATE_MEMBER_CLASS_LIST", type: "s", required: false, sample: "ENJ,EPC"}
 - { name: "THIRD_PARTY_ADD_POINT_TRANSACTION_TYPE", type: "s", required: false, sample: "4"}
 - { name: "THIRD_PARTY_DEDUCT_POINT_TRANSACTION_TYPE", type: "s", required: false, sample: "5"}
+- { name: "ECOM_PICKUP_STOCK_TYPE", type: "s", required: false, sample: "internal" }
+- { name: "ECOM_ENABLE_DELIVERY_STORE", type: "b", required: false, sample: "false" }
+- { name: "ECOM_PAYMENT_KTC_MERCHANT_ID", type: "s", required: false, sample: ""}
+- { name: "ECOM_PAYMENT_KTC_IPP_MERCHANT_ID", type: "s", required: false, sample: "991424841"}
+- { name: "ECOM_PAYMENT_KTC_API_ENDPOINT", type: "s", required: false, sample: "https://testpaygate.ktc.co.th/ktc/eng/merchandize/payment/payForm.jsp"}
