@@ -87,3 +87,4 @@ configs:
 - { name: "PAM_IMAGE_APPUSH_CONTAINERS", alias: "PAM4_IMAGE_APPUSH_CONTAINERS", type: "n", required: true, sample: "3" }
 - { name: "PAM_SENDER_WORKERS_MAX_LIMIT", alias: "PAM_SENDER_WORKERS_MAX_LIMIT", type: "n", required: false, sample: "3" }
 - { name: "PAM_USE_MAILPAM_API", alias: "PAM_USE_MAILPAM_API", type: "b", required: false, sample: "true" }
+- { name: "PAM_ENABLE_TRACKER_CUSTOM_CREATED_AT", alias: "PAM_ENABLE_TRACKER_CUSTOM_CREATED_AT", type: "b", required: false, sample: "true" }
