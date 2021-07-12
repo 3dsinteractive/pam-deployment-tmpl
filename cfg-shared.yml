@@ -1,5 +1,6 @@
 version: v1
 configs:
+- { name: "SEAMAN_PREFIX", type: "s", required: false, sample: "stg" }
 - { name: "SEAMAN_PORT", type: "s", required: true, sample: "8080" }
 - { name: "SEAMAN_TIMEZONE_NAME", type: "s", required: true, sample: UTC+0 }
 - { name: "SEAMAN_TIMEZONE_OFFSET", type: "n", required: true, sample: 0 }
