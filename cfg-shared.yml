@@ -97,3 +97,4 @@ configs:
 - { name: "PAM_SENDER_API_INTERNAL", alias: "PAM_SENDER_API_INTERNAL", type: "s", required: true, sample: "http://sender-api:8080" }
 - { name: "PAM_MKT_BACKEND_API_INTERNAL", alias: "PAM_MKT_BACKEND_API_INTERNAL", type: "s", required: true, sample: "http://mkt-backend-api:8080" }
 - { name: "PAM_ENABLE_PTASK_MANAGER", alias: "PAM_ENABLE_PTASK_MANAGER", type: "b", required: false, sample: true }
+- { name: "PAM_ENABLE_MIGRATE_ECOM", alias: "PAM_ENABLE_MIGRATE_ECOM", type: "b", required: false, sample: true }
