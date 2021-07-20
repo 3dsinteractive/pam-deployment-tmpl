@@ -263,15 +263,6 @@ data:
         annotations:
           title: "Redis rejected connections ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
           description: "Some connections to Redis has been rejected, VALUE = {{ $value }}"
-      - alert: MariaConnectIsDown
-        expr: mysql_up{job="maria-connect-metric"} == 0
-        for: 1m
-        labels:
-          service: database
-          severity: critical
-        annotations:
-          title: "MariaDB Connect is down ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
-          description: "MariaDB Connect instance is down, VALUE = {{ $value }}"
       - alert: ServiceIsDown
         expr: up{job="seaman-metric"} == 0
         for: 1m
