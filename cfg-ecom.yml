@@ -50,3 +50,4 @@ configs:
 - { name: "ECOM_PAYMENT_KTC_MERCHANT_ID", type: "s", required: false, sample: ""}
 - { name: "ECOM_PAYMENT_KTC_IPP_MERCHANT_ID", type: "s", required: false, sample: "991424841"}
 - { name: "ECOM_PAYMENT_KTC_API_ENDPOINT", type: "s", required: false, sample: "https://testpaygate.ktc.co.th/ktc/eng/merchandize/payment/payForm.jsp"}
+- { name: "ECOM_KERRY_TRACKING_NO_PREFIX", type: "s", required: false, sample: "JMBS"}
