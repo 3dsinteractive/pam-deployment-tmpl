@@ -28,225 +28,225 @@ data:
         - targets: 
           - "prom1:9090"
 
-    # - job_name: metrics-server
-    #   metrics_path: /metrics
-    #   scheme: http
-    #   tls_config:
-    #     insecure_skip_verify: true
-    #   kubernetes_sd_configs:
-    #   - role: endpoints
-    #     namespaces:
-    #       names:
-    #       - <namespace>
-    #   relabel_configs:
-    #   - source_labels: [__meta_kubernetes_pod_name]
-    #     separator: ;
-    #     regex: (metrics-server-exporter-.*?)
-    #     action: keep
-    #   - source_labels: [__meta_kubernetes_namespace]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: namespace
-    #     replacement: $1
-    #     action: replace
-    #   - source_labels: [__meta_kubernetes_pod_name]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: pod
-    #     replacement: $1
-    #     action: replace
-    #   - source_labels: [__meta_kubernetes_service_name]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: service
-    #     replacement: $1
-    #     action: replace
+    - job_name: metrics-server
+      metrics_path: /metrics
+      scheme: http
+      tls_config:
+        insecure_skip_verify: true
+      kubernetes_sd_configs:
+      - role: endpoints
+        namespaces:
+          names:
+          - <namespace>
+      relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_name]
+        separator: ;
+        regex: (metrics-server-exporter-.*?)
+        action: keep
+      - source_labels: [__meta_kubernetes_namespace]
+        separator: ;
+        regex: (.*)
+        target_label: namespace
+        replacement: $1
+        action: replace
+      - source_labels: [__meta_kubernetes_pod_name]
+        separator: ;
+        regex: (.*)
+        target_label: pod
+        replacement: $1
+        action: replace
+      - source_labels: [__meta_kubernetes_service_name]
+        separator: ;
+        regex: (.*)
+        target_label: service
+        replacement: $1
+        action: replace
 
-    # - job_name: kube-state-metrics
-    #   static_configs:
-    #     - targets: 
-    #       - "kube-state-metrics:8080"
+    - job_name: kube-state-metrics
+      static_configs:
+        - targets: 
+          - "kube-state-metrics:8080"
 
-    # - job_name: redis-metric
-    #   scrape_interval: 60s
-    #   scrape_timeout: 30s
-    #   metrics_path: /metrics
-    #   scheme: http
-    #   tls_config:
-    #     insecure_skip_verify: true
-    #   kubernetes_sd_configs:
-    #   - role: endpoints
-    #     namespaces:
-    #       names:
-    #       - <namespace>
-    #   relabel_configs:
-    #   - source_labels: [__meta_kubernetes_pod_name]
-    #     separator: ;
-    #     regex: (prom-redis-exporter-.*?)
-    #     action: keep
-    #   - source_labels: [__meta_kubernetes_namespace]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: namespace
-    #     replacement: $1
-    #     action: replace
-    #   - source_labels: [__meta_kubernetes_pod_name]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: pod
-    #     replacement: $1
-    #     action: replace
-    #   - source_labels: [__meta_kubernetes_service_name]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: service
-    #     replacement: $1
-    #     action: replace
+    - job_name: redis-metric
+      scrape_interval: 60s
+      scrape_timeout: 30s
+      metrics_path: /metrics
+      scheme: http
+      tls_config:
+        insecure_skip_verify: true
+      kubernetes_sd_configs:
+      - role: endpoints
+        namespaces:
+          names:
+          - <namespace>
+      relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_name]
+        separator: ;
+        regex: (prom-redis-exporter-.*?)
+        action: keep
+      - source_labels: [__meta_kubernetes_namespace]
+        separator: ;
+        regex: (.*)
+        target_label: namespace
+        replacement: $1
+        action: replace
+      - source_labels: [__meta_kubernetes_pod_name]
+        separator: ;
+        regex: (.*)
+        target_label: pod
+        replacement: $1
+        action: replace
+      - source_labels: [__meta_kubernetes_service_name]
+        separator: ;
+        regex: (.*)
+        target_label: service
+        replacement: $1
+        action: replace
     
-    # - job_name: els-metric
-    #   scrape_interval: 60s
-    #   scrape_timeout: 30s
-    #   metrics_path: /metrics
-    #   scheme: http
-    #   tls_config:
-    #     insecure_skip_verify: true
-    #   kubernetes_sd_configs:
-    #   - role: endpoints
-    #     namespaces:
-    #       names:
-    #       - <namespace>
-    #   relabel_configs:
-    #   - source_labels: [__meta_kubernetes_pod_name]
-    #     separator: ;
-    #     regex: (prom-els-exporter-.*?)
-    #     action: keep
-    #   - source_labels: [__meta_kubernetes_namespace]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: namespace
-    #     replacement: $1
-    #     action: replace
-    #   - source_labels: [__meta_kubernetes_pod_name]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: pod
-    #     replacement: $1
-    #     action: replace
-    #   - source_labels: [__meta_kubernetes_service_name]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: service
-    #     replacement: $1
-    #     action: replace
+    - job_name: els-metric
+      scrape_interval: 60s
+      scrape_timeout: 30s
+      metrics_path: /metrics
+      scheme: http
+      tls_config:
+        insecure_skip_verify: true
+      kubernetes_sd_configs:
+      - role: endpoints
+        namespaces:
+          names:
+          - <namespace>
+      relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_name]
+        separator: ;
+        regex: (prom-els-exporter-.*?)
+        action: keep
+      - source_labels: [__meta_kubernetes_namespace]
+        separator: ;
+        regex: (.*)
+        target_label: namespace
+        replacement: $1
+        action: replace
+      - source_labels: [__meta_kubernetes_pod_name]
+        separator: ;
+        regex: (.*)
+        target_label: pod
+        replacement: $1
+        action: replace
+      - source_labels: [__meta_kubernetes_service_name]
+        separator: ;
+        regex: (.*)
+        target_label: service
+        replacement: $1
+        action: replace
 
-    # - job_name: kafka-metric
-    #   metrics_path: /metrics
-    #   scrape_interval: 180s
-    #   scrape_timeout: 60s
-    #   scheme: http
-    #   tls_config:
-    #     insecure_skip_verify: true
-    #   kubernetes_sd_configs:
-    #   - role: endpoints
-    #     namespaces:
-    #       names:
-    #       - <namespace>
-    #   relabel_configs:
-    #   - source_labels: [__meta_kubernetes_pod_name]
-    #     separator: ;
-    #     regex: (prom-kafka-exporter-.*?)
-    #     action: keep
-    #   - source_labels: [__meta_kubernetes_namespace]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: namespace
-    #     replacement: $1
-    #     action: replace
-    #   - source_labels: [__meta_kubernetes_pod_name]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: pod
-    #     replacement: $1
-    #     action: replace
-    #   - source_labels: [__meta_kubernetes_service_name]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: service
-    #     replacement: $1
-    #     action: replace
+    - job_name: kafka-metric
+      metrics_path: /metrics
+      scrape_interval: 180s
+      scrape_timeout: 60s
+      scheme: http
+      tls_config:
+        insecure_skip_verify: true
+      kubernetes_sd_configs:
+      - role: endpoints
+        namespaces:
+          names:
+          - <namespace>
+      relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_name]
+        separator: ;
+        regex: (prom-kafka-exporter-.*?)
+        action: keep
+      - source_labels: [__meta_kubernetes_namespace]
+        separator: ;
+        regex: (.*)
+        target_label: namespace
+        replacement: $1
+        action: replace
+      - source_labels: [__meta_kubernetes_pod_name]
+        separator: ;
+        regex: (.*)
+        target_label: pod
+        replacement: $1
+        action: replace
+      - source_labels: [__meta_kubernetes_service_name]
+        separator: ;
+        regex: (.*)
+        target_label: service
+        replacement: $1
+        action: replace
 
-    # - job_name: maria-connect-metric
-    #   scrape_interval: 60s
-    #   scrape_timeout: 30s
-    #   metrics_path: /metrics
-    #   scheme: http
-    #   tls_config:
-    #     insecure_skip_verify: true
-    #   kubernetes_sd_configs:
-    #   - role: endpoints
-    #     namespaces:
-    #       names:
-    #       - <namespace>
-    #   relabel_configs:
-    #   - source_labels: [__meta_kubernetes_pod_name]
-    #     separator: ;
-    #     regex: (prom-maria-connect-exporter-.*?)
-    #     action: keep
-    #   - source_labels: [__meta_kubernetes_namespace]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: namespace
-    #     replacement: $1
-    #     action: replace
-    #   - source_labels: [__meta_kubernetes_pod_name]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: pod
-    #     replacement: $1
-    #     action: replace
-    #   - source_labels: [__meta_kubernetes_service_name]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: service
-    #     replacement: $1
-    #     action: replace
+    - job_name: maria-connect-metric
+      scrape_interval: 60s
+      scrape_timeout: 30s
+      metrics_path: /metrics
+      scheme: http
+      tls_config:
+        insecure_skip_verify: true
+      kubernetes_sd_configs:
+      - role: endpoints
+        namespaces:
+          names:
+          - <namespace>
+      relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_name]
+        separator: ;
+        regex: (prom-maria-connect-exporter-.*?)
+        action: keep
+      - source_labels: [__meta_kubernetes_namespace]
+        separator: ;
+        regex: (.*)
+        target_label: namespace
+        replacement: $1
+        action: replace
+      - source_labels: [__meta_kubernetes_pod_name]
+        separator: ;
+        regex: (.*)
+        target_label: pod
+        replacement: $1
+        action: replace
+      - source_labels: [__meta_kubernetes_service_name]
+        separator: ;
+        regex: (.*)
+        target_label: service
+        replacement: $1
+        action: replace
 
-    # - job_name: seaman-metric
-    #   metrics_path: /metrics
-    #   scheme: http
-    #   tls_config:
-    #     insecure_skip_verify: true
-    #   kubernetes_sd_configs:
-    #   - role: endpoints
-    #     namespaces:
-    #       names:
-    #       - <namespace>
-    #   relabel_configs:
-    #   - source_labels: [__meta_kubernetes_pod_name]
-    #     separator: ;
-    #     regex: (<monitorServices>)
-    #     action: keep
-    #   - source_labels: [__meta_kubernetes_pod_container_port_number]
-    #     regex: 8080
-    #     action: keep
-    #   - source_labels: [__meta_kubernetes_namespace]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: namespace
-    #     replacement: $1
-    #     action: replace
-    #   - source_labels: [__meta_kubernetes_pod_name]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: pod
-    #     replacement: $1
-    #     action: replace
-    #   - source_labels: [__meta_kubernetes_service_name]
-    #     separator: ;
-    #     regex: (.*)
-    #     target_label: service
-    #     replacement: $1
-    #     action: replace
+    - job_name: seaman-metric
+      metrics_path: /metrics
+      scheme: http
+      tls_config:
+        insecure_skip_verify: true
+      kubernetes_sd_configs:
+      - role: endpoints
+        namespaces:
+          names:
+          - <namespace>
+      relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_name]
+        separator: ;
+        regex: (<monitorServices>)
+        action: keep
+      - source_labels: [__meta_kubernetes_pod_container_port_number]
+        regex: 8080
+        action: keep
+      - source_labels: [__meta_kubernetes_namespace]
+        separator: ;
+        regex: (.*)
+        target_label: namespace
+        replacement: $1
+        action: replace
+      - source_labels: [__meta_kubernetes_pod_name]
+        separator: ;
+        regex: (.*)
+        target_label: pod
+        replacement: $1
+        action: replace
+      - source_labels: [__meta_kubernetes_service_name]
+        separator: ;
+        regex: (.*)
+        target_label: service
+        replacement: $1
+        action: replace
 
     - job_name: node-exporter
       honor_timestamps: true
