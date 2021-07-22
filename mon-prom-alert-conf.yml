@@ -39,7 +39,7 @@ data:
           title: "Host memory under memory pressure ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
           description: "The node is under heavy memory pressure. High rate of major page faults, VALUE = {{ $value }}"
       - alert: HostHighCpuLoad
-        expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 98
+        expr: 100 - (avg by(instance,namespace) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 98
         for: 1m
         labels:
           service: app
@@ -48,7 +48,7 @@ data:
           title: "Host high CPU load ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
           description: "CPU load is > 98%, VALUE = {{ $value }}"
       - alert: HostUnusualNetworkThroughputIn
-        expr: sum by (instance) (irate(node_network_receive_bytes_total[2m])) / 1024 / 1024 > 100
+        expr: sum by (instance,namespace) (irate(node_network_receive_bytes_total[2m])) / 1024 / 1024 > 100
         for: 5m
         labels:
           service: node
@@ -57,7 +57,7 @@ data:
           title: "Host unusual network throughput in ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
           description: "Host network interfaces are probably receiving too much data (> 100 MB/s), VALUE = {{ $value }}"
       - alert: HostUnusualNetworkThroughputOut
-        expr: sum by (instance) (irate(node_network_transmit_bytes_total[2m])) / 1024 / 1024 > 100
+        expr: sum by (instance,namespace) (irate(node_network_transmit_bytes_total[2m])) / 1024 / 1024 > 100
         for: 5m
         labels:
           service: node
@@ -66,7 +66,7 @@ data:
           title: "Host unusual network throughput out ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
           description: "Host network interfaces are probably sending too much data (> 100 MB/s), VALUE = {{ $value }}"
       - alert: HostUnusualDiskReadRate
-        expr: sum by (instance) (irate(node_disk_read_bytes_total[2m])) / 1024 / 1024 > 50
+        expr: sum by (instance,namespace) (irate(node_disk_read_bytes_total[2m])) / 1024 / 1024 > 50
         for: 5m
         labels:
           service: node
@@ -75,7 +75,7 @@ data:
           title: "Host unusual disk read rate ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
           description: "Disk is probably reading too much data (> 50 MB/s), VALUE = {{ $value }}"
       - alert: HostUnusualDiskWriteRate
-        expr: sum by (instance) (irate(node_disk_written_bytes_total[2m])) / 1024 / 1024 > 50
+        expr: sum by (instance,namespace) (irate(node_disk_written_bytes_total[2m])) / 1024 / 1024 > 50
         for: 5m
         labels:
           service: node
