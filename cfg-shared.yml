@@ -98,3 +98,4 @@ configs:
 - { name: "PAM_MKT_BACKEND_API_INTERNAL", alias: "PAM_MKT_BACKEND_API_INTERNAL", type: "s", required: true, sample: "http://mkt-backend-api:8080" }
 - { name: "PAM_ENABLE_PTASK_MANAGER", alias: "PAM_ENABLE_PTASK_MANAGER", type: "b", required: false, sample: true }
 - { name: "PAM_ENABLE_MIGRATE_ECOM", alias: "PAM_ENABLE_MIGRATE_ECOM", type: "b", required: false, sample: true }
+- { name: "PAM4_FILESTORE_CDN", alias: "PAM4_FILESTORE_CDN", type: "s", required: true, sample: https://d3ci6p10x5fu7q.cloudfront.net }
