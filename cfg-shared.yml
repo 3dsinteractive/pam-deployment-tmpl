@@ -99,3 +99,5 @@ configs:
 - { name: "PAM_ENABLE_PTASK_MANAGER", alias: "PAM_ENABLE_PTASK_MANAGER", type: "b", required: false, sample: true }
 - { name: "PAM_ENABLE_MIGRATE_ECOM", alias: "PAM_ENABLE_MIGRATE_ECOM", type: "b", required: false, sample: true }
 - { name: "PAM4_FILESTORE_CDN", alias: "PAM4_FILESTORE_CDN", type: "s", required: false, sample: https://d3ci6p10x5fu7q.cloudfront.net }
+- { name: "PAM4_INDEXER_AUTH_USER", alias: "PAM4_INDEXER_AUTH_USER", type: "s", required: false, sample: admin }
+- { name: "PAM4_INDEXER_AUTH_PASSWORD", alias: "PAM4_INDEXER_AUTH_PASSWORD", type: "s", required: false, sample: 3DSinteractive! }
