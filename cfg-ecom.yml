@@ -52,3 +52,4 @@ configs:
 - { name: "ECOM_PAYMENT_KTC_API_ENDPOINT", type: "s", required: false, sample: "https://testpaygate.ktc.co.th/ktc/eng/merchandize/payment/payForm.jsp"}
 - { name: "ECOM_KERRY_TRACKING_NO_PREFIX", type: "s", required: false, sample: "JMBS"}
 - { name: "ECOM_ENABLE_TRACKING_PER_STORE", type: "b", required: false, sample: "false" }
+- { name: "ECOM_NOT_SUPPORTED_SHIPPING_ZIPCODES", type: "s", required: false, sample: "95000,95110"}
