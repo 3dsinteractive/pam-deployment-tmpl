@@ -4,7 +4,7 @@ metadata:
   name: <name>
   namespace: <namespace>
 spec:
-  ttlSecondsAfterFinished: 1200
+  ttlSecondsAfterFinished: 180
   template:
     spec:
       imagePullSecrets:
