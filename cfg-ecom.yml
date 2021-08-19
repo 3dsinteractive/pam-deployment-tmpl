@@ -54,3 +54,4 @@ configs:
 - { name: "ECOM_ENABLE_TRACKING_PER_STORE", type: "b", required: false, sample: "false" }
 - { name: "ECOM_NOT_SUPPORTED_SHIPPING_ZIPCODES", type: "s", required: false, sample: "95000,95110"}
 - { name: "PAM_ENABLE_CREATE_USER_WITH_AZURE_AD", alias: "PAM_ENABLE_CREATE_USER_WITH_AZURE_AD", type: "b", required: false, sample: "false" }
+- { name: "ECOM_ENABLE_SUM_STORE_STOCK_BY_STORE_ID", type: "b", required: false, sample: "false" }
