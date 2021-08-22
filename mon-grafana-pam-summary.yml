@@ -72,892 +72,6 @@ data:
             "x": 0,
             "y": 0
           },
-          "id": 56,
-          "panels": [
-            {
-              "aliasColors": {},
-              "bars": false,
-              "dashLength": 10,
-              "dashes": false,
-              "datasource": null,
-              "fill": 1,
-              "fillGradient": 0,
-              "gridPos": {
-                "h": 8,
-                "w": 18,
-                "x": 0,
-                "y": 1
-              },
-              "id": 57,
-              "legend": {
-                "avg": false,
-                "current": false,
-                "max": false,
-                "min": false,
-                "show": true,
-                "total": false,
-                "values": false
-              },
-              "lines": true,
-              "linewidth": 1,
-              "nullPointMode": "null",
-              "options": {
-                "dataLinks": []
-              },
-              "percentage": false,
-              "pointradius": 2,
-              "points": false,
-              "renderer": "flot",
-              "seriesOverrides": [],
-              "spaceLength": 10,
-              "stack": false,
-              "steppedLine": false,
-              "targets": [
-                {
-                  "expr": "topk(100, sum( rate(seaman_ptask_manager_request_total{}[1m]) ) by (endpoint) * 60 )",
-                  "legendFormat": "{{endpoint}}",
-                  "refId": "A"
-                }
-              ],
-              "thresholds": [],
-              "timeFrom": null,
-              "timeRegions": [],
-              "timeShift": null,
-              "title": "Works (count / min)",
-              "tooltip": {
-                "shared": true,
-                "sort": 0,
-                "value_type": "individual"
-              },
-              "type": "graph",
-              "xaxis": {
-                "buckets": null,
-                "mode": "time",
-                "name": null,
-                "show": true,
-                "values": []
-              },
-              "yaxes": [
-                {
-                  "format": "short",
-                  "label": null,
-                  "logBase": 1,
-                  "max": null,
-                  "min": null,
-                  "show": true
-                },
-                {
-                  "format": "short",
-                  "label": null,
-                  "logBase": 1,
-                  "max": null,
-                  "min": null,
-                  "show": true
-                }
-              ],
-              "yaxis": {
-                "align": false,
-                "alignLevel": null
-              }
-            },
-            {
-              "cacheTimeout": null,
-              "colorBackground": false,
-              "colorValue": false,
-              "colors": [
-                "#299c46",
-                "rgba(237, 129, 40, 0.89)",
-                "#d44a3a"
-              ],
-              "datasource": null,
-              "format": "none",
-              "gauge": {
-                "maxValue": 100,
-                "minValue": 0,
-                "show": false,
-                "thresholdLabels": false,
-                "thresholdMarkers": true
-              },
-              "gridPos": {
-                "h": 4,
-                "w": 3,
-                "x": 18,
-                "y": 1
-              },
-              "id": 58,
-              "interval": null,
-              "links": [],
-              "mappingType": 1,
-              "mappingTypes": [
-                {
-                  "name": "value to text",
-                  "value": 1
-                },
-                {
-                  "name": "range to text",
-                  "value": 2
-                }
-              ],
-              "maxDataPoints": 100,
-              "nullPointMode": "connected",
-              "nullText": null,
-              "options": {},
-              "postfix": "",
-              "postfixFontSize": "50%",
-              "prefix": "",
-              "prefixFontSize": "50%",
-              "rangeMaps": [
-                {
-                  "from": "null",
-                  "text": "N/A",
-                  "to": "null"
-                }
-              ],
-              "sparkline": {
-                "fillColor": "rgba(31, 118, 189, 0.18)",
-                "full": false,
-                "lineColor": "rgb(31, 120, 193)",
-                "show": false,
-                "ymax": null,
-                "ymin": null
-              },
-              "tableColumn": "",
-              "targets": [
-                {
-                  "expr": "sum(seaman_ptask_manager_inflight{endpoint=\"ptask_evaler_inform_update\"})",
-                  "refId": "A"
-                }
-              ],
-              "thresholds": "",
-              "timeFrom": null,
-              "timeShift": null,
-              "title": "Evaler",
-              "type": "singlestat",
-              "valueFontSize": "80%",
-              "valueMaps": [
-                {
-                  "op": "=",
-                  "text": "N/A",
-                  "value": "null"
-                }
-              ],
-              "valueName": "avg"
-            },
-            {
-              "cacheTimeout": null,
-              "colorBackground": false,
-              "colorValue": false,
-              "colors": [
-                "#299c46",
-                "rgba(237, 129, 40, 0.89)",
-                "#d44a3a"
-              ],
-              "datasource": null,
-              "format": "none",
-              "gauge": {
-                "maxValue": 100,
-                "minValue": 0,
-                "show": false,
-                "thresholdLabels": false,
-                "thresholdMarkers": true
-              },
-              "gridPos": {
-                "h": 4,
-                "w": 3,
-                "x": 21,
-                "y": 1
-              },
-              "id": 59,
-              "interval": null,
-              "links": [],
-              "mappingType": 1,
-              "mappingTypes": [
-                {
-                  "name": "value to text",
-                  "value": 1
-                },
-                {
-                  "name": "range to text",
-                  "value": 2
-                }
-              ],
-              "maxDataPoints": 100,
-              "nullPointMode": "connected",
-              "nullText": null,
-              "options": {},
-              "postfix": "",
-              "postfixFontSize": "50%",
-              "prefix": "",
-              "prefixFontSize": "50%",
-              "rangeMaps": [
-                {
-                  "from": "null",
-                  "text": "N/A",
-                  "to": "null"
-                }
-              ],
-              "sparkline": {
-                "fillColor": "rgba(31, 118, 189, 0.18)",
-                "full": false,
-                "lineColor": "rgb(31, 120, 193)",
-                "show": false,
-                "ymax": null,
-                "ymin": null
-              },
-              "tableColumn": "",
-              "targets": [
-                {
-                  "expr": "sum(seaman_ptask_manager_inflight{endpoint=~\"ptask_evaler_daily_refresh_.*\"})",
-                  "refId": "A"
-                }
-              ],
-              "thresholds": "",
-              "timeFrom": null,
-              "timeShift": null,
-              "title": "Daily Refresh",
-              "type": "singlestat",
-              "valueFontSize": "80%",
-              "valueMaps": [
-                {
-                  "op": "=",
-                  "text": "N/A",
-                  "value": "null"
-                }
-              ],
-              "valueName": "avg"
-            },
-            {
-              "aliasColors": {},
-              "bars": false,
-              "dashLength": 10,
-              "dashes": false,
-              "datasource": "Prometheus",
-              "decimals": null,
-              "fill": 1,
-              "fillGradient": 0,
-              "gridPos": {
-                "h": 7,
-                "w": 24,
-                "x": 0,
-                "y": 9
-              },
-              "id": 24,
-              "legend": {
-                "alignAsTable": true,
-                "avg": false,
-                "current": true,
-                "hideZero": true,
-                "max": true,
-                "min": true,
-                "rightSide": true,
-                "show": true,
-                "sideWidth": null,
-                "sort": "current",
-                "sortDesc": true,
-                "total": false,
-                "values": true
-              },
-              "lines": true,
-              "linewidth": 1,
-              "nullPointMode": "null",
-              "options": {
-                "dataLinks": []
-              },
-              "percentage": false,
-              "pointradius": 2,
-              "points": false,
-              "renderer": "flot",
-              "seriesOverrides": [],
-              "spaceLength": 10,
-              "stack": false,
-              "steppedLine": false,
-              "targets": [
-                {
-                  "expr": "topk(100, (sum(rate(seaman_ptask_manager_process_time_seconds_sum{}[5m])) by (endpoint) * 1000) / \n(sum(rate(seaman_ptask_manager_request_total{}[5m])) by (endpoint) ))",
-                  "legendFormat": "{{endpoint}}",
-                  "refId": "A"
-                }
-              ],
-              "thresholds": [],
-              "timeFrom": null,
-              "timeRegions": [],
-              "timeShift": null,
-              "title": "Works (Time/Request)",
-              "tooltip": {
-                "shared": true,
-                "sort": 2,
-                "value_type": "individual"
-              },
-              "type": "graph",
-              "xaxis": {
-                "buckets": null,
-                "mode": "time",
-                "name": null,
-                "show": true,
-                "values": []
-              },
-              "yaxes": [
-                {
-                  "format": "ms",
-                  "label": null,
-                  "logBase": 1,
-                  "max": null,
-                  "min": null,
-                  "show": true
-                },
-                {
-                  "format": "ms",
-                  "label": null,
-                  "logBase": 1,
-                  "max": null,
-                  "min": null,
-                  "show": true
-                }
-              ],
-              "yaxis": {
-                "align": false,
-                "alignLevel": null
-              }
-            }
-          ],
-          "title": "PTask Manager",
-          "type": "row"
-        },
-        {
-          "collapsed": true,
-          "datasource": null,
-          "gridPos": {
-            "h": 1,
-            "w": 24,
-            "x": 0,
-            "y": 1
-          },
-          "id": 46,
-          "panels": [
-            {
-              "aliasColors": {},
-              "bars": false,
-              "dashLength": 10,
-              "dashes": false,
-              "datasource": null,
-              "fill": 1,
-              "fillGradient": 0,
-              "gridPos": {
-                "h": 8,
-                "w": 18,
-                "x": 0,
-                "y": 2
-              },
-              "id": 48,
-              "legend": {
-                "avg": false,
-                "current": false,
-                "max": false,
-                "min": false,
-                "show": true,
-                "total": false,
-                "values": false
-              },
-              "lines": true,
-              "linewidth": 1,
-              "nullPointMode": "null",
-              "options": {
-                "dataLinks": []
-              },
-              "percentage": false,
-              "pointradius": 2,
-              "points": false,
-              "renderer": "flot",
-              "seriesOverrides": [],
-              "spaceLength": 10,
-              "stack": false,
-              "steppedLine": false,
-              "targets": [
-                {
-                  "expr": "topk(100, sum( rate(seaman_worker_pool_request_total{}[1m]) ) by (endpoint) * 60 )",
-                  "legendFormat": "{{endpoint}}",
-                  "refId": "A"
-                }
-              ],
-              "thresholds": [],
-              "timeFrom": null,
-              "timeRegions": [],
-              "timeShift": null,
-              "title": "Works (count / min)",
-              "tooltip": {
-                "shared": true,
-                "sort": 0,
-                "value_type": "individual"
-              },
-              "type": "graph",
-              "xaxis": {
-                "buckets": null,
-                "mode": "time",
-                "name": null,
-                "show": true,
-                "values": []
-              },
-              "yaxes": [
-                {
-                  "format": "short",
-                  "label": null,
-                  "logBase": 1,
-                  "max": null,
-                  "min": null,
-                  "show": true
-                },
-                {
-                  "format": "short",
-                  "label": null,
-                  "logBase": 1,
-                  "max": null,
-                  "min": null,
-                  "show": true
-                }
-              ],
-              "yaxis": {
-                "align": false,
-                "alignLevel": null
-              }
-            },
-            {
-              "cacheTimeout": null,
-              "colorBackground": false,
-              "colorValue": false,
-              "colors": [
-                "#299c46",
-                "rgba(237, 129, 40, 0.89)",
-                "#d44a3a"
-              ],
-              "datasource": null,
-              "format": "none",
-              "gauge": {
-                "maxValue": 100,
-                "minValue": 0,
-                "show": false,
-                "thresholdLabels": false,
-                "thresholdMarkers": true
-              },
-              "gridPos": {
-                "h": 4,
-                "w": 3,
-                "x": 18,
-                "y": 2
-              },
-              "id": 50,
-              "interval": null,
-              "links": [],
-              "mappingType": 1,
-              "mappingTypes": [
-                {
-                  "name": "value to text",
-                  "value": 1
-                },
-                {
-                  "name": "range to text",
-                  "value": 2
-                }
-              ],
-              "maxDataPoints": 100,
-              "nullPointMode": "connected",
-              "nullText": null,
-              "options": {},
-              "postfix": "",
-              "postfixFontSize": "50%",
-              "prefix": "",
-              "prefixFontSize": "50%",
-              "rangeMaps": [
-                {
-                  "from": "null",
-                  "text": "N/A",
-                  "to": "null"
-                }
-              ],
-              "sparkline": {
-                "fillColor": "rgba(31, 118, 189, 0.18)",
-                "full": false,
-                "lineColor": "rgb(31, 120, 193)",
-                "show": false,
-                "ymax": null,
-                "ymin": null
-              },
-              "tableColumn": "",
-              "targets": [
-                {
-                  "expr": "sum(seaman_worker_pool_inflight{endpoint=\"ptask--ptask-trgfeeder\"})",
-                  "refId": "A"
-                }
-              ],
-              "thresholds": "",
-              "timeFrom": null,
-              "timeShift": null,
-              "title": "Feeder",
-              "type": "singlestat",
-              "valueFontSize": "80%",
-              "valueMaps": [
-                {
-                  "op": "=",
-                  "text": "N/A",
-                  "value": "null"
-                }
-              ],
-              "valueName": "avg"
-            },
-            {
-              "cacheTimeout": null,
-              "colorBackground": false,
-              "colorValue": false,
-              "colors": [
-                "#299c46",
-                "rgba(237, 129, 40, 0.89)",
-                "#d44a3a"
-              ],
-              "datasource": null,
-              "format": "none",
-              "gauge": {
-                "maxValue": 100,
-                "minValue": 0,
-                "show": false,
-                "thresholdLabels": false,
-                "thresholdMarkers": true
-              },
-              "gridPos": {
-                "h": 4,
-                "w": 3,
-                "x": 21,
-                "y": 2
-              },
-              "id": 51,
-              "interval": null,
-              "links": [],
-              "mappingType": 1,
-              "mappingTypes": [
-                {
-                  "name": "value to text",
-                  "value": 1
-                },
-                {
-                  "name": "range to text",
-                  "value": 2
-                }
-              ],
-              "maxDataPoints": 100,
-              "nullPointMode": "connected",
-              "nullText": null,
-              "options": {},
-              "postfix": "",
-              "postfixFontSize": "50%",
-              "prefix": "",
-              "prefixFontSize": "50%",
-              "rangeMaps": [
-                {
-                  "from": "null",
-                  "text": "N/A",
-                  "to": "null"
-                }
-              ],
-              "sparkline": {
-                "fillColor": "rgba(31, 118, 189, 0.18)",
-                "full": false,
-                "lineColor": "rgb(31, 120, 193)",
-                "show": false,
-                "ymax": null,
-                "ymin": null
-              },
-              "tableColumn": "",
-              "targets": [
-                {
-                  "expr": "sum(seaman_worker_pool_inflight{endpoint=\"ptask--ptask-trgeval\"})",
-                  "refId": "A"
-                }
-              ],
-              "thresholds": "",
-              "timeFrom": null,
-              "timeShift": null,
-              "title": "Evaller",
-              "type": "singlestat",
-              "valueFontSize": "80%",
-              "valueMaps": [
-                {
-                  "op": "=",
-                  "text": "N/A",
-                  "value": "null"
-                }
-              ],
-              "valueName": "avg"
-            },
-            {
-              "cacheTimeout": null,
-              "colorBackground": false,
-              "colorValue": false,
-              "colors": [
-                "#299c46",
-                "rgba(237, 129, 40, 0.89)",
-                "#d44a3a"
-              ],
-              "datasource": null,
-              "format": "none",
-              "gauge": {
-                "maxValue": 100,
-                "minValue": 0,
-                "show": false,
-                "thresholdLabels": false,
-                "thresholdMarkers": true
-              },
-              "gridPos": {
-                "h": 4,
-                "w": 3,
-                "x": 18,
-                "y": 6
-              },
-              "id": 52,
-              "interval": null,
-              "links": [],
-              "mappingType": 1,
-              "mappingTypes": [
-                {
-                  "name": "value to text",
-                  "value": 1
-                },
-                {
-                  "name": "range to text",
-                  "value": 2
-                }
-              ],
-              "maxDataPoints": 100,
-              "nullPointMode": "connected",
-              "nullText": null,
-              "options": {},
-              "postfix": "",
-              "postfixFontSize": "50%",
-              "prefix": "",
-              "prefixFontSize": "50%",
-              "rangeMaps": [
-                {
-                  "from": "null",
-                  "text": "N/A",
-                  "to": "null"
-                }
-              ],
-              "sparkline": {
-                "fillColor": "rgba(31, 118, 189, 0.18)",
-                "full": false,
-                "lineColor": "rgb(31, 120, 193)",
-                "show": false,
-                "ymax": null,
-                "ymin": null
-              },
-              "tableColumn": "",
-              "targets": [
-                {
-                  "expr": "sum(seaman_worker_pool_inflight{endpoint=\"ptask--ptask-msgbuilder\"})",
-                  "refId": "A"
-                }
-              ],
-              "thresholds": "",
-              "timeFrom": null,
-              "timeShift": null,
-              "title": "Builder",
-              "type": "singlestat",
-              "valueFontSize": "80%",
-              "valueMaps": [
-                {
-                  "op": "=",
-                  "text": "N/A",
-                  "value": "null"
-                }
-              ],
-              "valueName": "avg"
-            },
-            {
-              "cacheTimeout": null,
-              "colorBackground": false,
-              "colorValue": false,
-              "colors": [
-                "#299c46",
-                "rgba(237, 129, 40, 0.89)",
-                "#d44a3a"
-              ],
-              "datasource": null,
-              "format": "none",
-              "gauge": {
-                "maxValue": 100,
-                "minValue": 0,
-                "show": false,
-                "thresholdLabels": false,
-                "thresholdMarkers": true
-              },
-              "gridPos": {
-                "h": 4,
-                "w": 3,
-                "x": 21,
-                "y": 6
-              },
-              "id": 53,
-              "interval": null,
-              "links": [],
-              "mappingType": 1,
-              "mappingTypes": [
-                {
-                  "name": "value to text",
-                  "value": 1
-                },
-                {
-                  "name": "range to text",
-                  "value": 2
-                }
-              ],
-              "maxDataPoints": 100,
-              "nullPointMode": "connected",
-              "nullText": null,
-              "options": {},
-              "postfix": "",
-              "postfixFontSize": "50%",
-              "prefix": "",
-              "prefixFontSize": "50%",
-              "rangeMaps": [
-                {
-                  "from": "null",
-                  "text": "N/A",
-                  "to": "null"
-                }
-              ],
-              "sparkline": {
-                "fillColor": "rgba(31, 118, 189, 0.18)",
-                "full": false,
-                "lineColor": "rgb(31, 120, 193)",
-                "show": false,
-                "ymax": null,
-                "ymin": null
-              },
-              "tableColumn": "",
-              "targets": [
-                {
-                  "expr": "sum(seaman_worker_pool_inflight{endpoint=\"ptask--ptask-msgsender\"})",
-                  "refId": "A"
-                }
-              ],
-              "thresholds": "",
-              "timeFrom": null,
-              "timeShift": null,
-              "title": "Sender",
-              "type": "singlestat",
-              "valueFontSize": "80%",
-              "valueMaps": [
-                {
-                  "op": "=",
-                  "text": "N/A",
-                  "value": "null"
-                }
-              ],
-              "valueName": "avg"
-            },
-            {
-              "aliasColors": {},
-              "bars": false,
-              "dashLength": 10,
-              "dashes": false,
-              "datasource": "Prometheus",
-              "decimals": null,
-              "fill": 1,
-              "fillGradient": 0,
-              "gridPos": {
-                "h": 7,
-                "w": 24,
-                "x": 0,
-                "y": 10
-              },
-              "id": 60,
-              "legend": {
-                "alignAsTable": true,
-                "avg": false,
-                "current": true,
-                "hideZero": true,
-                "max": true,
-                "min": true,
-                "rightSide": true,
-                "show": true,
-                "sideWidth": null,
-                "sort": "current",
-                "sortDesc": true,
-                "total": false,
-                "values": true
-              },
-              "lines": true,
-              "linewidth": 1,
-              "nullPointMode": "null",
-              "options": {
-                "dataLinks": []
-              },
-              "percentage": false,
-              "pointradius": 2,
-              "points": false,
-              "renderer": "flot",
-              "seriesOverrides": [],
-              "spaceLength": 10,
-              "stack": false,
-              "steppedLine": false,
-              "targets": [
-                {
-                  "expr": "topk(100, (sum(rate(seaman_worker_pool_process_time_seconds_sum{}[5m])) by (endpoint) * 1000) / \n(sum(rate(seaman_worker_pool_request_total{}[5m])) by (endpoint) ))",
-                  "legendFormat": "{{endpoint}}",
-                  "refId": "A"
-                }
-              ],
-              "thresholds": [],
-              "timeFrom": null,
-              "timeRegions": [],
-              "timeShift": null,
-              "title": "Works (Time/Request)",
-              "tooltip": {
-                "shared": true,
-                "sort": 2,
-                "value_type": "individual"
-              },
-              "type": "graph",
-              "xaxis": {
-                "buckets": null,
-                "mode": "time",
-                "name": null,
-                "show": true,
-                "values": []
-              },
-              "yaxes": [
-                {
-                  "format": "ms",
-                  "label": null,
-                  "logBase": 1,
-                  "max": null,
-                  "min": null,
-                  "show": true
-                },
-                {
-                  "format": "ms",
-                  "label": null,
-                  "logBase": 1,
-                  "max": null,
-                  "min": null,
-                  "show": true
-                }
-              ],
-              "yaxis": {
-                "align": false,
-                "alignLevel": null
-              }
-            }
-          ],
-          "title": "Worker Pool",
-          "type": "row"
-        },
-        {
-          "collapsed": true,
-          "datasource": null,
-          "gridPos": {
-            "h": 1,
-            "w": 24,
-            "x": 0,
-            "y": 2
-          },
           "id": 19,
           "panels": [
             {
@@ -1529,7 +643,116 @@ data:
             "h": 1,
             "w": 24,
             "x": 0,
-            "y": 3
+            "y": 1
+          },
+          "id": 70,
+          "panels": [
+            {
+              "aliasColors": {},
+              "bars": false,
+              "dashLength": 10,
+              "dashes": false,
+              "datasource": "Prometheus",
+              "decimals": null,
+              "description": "",
+              "fill": 1,
+              "fillGradient": 0,
+              "gridPos": {
+                "h": 7,
+                "w": 24,
+                "x": 0,
+                "y": 1
+              },
+              "id": 68,
+              "legend": {
+                "alignAsTable": true,
+                "avg": false,
+                "current": true,
+                "hideZero": true,
+                "max": true,
+                "min": true,
+                "rightSide": true,
+                "show": true,
+                "sideWidth": null,
+                "sort": "current",
+                "sortDesc": true,
+                "total": false,
+                "values": true
+              },
+              "lines": true,
+              "linewidth": 1,
+              "nullPointMode": "null",
+              "options": {
+                "dataLinks": []
+              },
+              "percentage": false,
+              "pointradius": 2,
+              "points": false,
+              "renderer": "flot",
+              "seriesOverrides": [],
+              "spaceLength": 10,
+              "stack": false,
+              "steppedLine": false,
+              "targets": [
+                {
+                  "expr": "topk(100, sum( rate(seaman_metric_request_total{method=\"overload\"}[5m]) ) by (endpoint) * 60 )",
+                  "legendFormat": "{{endpoint}}",
+                  "refId": "A"
+                }
+              ],
+              "thresholds": [],
+              "timeFrom": null,
+              "timeRegions": [],
+              "timeShift": null,
+              "title": "Trigger Contacts Overload (Count/Minute)",
+              "tooltip": {
+                "shared": true,
+                "sort": 2,
+                "value_type": "individual"
+              },
+              "type": "graph",
+              "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+              },
+              "yaxes": [
+                {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+                },
+                {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+                }
+              ],
+              "yaxis": {
+                "align": false,
+                "alignLevel": null
+              }
+            }
+          ],
+          "title": "Overload",
+          "type": "row"
+        },
+        {
+          "collapsed": true,
+          "datasource": null,
+          "gridPos": {
+            "h": 1,
+            "w": 24,
+            "x": 0,
+            "y": 2
           },
           "id": 27,
           "panels": [
@@ -1546,7 +769,7 @@ data:
                 "h": 7,
                 "w": 24,
                 "x": 0,
-                "y": 4
+                "y": 12
               },
               "id": 31,
               "legend": {
@@ -1639,7 +862,7 @@ data:
                 "h": 7,
                 "w": 24,
                 "x": 0,
-                "y": 11
+                "y": 19
               },
               "id": 4,
               "legend": {
@@ -1732,7 +955,7 @@ data:
                 "h": 7,
                 "w": 24,
                 "x": 0,
-                "y": 18
+                "y": 26
               },
               "id": 20,
               "legend": {
@@ -1825,7 +1048,7 @@ data:
                 "h": 7,
                 "w": 24,
                 "x": 0,
-                "y": 25
+                "y": 33
               },
               "id": 32,
               "legend": {
@@ -1916,7 +1139,7 @@ data:
             "h": 1,
             "w": 24,
             "x": 0,
-            "y": 4
+            "y": 3
           },
           "id": 7,
           "panels": [
@@ -3512,7 +2735,7 @@ data:
             "h": 1,
             "w": 24,
             "x": 0,
-            "y": 5
+            "y": 4
           },
           "id": 11,
           "panels": [
@@ -4085,7 +3308,7 @@ data:
             "h": 1,
             "w": 24,
             "x": 0,
-            "y": 6
+            "y": 5
           },
           "id": 34,
           "panels": [
@@ -4649,9 +3872,895 @@ data:
           ],
           "title": "Cacher",
           "type": "row"
+        },
+        {
+          "collapsed": true,
+          "datasource": null,
+          "gridPos": {
+            "h": 1,
+            "w": 24,
+            "x": 0,
+            "y": 6
+          },
+          "id": 56,
+          "panels": [
+            {
+              "aliasColors": {},
+              "bars": false,
+              "dashLength": 10,
+              "dashes": false,
+              "datasource": null,
+              "fill": 1,
+              "fillGradient": 0,
+              "gridPos": {
+                "h": 8,
+                "w": 18,
+                "x": 0,
+                "y": 2
+              },
+              "id": 57,
+              "legend": {
+                "avg": false,
+                "current": false,
+                "max": false,
+                "min": false,
+                "show": true,
+                "total": false,
+                "values": false
+              },
+              "lines": true,
+              "linewidth": 1,
+              "nullPointMode": "null",
+              "options": {
+                "dataLinks": []
+              },
+              "percentage": false,
+              "pointradius": 2,
+              "points": false,
+              "renderer": "flot",
+              "seriesOverrides": [],
+              "spaceLength": 10,
+              "stack": false,
+              "steppedLine": false,
+              "targets": [
+                {
+                  "expr": "topk(100, sum( rate(seaman_ptask_manager_request_total{}[1m]) ) by (endpoint) * 60 )",
+                  "legendFormat": "{{endpoint}}",
+                  "refId": "A"
+                }
+              ],
+              "thresholds": [],
+              "timeFrom": null,
+              "timeRegions": [],
+              "timeShift": null,
+              "title": "Works (count / min)",
+              "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+              },
+              "type": "graph",
+              "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+              },
+              "yaxes": [
+                {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+                },
+                {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+                }
+              ],
+              "yaxis": {
+                "align": false,
+                "alignLevel": null
+              }
+            },
+            {
+              "cacheTimeout": null,
+              "colorBackground": false,
+              "colorValue": false,
+              "colors": [
+                "#299c46",
+                "rgba(237, 129, 40, 0.89)",
+                "#d44a3a"
+              ],
+              "datasource": null,
+              "format": "none",
+              "gauge": {
+                "maxValue": 100,
+                "minValue": 0,
+                "show": false,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+              },
+              "gridPos": {
+                "h": 4,
+                "w": 3,
+                "x": 18,
+                "y": 2
+              },
+              "id": 58,
+              "interval": null,
+              "links": [],
+              "mappingType": 1,
+              "mappingTypes": [
+                {
+                  "name": "value to text",
+                  "value": 1
+                },
+                {
+                  "name": "range to text",
+                  "value": 2
+                }
+              ],
+              "maxDataPoints": 100,
+              "nullPointMode": "connected",
+              "nullText": null,
+              "options": {},
+              "postfix": "",
+              "postfixFontSize": "50%",
+              "prefix": "",
+              "prefixFontSize": "50%",
+              "rangeMaps": [
+                {
+                  "from": "null",
+                  "text": "N/A",
+                  "to": "null"
+                }
+              ],
+              "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false,
+                "ymax": null,
+                "ymin": null
+              },
+              "tableColumn": "",
+              "targets": [
+                {
+                  "expr": "sum(seaman_ptask_manager_inflight{endpoint=\"ptask_evaler_inform_update\"})",
+                  "refId": "A"
+                }
+              ],
+              "thresholds": "",
+              "timeFrom": null,
+              "timeShift": null,
+              "title": "Evaler",
+              "type": "singlestat",
+              "valueFontSize": "80%",
+              "valueMaps": [
+                {
+                  "op": "=",
+                  "text": "N/A",
+                  "value": "null"
+                }
+              ],
+              "valueName": "avg"
+            },
+            {
+              "cacheTimeout": null,
+              "colorBackground": false,
+              "colorValue": false,
+              "colors": [
+                "#299c46",
+                "rgba(237, 129, 40, 0.89)",
+                "#d44a3a"
+              ],
+              "datasource": null,
+              "format": "none",
+              "gauge": {
+                "maxValue": 100,
+                "minValue": 0,
+                "show": false,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+              },
+              "gridPos": {
+                "h": 4,
+                "w": 3,
+                "x": 21,
+                "y": 2
+              },
+              "id": 59,
+              "interval": null,
+              "links": [],
+              "mappingType": 1,
+              "mappingTypes": [
+                {
+                  "name": "value to text",
+                  "value": 1
+                },
+                {
+                  "name": "range to text",
+                  "value": 2
+                }
+              ],
+              "maxDataPoints": 100,
+              "nullPointMode": "connected",
+              "nullText": null,
+              "options": {},
+              "postfix": "",
+              "postfixFontSize": "50%",
+              "prefix": "",
+              "prefixFontSize": "50%",
+              "rangeMaps": [
+                {
+                  "from": "null",
+                  "text": "N/A",
+                  "to": "null"
+                }
+              ],
+              "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false,
+                "ymax": null,
+                "ymin": null
+              },
+              "tableColumn": "",
+              "targets": [
+                {
+                  "expr": "sum(seaman_ptask_manager_inflight{endpoint=~\"ptask_evaler_daily_refresh_.*\"})",
+                  "refId": "A"
+                }
+              ],
+              "thresholds": "",
+              "timeFrom": null,
+              "timeShift": null,
+              "title": "Daily Refresh",
+              "type": "singlestat",
+              "valueFontSize": "80%",
+              "valueMaps": [
+                {
+                  "op": "=",
+                  "text": "N/A",
+                  "value": "null"
+                }
+              ],
+              "valueName": "avg"
+            },
+            {
+              "aliasColors": {},
+              "bars": false,
+              "dashLength": 10,
+              "dashes": false,
+              "datasource": "Prometheus",
+              "decimals": null,
+              "fill": 1,
+              "fillGradient": 0,
+              "gridPos": {
+                "h": 7,
+                "w": 24,
+                "x": 0,
+                "y": 10
+              },
+              "id": 24,
+              "legend": {
+                "alignAsTable": true,
+                "avg": false,
+                "current": true,
+                "hideZero": true,
+                "max": true,
+                "min": true,
+                "rightSide": true,
+                "show": true,
+                "sideWidth": null,
+                "sort": "current",
+                "sortDesc": true,
+                "total": false,
+                "values": true
+              },
+              "lines": true,
+              "linewidth": 1,
+              "nullPointMode": "null",
+              "options": {
+                "dataLinks": []
+              },
+              "percentage": false,
+              "pointradius": 2,
+              "points": false,
+              "renderer": "flot",
+              "seriesOverrides": [],
+              "spaceLength": 10,
+              "stack": false,
+              "steppedLine": false,
+              "targets": [
+                {
+                  "expr": "topk(100, (sum(rate(seaman_ptask_manager_process_time_seconds_sum{}[5m])) by (endpoint) * 1000) / \n(sum(rate(seaman_ptask_manager_request_total{}[5m])) by (endpoint) ))",
+                  "legendFormat": "{{endpoint}}",
+                  "refId": "A"
+                }
+              ],
+              "thresholds": [],
+              "timeFrom": null,
+              "timeRegions": [],
+              "timeShift": null,
+              "title": "Works (Time/Request)",
+              "tooltip": {
+                "shared": true,
+                "sort": 2,
+                "value_type": "individual"
+              },
+              "type": "graph",
+              "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+              },
+              "yaxes": [
+                {
+                  "format": "ms",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+                },
+                {
+                  "format": "ms",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+                }
+              ],
+              "yaxis": {
+                "align": false,
+                "alignLevel": null
+              }
+            }
+          ],
+          "title": "PTask Manager",
+          "type": "row"
+        },
+        {
+          "collapsed": true,
+          "datasource": null,
+          "gridPos": {
+            "h": 1,
+            "w": 24,
+            "x": 0,
+            "y": 7
+          },
+          "id": 46,
+          "panels": [
+            {
+              "aliasColors": {},
+              "bars": false,
+              "dashLength": 10,
+              "dashes": false,
+              "datasource": null,
+              "fill": 1,
+              "fillGradient": 0,
+              "gridPos": {
+                "h": 8,
+                "w": 18,
+                "x": 0,
+                "y": 3
+              },
+              "id": 48,
+              "legend": {
+                "avg": false,
+                "current": false,
+                "max": false,
+                "min": false,
+                "show": true,
+                "total": false,
+                "values": false
+              },
+              "lines": true,
+              "linewidth": 1,
+              "nullPointMode": "null",
+              "options": {
+                "dataLinks": []
+              },
+              "percentage": false,
+              "pointradius": 2,
+              "points": false,
+              "renderer": "flot",
+              "seriesOverrides": [],
+              "spaceLength": 10,
+              "stack": false,
+              "steppedLine": false,
+              "targets": [
+                {
+                  "expr": "topk(100, sum( rate(seaman_worker_pool_request_total{}[1m]) ) by (endpoint) * 60 )",
+                  "legendFormat": "{{endpoint}}",
+                  "refId": "A"
+                }
+              ],
+              "thresholds": [],
+              "timeFrom": null,
+              "timeRegions": [],
+              "timeShift": null,
+              "title": "Works (count / min)",
+              "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+              },
+              "type": "graph",
+              "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+              },
+              "yaxes": [
+                {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+                },
+                {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+                }
+              ],
+              "yaxis": {
+                "align": false,
+                "alignLevel": null
+              }
+            },
+            {
+              "cacheTimeout": null,
+              "colorBackground": false,
+              "colorValue": false,
+              "colors": [
+                "#299c46",
+                "rgba(237, 129, 40, 0.89)",
+                "#d44a3a"
+              ],
+              "datasource": null,
+              "format": "none",
+              "gauge": {
+                "maxValue": 100,
+                "minValue": 0,
+                "show": false,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+              },
+              "gridPos": {
+                "h": 4,
+                "w": 3,
+                "x": 18,
+                "y": 3
+              },
+              "id": 50,
+              "interval": null,
+              "links": [],
+              "mappingType": 1,
+              "mappingTypes": [
+                {
+                  "name": "value to text",
+                  "value": 1
+                },
+                {
+                  "name": "range to text",
+                  "value": 2
+                }
+              ],
+              "maxDataPoints": 100,
+              "nullPointMode": "connected",
+              "nullText": null,
+              "options": {},
+              "postfix": "",
+              "postfixFontSize": "50%",
+              "prefix": "",
+              "prefixFontSize": "50%",
+              "rangeMaps": [
+                {
+                  "from": "null",
+                  "text": "N/A",
+                  "to": "null"
+                }
+              ],
+              "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false,
+                "ymax": null,
+                "ymin": null
+              },
+              "tableColumn": "",
+              "targets": [
+                {
+                  "expr": "sum(seaman_worker_pool_inflight{endpoint=\"ptask--ptask-trgfeeder\"})",
+                  "refId": "A"
+                }
+              ],
+              "thresholds": "",
+              "timeFrom": null,
+              "timeShift": null,
+              "title": "Feeder",
+              "type": "singlestat",
+              "valueFontSize": "80%",
+              "valueMaps": [
+                {
+                  "op": "=",
+                  "text": "N/A",
+                  "value": "null"
+                }
+              ],
+              "valueName": "avg"
+            },
+            {
+              "cacheTimeout": null,
+              "colorBackground": false,
+              "colorValue": false,
+              "colors": [
+                "#299c46",
+                "rgba(237, 129, 40, 0.89)",
+                "#d44a3a"
+              ],
+              "datasource": null,
+              "format": "none",
+              "gauge": {
+                "maxValue": 100,
+                "minValue": 0,
+                "show": false,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+              },
+              "gridPos": {
+                "h": 4,
+                "w": 3,
+                "x": 21,
+                "y": 3
+              },
+              "id": 51,
+              "interval": null,
+              "links": [],
+              "mappingType": 1,
+              "mappingTypes": [
+                {
+                  "name": "value to text",
+                  "value": 1
+                },
+                {
+                  "name": "range to text",
+                  "value": 2
+                }
+              ],
+              "maxDataPoints": 100,
+              "nullPointMode": "connected",
+              "nullText": null,
+              "options": {},
+              "postfix": "",
+              "postfixFontSize": "50%",
+              "prefix": "",
+              "prefixFontSize": "50%",
+              "rangeMaps": [
+                {
+                  "from": "null",
+                  "text": "N/A",
+                  "to": "null"
+                }
+              ],
+              "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false,
+                "ymax": null,
+                "ymin": null
+              },
+              "tableColumn": "",
+              "targets": [
+                {
+                  "expr": "sum(seaman_worker_pool_inflight{endpoint=\"ptask--ptask-trgeval\"})",
+                  "refId": "A"
+                }
+              ],
+              "thresholds": "",
+              "timeFrom": null,
+              "timeShift": null,
+              "title": "Evaller",
+              "type": "singlestat",
+              "valueFontSize": "80%",
+              "valueMaps": [
+                {
+                  "op": "=",
+                  "text": "N/A",
+                  "value": "null"
+                }
+              ],
+              "valueName": "avg"
+            },
+            {
+              "cacheTimeout": null,
+              "colorBackground": false,
+              "colorValue": false,
+              "colors": [
+                "#299c46",
+                "rgba(237, 129, 40, 0.89)",
+                "#d44a3a"
+              ],
+              "datasource": null,
+              "format": "none",
+              "gauge": {
+                "maxValue": 100,
+                "minValue": 0,
+                "show": false,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+              },
+              "gridPos": {
+                "h": 4,
+                "w": 3,
+                "x": 18,
+                "y": 7
+              },
+              "id": 52,
+              "interval": null,
+              "links": [],
+              "mappingType": 1,
+              "mappingTypes": [
+                {
+                  "name": "value to text",
+                  "value": 1
+                },
+                {
+                  "name": "range to text",
+                  "value": 2
+                }
+              ],
+              "maxDataPoints": 100,
+              "nullPointMode": "connected",
+              "nullText": null,
+              "options": {},
+              "postfix": "",
+              "postfixFontSize": "50%",
+              "prefix": "",
+              "prefixFontSize": "50%",
+              "rangeMaps": [
+                {
+                  "from": "null",
+                  "text": "N/A",
+                  "to": "null"
+                }
+              ],
+              "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false,
+                "ymax": null,
+                "ymin": null
+              },
+              "tableColumn": "",
+              "targets": [
+                {
+                  "expr": "sum(seaman_worker_pool_inflight{endpoint=\"ptask--ptask-msgbuilder\"})",
+                  "refId": "A"
+                }
+              ],
+              "thresholds": "",
+              "timeFrom": null,
+              "timeShift": null,
+              "title": "Builder",
+              "type": "singlestat",
+              "valueFontSize": "80%",
+              "valueMaps": [
+                {
+                  "op": "=",
+                  "text": "N/A",
+                  "value": "null"
+                }
+              ],
+              "valueName": "avg"
+            },
+            {
+              "cacheTimeout": null,
+              "colorBackground": false,
+              "colorValue": false,
+              "colors": [
+                "#299c46",
+                "rgba(237, 129, 40, 0.89)",
+                "#d44a3a"
+              ],
+              "datasource": null,
+              "format": "none",
+              "gauge": {
+                "maxValue": 100,
+                "minValue": 0,
+                "show": false,
+                "thresholdLabels": false,
+                "thresholdMarkers": true
+              },
+              "gridPos": {
+                "h": 4,
+                "w": 3,
+                "x": 21,
+                "y": 7
+              },
+              "id": 53,
+              "interval": null,
+              "links": [],
+              "mappingType": 1,
+              "mappingTypes": [
+                {
+                  "name": "value to text",
+                  "value": 1
+                },
+                {
+                  "name": "range to text",
+                  "value": 2
+                }
+              ],
+              "maxDataPoints": 100,
+              "nullPointMode": "connected",
+              "nullText": null,
+              "options": {},
+              "postfix": "",
+              "postfixFontSize": "50%",
+              "prefix": "",
+              "prefixFontSize": "50%",
+              "rangeMaps": [
+                {
+                  "from": "null",
+                  "text": "N/A",
+                  "to": "null"
+                }
+              ],
+              "sparkline": {
+                "fillColor": "rgba(31, 118, 189, 0.18)",
+                "full": false,
+                "lineColor": "rgb(31, 120, 193)",
+                "show": false,
+                "ymax": null,
+                "ymin": null
+              },
+              "tableColumn": "",
+              "targets": [
+                {
+                  "expr": "sum(seaman_worker_pool_inflight{endpoint=\"ptask--ptask-msgsender\"})",
+                  "refId": "A"
+                }
+              ],
+              "thresholds": "",
+              "timeFrom": null,
+              "timeShift": null,
+              "title": "Sender",
+              "type": "singlestat",
+              "valueFontSize": "80%",
+              "valueMaps": [
+                {
+                  "op": "=",
+                  "text": "N/A",
+                  "value": "null"
+                }
+              ],
+              "valueName": "avg"
+            },
+            {
+              "aliasColors": {},
+              "bars": false,
+              "dashLength": 10,
+              "dashes": false,
+              "datasource": "Prometheus",
+              "decimals": null,
+              "fill": 1,
+              "fillGradient": 0,
+              "gridPos": {
+                "h": 7,
+                "w": 24,
+                "x": 0,
+                "y": 11
+              },
+              "id": 60,
+              "legend": {
+                "alignAsTable": true,
+                "avg": false,
+                "current": true,
+                "hideZero": true,
+                "max": true,
+                "min": true,
+                "rightSide": true,
+                "show": true,
+                "sideWidth": null,
+                "sort": "current",
+                "sortDesc": true,
+                "total": false,
+                "values": true
+              },
+              "lines": true,
+              "linewidth": 1,
+              "nullPointMode": "null",
+              "options": {
+                "dataLinks": []
+              },
+              "percentage": false,
+              "pointradius": 2,
+              "points": false,
+              "renderer": "flot",
+              "seriesOverrides": [],
+              "spaceLength": 10,
+              "stack": false,
+              "steppedLine": false,
+              "targets": [
+                {
+                  "expr": "topk(100, (sum(rate(seaman_worker_pool_process_time_seconds_sum{}[5m])) by (endpoint) * 1000) / \n(sum(rate(seaman_worker_pool_request_total{}[5m])) by (endpoint) ))",
+                  "legendFormat": "{{endpoint}}",
+                  "refId": "A"
+                }
+              ],
+              "thresholds": [],
+              "timeFrom": null,
+              "timeRegions": [],
+              "timeShift": null,
+              "title": "Works (Time/Request)",
+              "tooltip": {
+                "shared": true,
+                "sort": 2,
+                "value_type": "individual"
+              },
+              "type": "graph",
+              "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+              },
+              "yaxes": [
+                {
+                  "format": "ms",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+                },
+                {
+                  "format": "ms",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+                }
+              ],
+              "yaxis": {
+                "align": false,
+                "alignLevel": null
+              }
+            }
+          ],
+          "title": "Worker Pool",
+          "type": "row"
         }
       ],
-      "refresh": "30s",
+      "refresh": "10s",
       "schemaVersion": 20,
       "style": "dark",
       "tags": [],
