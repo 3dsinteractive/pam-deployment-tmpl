@@ -45,7 +45,7 @@ data:
           "version": "5.0.0"
         }
       ],
-      "annotations": {
+       "annotations": {
         "list": [
           {
             "builtIn": 1,
@@ -808,7 +808,7 @@ data:
           "tableColumn": "",
           "targets": [
             {
-              "expr": "seaman_metric_inflight{method=\"overload\", endpoint=\"total_load_avg_1m\"}",
+              "expr": "sum(seaman_metric_inflight{method=\"overload\", endpoint=\"total_load_avg_1m\"})",
               "refId": "A"
             }
           ],
@@ -891,7 +891,7 @@ data:
           "tableColumn": "",
           "targets": [
             {
-              "expr": "seaman_metric_inflight{method=\"overload\", endpoint=\"total_load_avg_5m\"}",
+              "expr": "sum(seaman_metric_inflight{method=\"overload\", endpoint=\"total_load_avg_5m\"})",
               "refId": "A"
             }
           ],
@@ -974,7 +974,7 @@ data:
           "tableColumn": "",
           "targets": [
             {
-              "expr": "seaman_metric_inflight{method=\"overload\", endpoint=\"total_load_avg_15m\"}",
+              "expr": "sum(seaman_metric_inflight{method=\"overload\", endpoint=\"total_load_avg_15m\"})",
               "refId": "A"
             }
           ],
