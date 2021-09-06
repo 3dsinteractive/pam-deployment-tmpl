@@ -88,4 +88,5 @@ configs:
 - { name: "PAM_SENDER_WORKERS_MAX_LIMIT", alias: "PAM_SENDER_WORKERS_MAX_LIMIT", type: "n", required: false, sample: "3" }
 - { name: "PAM_USE_MAILPAM_API", alias: "PAM_USE_MAILPAM_API", type: "b", required: false, sample: "true" }
 - { name: "PAM_ENABLE_TRACKER_CUSTOM_CREATED_AT", alias: "PAM_ENABLE_TRACKER_CUSTOM_CREATED_AT", type: "b", required: false, sample: "true" }
+- { name: "PAM_ENABLE_READ_FILE_TRACKERS", alias: "PAM_ENABLE_READ_FILE_TRACKERS", type: "b", required: false, sample: "true" }
 - { name: "PAM_ENABLE_CREATE_USER_WITH_AZURE_AD", alias: "PAM_ENABLE_CREATE_USER_WITH_AZURE_AD", type: "b", required: false, sample: "false" }
