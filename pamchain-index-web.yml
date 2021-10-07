@@ -20,7 +20,6 @@ spec:
       labels:
         name: <name>
     spec:
-      terminationGracePeriodSeconds: 60
       imagePullSecrets:
       - name: dockerlogin
       nodeSelector:
@@ -32,25 +31,22 @@ spec:
         image: <image>
         imagePullPolicy: IfNotPresent
         readinessProbe:
-          httpGet:
-            path: /readinez
-            port: 8080
+          tcpSocket:
+            port: 8000
           initialDelaySeconds: 10
           periodSeconds: 10
           timeoutSeconds: 3
           failureThreshold: 3
         livenessProbe:
-          httpGet:
-            path: /healthz
-            port: 8080
+          tcpSocket:
+            port: 8000
           initialDelaySeconds: 60
           periodSeconds: 30
           timeoutSeconds: 30
           failureThreshold: 10
-        env: [ {name: PAM4_ENV, value: <env>}, {name: DEBUG, value: "true"}, {name: PAM4_PROFILER_NAME, value: pam-<name>} <envs>]
         ports:
-        - name: pamchain8080
-          containerPort: 8080
+        - name: pamchain8000
+          containerPort: 8000
         resources:
           requests:
             memory: <minMem>
@@ -58,16 +54,6 @@ spec:
           limits:
             memory: <maxMem>
             cpu: <maxCpu>
-        volumeMounts:
-        - name: vol-profiler
-          mountPath: /profiler
-      volumes:
-      - name: vol-profiler
-        configMap:
-          name: profiler
-          items:
-          - key: profiler
-            path: profiler.json
 ---
 apiVersion: v1
 kind: Service
@@ -78,9 +64,9 @@ metadata:
     name: <name>
 spec:
   ports:
-  - port: 8080
-    name: pamchain8080
-    targetPort: 8080
+  - port: 80
+    name: pamchain80
+    targetPort: 8000
     protocol: TCP
   selector:
     name: <name>
