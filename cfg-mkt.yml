@@ -94,3 +94,4 @@ configs:
 - { name: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS", alias: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS", type: "b", required: false, sample: "false" }
 - { name: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS_APP_PUSH", alias: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS_APP_PUSH", type: "b", required: false, sample: "false" }
 - { name: "PAM_ENABLE_MAPPING_AZURE_AD_GROUP_TO_USER_ROLE", alias: "PAM_ENABLE_MAPPING_AZURE_AD_GROUP_TO_USER_ROLE", type: "b", required: false, sample: "false" }
+- { name: "PAM4_PTASK_TRACKER_IMPORTER_FILETRACKER_WORKERS", alias: "PAM4_PTASK_TRACKER_IMPORTER_FILETRACKER_WORKERS", type: "n", required: false, sample: 5 }
