@@ -1,0 +1,13 @@
+version: v1
+configs:
+- { name: "SEAMAN_PREFIX", type: "s", required: false, sample: "stg" }
+- { name: "SEAMAN_PORT", type: "s", required: true, sample: "8080" }
+- { name: "SEAMAN_TIMEZONE_NAME", type: "s", required: true, sample: UTC+0 }
+- { name: "SEAMAN_TIMEZONE_OFFSET", type: "n", required: true, sample: 0 }
+- { name: "SEAMAN_MONITORING", type: "b", required: true, sample: true }
+- { name: "SEAMAN_PRODUCER_ASYNC", type: "b", required: true, sample: true }
+- { name: "SEAMAN_DEBUG_KAFKA", type: "b", required: false, sample: false }
+- { name: "SEAMAN_DEBUG_KAFKA_MODULES", type: "s", required: false, sample: "generic,broker,topic,metadata,feature,queue,msg,protocol,cgrp,security,fetch,interceptor,plugin,consumer,admin,eos,mock,all" }
+- { name: "PAM_CACHER_ENDPOINT", alias: "PAM4_CACHER_ENDPOINT", type: "s", required: true, sample: redis:6379 }
+- { name: "PAM_CACHER_PASSWORD", alias: "PAM4_CACHER_PASSWORD", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_CACHER_DB", alias: "PAM4_CACHER_DB", type: "n", required: true, sample: 0 }

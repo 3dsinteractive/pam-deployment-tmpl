@@ -3,3 +3,4 @@ cfg-mkt: ["connect", "builder", "sender", "msgscheduler", "elsdb", "migrate-conn
 cfg-ecom: ["ecom", "ecom-backend", "ecom-transaction", "migrate-connect", "migrate-seeder"]
 cfg-coupon: []
 cfg-cms-api: ["cms-api"]
+cfg-stoken: ["stoken"]
