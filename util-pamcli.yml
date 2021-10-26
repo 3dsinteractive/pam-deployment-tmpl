@@ -23,4 +23,6 @@ spec:
         requests:
           memory: <minMem>
           cpu: <minCpu>
-          
+        limits:
+          memory: <maxMem>
+          cpu: <maxCpu>
