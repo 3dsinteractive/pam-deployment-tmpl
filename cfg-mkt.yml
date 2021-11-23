@@ -98,3 +98,4 @@ configs:
 - { name: "PAM4_PTASK_TRACKER_IMPORTER_MQ_PARTITIONS", alias: "PAM4_PTASK_TRACKER_IMPORTER_MQ_PARTITIONS", type: "n", required: false, sample: 5 }
 - { name: "PAM4_SCHEDULER_READ_FILE_TRACKER_BACKWARD", alias: "PAM4_SCHEDULER_READ_FILE_TRACKER_BACKWARD", type: "n", required: false, sample: 5 }
 - { name: "PAM4_CAMPAIGN_DYNAMIC_TEMPLATE_RECURRING_SCHEDULER_NIGHT_HOUR", alias: "PAM4_CAMPAIGN_DYNAMIC_TEMPLATE_RECURRING_SCHEDULER_NIGHT_HOUR", type: "n", required: false, sample: 5 }
+- { name: "PAM_EXTERNAL_API_BITLY_SECRET", alias: "PAM_EXTERNAL_API_BITLY_SECRET", type: "s", required: false, sample: "" }
