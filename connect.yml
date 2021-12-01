@@ -24,9 +24,6 @@ spec:
       terminationGracePeriodSeconds: 60
       imagePullSecrets:
       - name: dockerlogin
-      affinity:
-        podAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
       nodeSelector:
         env: c1
         role: worker
