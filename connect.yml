@@ -12,6 +12,7 @@ spec:
     rollingUpdate:
       maxUnavailable: 0
       maxSurge: 3
+
   selector:
     matchLabels:
       name: <name>
@@ -23,6 +24,9 @@ spec:
       terminationGracePeriodSeconds: 60
       imagePullSecrets:
       - name: dockerlogin
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
       nodeSelector:
         env: c1
         role: worker
