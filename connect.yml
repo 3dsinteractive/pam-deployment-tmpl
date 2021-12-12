@@ -25,8 +25,17 @@ spec:
       imagePullSecrets:
       - name: dockerlogin
       affinity:
-        podAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 1
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: env
+                  operator: In
+                  values:
+                  - c1
+              topologyKey: kubernetes.io/hostname
       nodeSelector:
         env: c1
         role: worker
