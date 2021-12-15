@@ -101,3 +101,5 @@ configs:
 - { name: "PAM_EXTERNAL_API_BITLY_SECRET", alias: "PAM_EXTERNAL_API_BITLY_SECRET", type: "s", required: false, sample: "" }
 - { name: "PAM_TRACKER_RECEIVED_CONSUMER_SIZE_FACTOR", alias: "PAM_TRACKER_RECEIVED_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 5 }
 - { name: "PAM_TRACKER_CREATED_CONSUMER_SIZE_FACTOR", alias: "PAM_TRACKER_CREATED_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 5 }
+- { name: "PAM_MAX_ACTIVE_STATIC_TRIGGER", type: "n", required: false, sample: "100" }
+- { name: "PAM_MAX_ACTIVE_REALTIME_TRIGGER", type: "n", required: false, sample: "100" }
