@@ -56,3 +56,4 @@ configs:
 - { name: "ECOM_ENABLE_SUM_STORE_STOCK_BY_STORE_ID", type: "b", required: false, sample: "false" }
 - { name: "ECOM_ENABLE_FIX_ECOM_MEMBER_POINTS_RATE", type: "b", required: false, sample: "false" }
 - { name: "ECOM_MEMBER_POINTS_RATE", type: "n", required: false, sample: "25.0" }
+- { name: "ECOM_MEMBER_B2B_ONLY", type: "b", required: false, sample: "true" }
