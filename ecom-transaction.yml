@@ -23,6 +23,17 @@ spec:
       terminationGracePeriodSeconds: 10
       imagePullSecrets:
       - name: dockerlogin
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 1
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: env
+                  operator: In
+                  values:
+                  - c1
       nodeSelector:
         env: c1
         role: worker
