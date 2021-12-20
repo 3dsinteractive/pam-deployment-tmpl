@@ -112,7 +112,7 @@ data:
     - name: 'pam-alert-critical'
       slack_configs:
       - api_url: <slackHookCritical>
-        channel: '#pam-alert-critical'
+        channel: '#pam-alert-criticals'
         send_resolved: true
         title: |-
           [{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] {{ .CommonLabels.alertname }} for {{ .CommonLabels.job }}
