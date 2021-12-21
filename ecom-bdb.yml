@@ -33,6 +33,7 @@ spec:
                   operator: In
                   values:
                   - c1
+              topologyKey: kubernetes.io/hostname
       nodeSelector:
         env: c1
         role: worker
