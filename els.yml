@@ -30,7 +30,7 @@ spec:
           command: ["/bin/sh", "-c", "chown 1001 /pam/<namespace>/<name>/data"]
       containers:
       - name: <name>
-        image: 3dsinteractive/elasticsearch:6.8-custom
+        image: 3dsinteractive/elasticsearch:6.8.21-custom
         imagePullPolicy: Always
         env:
         - name: ELASTICSEARCH_CLUSTER_NAME
