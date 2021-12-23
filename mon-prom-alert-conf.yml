@@ -245,15 +245,6 @@ data:
         annotations:
           title: "Redis out of memory ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
           description: "Redis is running out of memory (> 90%), VALUE = {{ $value }}"
-      - alert: RedisTooManyConnections
-        expr: redis_connected_clients > 3000
-        for: 5m
-        labels:
-          service: database
-          severity: warning
-        annotations:
-          title: "Redis too many connections ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
-          description: "Job {{$labels.namespace}}/{{$labels.exported_job}} , Redis instance has too many connections, VALUE = {{ $value }}"
       - alert: RedisRejectedConnections
         expr: increase(redis_rejected_connections_total[1m]) > 0
         for: 5m
