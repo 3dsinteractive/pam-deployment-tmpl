@@ -102,3 +102,6 @@ configs:
 - { name: "PAM4_INDEXER_AUTH_USER", alias: "PAM4_INDEXER_AUTH_USER", type: "s", required: false, sample: admin }
 - { name: "PAM4_INDEXER_AUTH_PASSWORD", alias: "PAM4_INDEXER_AUTH_PASSWORD", type: "s", required: false, sample: 3DSinteractive! }
 - { name: "PAM_INDEXER_CPUCORES_PER_NODE", alias: "PAM_INDEXER_CPUCORES_PER_NODE", type: "n", required: false, sample: 4 }
+- { name: "PAM_MAX_ACTIVE_TRIGGER", type: "n", required: true, sample: "100" }
+- { name: "PAM_MAX_ACTIVE_STATIC_TRIGGER", type: "n", required: false, sample: "100" }
+- { name: "PAM_MAX_ACTIVE_REALTIME_TRIGGER", type: "n", required: false, sample: "100" }

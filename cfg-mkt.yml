@@ -69,7 +69,6 @@ configs:
 - { name: "PAM_HAS_MIGRATE_ROUTING_TRACKERS", type: "b", required: true, sample: "true" }
 - { name: "PAM_GDRIVE_OAUTH_CONFIG", alias: "PAM4_GDRIVE_OAUTH_CONFIG", type: "s", required: false, sample: "[JSON]" }
 - { name: "PAM_USE_MAILPAM_API", type: "b", required: false, sample: "false" }
-- { name: "PAM_MAX_ACTIVE_TRIGGER", type: "n", required: true, sample: "100" }
 - { name: "PAM_DISABLE_INFORM_WEB_HOOK", type: "b", required: true, sample: "false" }
 - { name: "PAM_ENABLE_PDPA_FEATURE", alias: "PAM_ENABLE_PDPA_FEATURE", type: "b", required: true, sample: "true" }
 - { name: "ENABLE_CONSENT", alias: "ENABLE_CONSENT", type: "b", required: true, sample: "true" }
@@ -101,6 +100,4 @@ configs:
 - { name: "PAM_EXTERNAL_API_BITLY_SECRET", alias: "PAM_EXTERNAL_API_BITLY_SECRET", type: "s", required: false, sample: "" }
 - { name: "PAM_TRACKER_RECEIVED_CONSUMER_SIZE_FACTOR", alias: "PAM_TRACKER_RECEIVED_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 5 }
 - { name: "PAM_TRACKER_CREATED_CONSUMER_SIZE_FACTOR", alias: "PAM_TRACKER_CREATED_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 5 }
-- { name: "PAM_MAX_ACTIVE_STATIC_TRIGGER", type: "n", required: false, sample: "100" }
-- { name: "PAM_MAX_ACTIVE_REALTIME_TRIGGER", type: "n", required: false, sample: "100" }
 - { name: "PAM4_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", alias: "PAM4_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", type: "b", required: false, sample: "false" }

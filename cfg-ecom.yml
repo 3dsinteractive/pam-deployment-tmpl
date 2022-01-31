@@ -61,6 +61,3 @@ configs:
 - { name: "ECOM_REQUEST_OTP_PERIOD_TIME_MINUTE", type: "n", required: false, sample: "3" }
 - { name: "ECOM_ENABLE_CAPTCHA_FEATURE", type: "b", required: false, sample: "true" }
 - { name: "ECOM_CAPTCHA_CONFIG", type: "s", required: false, sample: "{}" }
-- { name: "PAM_MAX_ACTIVE_TRIGGER", type: "n", required: true, sample: "100" }
-- { name: "PAM_MAX_ACTIVE_STATIC_TRIGGER", type: "n", required: false, sample: "100" }
-- { name: "PAM_MAX_ACTIVE_REALTIME_TRIGGER", type: "n", required: false, sample: "100" }
