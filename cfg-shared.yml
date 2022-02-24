@@ -19,7 +19,6 @@ configs:
 - { name: "PAM_INDEXER_ENDPOINTS", alias: "PAM4_INDEXER_ENDPOINTS", type: "s", required: true, sample: "http://els1:9200,http://els2:9200,http://els3:9200" }
 - { name: "PAM_INDEXER_SNIFF", alias: "PAM4_INDEXER_SNIFF", type: "b", required: true, sample: false }
 - { name: "PAM_INDEXER_GZIP", alias: "PAM4_INDEXER_GZIP", type: "b", required: true, sample: true }
-- { name: "ECOM_HOST", type: "s", required: true, sample: https://stg-ecom.pams.ai }
 - { name: "PAM_CONNECT_API_ENDPOINT", alias: "PAM4_CONNECT_API_ENDPOINT", type: "s", required: true, sample: https://stg.pams.ai }
 - { name: "PAM_CONNECT_API_APPID", alias: "PAM4_CONNECT_API_APPID", type: "s", required: true, sample: "UUID" }
 - { name: "PAM_CONNECT_API_SECRET", alias: "PAM4_CONNECT_API_SECRET", type: "s", required: true, sample: "UUID" }

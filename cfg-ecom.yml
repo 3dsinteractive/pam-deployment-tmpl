@@ -1,5 +1,6 @@
 version: v1
 configs:
+- { name: "ECOM_HOST", type: "s", required: true, sample: https://stg-ecom.pams.ai }
 - { name: "PAM_SHIPPING_PROVIDER_KERRY_ENDPOINT", alias: "PAM4_SHIPPING_PROVIDER_KERRY_ENDPOINT", type: "s", required: true, sample: "https://poc-it.th.kerryexpress.com/ediwebapi_uat" }
 - { name: "PAM_SHIPPING_PROVIDER_KERRY_APP_ID", alias: "PAM4_SHIPPING_PROVIDER_KERRY_APP_ID", type: "s", required: true, sample: "[NAME]" }
 - { name: "PAM_SHIPPING_PROVIDER_KERRY_APP_KEY", alias: "PAM4_SHIPPING_PROVIDER_KERRY_APP_KEY", type: "s", required: true, sample: "[UUID]" }
