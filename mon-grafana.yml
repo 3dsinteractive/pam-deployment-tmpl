@@ -69,10 +69,8 @@ spec:
             sources:
             - configMap:
                 name: grafana-dashboard-servers
-            # - configMap:
-            #     name: grafana-dashboard-els
             - configMap:
-                name: grafana-dashboard-els-query
+                name: grafana-dashboard-els
             - configMap:
                 name: grafana-dashboard-kfk
             - configMap:
