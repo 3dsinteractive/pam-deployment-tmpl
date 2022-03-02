@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-redis
+  namespace: <namespace>
+  labels:
+    name: pvc-redis
+spec:
+  volumeName: pv-redis
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi

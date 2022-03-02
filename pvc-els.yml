@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-els1
+  namespace: <namespace>
+  labels:
+    name: pvc-els1
+spec:
+  volumeName: pv-els1
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-els2
+  namespace: <namespace>
+  labels:
+    name: pvc-els2
+spec:
+  volumeName: pv-els2
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-els3
+  namespace: <namespace>
+  labels:
+    name: pvc-els3
+spec:
+  volumeName: pv-els3
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+---

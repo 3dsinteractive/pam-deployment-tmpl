@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-zk1
+  namespace: <namespace>
+  labels:
+    name: pvc-zk1
+spec:
+  volumeName: pv-zk1
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-zk2
+  namespace: <namespace>
+  labels:
+    name: pvc-zk2
+spec:
+  volumeName: pv-zk2
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-zk3
+  namespace: <namespace>
+  labels:
+    name: pvc-zk3
+spec:
+  volumeName: pv-zk3
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+---
