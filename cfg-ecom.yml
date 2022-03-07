@@ -62,3 +62,4 @@ configs:
 - { name: "ECOM_REQUEST_OTP_PERIOD_TIME_MINUTE", type: "n", required: false, sample: "3" }
 - { name: "ECOM_ENABLE_CAPTCHA_FEATURE", type: "b", required: false, sample: "true" }
 - { name: "ECOM_CAPTCHA_CONFIG", type: "s", required: false, sample: "{}" }
+- { name: "ECOM_ENABLE_TRANSACTION_MEMBER_POINT", type: "b", required: false, sample: "true" }
