@@ -12,7 +12,6 @@ spec:
     rollingUpdate:
       maxUnavailable: 0
       maxSurge: 3
-
   selector:
     matchLabels:
       name: <name>
