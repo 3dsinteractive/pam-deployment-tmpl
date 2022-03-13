@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-<name>
+  namespace: <namespace>
+  labels:
+    name: pvc-<name>
+spec:
+  volumeName: <namespace>-pv-<name>
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
