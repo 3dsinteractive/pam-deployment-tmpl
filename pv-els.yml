@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv-els1
+  name: pv-<name>
   namespace: <namespace>
   labels:
-    name: pv-els1
+    name: pv-<name>
 spec:
   accessModes:
     - ReadWriteOnce
@@ -12,37 +12,4 @@ spec:
     storage: 10Gi
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: /pam/<namespace>/els1/data
----
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: pv-els2
-  namespace: <namespace>
-  labels:
-    name: pv-els2
-spec:
-  accessModes:
-    - ReadWriteOnce
-  capacity:
-    storage: 10Gi
-  persistentVolumeReclaimPolicy: Retain
-  hostPath:
-    path: /pam/<namespace>/els2/data
----
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: pv-els3
-  namespace: <namespace>
-  labels:
-    name: pv-els3
-spec:
-  accessModes:
-    - ReadWriteOnce
-  capacity:
-    storage: 10Gi
-  persistentVolumeReclaimPolicy: Retain
-  hostPath:
-    path: /pam/<namespace>/els3/data
----
+    path: /pam/<namespace>/<name>/data

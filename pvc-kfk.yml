@@ -1,45 +1,14 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pvc-kfk1
+  name: pvc-<name>
   namespace: <namespace>
   labels:
-    name: pvc-kfk1
+    name: pvc-<name>
 spec:
-  volumeName: pv-kfk1
+  volumeName: pv-<name>
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
       storage: 10Gi
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: pvc-kfk2
-  namespace: <namespace>
-  labels:
-    name: pvc-kfk2
-spec:
-  volumeName: pv-kfk2
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 10Gi
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: pvc-kfk3
-  namespace: <namespace>
-  labels:
-    name: pvc-kfk3
-spec:
-  volumeName: pv-kfk3
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 10Gi
----

@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pvc-minio
+  name: pvc-<name>
   namespace: <namespace>
   labels:
-    name: pvc-minio
+    name: pvc-<name>
 spec:
-  volumeName: pv-minio
+  volumeName: pv-<name>
   accessModes:
     - ReadWriteOnce
   resources:

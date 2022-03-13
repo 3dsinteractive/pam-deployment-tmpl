@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv-kfk1
+  name: pv-<name>
   namespace: <namespace>
   labels:
-    name: pv-kfk1
+    name: pv-<name>
 spec:
   accessModes:
     - ReadWriteOnce
@@ -12,37 +12,4 @@ spec:
     storage: 10Gi
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: /pam/<namespace>/kfk1
----
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: pv-kfk2
-  namespace: <namespace>
-  labels:
-    name: pv-kfk2
-spec:
-  accessModes:
-    - ReadWriteOnce
-  capacity:
-    storage: 10Gi
-  persistentVolumeReclaimPolicy: Retain
-  hostPath:
-    path: /pam/<namespace>/kfk2
----
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: pv-kfk3
-  namespace: <namespace>
-  labels:
-    name: pv-kfk3
-spec:
-  accessModes:
-    - ReadWriteOnce
-  capacity:
-    storage: 10Gi
-  persistentVolumeReclaimPolicy: Retain
-  hostPath:
-    path: /pam/<namespace>/kfk3
----
+    path: /pam/<namespace>/<name>
