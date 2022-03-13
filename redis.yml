@@ -1,0 +1,103 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      name: <name>
+  template:
+    metadata:
+      labels:
+        name: <name>
+    spec:
+      nodeSelector:
+        env: c1
+        db: <nodeLabel>
+      priorityClassName: class-storage
+      initContainers:
+        - name: init-sysctl
+          image: busybox
+          command:
+          - /bin/sh
+          - -c
+          - |
+            sysctl -w net.core.somaxconn=65535
+            sysctl -w vm.overcommit_memory=1
+          securityContext:
+            privileged: true
+        - name: disable-thp
+          image: busybox
+          volumeMounts:
+            - name: host-sys
+              mountPath: /host-sys
+          command: ["/bin/sh", "-c", "echo never > /host-sys/kernel/mm/transparent_hugepage/enabled"]
+        - name: init-dir
+          image: busybox
+          volumeMounts:
+            - name: vol-data
+              mountPath: /pam/<namespace>/<name>/data
+          command: ["/bin/sh", "-c", "chown 1001 /pam/<namespace>/<name>/data"]
+      containers:
+        - name: <name>
+          image: 3dsinteractive/redis:5.0-custom
+          imagePullPolicy: Always
+          ports:
+            - name: redis6379
+              containerPort: 6379
+          env:
+            - name: ALLOW_EMPTY_PASSWORD
+              value: "yes"
+          resources:
+            requests:
+              memory: <minMem>
+              cpu: <minCpu>
+            limits:
+              memory: <maxMem>
+              cpu: <maxCpu>
+          livenessProbe:
+            tcpSocket:
+              port: 6379
+            initialDelaySeconds: 30
+            timeoutSeconds: 1
+            periodSeconds: 300
+          readinessProbe:
+            tcpSocket:
+              port: 6379
+            initialDelaySeconds: 30
+            timeoutSeconds: 1
+            periodSeconds: 30
+            failureThreshold: 5
+          volumeMounts:
+          - mountPath: /bitnami/<name>/data
+            name: vol-data
+      volumes:
+      - name: vol-data
+        persistentVolumeClaim:
+          claimName: pvc-<name>
+      - name: host-sys
+        hostPath:
+          path: /sys
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  selector:
+    name: <name>
+  ports:
+  - port: 6379
+    name: redis6379
+    targetPort: 6379
+    protocol: TCP
+  clusterIP: None
