@@ -26,7 +26,22 @@ attrs:
 - { name: "indexQueueSize", alias: "indexQueueSize", doublequote: true, replace: true }
 - { name: "snapshotS3Key", alias: "snapshotS3Key", doublequote: true, replace: true }
 - { name: "snapshotS3Secret", alias: "snapshotS3Secret", doublequote: true, replace: true }
-
+# Use in zk
+- { name: "zooServerID", alias: "zooServerID", doublequote: true, replace: true }
+- { name: "zooServers", alias: "zooServers", doublequote: true, replace: true }
+- { name: "zooHeapSize", alias: "zooHeapSize", doublequote: true, replace: true }
+# Use in kfk
+- { name: "kafkaBrokerID", alias: "kafkaBrokerID", doublequote: true, replace: true }
+- { name: "kafkaPortNumber", alias: "kafkaPortNumber", doublequote: true, replace: true }
+- { name: "kafkaNumPartitions", alias: "kafkaNumPartitions", doublequote: true, replace: true }
+- { name: "kafkaZookeeperConnect", alias: "kafkaZookeeperConnect", doublequote: true, replace: true }
+- { name: "kafkaNumNetworkThreads", alias: "kafkaNumNetworkThreads", doublequote: true, replace: true }
+- { name: "kafkaNumIOThreads", alias: "kafkaNumIOThreads", doublequote: true, replace: true }
+- { name: "kafkaSocketSendBuffeBytes", alias: "kafkaSocketSendBuffeBytes", doublequote: true, replace: true }
+- { name: "kafkaSocketReceiveBufferBytes", alias: "kafkaSocketReceiveBufferBytes", doublequote: true, replace: true }
+- { name: "kafkaSocketRequestMaxBytes", alias: "kafkaSocketRequestMaxBytes", doublequote: true, replace: true }
+- { name: "kafkaMaxMessageBytes", alias: "kafkaMaxMessageBytes", doublequote: true, replace: true }
+- { name: "kafkaHeapOpts", alias: "kafkaHeapOpts", doublequote: true, replace: true }
 # Use in demo-server
 - { name: "endpoint", alias: "endpoint", doublequote: true, replace: true }
 - { name: "users", alias: "users", doublequote: true, replace: true }
