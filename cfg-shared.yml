@@ -97,9 +97,9 @@ configs:
 - { name: "PAM_MKT_BACKEND_API_INTERNAL", alias: "PAM_MKT_BACKEND_API_INTERNAL", type: "s", required: true, sample: "http://mkt-backend-api:8080" }
 - { name: "PAM_ENABLE_PTASK_MANAGER", alias: "PAM_ENABLE_PTASK_MANAGER", type: "b", required: false, sample: true }
 - { name: "PAM_ENABLE_MIGRATE_ECOM", alias: "PAM_ENABLE_MIGRATE_ECOM", type: "b", required: false, sample: true }
-- { name: "PAM4_FILESTORE_CDN", alias: "PAM4_FILESTORE_CDN", type: "s", required: false, sample: https://d3ci6p10x5fu7q.cloudfront.net }
-- { name: "PAM4_INDEXER_AUTH_USER", alias: "PAM4_INDEXER_AUTH_USER", type: "s", required: false, sample: admin }
-- { name: "PAM4_INDEXER_AUTH_PASSWORD", alias: "PAM4_INDEXER_AUTH_PASSWORD", type: "s", required: false, sample: 3DSinteractive! }
+- { name: "PAM_FILESTORE_CDN", alias: "PAM4_FILESTORE_CDN", type: "s", required: false, sample: https://d3ci6p10x5fu7q.cloudfront.net }
+- { name: "PAM_INDEXER_AUTH_USER", alias: "PAM4_INDEXER_AUTH_USER", type: "s", required: false, sample: admin }
+- { name: "PAM_INDEXER_AUTH_PASSWORD", alias: "PAM4_INDEXER_AUTH_PASSWORD", type: "s", required: false, sample: 3DSinteractive! }
 - { name: "PAM_INDEXER_CPUCORES_PER_NODE", alias: "PAM_INDEXER_CPUCORES_PER_NODE", type: "n", required: false, sample: 4 }
 - { name: "PAM_MAX_ACTIVE_TRIGGER", type: "n", required: true, sample: "100" }
 - { name: "PAM_MAX_ACTIVE_STATIC_TRIGGER", type: "n", required: false, sample: "100" }

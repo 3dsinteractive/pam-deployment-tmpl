@@ -93,11 +93,11 @@ configs:
 - { name: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS", alias: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS", type: "b", required: false, sample: "false" }
 - { name: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS_APP_PUSH", alias: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS_APP_PUSH", type: "b", required: false, sample: "false" }
 - { name: "PAM_ENABLE_MAPPING_AZURE_AD_GROUP_TO_USER_ROLE", alias: "PAM_ENABLE_MAPPING_AZURE_AD_GROUP_TO_USER_ROLE", type: "b", required: false, sample: "false" }
-- { name: "PAM4_PTASK_TRACKER_IMPORTER_FILETRACKER_WORKERS", alias: "PAM4_PTASK_TRACKER_IMPORTER_FILETRACKER_WORKERS", type: "n", required: false, sample: 5 }
-- { name: "PAM4_PTASK_TRACKER_IMPORTER_MQ_PARTITIONS", alias: "PAM4_PTASK_TRACKER_IMPORTER_MQ_PARTITIONS", type: "n", required: false, sample: 5 }
-- { name: "PAM4_SCHEDULER_READ_FILE_TRACKER_BACKWARD", alias: "PAM4_SCHEDULER_READ_FILE_TRACKER_BACKWARD", type: "n", required: false, sample: 5 }
-- { name: "PAM4_CAMPAIGN_DYNAMIC_TEMPLATE_RECURRING_SCHEDULER_NIGHT_HOUR", alias: "PAM4_CAMPAIGN_DYNAMIC_TEMPLATE_RECURRING_SCHEDULER_NIGHT_HOUR", type: "n", required: false, sample: 5 }
+- { name: "PAM_PTASK_TRACKER_IMPORTER_FILETRACKER_WORKERS", alias: "PAM4_PTASK_TRACKER_IMPORTER_FILETRACKER_WORKERS", type: "n", required: false, sample: 5 }
+- { name: "PAM_PTASK_TRACKER_IMPORTER_MQ_PARTITIONS", alias: "PAM4_PTASK_TRACKER_IMPORTER_MQ_PARTITIONS", type: "n", required: false, sample: 5 }
+- { name: "PAM_SCHEDULER_READ_FILE_TRACKER_BACKWARD", alias: "PAM4_SCHEDULER_READ_FILE_TRACKER_BACKWARD", type: "n", required: false, sample: 5 }
+- { name: "PAM_CAMPAIGN_DYNAMIC_TEMPLATE_RECURRING_SCHEDULER_NIGHT_HOUR", alias: "PAM4_CAMPAIGN_DYNAMIC_TEMPLATE_RECURRING_SCHEDULER_NIGHT_HOUR", type: "n", required: false, sample: 5 }
 - { name: "PAM_EXTERNAL_API_BITLY_SECRET", alias: "PAM_EXTERNAL_API_BITLY_SECRET", type: "s", required: false, sample: "" }
 - { name: "PAM_TRACKER_RECEIVED_CONSUMER_SIZE_FACTOR", alias: "PAM_TRACKER_RECEIVED_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 5 }
 - { name: "PAM_TRACKER_CREATED_CONSUMER_SIZE_FACTOR", alias: "PAM_TRACKER_CREATED_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 5 }
-- { name: "PAM4_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", alias: "PAM4_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", type: "b", required: false, sample: "false" }
+- { name: "PAM_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", alias: "PAM4_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", type: "b", required: false, sample: "false" }
