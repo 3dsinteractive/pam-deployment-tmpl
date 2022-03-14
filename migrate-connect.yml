@@ -1,16 +1,26 @@
-apiVersion: batch/v1
-kind: Job
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: <name>
   namespace: <namespace>
+  labels:
+    name: <name>
 spec:
-  ttlSecondsAfterFinished: 120
-  activeDeadlineSeconds: 340
+  replicas: 1
+  selector:
+    matchLabels:
+      name: <name>
   template:
+    metadata:
+      labels:
+        name: <name>
     spec:
+      terminationGracePeriodSeconds: 60
       imagePullSecrets:
       - name: dockerlogin
-      restartPolicy: Never
+      nodeSelector:
+        env: c1
+        role: worker
       containers:
       - name: <name>
         image: 3dsinteractive/pam4-migrate:<namespace>-6.0.<timestamp>
