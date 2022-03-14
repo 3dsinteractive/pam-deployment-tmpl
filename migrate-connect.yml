@@ -1,28 +1,25 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
   name: <name>
   namespace: <namespace>
   labels:
     name: <name>
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      name: <name>
-  template:
-    metadata:
-      labels:
-        name: <name>
-    spec:
-      terminationGracePeriodSeconds: 60
-      imagePullSecrets:
-      - name: dockerlogin
-      nodeSelector:
-        env: c1
-        role: worker
-      containers:
-      - name: <name>
-        image: 3dsinteractive/pam4-migrate:<tag>.<timestamp>
-        imagePullPolicy: Always
-        env: [ {name: PAM4_ENV, value: prod}, {name: DEBUG, value: "true"} <envs>]
+  nodeSelector:
+    env: c1
+    role: worker
+  imagePullSecrets:
+  - name: dockerlogin
+  containers:
+    - name: <name>
+      image: 3dsinteractive/pam4-migrate:<tag>.<timestamp>
+      imagePullPolicy: Always
+      env: [ {name: PAM4_ENV, value: prod}, {name: DEBUG, value: "true"} <envs>]
+      resources:
+        requests:
+          memory: <minMem>
+          cpu: <minCpu>
+        limits:
+          memory: <maxMem>
+          cpu: <maxCpu>
