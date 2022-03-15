@@ -1,50 +1,35 @@
 version: v1
 configs:
-- { name: "PAM_CMS_API_ENDPOINT", alias: "PAM4_CMS_API_ENDPOINT", type: "s", required: true, sample: "https://stg-mkt.pams.ai/api" }
-- { name: "PAM_CMS_API_ENDPOINT_INTERNAL", alias: "PAM4_CMS_API_ENDPOINT_INTERNAL", type: "s", required: true, sample: "http://mkt-backend-api:8080/api" }
+- { name: "PAM_CMS_API_ENDPOINT", alias: "PAM4_CMS_API_ENDPOINT", type: "s", required: true, sample: "https://stg-mkt.pams.ai/api", default: "[REPLACE_PAM_CMS_API_ENDPOINT]" }
+- { name: "PAM_CMS_API_ENDPOINT_INTERNAL", alias: "PAM4_CMS_API_ENDPOINT_INTERNAL", type: "s", required: true, sample: "http://mkt-backend-api:8080/api", default: http://mkt-backend-api:8080/api }
 - { name: "PAM_CMS_API_APPID", alias: "PAM4_CMS_API_APPID", type: "s", required: true, sample: "[UUID]" }
 - { name: "PAM_CMS_API_SECRET", alias: "PAM4_CMS_API_SECRET", type: "s", required: true, sample: "[UUID]" }
-- { name: "PAM_CMS_API_TIMEOUT", alias: "PAM4_CMS_API_TIMEOUT", type: "n", required: true, sample: "10" }
-- { name: "PAM_MKT_API_ENDPOINT", alias: "PAM4_MKT_API_ENDPOINT", type: "s", required: true, sample: "https://stg-mkt.pams.ai/api" }
+- { name: "PAM_CMS_API_TIMEOUT", alias: "PAM4_CMS_API_TIMEOUT", type: "n", required: true, sample: 10, default: 30 }
+- { name: "PAM_MKT_API_ENDPOINT", alias: "PAM4_MKT_API_ENDPOINT", type: "s", required: true, sample: "https://stg-mkt.pams.ai/api", default: "[REPLACE_PAM_MKT_API_ENDPOINT]" }
 - { name: "PAM_MKT_API_APPID", alias: "PAM4_MKT_API_APPID", type: "s", required: true, sample: "[UUID]" }
 - { name: "PAM_MKT_API_SECRET", alias: "PAM4_MKT_API_SECRET", type: "s", required: true, sample: "[UUID]" }
-- { name: "PAM_MKT_API_TIMEOUT", alias: "PAM4_MKT_API_TIMEOUT", type: "n", required: true, sample: "5" }
+- { name: "PAM_MKT_API_TIMEOUT", alias: "PAM4_MKT_API_TIMEOUT", type: "n", required: true, sample: 10, default: 30 }
 - { name: "PAM_AI_API_ENDPOINT", alias: "PAM4_AI_API_ENDPOINT", type: "s", required: true, sample: "https://stg.pams.ai/model/api" }
 - { name: "PAM_AI_API_APPID", alias: "PAM4_AI_API_APPID", type: "s", required: true, sample: "[UUID]" }
 - { name: "PAM_AI_API_SECRET", alias: "PAM4_AI_API_SECRET", type: "s", required: true, sample: "[UUID]" }
 - { name: "PAM_AI_API_TIMEOUT", alias: "PAM4_AI_API_TIMEOUT", type: "n", required: true, sample: "5" }
-- { name: "PAM_TRACKERRECEIVEDCONSUME_BATCHSIZE", alias: "PAM4_TRACKERRECEIVEDCONSUME_BATCHSIZE", type: "n", required: true, sample: "500" }
-- { name: "PAM_TRACKERRECEIVEDCONSUME_BATCHTIMEOUT", alias: "PAM4_TRACKERRECEIVEDCONSUME_BATCHTIMEOUT", type: "n", required: true, sample: "1500" }
-- { name: "PAM_EVALTRIGGERCONSUME_BATCHSIZE", alias: "PAM4_EVALTRIGGERCONSUME_BATCHSIZE", type: "n", required: true, sample: "500" }
-- { name: "PAM_EVALTRIGGERCONSUME_TIMEOUT", alias: "PAM4_EVALTRIGGERCONSUME_TIMEOUT", type: "n", required: true, sample: "1500" }
-- { name: "PAM_EVALTRIGGERCOMMANDS_BATCHSIZE", alias: "PAM4_EVALTRIGGERCOMMANDS_BATCHSIZE", type: "n", required: true, sample: "500" }
-- { name: "PAM_EVALTRIGGERCOMMANDS_TIMEOUT", alias: "PAM4_EVALTRIGGERCOMMANDS_TIMEOUT", type: "n", required: true, sample: "1500" }
-- { name: "PAM_EVALTRACKERCONSUME_BATCHSIZE", alias: "PAM4_EVALTRACKERCONSUME_BATCHSIZE", type: "n", required: true, sample: "500" }
-- { name: "PAM_EVALTRACKERCONSUME_TIMEOUT", alias: "PAM4_EVALTRACKERCONSUME_TIMEOUT", type: "n", required: true, sample: "1500" }
-- { name: "PAM_EVALTRACKERCOMMANDS_BATCHSIZE", alias: "PAM4_EVALTRACKERCOMMANDS_BATCHSIZE", type: "n", required: true, sample: "500" }
-- { name: "PAM_EVALTRACKERCOMMANDS_TIMEOUT", alias: "PAM4_EVALTRACKERCOMMANDS_TIMEOUT", type: "n", required: true, sample: "1500" }
-- { name: "PAM_CONTACTIMPORTCONSUME_BATCHSIZE", alias: "PAM4_CONTACTIMPORTCONSUME_BATCHSIZE", type: "n", required: true, sample: "500" }
-- { name: "PAM_CONTACTIMPORTCONSUME_TIMEOUT", alias: "PAM4_CONTACTIMPORTCONSUME_TIMEOUT", type: "n", required: true, sample: "1500" }
-- { name: "PAM_CONTACTIMPORTCOMMANDS_BATCHSIZE", alias: "PAM4_CONTACTIMPORTCOMMANDS_BATCHSIZE", type: "n", required: true, sample: "500" }
-- { name: "PAM_CONTACTIMPORTCOMMANDS_TIMEOUT", alias: "PAM4_CONTACTIMPORTCOMMANDS_TIMEOUT", type: "n", required: true, sample: "1500" }
-- { name: "PAM_MERGEDCONTACTCONSUME_BATCHSIZE", alias: "PAM4_MERGEDCONTACTCONSUME_BATCHSIZE", type: "n", required: true, sample: "500" }
-- { name: "PAM_MERGEDCONTACTCONSUME_TIMEOUT", alias: "PAM4_MERGEDCONTACTCONSUME_TIMEOUT", type: "n", required: true, sample: "1500" }
-- { name: "PAM_MERGEDCONTACTCOMMANDS_BATCHSIZE", alias: "PAM4_MERGEDCONTACTCOMMANDS_BATCHSIZE", type: "n", required: true, sample: "500" }
-- { name: "PAM_MERGEDCONTACTCOMMANDS_TIMEOUT", alias: "PAM4_MERGEDCONTACTCOMMANDS_TIMEOUT", type: "n", required: true, sample: "1500" }
-- { name: "PAM_CACHE_EXPIRE_TIME_CONTACTATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_CONTACTATTRS", type: "n", required: true, sample: "10" }
-- { name: "PAM_CACHE_EXPIRE_TIME_TRIGGERATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_TRIGGERATTRS", type: "n", required: true, sample: "10" }
-- { name: "PAM_CACHE_EXPIRE_TIME_AIATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_AIATTRS", type: "n", required: true, sample: "10" }
-- { name: "PAM_CACHE_EXPIRE_TIME_MEDIAATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_MEDIAATTRS", type: "n", required: true, sample: "10" }
-- { name: "PAM_CACHE_EXPIRE_TIME_PRODUCTATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_PRODUCTATTRS", type: "n", required: true, sample: "10" }
-- { name: "PAM_CACHE_EXPIRE_TIME_TRACKERATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_TRACKERATTRS", type: "n", required: true, sample: "10" }
-- { name: "PAM_CACHE_EXPIRE_TIME_CAMPAIGNATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_CAMPAIGNATTRS", type: "n", required: true, sample: "10" }
-- { name: "PAM_CACHE_EXPIRE_TIME_PRODUCT_TRENDS", alias: "PAM4_CACHE_EXPIRE_TIME_PRODUCT_TRENDS", type: "n", required: true, sample: "10" }
-- { name: "PAM_CACHE_EXPIRE_TIME_REPORT", alias: "PAM4_CACHE_EXPIRE_TIME_REPORT", type: "n", required: true, sample: "3000" }
-- { name: "PAM_CACHE_EXPIRE_TIME_MJML", alias: "PAM4_CACHE_EXPIRE_TIME_MJML", type: "n", required: true, sample: "10" }
-- { name: "PAM_INDEXERWORKER_POOLSIZE", alias: "PAM4_INDEXERWORKER_POOLSIZE", type: "n", required: true, sample: "10" }
-- { name: "PAM_SCHEDULE_APPPUSHNOTI", alias: "PAM4_SCHEDULE_APPPUSHNOTI", type: "n", required: true, sample: "120" }
-- { name: "PAM_SCHEDULE_SPDAYS_TRIGGERS", alias: "PAM4_SCHEDULE_SPDAYS_TRIGGERS", type: "n", required: true, sample: "1800" }
-- { name: "PAM_SCHEDULE_CAMPAIGNNOTENGAGE_TRIGGERS", alias: "PAM4_SCHEDULE_CAMPAIGNNOTENGAGE_TRIGGERS", type: "n", required: true, sample: "1800" }
+- { name: "PAM_TRACKERRECEIVEDCONSUME_BATCHSIZE", alias: "PAM4_TRACKERRECEIVEDCONSUME_BATCHSIZE", type: "n", required: true, sample: "500", default: 500 }
+- { name: "PAM_TRACKERRECEIVEDCONSUME_BATCHTIMEOUT", alias: "PAM4_TRACKERRECEIVEDCONSUME_BATCHTIMEOUT", type: "n", required: true, sample: "1500", default: 3000 }
+- { name: "PAM_EVALTRIGGERCOMMANDS_BATCHSIZE", alias: "PAM4_EVALTRIGGERCOMMANDS_BATCHSIZE", type: "n", required: true, sample: "500", default: 500 }
+- { name: "PAM_EVALTRIGGERCOMMANDS_TIMEOUT", alias: "PAM4_EVALTRIGGERCOMMANDS_TIMEOUT", type: "n", required: true, sample: "1500", default: 3000 }
+- { name: "PAM_CONTACTIMPORTCOMMANDS_BATCHSIZE", alias: "PAM4_CONTACTIMPORTCOMMANDS_BATCHSIZE", type: "n", required: true, sample: "500", default: 500 }
+- { name: "PAM_CONTACTIMPORTCOMMANDS_TIMEOUT", alias: "PAM4_CONTACTIMPORTCOMMANDS_TIMEOUT", type: "n", required: true, sample: "1500", default: 3000 }
+- { name: "PAM_CACHE_EXPIRE_TIME_CONTACTATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_CONTACTATTRS", type: "n", required: true, sample: "10", default: 10 }
+- { name: "PAM_CACHE_EXPIRE_TIME_TRIGGERATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_TRIGGERATTRS", type: "n", required: true, sample: "10", default: 10 }
+- { name: "PAM_CACHE_EXPIRE_TIME_MEDIAATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_MEDIAATTRS", type: "n", required: true, sample: "10", default: 10 }
+- { name: "PAM_CACHE_EXPIRE_TIME_TRACKERATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_TRACKERATTRS", type: "n", required: true, sample: "10", default: 10  }
+- { name: "PAM_CACHE_EXPIRE_TIME_CAMPAIGNATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_CAMPAIGNATTRS", type: "n", required: true, sample: "10", default: 10  }
+- { name: "PAM_CACHE_EXPIRE_TIME_REPORT", alias: "PAM4_CACHE_EXPIRE_TIME_REPORT", type: "n", required: true, sample: "300", default: 300 }
+- { name: "PAM_CACHE_EXPIRE_TIME_MJML", alias: "PAM4_CACHE_EXPIRE_TIME_MJML", type: "n", required: true, sample: "120", default: 120 }
+- { name: "PAM_INDEXERWORKER_POOLSIZE", alias: "PAM4_INDEXERWORKER_POOLSIZE", type: "n", required: true, sample: "1000", default: 1000 }
+- { name: "PAM_SCHEDULE_APPPUSHNOTI", alias: "PAM4_SCHEDULE_APPPUSHNOTI", type: "n", required: true, sample: "120", default: 120 }
+- { name: "PAM_SCHEDULE_SPDAYS_TRIGGERS", alias: "PAM4_SCHEDULE_SPDAYS_TRIGGERS", type: "n", required: true, sample: "1800", default: 3600 }
+- { name: "PAM_SCHEDULE_CAMPAIGNNOTENGAGE_TRIGGERS", alias: "PAM4_SCHEDULE_CAMPAIGNNOTENGAGE_TRIGGERS", type: "n", required: true, sample: "1800", default: 1800 }
 - { name: "PAM_SCHEDULE_PRODUCTS_TRENDS", alias: "PAM4_SCHEDULE_PRODUCTS_TRENDS", type: "n", required: true, sample: "3600" }
 - { name: "PAM_SCHEDULE_DAILY_TRACKERS", alias: "PAM4_SCHEDULE_DAILY_TRACKERS", type: "n", required: true, sample: "3600" }
 - { name: "PAM_PUSH_TO_CONTACT_CREATED_PARTITIONS", alias: "PAM4_PUSH_TO_CONTACT_CREATED_PARTITIONS", type: "n", required: true, sample: "50" }
