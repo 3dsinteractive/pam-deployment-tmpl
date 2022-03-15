@@ -1,55 +1,55 @@
 version: v1
 configs:
-- { name: "ECOM_HOST", type: "s", required: true, sample: https://stg-ecom.pams.ai }
-- { name: "PAM_SHIPPING_PROVIDER_KERRY_ENDPOINT", alias: "PAM4_SHIPPING_PROVIDER_KERRY_ENDPOINT", type: "s", required: true, sample: "https://poc-it.th.kerryexpress.com/ediwebapi_uat" }
+- { name: "ECOM_HOST", type: "s", required: true, sample: https://stg-ecom.pams.ai, default: "[REPLACE_ECOM_HOST]" }
+- { name: "PAM_SHIPPING_PROVIDER_KERRY_ENDPOINT", alias: "PAM4_SHIPPING_PROVIDER_KERRY_ENDPOINT", type: "s", required: true, sample: "https://poc-it.th.kerryexpress.com/ediwebapi_uat", default: https://poc-it.th.kerryexpress.com/ediwebapi_uat }
 - { name: "PAM_SHIPPING_PROVIDER_KERRY_APP_ID", alias: "PAM4_SHIPPING_PROVIDER_KERRY_APP_ID", type: "s", required: true, sample: "[NAME]" }
 - { name: "PAM_SHIPPING_PROVIDER_KERRY_APP_KEY", alias: "PAM4_SHIPPING_PROVIDER_KERRY_APP_KEY", type: "s", required: true, sample: "[UUID]" }
-- { name: "PAM_ORDER_EMAIL_INFO_EVENT", alias: "PAM4_ORDER_EMAIL_INFO_EVENT", type: "b", required: true, sample: "true" }
-- { name: "ECOM_PAYMENT_EGHL_SERVICE_ID", type: "s", required: true, sample: "sit" }
-- { name: "ECOM_PAYMENT_EGHL_PAYMENT_URL", type: "s", required: true, sample: "https://test2pay.ghl.com/ipgsg/payment.aspx" }
+- { name: "PAM_ORDER_EMAIL_INFO_EVENT", alias: "PAM4_ORDER_EMAIL_INFO_EVENT", type: "b", required: true, sample: "true", default: true }
+- { name: "ECOM_PAYMENT_EGHL_SERVICE_ID", type: "s", required: true, sample: "[SERVICE_ID]" }
+- { name: "ECOM_PAYMENT_EGHL_PAYMENT_URL", type: "s", required: true, sample: "https://test2pay.ghl.com/ipgsg/payment.aspx", default: https://test2pay.ghl.com/ipgsg/payment.aspx }
 - { name: "ECOM_PAYMENT_EGHL_PASSWORD", type: "s", required: true, sample: "[UUID]" }
-- { name: "PAM_ORDER_EXPIRED_IN_TIME_MINUTE", alias: "PAM4_ORDER_EXPIRED_IN_TIME_MINUTE", type: "n", required: true, sample: "60" }
+- { name: "PAM_ORDER_EXPIRED_IN_TIME_MINUTE", alias: "PAM4_ORDER_EXPIRED_IN_TIME_MINUTE", type: "n", required: true, sample: "60", default: 60 }
 - { name: "ECOM_PAYMENT_OMISE_PUBLIC_KEY", type: "s", required: true, sample: "[UUID]" }
 - { name: "ECOM_PAYMENT_OMISE_SECRET_KEY", type: "s", required: true, sample: "[UUID]" }
-- { name: "PAM_SCHEDULE_TRENDING_SUGGEST_HR", alias: "PAM4_SCHEDULE_TRENDING_SUGGEST_HR", type: "n", required: true, sample: "1" }
-- { name: "ECOM_VALIDATE_STOCK", type: "b", required: true, sample: "true" }
-- { name: "ECOM_SEND_POINT_TO_EXTERNAL", type: "b", required: true, sample: "false" }
-- { name: "ECOM_SEEDER_2C2P_IPP", type: "b", required: true, sample: "true" }
-- { name: "ECOM_PRODUCT_IS_CALCULATE_POINT", type: "b", required: true, sample: "true" }
-- { name: "ECOM_ENABLE_DISPLAY_RELATED_PRODUCT", type: "b", required: true, sample: "true" }
-- { name: "ECOM_LANDING_VERIFIED_URL", type: "s", required: true, sample: "https://stg-ecom-bdb.pams.ai" }
-- { name: "ECOM_IS_FLASHSALE_PRODUCT_ENABLED", type: "s", required: true, sample: "true" }
-- { name: "ECOM_ORDER_CODE_TYPE", type: "s", required: true, sample: "INCREMENT_PERIOD_DAY" }
-- { name: "ECOM_ORDER_PREFIX_CODE", type: "s", required: true, sample: "ONL" }
-- { name: "ECOM_ORDER_CODE_LENGTH", type: "n", required: true, sample: "14" }
-- { name: "ECOM_ADDRESS_DATABASE_VERSION", type: "s", required: false, sample: "version2" }
+- { name: "PAM_SCHEDULE_TRENDING_SUGGEST_HR", alias: "PAM4_SCHEDULE_TRENDING_SUGGEST_HR", type: "n", required: true, sample: "1", default: 1 }
+- { name: "ECOM_VALIDATE_STOCK", type: "b", required: true, sample: "true", default: true }
+- { name: "ECOM_SEND_POINT_TO_EXTERNAL", type: "b", required: true, sample: "false", default: true }
+- { name: "ECOM_SEEDER_2C2P_IPP", type: "b", required: true, sample: "true", default: true }
+- { name: "ECOM_PRODUCT_IS_CALCULATE_POINT", type: "b", required: true, sample: "true", default: true }
+- { name: "ECOM_ENABLE_DISPLAY_RELATED_PRODUCT", type: "b", required: true, sample: "true", default: true }
+- { name: "ECOM_LANDING_VERIFIED_URL", type: "s", required: true, sample: "https://stg-ecom-bdb.pams.ai", default: "[REPLACE_ECOM_LANDING_VERIFIED_URL]" }
+- { name: "ECOM_IS_FLASHSALE_PRODUCT_ENABLED", type: "s", required: true, sample: "true", default: true }
+- { name: "ECOM_ORDER_CODE_TYPE", type: "s", required: true, sample: "INCREMENT_PERIOD_DAY", default: INCREMENT_PERIOD_MONTH }
+- { name: "ECOM_ORDER_PREFIX_CODE", type: "s", required: true, sample: "ONL", default: ORDER }
+- { name: "ECOM_ORDER_CODE_LENGTH", type: "n", required: true, sample: "14", default: 14 }
+- { name: "ECOM_ADDRESS_DATABASE_VERSION", type: "s", required: false, sample: "version2", default: version2 }
 - { name: "ECOM_PAYMENT_2C2P_MERCHANT_ID", type: "s", required: false, sample: "764111111111111" }
 - { name: "ECOM_PAYMENT_2C2P_SECRET_KEY", type: "s", required: false, sample: "V4SZ0C5OlxAq" }
-- { name: "ECOM_PRODUCT_CREATE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_CREATE_EXCEL_COLUMN_HEADER", type: "s", required: true, sample: "[{\"column_name\":\"Product Code\",\"is_required\":false,\"field_name\":\"product_code\"}]" }
-- { name: "ECOM_PRODUCT_UPDATE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_UPDATE_EXCEL_COLUMN_HEADER", type: "s", required: true, sample: "[{\"column_name\":\"*Product ID (Do not change)\",\"is_required\":true,\"field_name\":\"product_id\"}]" }
-- { name: "ECOM_PRODUCT_SKU_EXCEL_COLUMN_HEADER", alias: "PRODUCT_SKU_EXCEL_COLUMN_HEADER", type: "s", required: true, sample: "[{\"column_name\":\"*Product ID (Do not change)\",\"is_required\":true,\"field_name\":\"product_id\"}]" }
-- { name: "ECOM_PRODUCT_PRICE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_PRICE_EXCEL_COLUMN_HEADER", type: "s", required: true, sample: "[{\"column_name\":\"sku\",\"is_required\":true,\"field_name\":\"item_no\",\"col_header_name\":\"A\"}]" }
-- { name: "ECOM_PRODUCT_PRICE_TEMP_HEADER", alias: "PRODUCT_PRICE_TEMP_HEADER", type: "s", required: true, sample: "{\"item_no\":\"sku\", \"cust_price_grp\":\"\", \"price_code\":\"price code\"}" }
-- { name: "ECOM_ENABLE_NEW_ECOM_CMS_API", alias: "ECOM_ENABLE_NEW_ECOM_CMS_API", type: "b", required: true, sample: "true" }
+- { name: "ECOM_PRODUCT_CREATE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_CREATE_EXCEL_COLUMN_HEADER", type: "s", required: true, default: "[{\"column_name\":\"Product Code\",\"is_required\":false,\"field_name\":\"product_code\"}]" }
+- { name: "ECOM_PRODUCT_UPDATE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_UPDATE_EXCEL_COLUMN_HEADER", type: "s", required: true, default: "[{\"column_name\":\"*Product ID (Do not change)\",\"is_required\":true,\"field_name\":\"product_id\"}]" }
+- { name: "ECOM_PRODUCT_SKU_EXCEL_COLUMN_HEADER", alias: "PRODUCT_SKU_EXCEL_COLUMN_HEADER", type: "s", required: true, default: "[{\"column_name\":\"*Product ID (Do not change)\",\"is_required\":true,\"field_name\":\"product_id\"}]" }
+- { name: "ECOM_PRODUCT_PRICE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_PRICE_EXCEL_COLUMN_HEADER", type: "s", required: true, default: "[{\"column_name\":\"sku\",\"is_required\":true,\"field_name\":\"item_no\",\"col_header_name\":\"A\"}]" }
+- { name: "ECOM_PRODUCT_PRICE_TEMP_HEADER", alias: "PRODUCT_PRICE_TEMP_HEADER", type: "s", required: true, default: "{\"item_no\":\"sku\", \"cust_price_grp\":\"\", \"price_code\":\"price code\"}" }
+- { name: "ECOM_ENABLE_NEW_ECOM_CMS_API", alias: "ECOM_ENABLE_NEW_ECOM_CMS_API", type: "b", required: true, default: true }
 - { name: "ECOM_PAYMENT_BBL_MERCHANT_ID", type: "s", required: false, sample: ""}
 - { name: "ECOM_PAYMENT_BBL_MERCHANT_API_ID", type: "s", required: false, sample: ""}
 - { name: "ECOM_PAYMENT_BBL_MERCHANT_API_PASSWORD", type: "s", required: false, sample: ""}
 - { name: "ECOM_PAYMENT_BBL_API_ENDPOINT", type: "s", required: false, sample: ""}
-- { name: "ECOM_ENABLE_IPP", type: "b", required: false, sample: "true" }
-- { name: "PAM_IGNOREGEN_MEMBER_CARD_NO", alias: "PAM4_IGNOREGEN_MEMBER_CARD_NO", type: "b", required: false, sample: "false" }
-- { name: "MEMBER_REGISTER_INITIAL_VALUE", type: "b", required: false, sample: "true" }
-- { name: "THIRD_PARTY_POINT_UPDATE", type: "b", required: false, sample: "true" }
-- { name: "THIRD_PARTY_VERIFIED_OTP", type: "b", required: false, sample: "true" }
-- { name: "PAM_CACHE_EXPIRE_TIME_ALLOW_REQUEST_IPADDRESS", alias: "PAM4_CACHE_EXPIRE_TIME_ALLOW_REQUEST_IPADDRESS", type: "n", required: false, sample: "30" }
-- { name: "PAM_CUSTOMER_NAME", alias: "PAM4_CUSTOMER_NAME", type: "s", required: false, sample: "jaymart" }
-- { name: "ECOM_IS_ENABLE_VALIDATE_MEMBER_CLASS", type: "b", required: false, sample: "false" }
+- { name: "ECOM_ENABLE_IPP", type: "b", required: false, sample: "true", default: true }
+- { name: "PAM_IGNOREGEN_MEMBER_CARD_NO", alias: "PAM4_IGNOREGEN_MEMBER_CARD_NO", type: "b", required: false, sample: "false", default: true }
+- { name: "MEMBER_REGISTER_INITIAL_VALUE", type: "b", required: false, sample: "true", default: true }
+- { name: "THIRD_PARTY_POINT_UPDATE", type: "b", required: false, sample: "true", default: false }
+- { name: "THIRD_PARTY_VERIFIED_OTP", type: "b", required: false, sample: "true", default: false }
+- { name: "PAM_CACHE_EXPIRE_TIME_ALLOW_REQUEST_IPADDRESS", alias: "PAM4_CACHE_EXPIRE_TIME_ALLOW_REQUEST_IPADDRESS", type: "n", required: false, sample: "30", default: 30 }
+- { name: "PAM_CUSTOMER_NAME", alias: "PAM4_CUSTOMER_NAME", type: "s", required: false, sample: "[CUSTOMER_NAME]", default: "[REPLACE_PAM_CUSTOMER_NAME]" }
+- { name: "ECOM_IS_ENABLE_VALIDATE_MEMBER_CLASS", type: "b", required: false, sample: "false", default: false}
 - { name: "ECOM_VALIDATE_MEMBER_CLASS_LIST", type: "s", required: false, sample: "ENJ,EPC"}
 - { name: "THIRD_PARTY_ADD_POINT_TRANSACTION_TYPE", type: "s", required: false, sample: "4"}
 - { name: "THIRD_PARTY_DEDUCT_POINT_TRANSACTION_TYPE", type: "s", required: false, sample: "5"}
-- { name: "ECOM_PICKUP_STOCK_TYPE", type: "s", required: false, sample: "internal" }
-- { name: "ECOM_ENABLE_DELIVERY_STORE", type: "b", required: false, sample: "false" }
+- { name: "ECOM_PICKUP_STOCK_TYPE", type: "s", required: false, sample: "internal", default: internal }
+- { name: "ECOM_ENABLE_DELIVERY_STORE", type: "b", required: false, sample: "false", default: false }
 - { name: "ECOM_PAYMENT_KTC_MERCHANT_ID", type: "s", required: false, sample: ""}
-- { name: "ECOM_PAYMENT_KTC_IPP_MERCHANT_ID", type: "s", required: false, sample: "991424841"}
+- { name: "ECOM_PAYMENT_KTC_IPP_MERCHANT_ID", type: "s", required: false, sample: "[MERCHANT_ID]"}
 - { name: "ECOM_PAYMENT_KTC_API_ENDPOINT", type: "s", required: false, sample: "https://testpaygate.ktc.co.th/ktc/eng/merchandize/payment/payForm.jsp"}
 - { name: "ECOM_KERRY_TRACKING_NO_PREFIX", type: "s", required: false, sample: "JMBS"}
 - { name: "ECOM_ENABLE_TRACKING_PER_STORE", type: "b", required: false, sample: "false" }
@@ -60,6 +60,6 @@ configs:
 - { name: "ECOM_ENABLE_MEMBER_TYPE_B2B_ONLY", type: "b", required: false, sample: "true" }
 - { name: "ECOM_ENABLE_MEMBER_TYPE_B2C", type: "b", required: false, sample: "true" }
 - { name: "ECOM_REQUEST_OTP_PERIOD_TIME_MINUTE", type: "n", required: false, sample: "3" }
-- { name: "ECOM_ENABLE_CAPTCHA_FEATURE", type: "b", required: false, sample: "true" }
-- { name: "ECOM_CAPTCHA_CONFIG", type: "s", required: false, sample: "{}" }
+- { name: "ECOM_ENABLE_CAPTCHA_FEATURE", type: "b", required: false, sample: "true", default: true }
+- { name: "ECOM_CAPTCHA_CONFIG", type: "s", required: false, default: {"ShowLineOptions":[],"CaptchaType":"string","Id":"","VerifyValue":"","DriverAudio":{"Length":6,"Language":"zh"},"DriverString":{"Height":60,"Width":240,"ShowLineOptions":0,"NoiseCount":0,"Source":"1234567890qwertyuioplkjhgfdsazxcvbnm","Length":6,"Fonts":["wqy-microhei.ttc"],"BgColor":{"R":0,"G":0,"B":0,"A":0}},"DriverMath":{"Height":60,"Width":240,"ShowLineOptions":0,"NoiseCount":0,"Length":6,"Fonts":["wqy-microhei.ttc"],"BgColor":{"R":0,"G":0,"B":0,"A":0}},"DriverChinese":{"Height":60,"Width":320,"ShowLineOptions":0,"NoiseCount":0,"Source":"设想,你在,处理,消费者,的音,频输,出音,频可,能无,论什,么都,没有,任何,输出,或者,它可,能是,单声道,立体声,或是,环绕立,体声的,,不想要,的值","Length":2,"Fonts":["wqy-microhei.ttc"],"BgColor":{"R":125,"G":125,"B":0,"A":118}},"DriverDigit":{"Height":80,"Width":240,"Length":5,"MaxSkew":0.7,"DotCount":80}} }
 - { name: "ECOM_ENABLE_TRANSACTION_MEMBER_POINT", type: "b", required: false, sample: "true" }
