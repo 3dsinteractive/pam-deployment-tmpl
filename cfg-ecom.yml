@@ -54,9 +54,9 @@ configs:
 - { name: "ECOM_KERRY_TRACKING_NO_PREFIX", type: "s", required: false, sample: "JMBS"}
 - { name: "ECOM_ENABLE_TRACKING_PER_STORE", type: "b", required: false, sample: "false" }
 - { name: "ECOM_NOT_SUPPORTED_SHIPPING_ZIPCODES", type: "s", required: false, sample: "95000,95110"}
-- { name: "ECOM_ENABLE_SUM_STORE_STOCK_BY_STORE_ID", type: "b", required: false, sample: "false" }
-- { name: "ECOM_ENABLE_FIX_ECOM_MEMBER_POINTS_RATE", type: "b", required: false, sample: "false" }
-- { name: "ECOM_MEMBER_POINTS_RATE", type: "n", required: false, sample: "25.0" }
+- { name: "ECOM_ENABLE_SUM_STORE_STOCK_BY_STORE_ID", type: "b", required: false, sample: "false", default: false }
+- { name: "ECOM_ENABLE_FIX_ECOM_MEMBER_POINTS_RATE", type: "b", required: false, sample: "false", default: true }
+- { name: "ECOM_MEMBER_POINTS_RATE", type: "n", required: false, default: "40.0" }
 - { name: "ECOM_ENABLE_MEMBER_TYPE_B2B_ONLY", type: "b", required: false, sample: "true" }
 - { name: "ECOM_ENABLE_MEMBER_TYPE_B2C", type: "b", required: false, sample: "true" }
 - { name: "ECOM_REQUEST_OTP_PERIOD_TIME_MINUTE", type: "n", required: false, sample: "3" }
