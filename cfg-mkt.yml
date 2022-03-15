@@ -26,63 +26,58 @@ configs:
 - { name: "PAM_CACHE_EXPIRE_TIME_CAMPAIGNATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_CAMPAIGNATTRS", type: "n", required: true, sample: "10", default: 10  }
 - { name: "PAM_CACHE_EXPIRE_TIME_REPORT", alias: "PAM4_CACHE_EXPIRE_TIME_REPORT", type: "n", required: true, sample: "300", default: 300 }
 - { name: "PAM_CACHE_EXPIRE_TIME_MJML", alias: "PAM4_CACHE_EXPIRE_TIME_MJML", type: "n", required: true, sample: "120", default: 120 }
-- { name: "PAM_INDEXERWORKER_POOLSIZE", alias: "PAM4_INDEXERWORKER_POOLSIZE", type: "n", required: true, sample: "1000", default: 1000 }
 - { name: "PAM_SCHEDULE_APPPUSHNOTI", alias: "PAM4_SCHEDULE_APPPUSHNOTI", type: "n", required: true, sample: "120", default: 120 }
 - { name: "PAM_SCHEDULE_SPDAYS_TRIGGERS", alias: "PAM4_SCHEDULE_SPDAYS_TRIGGERS", type: "n", required: true, sample: "1800", default: 3600 }
 - { name: "PAM_SCHEDULE_CAMPAIGNNOTENGAGE_TRIGGERS", alias: "PAM4_SCHEDULE_CAMPAIGNNOTENGAGE_TRIGGERS", type: "n", required: true, sample: "1800", default: 1800 }
-- { name: "PAM_SCHEDULE_PRODUCTS_TRENDS", alias: "PAM4_SCHEDULE_PRODUCTS_TRENDS", type: "n", required: true, sample: "3600" }
-- { name: "PAM_SCHEDULE_DAILY_TRACKERS", alias: "PAM4_SCHEDULE_DAILY_TRACKERS", type: "n", required: true, sample: "3600" }
-- { name: "PAM_PUSH_TO_CONTACT_CREATED_PARTITIONS", alias: "PAM4_PUSH_TO_CONTACT_CREATED_PARTITIONS", type: "n", required: true, sample: "50" }
-- { name: "PAM_PUSH_TO_CONTACT_CREATED_REPLICAS", alias: "PAM4_PUSH_TO_CONTACT_CREATED_REPLICAS", type: "n", required: true, sample: "2" }
-- { name: "PAM_TRACKER_INDEX_SHARDS", alias: "PAM4_TRACKER_INDEX_SHARDS", type: "n", required: true, sample: "3" }
-- { name: "PAM_TRACKER_INDEX_REPLICAS", alias: "PAM4_TRACKER_INDEX_REPLICAS", type: "n", required: true, sample: "0" }
-- { name: "PAM_MJML_DIR", alias: "PAM4_MJML_DIR", type: "s", required: true, sample: "/app/email/mjml" }
-- { name: "PAM_SCHEDULE_CONTACT_EXPORT_FILE_DELETE", alias: "PAM4_SCHEDULE_CONTACT_EXPORT_FILE_DELETE", type: "n", required: true, sample: "3600" }
-- { name: "PAM_SCHEDULE_DELIVERS", alias: "PAM4_SCHEDULE_DELIVERS", type: "n", required: true, sample: "1800" }
-- { name: "PAM_DELIVERS_LIMIT", alias: "PAM4_DELIVERS_LIMIT", type: "n", required: true, sample: "1000" }
-- { name: "PAM_DELIVERS_DIFF_TIME_MINUTE_QUERY", alias: "PAM4_DELIVERS_DIFF_TIME_MINUTE_QUERY", type: "n", required: true, sample: "60" }
-- { name: "PAM_SMS_CLICKNEXT_ENDPOINT", alias: "PAM4_SMS_CLICKNEXT_ENDPOINT", type: "s", required: true, sample: "https://member.smsmkt.com:443/webservice/SMSService.php?wsdl" }
-- { name: "PAM_FILE_AGE_IN_DAYS", alias: "PAM4_FILE_AGE_IN_DAYS", type: "n", required: true, sample: "7" }
-- { name: "PAM_CMS_FRONTEND_URL", alias: "PAM4_CMS_FRONTEND_URL", type: "s", required: true, sample: "https://stg-cms.pams.ai" }
-- { name: "PAM_DELIVERY_FREQUENCY_CAPPING", alias: "PAM4_DELIVERY_FREQUENCY_CAPPING", type: "n", required: true, sample: "50" }
-- { name: "PAM_DELIVERY_TX_FREQUENCY_CAPPING", alias: "PAM4_DELIVERY_TX_FREQUENCY_CAPPING", type: "n", required: true, sample: "50" }
-- { name: "PAM_ENABLE_ENCODE_THAI_URL_TO_COMPARE_TRIGGER_CONDITION", "PAM4_ENABLE_ENCODE_THAI_URL_TO_COMPARE_TRIGGER_CONDITION", type: "b", required: true, sample:  "true" }
-- { name: "PAM_ORDER_EMAIL_INFO_EVENT", alias: "PAM4_ORDER_EMAIL_INFO_EVENT", type: "b", required: true, sample: "true" }
-- { name: "PAM_HAS_MIGRATE_DELIVER_ENGAGE", type: "b", required: true, sample: "true" }
-- { name: "PAM_SCHEDULE_RETENTION_PERIOD", alias: "PAM4_SCHEDULE_RETENTION_PERIOD", type: "n", required: true, sample: "6" }
-- { name: "PAM_SCHEDULE_RETENTION_LIMIT", alias: "PAM4_SCHEDULE_RETENTION_LIMIT", type: "n", required: true, sample: "24" }
-- { name: "PAM_HAS_MIGRATE_ROUTING_TRACKERS", type: "b", required: true, sample: "true" }
-- { name: "PAM_GDRIVE_OAUTH_CONFIG", alias: "PAM4_GDRIVE_OAUTH_CONFIG", type: "s", required: false, sample: "[JSON]" }
-- { name: "PAM_USE_MAILPAM_API", type: "b", required: false, sample: "false" }
-- { name: "PAM_DISABLE_INFORM_WEB_HOOK", type: "b", required: true, sample: "false" }
-- { name: "PAM_ENABLE_PDPA_FEATURE", alias: "PAM_ENABLE_PDPA_FEATURE", type: "b", required: true, sample: "true" }
-- { name: "ENABLE_CONSENT", alias: "ENABLE_CONSENT", type: "b", required: true, sample: "true" }
-- { name: "PAM_ENABLE_NEW_PAM_CMS", alias: "PAM4_ENABLE_NEW_PAM_CMS", type: "b", required: true, sample: "true" }
-- { name: "PAM_EVAL_CONTACT_TRIGGERS_CONSUMER_SIZE_FACTOR", type: "n", required: true, sample: "2" }
-- { name: "PAM_DAILY_REFRESH_SEGMENT_PARALLEL_TOTAL", alias: "PAM_DAILY_REFRESH_SEGMENT_PARALLEL_TOTAL", type: "n", required: false, sample: 10 }
-- { name: "PAM_ENABLE_DAILY_REFRESH", alias: "PAM_ENABLE_DAILY_REFRESH", type: "b", required: false, sample: "true" }
-- { name: "PAM_TRACKER_TODAY_INDEX_SHARDS", alias: "PAM_TRACKER_TODAY_INDEX_SHARDS", type: "n", required: false, sample: "3" }
-- { name: "PAM_TRACKER_TODAY_INDEX_REPLICAS", alias: "PAM_TRACKER_TODAY_INDEX_REPLICAS", type: "n", required: false, sample: "0" }
-- { name: "PAM_LINKED_DATABASE_INDEX_SHARDS", alias: "PAM_LINKED_DATABASE_INDEX_SHARDS", type: "n", required: false, sample: "3" }
-- { name: "PAM_LINKED_DATABASE_INDEX_REPLICAS", alias: "PAM_LINKED_DATABASE_INDEX_REPLICAS", type: "n", required: false, sample: "0" }
-- { name: "PAM_ENABLE_TRACKER_TODAY", alias: "PAM_ENABLE_TRACKER_TODAY", type: "b", required: false, sample: "true" }
+- { name: "PAM_SCHEDULE_DAILY_TRACKERS", alias: "PAM4_SCHEDULE_DAILY_TRACKERS", type: "n", required: true, sample: "3600", default: 3600 }
+- { name: "PAM_PUSH_TO_CONTACT_CREATED_PARTITIONS", alias: "PAM4_PUSH_TO_CONTACT_CREATED_PARTITIONS", type: "n", required: true, sample: "50", default: 50 }
+- { name: "PAM_PUSH_TO_CONTACT_CREATED_REPLICAS", alias: "PAM4_PUSH_TO_CONTACT_CREATED_REPLICAS", type: "n", required: true, sample: "2", default: 2 }
+- { name: "PAM_TRACKER_INDEX_SHARDS", alias: "PAM4_TRACKER_INDEX_SHARDS", type: "n", required: true, sample: "3", default: 1 }
+- { name: "PAM_TRACKER_INDEX_REPLICAS", alias: "PAM4_TRACKER_INDEX_REPLICAS", type: "n", required: true, sample: "0", default: 0 }
+- { name: "PAM_MJML_DIR", alias: "PAM4_MJML_DIR", type: "s", required: true, sample: "/app/email/mjml", default: /app/email/mjml }
+- { name: "PAM_SCHEDULE_CONTACT_EXPORT_FILE_DELETE", alias: "PAM4_SCHEDULE_CONTACT_EXPORT_FILE_DELETE", type: "n", required: true, sample: "3600", default: 3600 }
+- { name: "PAM_SCHEDULE_DELIVERS", alias: "PAM4_SCHEDULE_DELIVERS", type: "n", required: true, sample: "1800", default: 1800 }
+- { name: "PAM_DELIVERS_LIMIT", alias: "PAM4_DELIVERS_LIMIT", type: "n", required: true, sample: "1000", default: 1000 }
+- { name: "PAM_DELIVERS_DIFF_TIME_MINUTE_QUERY", alias: "PAM4_DELIVERS_DIFF_TIME_MINUTE_QUERY", type: "n", required: true, sample: "60", default: 60 }
+- { name: "PAM_SMS_CLICKNEXT_ENDPOINT", alias: "PAM4_SMS_CLICKNEXT_ENDPOINT", type: "s", required: true, sample: "https://member.smsmkt.com:443/webservice/SMSService.php?wsdl", default: https://member.smsmkt.com:443/webservice/SMSService.php?wsdl }
+- { name: "PAM_FILE_AGE_IN_DAYS", alias: "PAM4_FILE_AGE_IN_DAYS", type: "n", required: true, sample: "7", default: 7 }
+- { name: "PAM_CMS_FRONTEND_URL", alias: "PAM4_CMS_FRONTEND_URL", type: "s", required: true, sample: "https://stg-cms.pams.ai", default: "[REPLACE_PAM_CMS_FRONTEND_URL]" }
+- { name: "PAM_DELIVERY_FREQUENCY_CAPPING", alias: "PAM4_DELIVERY_FREQUENCY_CAPPING", type: "n", required: true, sample: "10", default: 10 }
+- { name: "PAM_DELIVERY_TX_FREQUENCY_CAPPING", alias: "PAM4_DELIVERY_TX_FREQUENCY_CAPPING", type: "n", required: true, sample: "30", default: 30 }
+- { name: "PAM_ORDER_EMAIL_INFO_EVENT", alias: "PAM4_ORDER_EMAIL_INFO_EVENT", type: "b", required: true, sample: "true", default: true }
+- { name: "PAM_HAS_MIGRATE_DELIVER_ENGAGE", type: "b", required: true, sample: "true", default: true }
+- { name: "PAM_SCHEDULE_RETENTION_PERIOD", alias: "PAM4_SCHEDULE_RETENTION_PERIOD", type: "n", required: true, sample: "12", default: 12 }
+- { name: "PAM_SCHEDULE_RETENTION_LIMIT", alias: "PAM4_SCHEDULE_RETENTION_LIMIT", type: "n", required: true, sample: "24", default: 24 }
+- { name: "PAM_HAS_MIGRATE_ROUTING_TRACKERS", type: "b", required: true, sample: "true", default: true }
+- { name: "PAM_USE_MAILPAM_API", type: "b", required: false, sample: "false", default: false }
+- { name: "PAM_DISABLE_INFORM_WEB_HOOK", type: "b", required: true, sample: "false", default: false }
+- { name: "PAM_ENABLE_PDPA_FEATURE", alias: "PAM_ENABLE_PDPA_FEATURE", type: "b", required: true, sample: "true", default: true }
+- { name: "ENABLE_CONSENT", alias: "ENABLE_CONSENT", type: "b", required: true, sample: "true", default: true }
+- { name: "PAM_ENABLE_NEW_PAM_CMS", alias: "PAM4_ENABLE_NEW_PAM_CMS", type: "b", required: true, sample: "true", default: true }
+- { name: "PAM_EVAL_CONTACT_TRIGGERS_CONSUMER_SIZE_FACTOR", type: "n", required: true, sample: "10", default: 10 }
+- { name: "PAM_DAILY_REFRESH_SEGMENT_PARALLEL_TOTAL", alias: "PAM_DAILY_REFRESH_SEGMENT_PARALLEL_TOTAL", type: "n", required: false, sample: 10, default: 10 }
+- { name: "PAM_ENABLE_DAILY_REFRESH", alias: "PAM_ENABLE_DAILY_REFRESH", type: "b", required: false, sample: "true", default: true }
+- { name: "PAM_TRACKER_TODAY_INDEX_SHARDS", alias: "PAM_TRACKER_TODAY_INDEX_SHARDS", type: "n", required: false, sample: "3", default: 3 }
+- { name: "PAM_TRACKER_TODAY_INDEX_REPLICAS", alias: "PAM_TRACKER_TODAY_INDEX_REPLICAS", type: "n", required: false, sample: "0", default: 0 }
+- { name: "PAM_LINKED_DATABASE_INDEX_SHARDS", alias: "PAM_LINKED_DATABASE_INDEX_SHARDS", type: "n", required: false, sample: "3", default: 3 }
+- { name: "PAM_LINKED_DATABASE_INDEX_REPLICAS", alias: "PAM_LINKED_DATABASE_INDEX_REPLICAS", type: "n", required: false, sample: "0", default: 0 }
 - { name: "SENDER_MACRO_KIOS_SERVICE_ID", alias: "SENDER_MACRO_KIOS_SERVICE_ID", type: "s", required: false, sample: "JMC001" }
-- { name: "PAM_EVAL_WORKERS_MAX_LIMIT", alias: "PAM_EVAL_WORKERS_MAX_LIMIT", type: "n", required: false, sample: 5 }
+- { name: "PAM_EVAL_WORKERS_MAX_LIMIT", alias: "PAM_EVAL_WORKERS_MAX_LIMIT", type: "n", required: false, sample: 10, default: 10 }
 - { name: "PAM_IMAGE_APPUSH_CONTAINERS", alias: "PAM4_IMAGE_APPUSH_CONTAINERS", type: "n", required: true, sample: "3" }
-- { name: "PAM_SENDER_WORKERS_MAX_LIMIT", alias: "PAM_SENDER_WORKERS_MAX_LIMIT", type: "n", required: false, sample: "3" }
-- { name: "PAM_USE_MAILPAM_API", alias: "PAM_USE_MAILPAM_API", type: "b", required: false, sample: "true" }
-- { name: "ENABLE_UPDATE_CONNECT_USER", alias: "ENABLE_UPDATE_CONNECT_USER", type: "b", required: true, sample: "false" }
-- { name: "PAM_ENABLE_TRACKER_CUSTOM_CREATED_AT", alias: "PAM_ENABLE_TRACKER_CUSTOM_CREATED_AT", type: "b", required: false, sample: "true" }
-- { name: "PAM_ENABLE_READ_FILE_TRACKERS", alias: "PAM_ENABLE_READ_FILE_TRACKERS", type: "b", required: false, sample: "true" }
-- { name: "PAM_ENABLE_CREATE_USER_WITH_AZURE_AD", alias: "PAM_ENABLE_CREATE_USER_WITH_AZURE_AD", type: "b", required: false, sample: "false" }
-- { name: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS", alias: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS", type: "b", required: false, sample: "false" }
-- { name: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS_APP_PUSH", alias: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS_APP_PUSH", type: "b", required: false, sample: "false" }
-- { name: "PAM_ENABLE_MAPPING_AZURE_AD_GROUP_TO_USER_ROLE", alias: "PAM_ENABLE_MAPPING_AZURE_AD_GROUP_TO_USER_ROLE", type: "b", required: false, sample: "false" }
-- { name: "PAM_PTASK_TRACKER_IMPORTER_FILETRACKER_WORKERS", alias: "PAM4_PTASK_TRACKER_IMPORTER_FILETRACKER_WORKERS", type: "n", required: false, sample: 5 }
-- { name: "PAM_PTASK_TRACKER_IMPORTER_MQ_PARTITIONS", alias: "PAM4_PTASK_TRACKER_IMPORTER_MQ_PARTITIONS", type: "n", required: false, sample: 5 }
-- { name: "PAM_SCHEDULER_READ_FILE_TRACKER_BACKWARD", alias: "PAM4_SCHEDULER_READ_FILE_TRACKER_BACKWARD", type: "n", required: false, sample: 5 }
-- { name: "PAM_CAMPAIGN_DYNAMIC_TEMPLATE_RECURRING_SCHEDULER_NIGHT_HOUR", alias: "PAM4_CAMPAIGN_DYNAMIC_TEMPLATE_RECURRING_SCHEDULER_NIGHT_HOUR", type: "n", required: false, sample: 5 }
-- { name: "PAM_EXTERNAL_API_BITLY_SECRET", alias: "PAM_EXTERNAL_API_BITLY_SECRET", type: "s", required: false, sample: "" }
-- { name: "PAM_TRACKER_RECEIVED_CONSUMER_SIZE_FACTOR", alias: "PAM_TRACKER_RECEIVED_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 5 }
-- { name: "PAM_TRACKER_CREATED_CONSUMER_SIZE_FACTOR", alias: "PAM_TRACKER_CREATED_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 5 }
-- { name: "PAM_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", alias: "PAM4_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", type: "b", required: false, sample: "false" }
+- { name: "PAM_SENDER_WORKERS_MAX_LIMIT", alias: "PAM_SENDER_WORKERS_MAX_LIMIT", type: "n", required: false, sample: "3", default: 3 }
+- { name: "PAM_USE_MAILPAM_API", alias: "PAM_USE_MAILPAM_API", type: "b", required: false, sample: "true", default: false }
+- { name: "ENABLE_UPDATE_CONNECT_USER", alias: "ENABLE_UPDATE_CONNECT_USER", type: "b", required: true, sample: "false", default: false }
+- { name: "PAM_ENABLE_TRACKER_CUSTOM_CREATED_AT", alias: "PAM_ENABLE_TRACKER_CUSTOM_CREATED_AT", type: "b", required: false, sample: "true", default: true }
+- { name: "PAM_ENABLE_READ_FILE_TRACKERS", alias: "PAM_ENABLE_READ_FILE_TRACKERS", type: "b", required: false, sample: "true", default: true }
+- { name: "PAM_ENABLE_CREATE_USER_WITH_AZURE_AD", alias: "PAM_ENABLE_CREATE_USER_WITH_AZURE_AD", type: "b", required: false, sample: "false", default: false }
+- { name: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS", alias: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS", type: "b", required: false, sample: "false", default: true }
+- { name: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS_APP_PUSH", alias: "PAM_ENABLE_OPTIMIZE_CONTACT_DELIVERS_APP_PUSH", type: "b", required: false, sample: "false", default: true }
+- { name: "PAM_ENABLE_MAPPING_AZURE_AD_GROUP_TO_USER_ROLE", alias: "PAM_ENABLE_MAPPING_AZURE_AD_GROUP_TO_USER_ROLE", type: "b", required: false, sample: "false", default: false }
+- { name: "PAM_PTASK_TRACKER_IMPORTER_FILETRACKER_WORKERS", alias: "PAM4_PTASK_TRACKER_IMPORTER_FILETRACKER_WORKERS", type: "n", required: false, sample: 10, default: 10 }
+- { name: "PAM_PTASK_TRACKER_IMPORTER_MQ_PARTITIONS", alias: "PAM4_PTASK_TRACKER_IMPORTER_MQ_PARTITIONS", type: "n", required: false, sample: 50, default: 50 }
+- { name: "PAM_SCHEDULER_READ_FILE_TRACKER_BACKWARD", alias: "PAM4_SCHEDULER_READ_FILE_TRACKER_BACKWARD", type: "n", required: false, sample: 6, default: 6 }
+- { name: "PAM_CAMPAIGN_DYNAMIC_TEMPLATE_RECURRING_SCHEDULER_NIGHT_HOUR", alias: "PAM4_CAMPAIGN_DYNAMIC_TEMPLATE_RECURRING_SCHEDULER_NIGHT_HOUR", type: "n", required: false, sample: 22, default: 22 }
+- { name: "PAM_EXTERNAL_API_BITLY_SECRET", alias: "PAM_EXTERNAL_API_BITLY_SECRET", type: "s", required: false, sample: "", default: "[REPLACE_PAM_EXTERNAL_API_BITLY_SECRET]" }
+- { name: "PAM_TRACKER_RECEIVED_CONSUMER_SIZE_FACTOR", alias: "PAM_TRACKER_RECEIVED_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 10, default: 10 }
+- { name: "PAM_TRACKER_CREATED_CONSUMER_SIZE_FACTOR", alias: "PAM_TRACKER_CREATED_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 10, default: 10 }
+- { name: "PAM_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", alias: "PAM4_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", type: "b", required: false, sample: "false", default: false }
