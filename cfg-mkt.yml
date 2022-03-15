@@ -39,6 +39,7 @@ configs:
 - { name: "PAM_SCHEDULE_DELIVERS", alias: "PAM4_SCHEDULE_DELIVERS", type: "n", required: true, sample: "1800", default: 1800 }
 - { name: "PAM_DELIVERS_LIMIT", alias: "PAM4_DELIVERS_LIMIT", type: "n", required: true, sample: "1000", default: 1000 }
 - { name: "PAM_SMS_CLICKNEXT_ENDPOINT", alias: "PAM4_SMS_CLICKNEXT_ENDPOINT", type: "s", required: true, sample: "https://member.smsmkt.com:443/webservice/SMSService.php?wsdl", default: "https://member.smsmkt.com:443/webservice/SMSService.php?wsdl" }
+- { name: "PAM_DELIVERS_DIFF_TIME_MINUTE_QUERY", alias: "PAM4_DELIVERS_DIFF_TIME_MINUTE_QUERY", type: "n", required: true, sample: 60, default: 60 }
 - { name: "PAM_FILE_AGE_IN_DAYS", alias: "PAM4_FILE_AGE_IN_DAYS", type: "n", required: true, sample: "7", default: 7 }
 - { name: "PAM_CMS_FRONTEND_URL", alias: "PAM4_CMS_FRONTEND_URL", type: "s", required: true, sample: "https://stg-cms.pams.ai", default: "[REPLACE_PAM_CMS_FRONTEND_URL]" }
 - { name: "PAM_DELIVERY_FREQUENCY_CAPPING", alias: "PAM4_DELIVERY_FREQUENCY_CAPPING", type: "n", required: true, sample: "10", default: 10 }
