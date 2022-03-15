@@ -60,6 +60,6 @@ configs:
 - { name: "ECOM_ENABLE_MEMBER_TYPE_B2B_ONLY", type: "b", required: false, sample: "true" }
 - { name: "ECOM_ENABLE_MEMBER_TYPE_B2C", type: "b", required: false, sample: "true" }
 - { name: "ECOM_REQUEST_OTP_PERIOD_TIME_MINUTE", type: "n", required: false, sample: "3" }
-- { name: "ECOM_ENABLE_CAPTCHA_FEATURE", type: "b", required: false, sample: true, default: true }
-- { name: "ECOM_CAPTCHA_CONFIG", type: "s", required: false }
 - { name: "ECOM_ENABLE_TRANSACTION_MEMBER_POINT", type: "b", required: false, sample: "true" }
+- { name: "ECOM_ENABLE_CAPTCHA_FEATURE", type: "b", required: false, sample: true, default: true }
+- { name: "ECOM_CAPTCHA_CONFIG", type: "s", required: false, sample: "" }
