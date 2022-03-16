@@ -30,11 +30,11 @@ spec:
           value: <kibanaElsUrl>
         resources:
           requests:
-            memory: 100Mi
-            cpu: 50m
+            memory: <minMem>
+            cpu: <minCpu>
           limits:
-            memory: 500Mi
-            cpu: 300m
+            memory: <maxMem>
+            cpu: <maxCpu>
         livenessProbe:
           tcpSocket:
             port: 5601
@@ -51,3 +51,19 @@ spec:
         ports:
         - containerPort: 5601
           name: kibana5601
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kibana
+  namespace: <namespace>
+  labels:
+    name: kibana
+spec:
+  ports:
+  - port: 5601
+    name: "kibana5601"
+    targetPort: 5601
+    protocol: TCP
+  selector:
+    name: kibana
