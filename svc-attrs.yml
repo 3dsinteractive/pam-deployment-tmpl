@@ -42,6 +42,8 @@ attrs:
 - { name: "kafkaSocketRequestMaxBytes", alias: "kafkaSocketRequestMaxBytes", doublequote: true, replace: true }
 - { name: "kafkaMaxMessageBytes", alias: "kafkaMaxMessageBytes", doublequote: true, replace: true }
 - { name: "kafkaHeapOpts", alias: "kafkaHeapOpts", doublequote: true, replace: true }
+# Use in kibana
+- { name: "kibanaElsUrl", alias: "kibanaElsUrl", doublequote: true, replace: true }
 # Use in migrate and seeder
 - { name: "tag", alias: "tag", doublequote: false, replace: true }
 # Use in demo-server

@@ -27,7 +27,7 @@ spec:
         imagePullPolicy: Always
         env:
         - name: KIBANA_ELASTICSEARCH_URL
-          value: <elsUrl>
+          value: <kibanaElsUrl>
         resources:
           requests:
             memory: 100Mi
