@@ -16,6 +16,22 @@ spec:
       image: 3dsinteractive/pam4-cmsseeder:<tag>.<timestamp>
       imagePullPolicy: Always
       env: [ {name: PAM4_ENV, value: prod}, {name: DEBUG, value: "true"} <envs>]
+      readinessProbe:
+        httpGet:
+          path: /readinez
+          port: 8080
+        initialDelaySeconds: 10
+        periodSeconds: 10
+        timeoutSeconds: 3
+        failureThreshold: 3
+      livenessProbe:
+        httpGet:
+          path: /healthz
+          port: 8080
+        initialDelaySeconds: 60
+        periodSeconds: 30
+        timeoutSeconds: 30
+        failureThreshold: 10
       resources:
         requests:
           memory: <minMem>
