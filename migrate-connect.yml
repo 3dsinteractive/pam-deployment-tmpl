@@ -42,3 +42,19 @@ spec:
         limits:
           memory: <maxMem>
           cpu: <maxCpu>
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  ports:
+  - port: 8080
+    name: probe8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    name: <name>
