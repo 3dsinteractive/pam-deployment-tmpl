@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prom-els-exporter
+  namespace: <namespace>
+  labels:
+    name: prom-els-exporter
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      name: prom-els-exporter
+  template:
+    metadata:
+      labels:
+        name: prom-els-exporter
+    spec:
+      nodeSelector:
+        env: c1
+        role: worker
+      priorityClassName: class-monitor
+      containers:
+      - name: prom-els-exporter
+        image: 3dsinteractive/elasticsearch_exporter:1.1.0
+        imagePullPolicy: Always
+        args: ["--es.uri=<elsEndpoint>", "--es.all", "--es.timeout=20s"]
+        resources:
+          requests:
+            memory: <minMem>
+            cpu: <minCpu>
+          limits:
+            memory: <maxMem>
+            cpu: <maxCpu>
+        livenessProbe:
+          tcpSocket:
+            port: 9114
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+          periodSeconds: 300
+        readinessProbe:
+          tcpSocket:
+            port: 9114
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+          periodSeconds: 30
+          failureThreshold: 5
+        ports:
+        - containerPort: 9114
+          name: exporter9114
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prom-els-exporter
+  namespace: <namespace>
+  labels:
+    name: prom-els-exporter
+spec:
+  ports:
+  - port: 9114
+    name: exporter9114
+    targetPort: 9114
+    protocol: TCP
+  selector:
+    name: prom-els-exporter

@@ -46,6 +46,11 @@ attrs:
 - { name: "kibanaElsUrl", alias: "kibanaElsUrl", doublequote: true, replace: true }
 # Use in migrate and seeder
 - { name: "tag", alias: "tag", doublequote: false, replace: true }
+# Use in exporter
+- { name: "kafkaEndpoint", alias: "kafkaEndpoint", doublequote: true, replace: true }
+- { name: "kafkaVersion", alias: "kafkaVersion", doublequote: true, replace: true }
+# Use in exporter
+- { name: "elsEndpoint", alias: "elsEndpoint", doublequote: false, replace: true }
 # Use in demo-server
 - { name: "endpoint", alias: "endpoint", doublequote: true, replace: true }
 - { name: "users", alias: "users", doublequote: true, replace: true }
