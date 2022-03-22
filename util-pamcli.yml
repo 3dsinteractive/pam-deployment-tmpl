@@ -20,12 +20,12 @@ spec:
       nodeSelector:
         env: c1
         role: worker
+      imagePullSecrets:
+      - name: dockerlogin
       priorityClassName: class-monitor
       containers:
         - name: <name>
           image: 3dsinteractive/pamcli:<timestamp>
-          stdin: true
-          tty: true
           imagePullPolicy: Always
           env: [{name: DEBUG, value: "true"} <envs>]
           resources:
