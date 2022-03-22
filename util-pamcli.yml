@@ -26,6 +26,8 @@ spec:
       containers:
         - name: <name>
           image: 3dsinteractive/pamcli:<timestamp>
+          stdin: true
+          tty: true
           imagePullPolicy: Always
           env: [{name: DEBUG, value: "true"} <envs>]
           resources:

@@ -26,6 +26,8 @@ spec:
       containers:
         - name: <name>
           image: 3dsinteractive/util:2.0
+          stdin: true
+          tty: true
           imagePullPolicy: Always
           resources:
             requests:
