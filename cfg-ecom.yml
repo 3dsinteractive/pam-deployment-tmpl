@@ -68,5 +68,5 @@ configs:
 - { name: "ECOM_FACEBOOK_APP_ID", type: "s", required: false, sample: ""}
 - { name: "ECOM_FACEBOOK_APP_SECRET", type: "s", required: false, sample: ""}
 - { name: "SKIP_CHECK_ORDER_PERM", type: "b", required: false, sample: true, default: true}
-- { name: "ECOM_ENABLE_PRICE_PROMOTION_IS_NULL", type: "b", required: false, sample: true, default: true}
+- { name: "ECOM_ENABLE_PRICE_PROMOTION_IS_NULL", type: "b", required: false, sample: true, default: false}
 - { name: "PAM4_PAYMENT_RESPONSE_2C2P_VERSION", type: "n", required: false, sample: "4.1"}
