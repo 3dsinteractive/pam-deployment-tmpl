@@ -28,6 +28,9 @@ spec:
             - name: vol-data
               mountPath: /pam/<namespace>/<name>/data
           command: ["/bin/sh", "-c", "chown 1001 /pam/<namespace>/<name>/data"]
+        - name: init-sysctl
+          image: busybox
+          command: ["/bin/sh", "-c", "sysctl -w vm.max_map_count=262144"]  
       containers:
       - name: <name>
         image: 3dsinteractive/elasticsearch:6.8.21-custom
