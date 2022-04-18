@@ -114,3 +114,11 @@ spec:
     port: 9200
     protocol: TCP
   clusterIP: None
+---
+apiVersion: policy/v1
+kind: PodSecurityPolicy
+metadata:
+  name: sysctl-psp
+spec:
+  allowedUnsafeSysctls:
+  - vm.max_map_count
