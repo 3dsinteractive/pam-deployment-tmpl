@@ -28,6 +28,10 @@ spec:
             - name: vol-data
               mountPath: /pam/<namespace>/<name>/data
           command: ["/bin/sh", "-c", "chown 1001 /pam/<namespace>/<name>/data"]
+      securityContext:
+        sysctls:
+        - name: vm.max_map_count
+          value: "262144"
       containers:
       - name: <name>
         image: 3dsinteractive/elasticsearch:6.8.21-custom
