@@ -118,7 +118,10 @@ spec:
 apiVersion: policy/v1
 kind: PodSecurityPolicy
 metadata:
-  name: sysctl-psp
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
 spec:
   allowedUnsafeSysctls:
   - vm.max_map_count
