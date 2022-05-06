@@ -73,3 +73,7 @@ configs:
 - { name: "ECOM_ENABLE_MEMBER_CARD_NO_INCREMENT_BY_ELS", type: "b", required: false, sample: true, default: false}
 - { name: "ECOM_MEMBER_CARD_NO_LENGTH", type: "n", required: false, sample: "8", default: "8"}
 - { name: "ECOM_MEMBER_CARD_NO_PREFIX_CODE", type: "s", required: false, sample: "TNL", default: ""}
+- { name: "ECOM_ORDER_CHECK_DUMMY_MEMBER_CARD_NO", type: "s", required: false, sample: "DUMMY33333", default: ""}
+- { name: "ECOM_ENABLE_CHECK_DUMMY_MEMBER_CARD_NO", type: "b", required: false, sample: true, default: false}
+- { name: "ECOM_ENABLE_ORDER_EXTERNAL_CALCULATE_POINT", type: "b", required: false, sample: true, default: false}
+- { name: "ECOM_ENABLE_STOCK_VALIDATE_BOOKING", type: "b", required: false, sample: true, default: false}
