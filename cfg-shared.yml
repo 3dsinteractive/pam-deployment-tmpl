@@ -107,3 +107,4 @@ configs:
 - { name: "PAM_METRIC_TRACKER_ENDPOINT", type: "s", required: false, sample: "https://stgx.pams.ai", default: "" }
 - { name: "PAM_METRIC_TRACKER_TOKEN", type: "s", required: false, sample: "[TOKEN]", default: "" }
 - { name: "PAM_METRIC_CLIENT_NAME", type: "s", required: false, sample: "boodabest", default: "" }
+- { name: "SEAMAN_SEND_ERROR_FROM_CLIENT_NAME", type: "s", required: false, sample: "boodabest", default: "" }
