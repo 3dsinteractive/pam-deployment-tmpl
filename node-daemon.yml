@@ -6,6 +6,9 @@ metadata:
   labels:
     name: node-daemon
 spec:
+  selector: 
+    matchLabels:
+      name: node-daemon
   template:
     metadata:
       labels:
