@@ -14,7 +14,7 @@ spec:
       priorityClassName: class-monitor
       containers:
       - name: node-daemon
-        image: 3dsinteractive/pam-node-daemon:<timestamp>
+        image: <image>
         imagePullPolicy: IfNotPresent
         readinessProbe:
           httpGet:
