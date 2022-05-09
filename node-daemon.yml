@@ -14,6 +14,8 @@ spec:
       labels:
         name: node-daemon
     spec:
+      imagePullSecrets:
+      - name: dockerlogin
       priorityClassName: class-monitor
       containers:
       - name: node-daemon
