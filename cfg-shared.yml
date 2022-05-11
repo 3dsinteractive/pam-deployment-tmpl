@@ -107,3 +107,4 @@ configs:
 - { name: "PAM_METRIC_TRACKER_ENDPOINT", type: "s", required: false, sample: "https://stgx.pams.ai", default: "" }
 - { name: "PAM_METRIC_TRACKER_TOKEN", type: "s", required: false, sample: "[TOKEN]", default: "" }
 - { name: "PAM_CLIENT_NAME_ALIAS", type: "s", required: false, sample: "boodabest", default: "" }
+- { name: "ECOM_ADDRESS_DATABASE_VERSION", type: "s", required: false, sample: "version2", default: version2 }

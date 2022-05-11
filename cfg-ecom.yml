@@ -22,7 +22,6 @@ configs:
 - { name: "ECOM_ORDER_CODE_TYPE", type: "s", required: true, sample: "INCREMENT_PERIOD_DAY", default: INCREMENT_PERIOD_MONTH }
 - { name: "ECOM_ORDER_PREFIX_CODE", type: "s", required: true, sample: "ONL", default: ORDER }
 - { name: "ECOM_ORDER_CODE_LENGTH", type: "n", required: true, sample: "14", default: 14 }
-- { name: "ECOM_ADDRESS_DATABASE_VERSION", type: "s", required: false, sample: "version2", default: version2 }
 - { name: "ECOM_PAYMENT_2C2P_MERCHANT_ID", type: "s", required: false, sample: "764111111111111" }
 - { name: "ECOM_PAYMENT_2C2P_SECRET_KEY", type: "s", required: false, sample: "V4SZ0C5OlxAq" }
 - { name: "ECOM_PRODUCT_CREATE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_CREATE_EXCEL_COLUMN_HEADER", type: "s", required: true, default: '[{"column_name":"Product Code","is_required":false,"field_name":"product_code"}]' }
