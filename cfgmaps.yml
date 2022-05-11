@@ -1,4 +1,4 @@
 cfg-shared: ["cfg-shared", "node-daemon", "connect", "builder", "sender", "msgscheduler", "ecom", "ecom-backend", "ecom-transaction", "migrate-connect", "migrate-seeder", "util-pamcli"]
 cfg-mkt: ["node-daemon", "cfg-mkt", "connect", "builder", "sender", "msgscheduler", "migrate-connect", "migrate-seeder", "util-pamcli"]
-cfg-ecom: ["node-daemon", "cfg-ecom", "ecom-backend", "ecom-transaction", "ecom"]
+cfg-ecom: ["node-daemon", "cfg-ecom", "ecom-backend", "ecom-transaction", "ecom", "util-pamcli"]
 cfg-cms-api: ["cms-api"]
