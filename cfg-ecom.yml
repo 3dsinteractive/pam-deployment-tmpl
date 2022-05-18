@@ -77,3 +77,6 @@ configs:
 - { name: "ECOM_ENABLE_CHECK_DUMMY_MEMBER_CARD_NO", type: "b", required: false, sample: true, default: false}
 - { name: "ECOM_ENABLE_ORDER_EXTERNAL_CALCULATE_POINT", type: "b", required: false, sample: true, default: false}
 - { name: "ECOM_ENABLE_STOCK_VALIDATE_BOOKING", type: "b", required: false, sample: true, default: false}
+- { name: "ECOM_ENABLE_CONVERT_TRANSACTION_TYPE_TO_EARN_OR_BURN", type: "b", required: false, sample: true, default: false}
+- { name: "ECOM_ENABLE_ORDER_REQUIRE_TRANSACTION_TYPE", type: "b", required: false, sample: true, default: false}
+- { name: "ECOM_ENABLE_PRODUCT_CALUCULATE_TOPUP", type: "b", required: false, sample: true, default: false}
