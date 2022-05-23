@@ -33,7 +33,7 @@ spec:
             privileged: true  
       containers:
       - name: <name>
-        image: 3dsinteractive/elasticsearch:6.8.21-custom
+        image: 3dsinteractive/elasticsearch:6.8.23-custom
         imagePullPolicy: Always
         env:
         - name: ELASTICSEARCH_CLUSTER_NAME
