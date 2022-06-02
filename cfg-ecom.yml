@@ -82,3 +82,9 @@ configs:
 - { name: "ECOM_ENABLE_PRODUCT_CALUCULATE_TOPUP", type: "b", required: false, sample: true, default: false}
 - { name: "ECOM_SHIPPING_PROVIDER_ALIAS", type: "s", required: false, sample: "kerry", default: "kerry"}
 - { name: "ECOM_ENABLE_ORDER_INCREMENT_NUMBER_BY_ELS", type: "b", required: false, sample: true, default: false}
+- { name: "ECOM_HOST", type: "s", required: false, sample: " https://xyz-ecom.pams.ai", default: ""}
+- { name: "ECOM_DISPLAY_NAME", type: "s", required: false, sample: "abc.com", default: ""}
+- { name: "ECOM_PAYMENT_KBANK_MERCHANT_ID", type: "s", required: false, sample: "123456", default: ""}
+- { name: "ECOM_PAYMENT_KBANK_API_ENDPOINT", type: "s", required: false, sample: "https://dev-kpaymentgateway-services.kasikornbank.com/", default: ""}
+- { name: "ECOM_PAYMENT_KBANK_PUBLIC_KEY", type: "s", required: false, sample: "key-yyyyyyy", default: ""}
+- { name: "ECOM_PAYMENT_KBANK_PRIVATE_KEY", type: "s", required: false, sample: "key-xxxxxxx", default: ""}
