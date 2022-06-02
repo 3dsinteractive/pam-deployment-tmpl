@@ -8,6 +8,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
+  storageClassName: ""  
   capacity:
     storage: 10Gi
   persistentVolumeReclaimPolicy: Retain
