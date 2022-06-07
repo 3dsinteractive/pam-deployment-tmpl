@@ -88,3 +88,6 @@ configs:
 - { name: "ECOM_PAYMENT_KBANK_API_ENDPOINT", type: "s", required: false, sample: "https://dev-kpaymentgateway-services.kasikornbank.com/", default: ""}
 - { name: "ECOM_PAYMENT_KBANK_PUBLIC_KEY", type: "s", required: false, sample: "key-yyyyyyy", default: ""}
 - { name: "ECOM_PAYMENT_KBANK_PRIVATE_KEY", type: "s", required: false, sample: "key-xxxxxxx", default: ""}
+- { name: "ECOM_SEEDER_KBANK", type: "b", required: false, sample: true, default: false}
+- { name: "ECOM_SEEDER_KBANK_PROMPTPAY", type: "b", required: false, sample: true, default: false}
+- { name: "ECOM_SEEDER_KBANK_IPP", type: "b", required: false, sample: true, default: false}
