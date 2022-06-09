@@ -91,3 +91,6 @@ configs:
 - { name: "ECOM_SEEDER_KBANK", type: "b", required: false, sample: true, default: false}
 - { name: "ECOM_SEEDER_KBANK_PROMPTPAY", type: "b", required: false, sample: true, default: false}
 - { name: "ECOM_SEEDER_KBANK_IPP", type: "b", required: false, sample: true, default: false}
+- { name: "ECOM_MEMBER_CARD_NO_INCREMENT_BY", type: "s", required: false, sample: "maria", default: "maria"}
+- { name: "ECOM_ORDER_INVOICE_LENGTH", type: "n", required: false, sample: "", default: 11}
+- { name: "ECOM_ORDER_INVOICE_CN_LENGTH", type: "n", required: false, sample: "", default: 11}
