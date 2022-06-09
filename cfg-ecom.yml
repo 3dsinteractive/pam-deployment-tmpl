@@ -70,7 +70,7 @@ configs:
 - { name: "SKIP_CHECK_ORDER_PERM", type: "b", required: false, sample: true, default: true}
 - { name: "ECOM_ENABLE_PRICE_PROMOTION_IS_NULL", type: "b", required: false, sample: true, default: false}
 - { name: "PAM4_PAYMENT_RESPONSE_2C2P_VERSION", type: "n", required: false, sample: "4.1"}
-- { name: "ECOM_ENABLE_MEMBER_CARD_NO_INCREMENT_BY_ELS", type: "b", required: false, sample: true, default: false}
+- { name: "ECOM_ENABLE_INCREMENT_MEMBER_CARD_NO_BY", type: "s", required: false, sample: "maria", default: "maria"}
 - { name: "ECOM_MEMBER_CARD_NO_LENGTH", type: "n", required: false, sample: "8", default: "8"}
 - { name: "ECOM_MEMBER_CARD_NO_PREFIX_CODE", type: "s", required: false, sample: "TNL", default: ""}
 - { name: "ECOM_ORDER_CHECK_DUMMY_MEMBER_CARD_NO", type: "s", required: false, sample: "DUMMY33333", default: ""}
@@ -88,3 +88,9 @@ configs:
 - { name: "ECOM_PAYMENT_KBANK_API_ENDPOINT", type: "s", required: false, sample: "https://dev-kpaymentgateway-services.kasikornbank.com/", default: ""}
 - { name: "ECOM_PAYMENT_KBANK_PUBLIC_KEY", type: "s", required: false, sample: "key-yyyyyyy", default: ""}
 - { name: "ECOM_PAYMENT_KBANK_PRIVATE_KEY", type: "s", required: false, sample: "key-xxxxxxx", default: ""}
+- { name: "ECOM_SEEDER_KBANK", type: "b", required: false, sample: true, default: false}
+- { name: "ECOM_SEEDER_KBANK_PROMPTPAY", type: "b", required: false, sample: true, default: false}
+- { name: "ECOM_SEEDER_KBANK_IPP", type: "b", required: false, sample: true, default: false}
+- { name: "ECOM_MEMBER_CARD_NO_INCREMENT_BY", type: "s", required: false, sample: "maria", default: "maria"}
+- { name: "ECOM_ORDER_INVOICE_LENGTH", type: "n", required: false, sample: "", default: 11}
+- { name: "ECOM_ORDER_INVOICE_CN_LENGTH", type: "n", required: false, sample: "", default: 11}
