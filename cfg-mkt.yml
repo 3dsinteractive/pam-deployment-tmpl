@@ -81,3 +81,4 @@ configs:
 - { name: "PAM_TRACKER_RECEIVED_CONSUMER_SIZE_FACTOR", alias: "PAM_TRACKER_RECEIVED_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 10, default: 10 }
 - { name: "PAM_TRACKER_CREATED_CONSUMER_SIZE_FACTOR", alias: "PAM_TRACKER_CREATED_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 10, default: 10 }
 - { name: "PAM_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", alias: "PAM4_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", type: "b", required: false, sample: "false", default: false }
+- { name: "PAM_SEEDER_COD", alias: "PAM4_SEEDER_COD", type: "b", required: false, sample: true, default: true }
