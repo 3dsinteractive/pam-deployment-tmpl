@@ -94,3 +94,8 @@ configs:
 - { name: "ECOM_MEMBER_CARD_NO_INCREMENT_BY", type: "s", required: false, sample: "maria", default: "maria"}
 - { name: "ECOM_ORDER_INVOICE_LENGTH", type: "n", required: false, sample: "", default: 11}
 - { name: "ECOM_ORDER_INVOICE_CN_LENGTH", type: "n", required: false, sample: "", default: 11}
+- { name: "ECOM_ORDER_STATUS_CANCEL_ID", type: "s", required: false, sample: "7", default: ""}
+- { name: "ECOM_ORDER_STATUS_READY_TO_SHIP_ID", type: "s", required: false, sample: "4", default: ""}
+- { name: "ECOM_ORDER_SHIPPING_TYPE_ID", type: "s", required: false, sample: "4", default: ""}
+- { name: "ECOM_ORDER_EXTERNAL_WAREHOUSE_CODE", type: "s", required: false, sample: "WB", default: ""}
+- { name: "ECOM_ORDER_SELLER_REFERENCE_ID", type: "s", required: false, sample: "PAM-Platform", default: ""}
