@@ -99,3 +99,5 @@ configs:
 - { name: "ECOM_ORDER_SHIPPING_TYPE_ID", type: "s", required: false, sample: "4", default: ""}
 - { name: "ECOM_ORDER_EXTERNAL_WAREHOUSE_CODE", type: "s", required: false, sample: "WB", default: ""}
 - { name: "ECOM_ORDER_SELLER_REFERENCE_ID", type: "s", required: false, sample: "PAM-Platform", default: ""}
+- { name: "ECOM_ENABLE_DISPLAY_BY_SALE_CHANNEL", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_ENABLE_BRAND_PERMISSION", type: "b", required: false, sample: false, default: false}
