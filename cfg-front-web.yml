@@ -1,24 +1,3 @@
 version: v1
 configs:
-- { name: "PORT", type: "s", required: true, sample: "8000", default: "8000" }
-- { name: "APP_LAYOUT_PREFIX", type: "s", required: true, sample: "tnl-line-earn", default: "tnl-line-earn" }
-- { name: "APP_LINE_LIFF_ID", type: "s", required: true, sample: "1657218475-yPaxQnZD", default: "1657218475-yPaxQnZD" }
-- { name: "APP_CLIENT", type: "s", required: true, sample: "tnl-line-earn", default: "tnl-line-earn" }
-- { name: "APP_TITLE", type: "s", required: true, sample: "Line Earn", default: "Line Earn" }
-- { name: "APP_ECOM_API", type: "s", required: true, sample: "https://tnl-ecom.pams.ai", default: "https://tnl-ecom.pams.ai" }
-- { name: "APP_PAM_API", type: "s", required: true, sample: "https://tnl.pams.ai", default: "https://tnl.pams.ai" }
-- { name: "APP_BASE_URL", type: "s", required: true, sample: "https://tnl-line-bdb.pams.ai", default: "https://tnl-line-bdb.pams.ai" }
-- { name: "APP_PAM_TRACKER_SCRIPT", type: "s", required: true, sample: "https://tnl.pams.ai/script/pam4-tracker.umd.js", default: "https://tnl.pams.ai/script/pam4-tracker.umd.js" }
-- { name: "APP_BASE_ASSET_URL", type: "s", required: true, sample: "https://pam-tnl.s3.ap-southeast-1.amazonaws.com", default: "https://pam-tnl.s3.ap-southeast-1.amazonaws.com" }
-- { name: "APP_S3_ACCESS_KEY", type: "s", required: true, sample: "AKIAXPEODJSXE7FXXPLR", default: "AKIAXPEODJSXE7FXXPLR" }
-- { name: "APP_S3_SECRET_KEY", type: "s", required: true, sample: "bYCtlxUxguZ6KGwLsmm7V/u3b3cZsyc4lvqXDj5/", default: "bYCtlxUxguZ6KGwLsmm7V/u3b3cZsyc4lvqXDj5/" }
-- { name: "APP_S3_BUCKET", type: "s", required: true, sample: "pam-tnl", default: "pam-tnl" }
-- { name: "APP_S3_PATH", type: "s", required: true, sample: "bdb-asset-$TIMESTAMP/", default: "bdb-asset-$TIMESTAMP/" }
-- { name: "APP_NAME", type: "s", required: true, sample: "bdb-asset-$TIMESTAMP/", default: "bdb-asset-$TIMESTAMP/" }
-- { name: "APP_LANGUAGE", type: "s", required: true, sample: "th", default: "th" }
-- { name: "APP_LANGUAGE_OPTIONS", type: "s", required: true, sample: "th,en", default: "th,en" }
-- { name: "APP_TRACKING_CONSENT_MESSAGE_ID", type: "s", required: true, sample: "29hQD9aAtnFlVTaDBqrR1TCRkDY", default: "29hQD9aAtnFlVTaDBqrR1TCRkDY" }
-- { name: "APP_CONTACTING_CONSENT_MESSAGE_IDS", type: "s", required: true, sample: "29hQS62V5fP6rN8BgnbMfvUGnNk", default: "29hQS62V5fP6rN8BgnbMfvUGnNk" }
-- { name: "APP_PUBLIC_DB_ALIAS", type: "s", required: true, sample: "ecom-public", default: "ecom-public" }
-- { name: "APP_LOGIN_DB_ALIAS", type: "s", required: true, sample: "ecom-login", default: "ecom-login" }
-- { name: "APP_LOGIN_KEY", type: "s", required: true, sample: "customer", default: "customer" }
+- { name: "APP_LINE_ACCESS_TOKEN", type: "s", required: true, sample: "[TOKEN]", default: "Nm/GrxANAa8Dt0TOO+3a7QSEqY0ANibb" }
