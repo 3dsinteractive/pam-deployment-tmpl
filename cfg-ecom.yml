@@ -103,3 +103,5 @@ configs:
 - { name: "ECOM_ENABLE_BRAND_PERMISSION", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ENABLE_MEMBER_CUMULATIVE_PURCHASE", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ENABLE_VALIDATE_SALE_CHANNEL", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_INDEX_CREATE_ALIAS_X_MONTH_FROM_NOW", type: "n", required: false, sample: "", default: 24}
+- { name: "ECOM_INDEX_CLOSE_INDEXES_AFTER_X_MONTH_FROM_NOW", type: "n", required: false, sample: "", default: 25}
