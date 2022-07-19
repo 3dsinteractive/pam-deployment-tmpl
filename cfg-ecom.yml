@@ -108,3 +108,5 @@ configs:
 - { name: "ECOM_INDEX_CLOSE_INDEXES_AFTER_X_MONTH_FROM_NOW", type: "n", required: false, sample: "", default: 25}
 - { name: "ECOM_FRONT_HOST", type: "s", required: false, sample: "", default: ""}
 - { name: "ECOM_ENABLE_VALIDATE_PASSWORD_FORMAT", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_PAYMENT_KBANK_FULL_PAYMENT_TERMINAL_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "ECOM_PAYMENT_KBANK_IPP_TERMINAL_ID", type: "s", required: false, sample: "", default: ""}
