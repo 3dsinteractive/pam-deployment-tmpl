@@ -116,3 +116,7 @@ configs:
 - { name: "PAM_ELASTIC_RESOLVE_CAMPAIGN_ID", type: "s", required: false, sample: "", default: "" }
 - { name: "PAM_GENERAL_TOPIC_RETENTION_PERIOD_IN_DAY", type: "n", required: false, sample: 7, default: 7 }
 - { name: "PAM_SCHEDULER_HOURLY_INTERVAL_RUNNING_TIME", type: "n", required: false, sample: 3600, default: 3600 }
+- { name: "PAM_REDIS_ALERT_CAMPAIGN_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_REDIS_RESOLVE_CAMPAIGN_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_KAFKA_ALERT_CAMPAIGN_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_KAFKA_RESOLVE_CAMPAIGN_ID", type: "s", required: false, sample: "", default: "" }
