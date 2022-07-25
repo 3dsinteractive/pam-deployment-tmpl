@@ -20,7 +20,6 @@ spec:
       nodeSelector:
         env: c1
         db: <nodeLabel>
-        els: <els>
       priorityClassName: class-storage
       initContainers:
         - name: init-dir
