@@ -26,8 +26,8 @@ spec:
           image: busybox
           volumeMounts:
             - name: vol-data
-              mountPath: /pam/<namespace>/<name>
-          command: ["/bin/sh", "-c", "chown 1001 /pam/<namespace>/<name>"]
+              mountPath: /var/lib/docker/pam/<namespace>/<name>
+          command: ["/bin/sh", "-c", "chown 1001 /var/lib/docker/pam/<namespace>/<name>"]
       containers:
       - name: <name>
         image: 3dsinteractive/zookeeper:3.0
