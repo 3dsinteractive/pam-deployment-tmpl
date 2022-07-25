@@ -1,3 +1,3 @@
 version: v1
 configs:
-- { name: "APP_LINE_ACCESS_TOKEN", type: "s", required: true, sample: "Nm/GrxANAa8Dt0TOO+3a7QSEqY0ANibb9yj7m3vHSLRychTvngwLcM9kcohnbwema4fNrKXHf+9Q+2VltTzHgfnSC2gg1Yxpgn69f5teHv6JgN4EptzQMVOqYJejq/OJblZHJ+tI1ZkSiqqG2k2KvAdB04t89/1O/w1cDnyilFU=", default: "Nm/GrxANAa8Dt0TOO+3a7QSEqY0ANibb9yj7m3vHSLRychTvngwLcM9kcohnbwema4fNrKXHf+9Q+2VltTzHgfnSC2gg1Yxpgn69f5teHv6JgN4EptzQMVOqYJejq/OJblZHJ+tI1ZkSiqqG2k2KvAdB04t89/1O/w1cDnyilFU=" }
+- { name: "APP_LINE_ACCESS_TOKEN", type: "s", required: true, sample: "[TOKEN]", default: "Nm/GrxANAa8Dt0TOO+3a7QSEqY0ANibb" }

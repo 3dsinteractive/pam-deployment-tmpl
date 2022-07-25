@@ -110,3 +110,13 @@ configs:
 - { name: "PAM_CLIENT_NAME_ALIAS", type: "s", required: false, sample: "boodabest", default: "" }
 - { name: "PAM_MONITORING_CLIENTS", type: "s", required: false, sample: "demox,stgx.boodabest", default: "" }
 - { name: "PAM_RATELIMIT_MEMORY_PERCENT", type: "n", required: false, sample: 95, default: 95 }
+- { name: "PAM_METRICS_RETENTION_PERIOD_IN_DAY", type: "n", required: false, sample: 7, default: -1 }
+- { name: "PAM_SERVER_NEGATE_STATUS", type: "b", required: false, sample: true, default: false }
+- { name: "PAM_ELASTIC_ALERT_CAMPAIGN_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_ELASTIC_RESOLVE_CAMPAIGN_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_GENERAL_TOPIC_RETENTION_PERIOD_IN_DAY", type: "n", required: false, sample: 7, default: 7 }
+- { name: "PAM_SCHEDULER_HOURLY_INTERVAL_RUNNING_TIME", type: "n", required: false, sample: 3600, default: 3600 }
+- { name: "PAM_REDIS_ALERT_CAMPAIGN_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_REDIS_RESOLVE_CAMPAIGN_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_KAFKA_ALERT_CAMPAIGN_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_KAFKA_RESOLVE_CAMPAIGN_ID", type: "s", required: false, sample: "", default: "" }
