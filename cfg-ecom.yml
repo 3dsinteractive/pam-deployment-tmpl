@@ -110,3 +110,4 @@ configs:
 - { name: "ECOM_ENABLE_VALIDATE_PASSWORD_FORMAT", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_PAYMENT_KBANK_FULL_PAYMENT_TERMINAL_ID", type: "s", required: false, sample: "", default: ""}
 - { name: "ECOM_PAYMENT_KBANK_IPP_TERMINAL_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "ECOM_ENABLE_PARAM_TRANSACTION_OPTIONAL_WITH_CONDITION", type: "b", required: false, sample: false, default: false}
