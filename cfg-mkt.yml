@@ -83,3 +83,6 @@ configs:
 - { name: "PAM_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", alias: "PAM4_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", type: "b", required: false, sample: "false", default: false }
 - { name: "PAM_SEEDER_COD", alias: "PAM4_SEEDER_COD", type: "b", required: false, sample: true, default: true }
 - { name: "PAM_ENABLE_SECURITY_EXPORT_FILE", alias: "PAM_ENABLE_SECURITY_EXPORT_FILE", type: "b", required: false, sample: true, default: false }
+- { name: "PAM_TRACKER_EVENT_INDEXD_NAMES", type: "s", required: false, sample: "" }
+- { name: "PAM_TRACKER_EVENT_SET_LINKED_CONTACT_SYNONYMS", type: "s", required: false, sample: "set_linked_contact" }
+- { name: "PAM_TRACKER_EVENT_FIND_LINKED_CONTACT_SYNONYMS", type: "s", required: false, sample: "login,page_viewed,member_registered" }
