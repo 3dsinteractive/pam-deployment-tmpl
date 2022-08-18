@@ -87,3 +87,6 @@ configs:
 - { name: "PAM_TRACKER_EVENT_SET_LINKED_CONTACT_SYNONYMS", type: "s", required: false, sample: "set_linked_contact" }
 - { name: "PAM_TRACKER_EVENT_FIND_LINKED_CONTACT_SYNONYMS", type: "s", required: false, sample: "login,page_viewed,member_registered" }
 - { name: "PAM_APP_PUSH_NOTIFICATION_DISPLAY_DURATION_IN_DAY", type: "n", required: false, sample: 30, default: 30 }
+- { name: "PAM_TRACKER_EVENT_NON_INDEX_FORM_FIELD_INDEXD_NAMES", type: "s", required: false, sample: "trackers_update_attribute" }
+- { name: "PAM_TRACKER_EVENT_EVAL_SEGMENT_INDEXD_NAMES", type: "s", required: false, sample: "trackers_page_view,trackers_chat,trackers" }
+- { name: "PAM_HAS_MIGRATE_CONTACT_DELIVERS_APP_PUSH", type: "b", required: false, sample: true, default: false }
