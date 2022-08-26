@@ -113,3 +113,4 @@ configs:
 - { name: "ECOM_ENABLE_PARAM_TRANSACTION_OPTIONAL_WITH_CONDITION", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_DEFAULT_ECOMMERCE_TYPE", type: "s", required: false, sample: "", default: "app-ecommerce"}
 - { name: "ECOM_ENABLE_FIX_TRANSACTION_MEMBER_POINT_EXPIRED_DATE", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_ENABLE_TRANSACTION_BIRTHDATE_POINT", type: "b", required: false, sample: false, default: false}
