@@ -114,3 +114,6 @@ configs:
 - { name: "ECOM_DEFAULT_ECOMMERCE_TYPE", type: "s", required: false, sample: "", default: "app-ecommerce"}
 - { name: "ECOM_ENABLE_FIX_TRANSACTION_MEMBER_POINT_EXPIRED_DATE", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ENABLE_TRANSACTION_BIRTHDATE_POINT", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_OTP_NUMBER_ATTEMPTS", type: "n", required: false, sample: 5, default: 5}
+- { name: "PAM4_ENABLE_VERIFY_OTP", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_ENABLE_VALIDATE_PASSWORD_FORMAT", type: "b", required: false, sample: false, default: false}
