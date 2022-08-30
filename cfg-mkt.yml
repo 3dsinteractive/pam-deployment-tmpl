@@ -17,8 +17,8 @@ configs:
 - { name: "PAM_TRACKERRECEIVEDCONSUME_BATCHTIMEOUT", alias: "PAM4_TRACKERRECEIVEDCONSUME_BATCHTIMEOUT", type: "n", required: true, sample: "1500", default: 3000 }
 - { name: "PAM_EVALTRIGGERCOMMANDS_BATCHSIZE", alias: "PAM4_EVALTRIGGERCOMMANDS_BATCHSIZE", type: "n", required: true, sample: "500", default: 500 }
 - { name: "PAM_EVALTRIGGERCOMMANDS_TIMEOUT", alias: "PAM4_EVALTRIGGERCOMMANDS_TIMEOUT", type: "n", required: true, sample: "1500", default: 3000 }
-- { name: "PAM_CONTACTIMPORTCOMMANDS_BATCHSIZE", alias: "PAM4_CONTACTIMPORTCOMMANDS_BATCHSIZE", type: "n", required: true, sample: "500", default: 500 }
-- { name: "PAM_CONTACTIMPORTCOMMANDS_TIMEOUT", alias: "PAM4_CONTACTIMPORTCOMMANDS_TIMEOUT", type: "n", required: true, sample: "1500", default: 3000 }
+- { name: "PAM_CONTACTIMPORTCOMMANDS_BATCHSIZE", alias: "PAM4_CONTACTIMPORTCOMMANDS_BATCHSIZE", type: "n", required: false, sample: "500", default: 500 }
+- { name: "PAM_CONTACTIMPORTCOMMANDS_TIMEOUT", alias: "PAM4_CONTACTIMPORTCOMMANDS_TIMEOUT", type: "n", required: false, sample: "1500", default: 3000 }
 - { name: "PAM_CACHE_EXPIRE_TIME_CONTACTATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_CONTACTATTRS", type: "n", required: true, sample: "10", default: 10 }
 - { name: "PAM_CACHE_EXPIRE_TIME_TRIGGERATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_TRIGGERATTRS", type: "n", required: true, sample: "10", default: 10 }
 - { name: "PAM_CACHE_EXPIRE_TIME_MEDIAATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_MEDIAATTRS", type: "n", required: true, sample: "10", default: 10 }
