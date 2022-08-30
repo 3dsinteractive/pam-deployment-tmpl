@@ -13,8 +13,8 @@ configs:
 - { name: "PAM_AI_API_APPID", alias: "PAM4_AI_API_APPID", type: "s", required: true, sample: "[UUID]" }
 - { name: "PAM_AI_API_SECRET", alias: "PAM4_AI_API_SECRET", type: "s", required: true, sample: "[UUID]" }
 - { name: "PAM_AI_API_TIMEOUT", alias: "PAM4_AI_API_TIMEOUT", type: "n", required: true, sample: "5" }
-- { name: "PAM_TRACKERRECEIVEDCONSUME_BATCHSIZE", alias: "PAM4_TRACKERRECEIVEDCONSUME_BATCHSIZE", type: "n", required: true, sample: "500", default: 500 }
-- { name: "PAM_TRACKERRECEIVEDCONSUME_BATCHTIMEOUT", alias: "PAM4_TRACKERRECEIVEDCONSUME_BATCHTIMEOUT", type: "n", required: true, sample: "1500", default: 3000 }
+- { name: "PAM_TRACKERRECEIVEDCONSUME_BATCHSIZE", alias: "PAM4_TRACKERRECEIVEDCONSUME_BATCHSIZE", type: "n", required: false, sample: "500", default: 500 }
+- { name: "PAM_TRACKERRECEIVEDCONSUME_BATCHTIMEOUT", alias: "PAM4_TRACKERRECEIVEDCONSUME_BATCHTIMEOUT", type: "n", required: false, sample: "1500", default: 3000 }
 - { name: "PAM_EVALTRIGGERCOMMANDS_BATCHSIZE", alias: "PAM4_EVALTRIGGERCOMMANDS_BATCHSIZE", type: "n", required: true, sample: "500", default: 500 }
 - { name: "PAM_EVALTRIGGERCOMMANDS_TIMEOUT", alias: "PAM4_EVALTRIGGERCOMMANDS_TIMEOUT", type: "n", required: true, sample: "1500", default: 3000 }
 - { name: "PAM_CONTACTIMPORTCOMMANDS_BATCHSIZE", alias: "PAM4_CONTACTIMPORTCOMMANDS_BATCHSIZE", type: "n", required: false, sample: "500", default: 500 }
