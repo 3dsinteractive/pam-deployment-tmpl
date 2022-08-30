@@ -117,3 +117,5 @@ configs:
 - { name: "PAM_CERTIFICATE_DOMAINS", type: "s", required: false, sample: "3dsinteractive:pams.ai,jaymart:jaymartstore.com", default: "" }
 - { name: "PAM_GENERAL_TOPIC_RETENTION_PERIOD_IN_DAY", type: "n", required: false, sample: 7, default: 7 }
 - { name: "PAM_SCHEDULER_HOURLY_INTERVAL_RUNNING_TIME", type: "n", required: false, sample: 3600, default: 3600 }
+- { name: "PAM_ENABLE_SECURITY_EXPORT_FILE", alias: "PAM_ENABLE_SECURITY_EXPORT_FILE", type: "b", required: false, sample: true, default: false }
+- { name: "PAM_ENABLE_VERIFY_OTP", alias: "PAM4_ENABLE_VERIFY_OTP", type: "b", required: false, sample: false, default: false}
