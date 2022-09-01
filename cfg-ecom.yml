@@ -117,3 +117,5 @@ configs:
 - { name: "ECOM_OTP_NUMBER_ATTEMPTS", type: "n", required: false, sample: 5, default: 5}
 - { name: "ECOM_ENABLE_VALIDATE_PASSWORD_FORMAT", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ASYNC_RATE_LIMIT_BY_IP_PER_MIN", type: "n", required: false, sample: 10, default: 10}
+- { name: "ECOM_PAYMENT_KBANK_PROMPT_PAY_MERCHANT_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "ECOM_PAYMENT_KBANK_PROMPT_PAY_TERMINAL_ID", type: "s", required: false, sample: "", default: ""}
