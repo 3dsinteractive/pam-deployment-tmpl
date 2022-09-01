@@ -55,12 +55,12 @@ configs:
 - { name: "PAM_FILESTORE_ISHTTPS", alias: "PAM4_FILESTORE_ISHTTPS", type: "b", required: true, sample: true, default: true }
 - { name: "PAM_FILESTORE_BUCKETNAME", alias: "PAM4_FILESTORE_BUCKETNAME", type: "s", required: true, sample: pam-staging, default: "[REPLACE_PAM_FILESTORE_BUCKETNAME]" }
 - { name: "PAM_FILESTORE_TIMEOUT", alias: "PAM4_FILESTORE_TIMEOUT", type: "n", required: true, sample: 3, default: 30 }
-- { name: "PAM_FILESTORE_PRIVATE_ENDPOINT", alias: "PAM4_FILESTORE_PRIVATE_ENDPOINT", type: "s", required: true, sample: s3-ap-southeast-1.amazonaws.com, default: s3-ap-southeast-1.amazonaws.com }
-- { name: "PAM_FILESTORE_PRIVATE_ACCESSKEY", alias: "PAM4_FILESTORE_PRIVATE_ACCESSKEY", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_ACCESSKEY]" }
-- { name: "PAM_FILESTORE_PRIVATE_SECRET", alias: "PAM4_FILESTORE_PRIVATE_SECRET", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_SECRET]" }
-- { name: "PAM_FILESTORE_PRIVATE_ISHTTPS", alias: "PAM4_FILESTORE_PRIVATE_ISHTTPS", type: "b", required: true, sample: true, default: true }
-- { name: "PAM_FILESTORE_PRIVATE_BUCKETNAME", alias: "PAM4_FILESTORE_PRIVATE_BUCKETNAME", type: "s", required: true, sample: pam-staging, default: "[REPLACE_PAM_FILESTORE_BUCKETNAME]" }
-- { name: "PAM_FILESTORE_PRIVATE_TIMEOUT", alias: "PAM4_FILESTORE_PRIVATE_TIMEOUT", type: "n", required: true, sample: 3, default: 30 }
+- { name: "PAM_FILESTORE_PRIVATE_ENDPOINT", alias: "PAM4_FILESTORE_PRIVATE_ENDPOINT", type: "s", required: false, sample: s3-ap-southeast-1.amazonaws.com, default: s3-ap-southeast-1.amazonaws.com }
+- { name: "PAM_FILESTORE_PRIVATE_ACCESSKEY", alias: "PAM4_FILESTORE_PRIVATE_ACCESSKEY", type: "s", required: false, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_ACCESSKEY]" }
+- { name: "PAM_FILESTORE_PRIVATE_SECRET", alias: "PAM4_FILESTORE_PRIVATE_SECRET", type: "s", required: false, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_SECRET]" }
+- { name: "PAM_FILESTORE_PRIVATE_ISHTTPS", alias: "PAM4_FILESTORE_PRIVATE_ISHTTPS", type: "b", required: false, sample: true, default: true }
+- { name: "PAM_FILESTORE_PRIVATE_BUCKETNAME", alias: "PAM4_FILESTORE_PRIVATE_BUCKETNAME", type: "s", required: false, sample: pam-staging, default: "[REPLACE_PAM_FILESTORE_BUCKETNAME]" }
+- { name: "PAM_FILESTORE_PRIVATE_TIMEOUT", alias: "PAM4_FILESTORE_PRIVATE_TIMEOUT", type: "n", required: false, sample: 3, default: 30 }
 - { name: "PAM_PROFILER_VERSION", alias: "PAM4_PROFILER_VERSION", type: "n", required: true, sample: 6.0, default: 6.0 }
 - { name: "PAM_PROFILER_PROJECT", alias: "PAM4_PROFILER_PROJECT", type: "s", required: true, sample: pam6-245009, default: pam6-245009 }
 - { name: "GOOGLE_APPLICATION_CREDENTIALS", type: "s", required: true, sample: /profiler/profiler.json, default: /profiler/profiler.json }
