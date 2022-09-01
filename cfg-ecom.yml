@@ -119,4 +119,4 @@ configs:
 - { name: "ECOM_ASYNC_RATE_LIMIT_BY_IP_PER_MIN", type: "n", required: false, sample: 10, default: 10}
 - { name: "ECOM_PAYMENT_KBANK_PROMPT_PAY_MERCHANT_ID", type: "s", required: false, sample: "", default: ""}
 - { name: "ECOM_PAYMENT_KBANK_PROMPT_PAY_TERMINAL_ID", type: "s", required: false, sample: "", default: ""}
-- { name: "ECOM_CMS_FRONTEND_URL", type: "s", required: true, sample: "https://stgx-ecom-cms.pams.ai", default: "[REPLACE_ECOM_CMS_FRONTEND_URL]" }
+- { name: "ECOM_CMS_FRONTEND_URL", type: "s", required: false, sample: "https://stgx-ecom-cms.pams.ai", default: "[REPLACE_ECOM_CMS_FRONTEND_URL]" }
