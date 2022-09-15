@@ -115,6 +115,7 @@ configs:
 - { name: "PAM_METRIC_TRACKER_TOKEN", type: "s", required: false, sample: "[TOKEN]", default: "" }
 - { name: "PAM_CLIENT_NAME_ALIAS", type: "s", required: false, sample: "boodabest", default: "" }
 - { name: "PAM_MONITORING_CLIENTS", type: "s", required: false, sample: "demox,stgx.boodabest", default: "" }
+- { name: "PAM_MONITORING_IGNORE_CLIENTS", type: "s", required: false, sample: "", default: "" }
 - { name: "PAM_RATELIMIT_MEMORY_PERCENT", type: "n", required: false, sample: 95, default: 95 }
 - { name: "PAM_METRICS_RETENTION_PERIOD_IN_DAY", type: "n", required: false, sample: 7, default: -1 }
 - { name: "PAM_SERVER_NEGATE_STATUS", type: "b", required: false, sample: true, default: false }
