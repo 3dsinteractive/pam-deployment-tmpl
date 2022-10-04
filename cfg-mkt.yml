@@ -90,3 +90,4 @@ configs:
 - { name: "PAM_TRACKER_EVENT_EVAL_SEGMENT_INDEXD_NAMES", type: "s", required: false, sample: "trackers_page_view,trackers_chat,trackers" }
 - { name: "PAM_HAS_MIGRATE_CONTACT_DELIVERS_APP_PUSH", type: "b", required: false, sample: true, default: false }
 - { name: "PAM_SENDER_PTASK_PROGRESS_UPDATE_THRESHOLD", type: "n", required: false, sample: 1000, default: 1000 }
+- { name: "PAM_WEB_DROP_LEAD_EMAIL", type: "s", required: false, sample: "contact@3dsinteractive.com" }
