@@ -121,3 +121,4 @@ configs:
 - { name: "ECOM_PAYMENT_KBANK_PROMPT_PAY_TERMINAL_ID", type: "s", required: false, sample: "", default: ""}
 - { name: "ECOM_CMS_FRONTEND_URL", type: "s", required: false, sample: "https://stgx-ecom-cms.pams.ai", default: "[REPLACE_ECOM_CMS_FRONTEND_URL]" }
 - { name: "ECOM_TRANSACTION_POINT_EXPIRED_IN_TIME_DAY", type: "n", required: false, sample: 14, default: 14}
+- { name: "ECOM_ENABLE_VOUCHER_TYPE_GIFT_VOUCHER", type: "b", required: false, sample: false, default: false}
