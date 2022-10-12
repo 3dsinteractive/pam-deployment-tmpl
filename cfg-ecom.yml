@@ -122,3 +122,10 @@ configs:
 - { name: "ECOM_CMS_FRONTEND_URL", type: "s", required: false, sample: "https://stgx-ecom-cms.pams.ai", default: "[REPLACE_ECOM_CMS_FRONTEND_URL]" }
 - { name: "ECOM_TRANSACTION_POINT_EXPIRED_IN_TIME_DAY", type: "n", required: false, sample: 14, default: 14}
 - { name: "ECOM_ENABLE_VOUCHER_TYPE_GIFT_VOUCHER", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_DROP_LEAD_VOUCHER_TRACKING_CONSENT_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "ECOM_DROP_LEAD_VOUCHER_CONTACTING_CONSENT_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "ECOM_DROP_LEAD_VOUCHER_DATABASE", type: "s", required: false, sample: "", default: ""}
+- { name: "ECOM_DROP_LEAD_VOUCHER_LINE_CAMPAIGN_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "ECOM_DROP_LEAD_VOUCHER_SMS_CAMPAIGN_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "ECOM_DROP_LEAD_VOUCHER_EMAIL_CAMPAIGN_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "ECOM_OTP_VALIDATE_EXIST_MEMBER", type: "b", required: false, sample: false, default: false}
