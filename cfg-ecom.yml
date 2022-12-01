@@ -102,6 +102,7 @@ configs:
 - { name: "ECOM_ORDER_SELLER_REFERENCE_ID", type: "s", required: false, sample: "PAM-Platform", default: ""}
 - { name: "ECOM_ENABLE_DISPLAY_BY_SALE_CHANNEL", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ENABLE_BRAND_PERMISSION", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_ENABLE_PARTIAL_BRAND_PERMISSION", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ENABLE_MEMBER_CUMULATIVE_PURCHASE", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ENABLE_VALIDATE_SALE_CHANNEL", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_INDEX_CREATE_ALIAS_X_MONTH_FROM_NOW", type: "n", required: false, sample: "", default: 24}
