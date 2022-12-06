@@ -64,8 +64,8 @@ configs:
 - { name: "PAM_PROFILER_VERSION", alias: "PAM4_PROFILER_VERSION", type: "n", required: true, sample: 6.0, default: 6.0 }
 - { name: "PAM_PROFILER_PROJECT", alias: "PAM4_PROFILER_PROJECT", type: "s", required: true, sample: pam6-245009, default: pam6-245009 }
 - { name: "GOOGLE_APPLICATION_CREDENTIALS", type: "s", required: true, sample: /profiler/profiler.json, default: /profiler/profiler.json }
-- { name: "PAM_MQ_PARTITIONS", alias: "PAM4_MQ_PARTITIONS", type: "n", required: true, sample: 50, default: 50 }
-- { name: "PAM_MQ_REPLICATIONS", alias: "PAM4_MQ_REPLICATIONS", type: "n", required: true, sample: 2, default: 2 }
+- { name: "PAM_MQ_PARTITIONS", alias: "PAM4_MQ_PARTITIONS", type: "n", required: true, sample: 50, default: 5 }
+- { name: "PAM_MQ_REPLICATIONS", alias: "PAM4_MQ_REPLICATIONS", type: "n", required: true, sample: 2, default: 1 }
 - { name: "PAM_K8S_ENABLED", alias: "PAM4_K8S_ENABLED", type: "b", required: true, sample: true, default: true }
 - { name: "SENTRY_ENDPOINT", type: "s", required: true, sample: https://xyz@logs.pams.ai/2, default: "[REPLACE_SENTRY_ENDPOINT]" }
 - { name: "PAM_HASH_SECRET", alias: "PAM4_HASH_SECRET", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_HASH_SECRET]" }
