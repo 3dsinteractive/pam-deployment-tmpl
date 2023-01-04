@@ -131,3 +131,4 @@ configs:
 - { name: "ECOM_DROP_LEAD_VOUCHER_EMAIL_CAMPAIGN_ID", type: "s", required: false, sample: "", default: ""}
 - { name: "ECOM_OTP_VALIDATE_EXIST_MEMBER", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_STORE_CODES_TYPE_DELIVERY", type: "s", required: false, sample: "1702", default: ""}
+- { name: "ECOM_ENABLE_ORDER_STORE_PERMISSION", type: "b", required: false, sample: false, default: false}
