@@ -132,3 +132,4 @@ configs:
 - { name: "ECOM_OTP_VALIDATE_EXIST_MEMBER", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_STORE_CODES_TYPE_DELIVERY", type: "s", required: false, sample: "1702", default: ""}
 - { name: "ECOM_ENABLE_ORDER_STORE_PERMISSION", type: "b", required: false, sample: false, default: false}
+- { name: "ENABLE_INSERT_OR_UPDATE_MEMBER_EXTERNAL", type: "b", required: false, sample: false, default: false}
