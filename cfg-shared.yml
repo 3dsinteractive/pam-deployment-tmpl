@@ -128,3 +128,9 @@ configs:
 - { name: "PAM_ELS_MAX_CONCURRENT_SEARCHES", type: "n", required: false, sample: 10, default: 10 }
 - { name: "PAM_ELS_SCALABLE_INDEX_SHARDS", type: "n", required: false, sample: 3, default: 3 }
 - { name: "PAM_MOBILE_COUNTRY_CODE", type: "s", required: false, sample: "+66", default: "" }
+- { name: "PAM_THIRD_PARTY_PERSISTER_ENDPOINT", type: "s", required: false, sample: maria-connect }
+- { name: "PAM_THIRD_PARTY_PERSISTER_PORT", type: "n", required: false, sample: 3306 }
+- { name: "PAM_THIRD_PARTY_PERSISTER_DB", type: "s", required: false, sample: my_database }
+- { name: "PAM_THIRD_PARTY_PERSISTER_USERNAME", type: "s", required: false, sample: my_user }
+- { name: "PAM_THIRD_PARTY_PERSISTER_PASSWORD", type: "s", required: false, sample: "UUID" }
+- { name: "PAM_THIRD_PARTY_PERSISTER_CHARSET", type: "s", required: false, sample: utf8mb4 }
