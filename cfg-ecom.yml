@@ -134,3 +134,9 @@ configs:
 - { name: "ECOM_ENABLE_ORDER_STORE_PERMISSION", type: "b", required: false, sample: false, default: false}
 - { name: "ENABLE_INSERT_OR_UPDATE_MEMBER_EXTERNAL", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ENABLE_VALIDATE_PASSWORD_SPECIAL_CHAR", type: "b", required: false, sample: false, default: false}
+- { name: "PAM_THIRD_PARTY_PERSISTER_ENDPOINT", type: "b", required: false, sample: false, default: false}
+- { name: "PAM_THIRD_PARTY_PERSISTER_PORT", type: "b", required: false, sample: false, default: false}
+- { name: "PAM_THIRD_PARTY_PERSISTER_DB", type: "b", required: false, sample: false, default: false}
+- { name: "PAM_THIRD_PARTY_PERSISTER_USERNAME", type: "b", required: false, sample: false, default: false}
+- { name: "PAM_THIRD_PARTY_PERSISTER_PASSWORD", type: "b", required: false, sample: false, default: false}
+- { name: "PAM_THIRD_PARTY_PERSISTER_CHARSET", type: "b", required: false, sample: false, default: false}
