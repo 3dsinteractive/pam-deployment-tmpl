@@ -43,6 +43,8 @@ spec:
           value: INSIDE://:9092
         - name: ALLOW_PLAINTEXT_LISTENER
           value: "yes"
+        - name: KAFKA_AUTO_CREATE_TOPIC_ENABLE
+          value: "false"          
         - name: KAFKA_NUM_PARTITIONS
           value: <kafkaNumPartitions>
         - name: KAFKA_ZOOKEEPER_CONNECT
