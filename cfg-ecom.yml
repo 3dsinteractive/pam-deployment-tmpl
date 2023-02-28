@@ -141,3 +141,6 @@ configs:
 - { name: "PAM_THIRD_PARTY_PERSISTER_PASSWORD", type: "b", required: false, sample: false, default: false}
 - { name: "PAM_THIRD_PARTY_PERSISTER_CHARSET", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ENABLE_LOGIN_WITH_CONTACT_EMAIL", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_RELATED_PRODUCT_SAME_GROUP", type: "b", required: false, sample: true, default: true}
+- { name: "ECOM_RELATED_PRODUCT_MORE", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_RELATED_PRODUCT_TYPE", type: "s", required: false, sample: "brand", default: ""}
