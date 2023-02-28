@@ -144,3 +144,4 @@ configs:
 - { name: "ECOM_RELATED_PRODUCT_SAME_GROUP", type: "b", required: false, sample: true, default: true}
 - { name: "ECOM_RELATED_PRODUCT_MORE", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_RELATED_PRODUCT_TYPE", type: "s", required: false, sample: "brand", default: ""}
+- { name: "ECOM_RELATED_PRODUCT_DISPLAY_LIMIT", type: "n", required: false, sample: 10, default: 10}
