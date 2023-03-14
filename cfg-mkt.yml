@@ -99,3 +99,4 @@ configs:
 - { name: "PAM_SCHEDULER_RUN_UPDATE_COUNTER_STAT", type: "n", required: false, sample: 300, default: 300 }
 - { name: "PAM_SCHEDULER_RUN_READ_TRACKER_FILE", type: "n", required: false, sample: 600, default: 600 }
 - { name: "PAM_ENABLE_DAILY_REFRESH_V2", type: "b", required: false, sample: true, default: false }
+- { name: "PAM_ALERT_DAILY_REFRESH_SEGMRNT_NOT_COMPLETED_EMAIL", type: "s", required: false, sample: "pam@3dsinteractive.com" }
