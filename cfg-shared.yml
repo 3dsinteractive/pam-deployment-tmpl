@@ -134,3 +134,4 @@ configs:
 - { name: "PAM_THIRD_PARTY_PERSISTER_USERNAME", type: "s", required: false, sample: my_user }
 - { name: "PAM_THIRD_PARTY_PERSISTER_PASSWORD", type: "s", required: false, sample: "UUID" }
 - { name: "PAM_THIRD_PARTY_PERSISTER_CHARSET", type: "s", required: false, sample: utf8mb4 }
+- { name: "PAM_ALERT_EMAIL", type: "s", required: false, sample: "pam@3dsinteractive.com" }
