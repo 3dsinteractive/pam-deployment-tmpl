@@ -134,12 +134,12 @@ configs:
 - { name: "ECOM_ENABLE_ORDER_STORE_PERMISSION", type: "b", required: false, sample: false, default: false}
 - { name: "ENABLE_INSERT_OR_UPDATE_MEMBER_EXTERNAL", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ENABLE_VALIDATE_PASSWORD_SPECIAL_CHAR", type: "b", required: false, sample: false, default: false}
-- { name: "PAM_THIRD_PARTY_PERSISTER_ENDPOINT", type: "s", required: false, sample: "", default: ""}
-- { name: "PAM_THIRD_PARTY_PERSISTER_PORT", type: "s", required: false, sample: "", default: ""}
-- { name: "PAM_THIRD_PARTY_PERSISTER_DB", type: "s", required: false, sample: "", default: ""}
-- { name: "PAM_THIRD_PARTY_PERSISTER_USERNAME", type: "s", required: false, sample: "", default: ""}
-- { name: "PAM_THIRD_PARTY_PERSISTER_PASSWORD", type: "s", required: false, sample: "", default: ""}
-- { name: "PAM_THIRD_PARTY_PERSISTER_CHARSET", type: "s", required: false, sample: "", default: ""}
+- { name: "PAM_THIRD_PARTY_PERSISTER_ENDPOINT", type: "s", required: false, sample: "" }
+- { name: "PAM_THIRD_PARTY_PERSISTER_PORT", type: "n", required: false, sample: 3306 }
+- { name: "PAM_THIRD_PARTY_PERSISTER_DB", type: "s", required: false, sample: "" }
+- { name: "PAM_THIRD_PARTY_PERSISTER_USERNAME", type: "s", required: false, sample: "" }
+- { name: "PAM_THIRD_PARTY_PERSISTER_PASSWORD", type: "s", required: false, sample: "" }
+- { name: "PAM_THIRD_PARTY_PERSISTER_CHARSET", type: "s", required: false, sample: "" }
 - { name: "ECOM_ENABLE_LOGIN_WITH_CONTACT_EMAIL", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_RELATED_PRODUCT_SAME_GROUP", type: "b", required: false, sample: true, default: true}
 - { name: "ECOM_RELATED_PRODUCT_MORE", type: "b", required: false, sample: false, default: false}
