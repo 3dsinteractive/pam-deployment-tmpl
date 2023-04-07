@@ -101,3 +101,4 @@ configs:
 - { name: "PAM_ENABLE_DAILY_REFRESH_V2", type: "b", required: false, sample: true, default: false }
 - { name: "PAM_TRACKER_MONTHS_LIMIT", type: "n", required: false, sample: 12, default: 12 }
 - { name: "PAM_ENABLE_ADAPTER_SCHEDULE", type: "b", required: false, sample: true, default: false }
+- { name: "PAM_ENABLE_ADAPTER_REALTIME", type: "b", required: false, sample: true, default: false }
