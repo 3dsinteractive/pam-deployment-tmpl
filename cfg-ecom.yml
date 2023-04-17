@@ -142,4 +142,4 @@ configs:
 - { name: "THIRD_PARTY_GET_MEMBER_KEY", type: "s", required: false, sample: "member_card", default: "member_card"}
 - { name: "ECOM_ENABLE_SEND_EVENT_UPDATE_MEMBER_CLASS", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ENABLE_SEND_EVENT_DIRECTION_MEMBER_CLASS", type: "b", required: false, sample: false, default: false}
-- { name: "ECOM_ENABLE_BACKEND_REQUIRED_SEO_URL", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_ENABLE_PARAM_BACKEND_REQUIRED_SEO_URL", type: "b", required: false, sample: false, default: false}
