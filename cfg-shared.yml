@@ -134,5 +134,5 @@ configs:
 - { name: "PAM_THIRD_PARTY_PERSISTER_USERNAME", type: "s", required: false, sample: my_user }
 - { name: "PAM_THIRD_PARTY_PERSISTER_PASSWORD", type: "s", required: false, sample: "UUID" }
 - { name: "PAM_THIRD_PARTY_PERSISTER_CHARSET", type: "s", required: false, sample: utf8mb4 }
-- { name: "PAM_EMAIL_ALERT", type: "s", required: false, sample: "pam@3dsinteractive.com" }
+- { name: "PAM_EMAIL_ALERT", type: "s", required: false, sample: "devops@3dsinteractive.com", default: "devops@3dsinteractive.com" }
 - { name: "PAM_ENABLE_MAINTENANCE_MODE", type: "b", required: false, sample: true, default: false }
