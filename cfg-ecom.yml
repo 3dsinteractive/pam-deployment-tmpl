@@ -143,3 +143,5 @@ configs:
 - { name: "ECOM_ENABLE_SEND_EVENT_UPDATE_MEMBER_CLASS", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ENABLE_SEND_EVENT_DIRECTION_MEMBER_CLASS", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ENABLE_PARAM_BACKEND_REQUIRED_SEO_URL", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_ENABLE_EXTERNAL_WHITE_LIST_IP", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_EXTERNAL_WHITE_LIST_IP", type: "s", required: false, sample: "", default: ""}
