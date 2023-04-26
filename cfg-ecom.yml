@@ -145,3 +145,5 @@ configs:
 - { name: "ECOM_ENABLE_PARAM_BACKEND_REQUIRED_SEO_URL", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ENABLE_EXTERNAL_WHITE_LIST_IP", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_EXTERNAL_WHITE_LIST_IP", type: "s", required: false, sample: "", default: ""}
+- { name: "ECOM_ENABLE_IGNORE_FILTER_MEMBER_CARD_NO_FOR_THE_BRAIN_MEMBER_DETAIL", type: "b", required: false, sample: false, default: false}
+
