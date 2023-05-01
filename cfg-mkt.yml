@@ -26,6 +26,7 @@ configs:
 - { name: "PAM_CACHE_EXPIRE_TIME_CAMPAIGNATTRS", alias: "PAM4_CACHE_EXPIRE_TIME_CAMPAIGNATTRS", type: "n", required: true, sample: "10", default: 10  }
 - { name: "PAM_CACHE_EXPIRE_TIME_REPORT", alias: "PAM4_CACHE_EXPIRE_TIME_REPORT", type: "n", required: true, sample: "300", default: 300 }
 - { name: "PAM_CACHE_EXPIRE_TIME_MJML", alias: "PAM4_CACHE_EXPIRE_TIME_MJML", type: "n", required: true, sample: "120", default: 120 }
+- { name: "PAM_CACHE_EXPIRE_TIME_EVENT_PARAMETERS", type: "n", required: false, sample: "120", default: 120 }
 - { name: "PAM_SCHEDULE_APPPUSHNOTI", alias: "PAM4_SCHEDULE_APPPUSHNOTI", type: "n", required: true, sample: "120", default: 120 }
 - { name: "PAM_SCHEDULE_SPDAYS_TRIGGERS", alias: "PAM4_SCHEDULE_SPDAYS_TRIGGERS", type: "n", required: true, sample: "1800", default: 3600 }
 - { name: "PAM_SCHEDULE_CAMPAIGNNOTENGAGE_TRIGGERS", alias: "PAM4_SCHEDULE_CAMPAIGNNOTENGAGE_TRIGGERS", type: "n", required: true, sample: "1800", default: 1800 }
