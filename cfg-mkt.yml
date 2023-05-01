@@ -103,3 +103,6 @@ configs:
 - { name: "PAM_ENABLE_ADAPTER_SCHEDULE", type: "b", required: false, sample: true, default: false }
 - { name: "PAM_ENABLE_ADAPTER_REALTIME", type: "b", required: false, sample: true, default: false }
 - { name: "PAM_ENABLE_UPDATE_TRACKER", type: "b", required: false, sample: true, default: false }
+- { name: "PAM_ENABLE_EVENT_PARAMETERS_FILTER", type: "b", required: false, sample: true, default: false }
+- { name: "PAM_ENABLE_RATE_LIMIT_BY_IP", type: "b", required: false, sample: true, default: false }
+- { name: "PAM_WHITELIST_IP_FOR_RATE_LIMITS", type: "s", required: false, sample: "10.10.10.10,20.20.20.20", default: "" }
