@@ -109,3 +109,5 @@ configs:
 - { name: "PAM_WHITELIST_IP_FOR_RATE_LIMITS", type: "s", required: false, sample: "10.10.10.10,20.20.20.20", default: "" }
 - { name: "PAM_EVENT_PARAMETER_MAX_LEN", type: "n", required: false, sample: 200, default: 200 }
 - { name: "PAM_EVENT_NAME_MAX_LEN", type: "n", required: false, sample: 50, default: 50 }
+- { name: "PAM_DEFAULT_MQ_PARTITIONS", type: "s", required: false, sample: "50", default: "50" }
+- { name: "PAM_TRACKING_WITHOUT_CONSENT_EVENTS", type: "s", required: false, sample: "event1,event2,event3", default: "" }
