@@ -113,3 +113,4 @@ configs:
 - { name: "PAM_TRACKING_WITHOUT_CONSENT_EVENTS", type: "s", required: false, sample: "event1,event2,event3", default: "" }
 - { name: "PAM_SQL_QUERY_BATCHSIZE", type: "n", required: false, sample: 10000, default: 10000 }
 - { name: "PAM_EXIT_WHEN_MIGRATE_FINISH", type: "b", required: false, sample: false, default: false }
+- { name: "PAM_EVALUATE_CONTACT_TRIGGERS_PARTITIONS", type: "n", required: false, sample: 100, default: 100 }
