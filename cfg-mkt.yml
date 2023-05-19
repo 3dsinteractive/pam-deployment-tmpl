@@ -114,3 +114,4 @@ configs:
 - { name: "PAM_SQL_QUERY_BATCHSIZE", type: "n", required: false, sample: 10000, default: 10000 }
 - { name: "PAM_EXIT_WHEN_MIGRATE_FINISH", type: "b", required: false, sample: false, default: false }
 - { name: "PAM_EVALUATE_CONTACT_TRIGGERS_PARTITIONS", type: "n", required: false, sample: 100, default: 100 }
+- { name: "PAM_SCHEDULE_DELETE_CACHESMAP", type: "n", required: false, sample: "1800", default: 1800 }
