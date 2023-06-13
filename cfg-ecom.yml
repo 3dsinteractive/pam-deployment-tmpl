@@ -80,6 +80,7 @@ configs:
 - { name: "ECOM_ENABLE_CONVERT_TRANSACTION_TYPE_TO_EARN_OR_BURN", type: "b", required: false, sample: true, default: false}
 - { name: "ECOM_ENABLE_ORDER_REQUIRE_TRANSACTION_TYPE", type: "b", required: false, sample: true, default: false}
 - { name: "ECOM_ENABLE_PRODUCT_CALUCULATE_TOPUP", type: "b", required: false, sample: true, default: false}
+- { name: "PAM_ECOM_SHIPMENT_TYPE", alias: "PAM4_ECOM_SHIPMENT_TYPE", type: "s", required: false, sample: "ONE_PACKAGE_PER_ORDER", default: "ONE_PACKAGE_PER_ORDER"}
 - { name: "ECOM_SHIPPING_PROVIDER_ALIAS", type: "s", required: false, sample: "kerry", default: "kerry"}
 - { name: "ECOM_ENABLE_ORDER_INCREMENT_NUMBER_BY_ELS", type: "b", required: false, sample: true, default: false}
 - { name: "ECOM_HOST", type: "s", required: false, sample: " https://xyz-ecom.pams.ai", default: ""}
