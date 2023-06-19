@@ -16,6 +16,7 @@ attrs:
 - { name: "slackHookCritical", alias: "slackHookCritical", doublequote: false, replace: true }
 - { name: "topicsInclude", alias: "topicsInclude", doublequote: false, replace: true }
 - { name: "topicsExclude", alias: "topicsExclude", doublequote: false, replace: true }
+- { name: "maxMemory", alias: "maxMemory", doublequote: true, replace: true}
 # Use in els
 - { name: "minimumMasterNode", alias: "minimumMasterNode", doublequote: true, replace: true }
 - { name: "clusters", alias: "clusters", doublequote: true, replace: true }

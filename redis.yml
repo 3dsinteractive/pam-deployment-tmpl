@@ -54,6 +54,8 @@ spec:
           env:
             - name: ALLOW_EMPTY_PASSWORD
               value: "yes"
+            - name: CUSTOM_REDIS_MAX_MEMORY
+              value: <maxMemory>
           resources:
             requests:
               memory: <minMem>
