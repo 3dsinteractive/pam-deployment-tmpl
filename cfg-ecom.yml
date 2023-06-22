@@ -153,3 +153,5 @@ configs:
 - { name: "ECOM_ENABLE_SEND_ORDER_CANCEL_EXTERNAL", type: "b", required: false, sample: false, default: false}
 - { name: "ENABLE_SET_MEMBER_ID_FROM_MOBILE_NO", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ATTRIBUTE_USE_FOR_CUSTOMER_KEY", type: "s", required: false, sample: "member_id", default: "member_id"}
+- { name: "ECOM_MQ_PRODUCT_UPDATE_PRICE_PARTITIONS", type: "n", required: false, sample: "50" }
+- { name: "ECOM_MQ_COUPON_MEMBER_REPLICAS", type: "n", required: false, sample: "2" }
