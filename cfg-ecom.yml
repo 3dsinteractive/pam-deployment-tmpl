@@ -39,6 +39,7 @@ configs:
 - { name: "PAM_IGNOREGEN_MEMBER_CARD_NO", alias: "PAM4_IGNOREGEN_MEMBER_CARD_NO", type: "b", required: false, sample: "false", default: true }
 - { name: "MEMBER_REGISTER_INITIAL_VALUE", type: "b", required: false, sample: "true", default: true }
 - { name: "THIRD_PARTY_POINT_UPDATE", type: "b", required: false, sample: "true", default: false }
+- { name: "THIRD_PARTY_POINT_USE", type: "b", required: false, sample: "true", default: false }
 - { name: "THIRD_PARTY_VERIFIED_OTP", type: "b", required: false, sample: "true", default: false }
 - { name: "PAM_CACHE_EXPIRE_TIME_ALLOW_REQUEST_IPADDRESS", alias: "PAM4_CACHE_EXPIRE_TIME_ALLOW_REQUEST_IPADDRESS", type: "n", required: false, sample: "30", default: 30 }
 - { name: "PAM_CUSTOMER_NAME", alias: "PAM4_CUSTOMER_NAME", type: "s", required: false, sample: "[CUSTOMER_NAME]", default: "[REPLACE_PAM_CUSTOMER_NAME]" }
