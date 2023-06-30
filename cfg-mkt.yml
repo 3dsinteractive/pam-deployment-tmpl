@@ -118,3 +118,6 @@ configs:
 - { name: "PAM_DATA_ADAPTER_PREV_X_MONTH",type: "n", required: false, sample: 1, default: 1 }
 - { name: "PAM_SCHEDULE_DELETE_CACHESMAP", type: "n", required: false, sample: "1800", default: 1800 }
 - { name: "PAM_EVAL_WORKERS_CAMPAIGN_NOT_ENGAGED_MAX_LIMIT", type: "n", required: false, sample: 3, default: 3 }
+- { name: "PAM_DAILY_REFRESH_CHANNEL", type: "n", required: false, sample: 3, default: 14 }
+- { name: "PAM_DAILY_REFRESH_RELATIVE_CHANNEL", type: "n", required: false, sample: 3, default: 7 }
+- { name: "PAM_DAILY_REFRESH_NO_RELATIVE_CHANNEL", type: "n", required: false, sample: 3, default: 7 }
