@@ -162,3 +162,4 @@ configs:
 - { name: "ECOM_THIRD_PARTY_PERSISTER_USERNAME", type: "s", required: false, sample: my_user }
 - { name: "ECOM_THIRD_PARTY_PERSISTER_PASSWORD", type: "s", required: false, sample: "UUID" }
 - { name: "ECOM_THIRD_PARTY_PERSISTER_CHARSET", type: "s", required: false, sample: utf8mb4 }
+- { name: "ECOM_ENABLE_UPDATE_STOCK_EXTERNAL", type: "b", required: false, sample: false, default: false}
