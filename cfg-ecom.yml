@@ -164,3 +164,5 @@ configs:
 - { name: "ECOM_THIRD_PARTY_PERSISTER_CHARSET", type: "s", required: false, sample: utf8mb4 }
 - { name: "ECOM_ENABLE_UPDATE_STOCK_EXTERNAL", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ATTEMPT_REPEAT_CALL_API", type: "n", required: false, sample: 3, default: 1}
+- { name: "ECOM_IGNORE_GET_PROVICE_FOR_GEN_PERMISSION", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_IGNORE_GET_TRACKING_NUMBER_FOR_CREATE_UPDATE_STORE", type: "b", required: false, sample: false, default: false}
