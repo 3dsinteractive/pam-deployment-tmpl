@@ -166,3 +166,5 @@ configs:
 - { name: "ECOM_ATTEMPT_REPEAT_CALL_API", type: "n", required: false, sample: 3, default: 1}
 - { name: "ECOM_IGNORE_GET_PROVICE_FOR_GEN_PERMISSION", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_IGNORE_GET_TRACKING_NUMBER_FOR_CREATE_UPDATE_STORE", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_PERMISSION_ORDER_KEY_PREFIX", type: "s", required: false, sample: ecom-orders, default: "" }
+- { name: "ECOM_PERMISSION_STORE_KEY_PREFIX", type: "s", required: false, sample: ecom-stores, default: "" }
