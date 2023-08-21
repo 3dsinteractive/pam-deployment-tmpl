@@ -1,5 +1,5 @@
-cfg-shared: ["cfg-shared", "node-daemon", "metrics-agents", "connect", "builder", "sender", "msgscheduler", "ecom", "ecom-backend", "ecom-transaction", "migrate-connect", "migrate-seeder", "util-pamcli", "migrate-connect-ecom"]
+cfg-shared: ["cfg-shared", "node-daemon", "metrics-agents", "connect", "builder", "sender", "msgscheduler", "ecom", "ecom-backend", "ecom-transaction", "migrate-connect", "migrate-seeder", "util-pamcli", "migrate-connect-ecom", "migrate-seeder-ecom"]
 cfg-mkt: ["node-daemon", "metrics-agents", "cfg-mkt", "connect", "builder", "sender", "msgscheduler", "migrate-connect", "migrate-seeder", "util-pamcli"]
-cfg-ecom: ["node-daemon", "metrics-agents", "cfg-ecom", "ecom-backend", "ecom-transaction", "ecom", "util-pamcli", "migrate-connect-ecom"]
+cfg-ecom: ["node-daemon", "metrics-agents", "cfg-ecom", "ecom-backend", "ecom-transaction", "ecom", "util-pamcli", "migrate-connect-ecom", "migrate-seeder-ecom"]
 cfg-cms-api: ["cms-api"]
 cfg-front-web: ["ecom-line-bdb", "ecom-web-bdb"]

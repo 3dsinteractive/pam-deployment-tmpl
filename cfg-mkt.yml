@@ -121,3 +121,6 @@ configs:
 - { name: "PAM_DAILY_REFRESH_CHANNEL", type: "n", required: false, sample: 10, default: 10 }
 - { name: "PAM_DAILY_REFRESH_RELATIVE_CHANNEL", type: "n", required: false, sample: 5, default: 5 }
 - { name: "PAM_DAILY_REFRESH_NO_RELATIVE_CHANNEL", type: "n", required: false, sample: 5, default: 5 }
+- { name: "PAM_DATA_ADAPTER_CAMPAIGN_INSIGHT_ENDED_AT_OFFSET", type: "n", required: false, sample: -3, default: -3 }
+- { name: "PAM_DATA_ADAPTER_CAMPAIGN_INSIGHT_DATE_RANGE_FOR_EXPORT_LIMIT", type: "n", required: false, sample: -3, default: -3 }
+- { name: "BULK_SENDER_MESSAGE_AMOUNT", type: "n", required: false, sample: 5 }

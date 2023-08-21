@@ -156,3 +156,16 @@ configs:
 - { name: "ECOM_ATTRIBUTE_USE_FOR_CUSTOMER_KEY", type: "s", required: false, sample: "member_id", default: "member_id"}
 - { name: "ECOM_MQ_PRODUCT_UPDATE_PRICE_PARTITIONS", type: "n", required: false, sample: "50" }
 - { name: "ECOM_MQ_PRODUCT_UPDATE_PRICE_REPLICAS", type: "n", required: false, sample: "2" }
+- { name: "ECOM_THIRD_PARTY_PERSISTER_ENDPOINT", type: "s", required: false, sample: maria-connect }
+- { name: "ECOM_THIRD_PARTY_PERSISTER_PORT", type: "n", required: false, sample: 3306 }
+- { name: "ECOM_THIRD_PARTY_PERSISTER_DB", type: "s", required: false, sample: my_database }
+- { name: "ECOM_THIRD_PARTY_PERSISTER_USERNAME", type: "s", required: false, sample: my_user }
+- { name: "ECOM_THIRD_PARTY_PERSISTER_PASSWORD", type: "s", required: false, sample: "UUID" }
+- { name: "ECOM_THIRD_PARTY_PERSISTER_CHARSET", type: "s", required: false, sample: utf8mb4 }
+- { name: "ECOM_ENABLE_UPDATE_STOCK_EXTERNAL", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_ATTEMPT_REPEAT_CALL_API", type: "n", required: false, sample: 3, default: 1}
+- { name: "ECOM_IGNORE_GET_PROVICE_FOR_GEN_PERMISSION", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_IGNORE_GET_TRACKING_NUMBER_FOR_CREATE_UPDATE_STORE", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_ENABLE_POSPORTAL_STORE_PERMISSION", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_PERMISSION_ORDER_KEY_PREFIX", type: "s", required: false, sample: ecom-orders, default: "" }
+- { name: "ECOM_PERMISSION_STORE_KEY_PREFIX", type: "s", required: false, sample: ecom-stores, default: "" }
