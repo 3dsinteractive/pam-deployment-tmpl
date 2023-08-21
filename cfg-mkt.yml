@@ -124,3 +124,4 @@ configs:
 - { name: "PAM_DATA_ADAPTER_CAMPAIGN_INSIGHT_ENDED_AT_OFFSET", type: "n", required: false, sample: -3, default: -3 }
 - { name: "PAM_DATA_ADAPTER_CAMPAIGN_INSIGHT_DATE_RANGE_FOR_EXPORT_LIMIT", type: "n", required: false, sample: -3, default: -3 }
 - { name: "BULK_SENDER_MESSAGE_AMOUNT", type: "n", required: false, sample: 5 }
+- { name: "PAM_TRACKER_EVENT_PAGE_VIEW", type: "s", required: false, sample: "page_view,pageview", default: "" }
