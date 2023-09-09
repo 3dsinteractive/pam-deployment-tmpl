@@ -170,3 +170,4 @@ configs:
 - { name: "ECOM_PERMISSION_ORDER_KEY_PREFIX", type: "s", required: false, sample: ecom-orders, default: "" }
 - { name: "ECOM_PERMISSION_STORE_KEY_PREFIX", type: "s", required: false, sample: ecom-stores, default: "" }
 - { name: "ECOM_ENABLE_PROMOTION_SKU_IMPORT", type: "b", required: false, sample: false, default: false}
+- { name: "ENABLE_GET_MEMBER_CLASS_IMAGE_URL", type: "b", required: false, sample: false, default: false}
