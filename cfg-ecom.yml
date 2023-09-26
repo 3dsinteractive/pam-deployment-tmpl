@@ -171,5 +171,5 @@ configs:
 - { name: "ECOM_PERMISSION_STORE_KEY_PREFIX", type: "s", required: false, sample: ecom-stores, default: "" }
 - { name: "ECOM_ENABLE_PROMOTION_SKU_IMPORT", type: "b", required: false, sample: false, default: false}
 - { name: "ENABLE_GET_MEMBER_CLASS_IMAGE_URL", type: "b", required: false, sample: false, default: false}
-- { name: "VOUCHER_CREATE_EXCEL_COLUMN_HEADER", type: "s", required: true, default: '[{"column_name":"Alias","is_required":false,"field_name":"alias"}]' }
-- { name: "VOUCHER_UPDATE_EXCEL_COLUMN_HEADER", type: "s", required: true, default: '[{"column_name":"*Voucher ID (Do not change)","is_required":true,"field_name":"voucher_id"}]' }
+- { name: "VOUCHER_CREATE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"Alias","is_required":false,"field_name":"alias"}]' }
+- { name: "VOUCHER_UPDATE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"*Voucher ID (Do not change)","is_required":true,"field_name":"voucher_id"}]' }
