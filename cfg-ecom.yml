@@ -177,6 +177,6 @@ configs:
 - { name: "ECOM_MQ_VOUCHER_PARTITIONS", type: "n", required: false, sample: "50" }
 - { name: "ECOM_MQ_VOUCHER_REPLICAS", type: "n", required: false, sample: "2" }
 - { name: "ECOM_VOUCHER_BARCODE_SHARDS", type: "n", required: false, sample: "1" }
-- { name: "ECOM_IGNORE_AGGR_REMAINING_VOUCHER", type: "b", required: false, sample: false, default: false}
-- { name: "ECOM_IGNORE_AGGR_REMAINING_STORE_STOCK_VOUCHER", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_IGNORE_AGGR_REMAINING_VOUCHER_FOR_LIST_VOUCHERS", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_ENABLE_AGGR_REMAINING_STORE_STOCK_VOUCHER_FOR_LIST_VOUCHERS", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_IGNORE_GENERATE_PICKUP_TIME_FOR_STORE", type: "b", required: false, sample: false, default: false}
