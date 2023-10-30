@@ -138,3 +138,5 @@ configs:
 - { name: "PAM_IS_IN_SIT_TEST", type: "b", required: false, sample: true, default: false }
 - { name: "SEAMAN_KAFKA_ADMIN_OPERATION_READ_TIMEOUT", type: "s", required: false, sample: 30s }
 - { name: "PAM_METRIC_SKIP_ALERT_CLIENTS", type: "s", required: false, sample: stg }
+- { name: "PAM_METRIC_SKIP_ALERT_CLIENTS", type: "s", required: false, sample: stg }
+- { name: "PAM_METRIC_NOTI_CAMPAIGN_ID", type: "s", required: false, sample: stg }
