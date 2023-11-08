@@ -130,3 +130,4 @@ configs:
 - { name: "PAM_K8S_NAMESPACE", alias: "PAM4_K8S_NAMESPACE", type: "s", required: false, sample: "staging", default: "" }
 - { name: "PAM_K8S_TOKEN", alias: "PAM4_K8S_TOKEN", type: "s", required: false, sample: "xxyyzz", default: "" }
 - { name: "PAM_CLOUD_RUN_NODE_LABEL", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_DATA_ADAPTER_CONTACT_TRIGGER_EXPORT_CSV_ROW_LIMIT", type: "n", required: false, sample: 50000, default: 50000 }
