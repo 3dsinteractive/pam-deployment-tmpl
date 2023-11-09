@@ -132,3 +132,5 @@ configs:
 - { name: "PAM_CLOUD_RUN_NODE_LABEL", type: "s", required: false, sample: "", default: "" }
 - { name: "PAM_DATA_ADAPTER_CONTACT_TRIGGER_EXPORT_CSV_ROW_LIMIT", type: "n", required: false, sample: 50000, default: 50000 }
 - { name: "PAM_DATAFLOW_COMPLETED_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: "3", default: 3 }
+- { name: "PAM_TOPIC_DATAFLOW_COMPLETED_PARTITIONS", type: "n", required: false, sample: "3", default: 3 }
+- { name: "PAM_TOPIC_DATAFLOW_COMPLETED_REPLICAS", type: "n", required: false, sample: "3", default: 3 }
