@@ -11,7 +11,7 @@ configs:
 - { name: "SEAMAN_AUDIT_LOG", type: "b", required: false, sample: true }
 - { name: "PAM_ELS_VERSION", alias: "PAM4_ELS_VERSION", type: "n", required: true, sample: 6.8, default: 6.8 }
 - { name: "PAM_PARALLELTASK_ENABLED", alias: "PAM4_PARALLELTASK_ENABLED", type: "b", required: true, sample: true, default: true }
-- { name: "PAM_SECRET", alias: "PAM4_SECRET", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_SECRET", alias: "PAM4_SECRET", type: "s", required: true, sample: "UUID", is_from_vault: true }
 - { name: "PAM_ADMINEMAIL_SENDER", alias: "PAM4_ADMINEMAIL_SENDER", type: "s", required: true, sample: contact@3dsinteractive.com, default: contact@3dsinteractive.com }
 - { name: "PAM_ADMINEMAIL_SENDERNAME", alias: "PAM4_ADMINEMAIL_SENDERNAME", type: "s", required: true, sample: PAM Admin, default: PAM Admin }
 - { name: "PAM_TIMEOFDAY_OFFSET", alias: "PAM4_TIMEOFDAY_OFFSET", type: "n", required: true, sample: 7, default: 7 }
@@ -50,14 +50,14 @@ configs:
 - { name: "PAM_MAILER_USER", alias: "PAM4_MAILER_USER", type: "s", required: true, sample: pushandmotion, default: "[REPLACE_PAM_MAILER_USER]" }
 - { name: "PAM_MAILER_PASSWORD", alias: "PAM4_MAILER_PASSWORD", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_MAILER_PASSWORD]" }
 - { name: "PAM_FILESTORE_ENDPOINT", alias: "PAM4_FILESTORE_ENDPOINT", type: "s", required: true, sample: s3-ap-southeast-1.amazonaws.com, default: s3-ap-southeast-1.amazonaws.com }
-- { name: "PAM_FILESTORE_ACCESSKEY", alias: "PAM4_FILESTORE_ACCESSKEY", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_ACCESSKEY]" }
-- { name: "PAM_FILESTORE_SECRET", alias: "PAM4_FILESTORE_SECRET", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_SECRET]" }
+- { name: "PAM_FILESTORE_ACCESSKEY", alias: "PAM4_FILESTORE_ACCESSKEY", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_ACCESSKEY]", is_from_vault: true }
+- { name: "PAM_FILESTORE_SECRET", alias: "PAM4_FILESTORE_SECRET", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_SECRET]", is_from_vault: true }
 - { name: "PAM_FILESTORE_ISHTTPS", alias: "PAM4_FILESTORE_ISHTTPS", type: "b", required: true, sample: true, default: true }
 - { name: "PAM_FILESTORE_BUCKETNAME", alias: "PAM4_FILESTORE_BUCKETNAME", type: "s", required: true, sample: pam-staging, default: "[REPLACE_PAM_FILESTORE_BUCKETNAME]" }
 - { name: "PAM_FILESTORE_TIMEOUT", alias: "PAM4_FILESTORE_TIMEOUT", type: "n", required: true, sample: 3, default: 30 }
 - { name: "PAM_FILESTORE_PRIVATE_ENDPOINT", alias: "PAM4_FILESTORE_PRIVATE_ENDPOINT", type: "s", required: false, sample: s3-ap-southeast-1.amazonaws.com, default: s3-ap-southeast-1.amazonaws.com }
 - { name: "PAM_FILESTORE_PRIVATE_ACCESSKEY", alias: "PAM4_FILESTORE_PRIVATE_ACCESSKEY", type: "s", required: false, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_ACCESSKEY]" }
-- { name: "PAM_FILESTORE_PRIVATE_SECRET", alias: "PAM4_FILESTORE_PRIVATE_SECRET", type: "s", required: false, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_SECRET]" }
+- { name: "PAM_FILESTORE_PRIVATE_SECRET", alias: "PAM4_FILESTORE_PRIVATE_SECRET", type: "s", required: false, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_SECRET]", is_from_vault: true }
 - { name: "PAM_FILESTORE_PRIVATE_ISHTTPS", alias: "PAM4_FILESTORE_PRIVATE_ISHTTPS", type: "b", required: false, sample: true, default: true }
 - { name: "PAM_FILESTORE_PRIVATE_BUCKETNAME", alias: "PAM4_FILESTORE_PRIVATE_BUCKETNAME", type: "s", required: false, sample: pam-staging, default: "[REPLACE_PAM_FILESTORE_BUCKETNAME]" }
 - { name: "PAM_FILESTORE_PRIVATE_TIMEOUT", alias: "PAM4_FILESTORE_PRIVATE_TIMEOUT", type: "n", required: false, sample: 3, default: 30 }
