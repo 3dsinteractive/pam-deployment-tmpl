@@ -50,7 +50,7 @@ configs:
 - { name: "PAM_MAILER_USER", alias: "PAM4_MAILER_USER", type: "s", required: true, sample: pushandmotion, default: "[REPLACE_PAM_MAILER_USER]" }
 - { name: "PAM_MAILER_PASSWORD", alias: "PAM4_MAILER_PASSWORD", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_MAILER_PASSWORD]" }
 - { name: "PAM_FILESTORE_ENDPOINT", alias: "PAM4_FILESTORE_ENDPOINT", type: "s", required: true, sample: s3-ap-southeast-1.amazonaws.com, default: s3-ap-southeast-1.amazonaws.com }
-- { name: "PAM_FILESTORE_ACCESSKEY", alias: "PAM4_FILESTORE_ACCESSKEY", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_ACCESSKEY]", is_from_vault: true }
+- { name: "PAM_FILESTORE_ACCESSKEY", alias: "PAM4_FILESTORE_ACCESSKEY", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_ACCESSKEY]" } 
 - { name: "PAM_FILESTORE_SECRET", alias: "PAM4_FILESTORE_SECRET", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_SECRET]", is_from_vault: true }
 - { name: "PAM_FILESTORE_ISHTTPS", alias: "PAM4_FILESTORE_ISHTTPS", type: "b", required: true, sample: true, default: true }
 - { name: "PAM_FILESTORE_BUCKETNAME", alias: "PAM4_FILESTORE_BUCKETNAME", type: "s", required: true, sample: pam-staging, default: "[REPLACE_PAM_FILESTORE_BUCKETNAME]" }
