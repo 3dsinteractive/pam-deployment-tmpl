@@ -137,3 +137,5 @@ configs:
 - { name: "PAM4_SCHEDULER_SEGMENT_REFRESH_NIGHT_HOUR", type: "n", required: false, sample: 19, default: 19 }
 - { name: "PAM_SKIP_MX_LOOKUP_HOSTS", alias: "PAM4_SKIP_MX_LOOKUP_HOSTS", type: "s", required: false, sample: "", default: "" }
 - { name: "PAM_SCHEDULER_RUN_DATA_ADAPTER_EVERY_MINUTE", type: "n", required: false, sample: 60, default: 60 }
+- { name: "PAM_EVENTS_PARAMETERS_BATCH_SIZE", type: "n", required: false, sample: 30000, default: 30000 }
+- { name: "PAM_EVENTS_PARAMETERS_BATCH_ROUND", type: "n", required: false, sample: 100, default: 100 }
