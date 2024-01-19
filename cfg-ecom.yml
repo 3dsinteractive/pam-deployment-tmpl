@@ -181,6 +181,6 @@ configs:
 - { name: "ECOM_ENABLE_AGGR_REMAINING_STORE_STOCK_VOUCHER_FOR_LIST_VOUCHERS", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_ENABLE_AGGR_REMAINING_STORE_STOCK_FOR_DETAIL_VOUCHER", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_IGNORE_GENERATE_PICKUP_TIME_FOR_STORE", type: "b", required: false, sample: false, default: false}
-- { name: "RMD_STORE_MASTER_DATA_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '{"column_headers":[{"column_name":"ID","row_name":"A"},{"column_name":"Store Code","row_name":"B"},{"column_name":"Branch Account","row_name":"C"},{"column_name":"Title TH","row_name":"D"},{"column_name":"Title EN","row_name":"E"}]}' }
+- { name: "RMD_MASTER_DATA_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '{"column_headers":[{"column_name":"ID","row_name":"A"},{"column_name":"Store Code","row_name":"B"},{"column_name":"Branch Account","row_name":"C"},{"column_name":"Title TH","row_name":"D"},{"column_name":"Title EN","row_name":"E"}]}' }
 - { name: "RMD_CREATE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"Alias","is_required":false,"field_name":"alias"}]' }
 - { name: "RMD_UPDATE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"*Voucher ID (Do not change)","is_required":true,"field_name":"voucher_id"}]' }
