@@ -139,3 +139,4 @@ configs:
 - { name: "PAM_SCHEDULER_RUN_DATA_ADAPTER_EVERY_MINUTE", type: "n", required: false, sample: 60, default: 60 }
 - { name: "PAM_EVENTS_PARAMETERS_BATCH_SIZE", type: "n", required: false, sample: 30000, default: 30000 }
 - { name: "PAM_EVENTS_PARAMETERS_BATCH_ROUND", type: "n", required: false, sample: 100, default: 100 }
+- { name: "PAM_DATA_ADAPTER_QUERY_DELAY", type: "n", required: false, sample: 30, default: 30 }
