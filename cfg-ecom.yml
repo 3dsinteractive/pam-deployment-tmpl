@@ -187,3 +187,5 @@ configs:
 - { name: "ECOM_SEND_QUESTIONNAIRE_TO_DEMOGRAPHIC_ATTRIBUTES", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_MQ_RMD_PARTITIONS", type: "n", required: false, sample: "50" }
 - { name: "ECOM_MQ_RMD_REPLICAS", type: "n", required: false, sample: "2" }
+- { name: "ECOM_ENABLE_SHARING_VOUCHER_BARCODE_INDEX", type: "b", required: false, sample: false, default: false}
+- { name: "ECOM_SHARING_VOUCHER_BARCODE_INDEX_LIMIT", type: "n", required: false, sample: "10" }
