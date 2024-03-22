@@ -79,6 +79,7 @@ configs:
 - { name: "PAM_SCHEDULER_READ_FILE_TRACKER_BACKWARD", alias: "PAM4_SCHEDULER_READ_FILE_TRACKER_BACKWARD", type: "n", required: false, sample: 6, default: 6 }
 - { name: "PAM_CAMPAIGN_DYNAMIC_TEMPLATE_RECURRING_SCHEDULER_NIGHT_HOUR", alias: "PAM4_CAMPAIGN_DYNAMIC_TEMPLATE_RECURRING_SCHEDULER_NIGHT_HOUR", type: "n", required: false, sample: 22, default: 22 }
 - { name: "PAM_EXTERNAL_API_BITLY_SECRET", alias: "PAM_EXTERNAL_API_BITLY_SECRET", type: "s", required: false, sample: "", default: "[REPLACE_PAM_EXTERNAL_API_BITLY_SECRET]" }
+- { name: "PAM_SHORTEN_BASE_URL", alias: "PAM_SHORTEN_BASE_URL", type: "s", required: false, sample: "", default: "https://shorturl.ai" }
 - { name: "PAM_TRACKER_RECEIVED_CONSUMER_SIZE_FACTOR", alias: "PAM_TRACKER_RECEIVED_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 10, default: 10 }
 - { name: "PAM_TRACKER_CREATED_CONSUMER_SIZE_FACTOR", alias: "PAM_TRACKER_CREATED_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 10, default: 10 }
 - { name: "PAM_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", alias: "PAM4_IS_ENABLE_SMS_PROVIDER_BY_EXTERNAL_API", type: "b", required: false, sample: "false", default: false }
