@@ -142,4 +142,4 @@ configs:
 - { name: "PAM_EVENTS_PARAMETERS_BATCH_ROUND", type: "n", required: false, sample: 100, default: 100 }
 - { name: "PAM_DATA_ADAPTER_QUERY_DELAY", type: "n", required: false, sample: 30, default: 30 }
 - { name: "PAM_MQ_CREATE_TOPIC_MAX_RETRY", type: "n", required: false, sample: 3, default: 3 }
-- { name: "PAM_ENABLE_MANAGE_SERVICE", type: "b", required: true, sample: "false", default: false }
+- { name: "PAM_ENABLE_MANAGE_SERVICE", type: "b", required: false, sample: "false", default: false }
