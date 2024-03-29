@@ -143,3 +143,5 @@ configs:
 - { name: "PAM_DATA_ADAPTER_QUERY_DELAY", type: "n", required: false, sample: 30, default: 30 }
 - { name: "PAM_MQ_CREATE_TOPIC_MAX_RETRY", type: "n", required: false, sample: 3, default: 3 }
 - { name: "PAM_ENABLE_MANAGE_SERVICE", type: "b", required: false, sample: "false", default: false }
+- { name: "PAM_REQUESTER_ERROR_NAMES", type: "s", required: false, sample: "id-trackers-events,shorturl-ai-api-shorten", default: "" }
+- { name: "PAM_METRICS_ERROR_NAMES", type: "s", required: false, sample: "invalid-file-format,customer-can-not-be-created", default: "" }
