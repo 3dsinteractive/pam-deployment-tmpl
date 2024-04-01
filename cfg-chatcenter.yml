@@ -1,6 +1,7 @@
 version: v1
 configs:
 - { name: "CC_RAILS_ENV", alias: "RAILS_ENV", type: "s", required: true, sample: "production" }
+- { name: "CC_FRONTEND_URL", alias: "FRONTEND_URL", type: "s", required: true, sample: "https://your-chatwoot-domain.tld" }
 - { name: "CC_POSTGRES_HOST", alias: "POSTGRES_HOST", type: "s", required: true, sample: "postgres" }
 - { name: "CC_POSTGRES_PORT", alias: "POSTGRES_PORT", type: "n", required: true, sample: 5432 }
 - { name: "CC_POSTGRES_DATABASE", alias: "POSTGRES_DATABASE", type: "s", required: true, sample: "my_database" }
