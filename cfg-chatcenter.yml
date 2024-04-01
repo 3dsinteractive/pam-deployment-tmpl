@@ -1,10 +1,10 @@
 version: v1
 configs:
-- { name: "CC_RAILS_ENV", type: "s", required: true, sample: "production" }
-- { name: "CC_POSTGRES_HOST", type: "s", required: true, sample: "postgres" }
-- { name: "CC_POSTGRES_PORT", type: "n", required: true, sample: 5432 }
-- { name: "CC_POSTGRES_DATABASE", type: "s", required: true, sample: "my_database" }
-- { name: "CC_POSTGRES_USERNAME", type: "s", required: true, sample: "postgres" }
-- { name: "CC_POSTGRES_PASSWORD", type: "s", required: true, sample: "mypostgrespassword" }
-- { name: "CC_REDIS_URL", type: "s", required: true, sample: "redis://redis:6379" }
-- { name: "CC_SECRET_KEY_BASE", type: "s", required: true, sample: "fe7382b387c1358808cf6973.." }
+- { name: "CC_RAILS_ENV", alias: "RAILS_ENV", type: "s", required: true, sample: "production" }
+- { name: "CC_POSTGRES_HOST", alias: "POSTGRES_HOST", type: "s", required: true, sample: "postgres" }
+- { name: "CC_POSTGRES_PORT", alias: "POSTGRES_PORT", type: "n", required: true, sample: 5432 }
+- { name: "CC_POSTGRES_DATABASE", alias: "POSTGRES_DATABASE", type: "s", required: true, sample: "my_database" }
+- { name: "CC_POSTGRES_USERNAME", alias: "POSTGRES_USERNAME", type: "s", required: true, sample: "postgres" }
+- { name: "CC_POSTGRES_PASSWORD", alias: "POSTGRES_PASSWORD", type: "s", required: true, sample: "mypostgrespassword" }
+- { name: "CC_REDIS_URL", alias: "REDIS_URL", type: "s", required: true, sample: "redis://redis:6379" }
+- { name: "CC_SECRET_KEY_BASE", alias: "SECRET_KEY_BASE", type: "s", required: true, sample: "fe7382b387c1358808cf6973.." }
