@@ -3,3 +3,4 @@ cfg-mkt: ["node-daemon", "metrics-agents", "cfg-mkt", "connect", "builder", "sen
 cfg-ecom: ["node-daemon", "metrics-agents", "cfg-ecom", "ecom-backend", "ecom-transaction", "ecom", "util-pamcli", "migrate-connect-ecom", "migrate-seeder-ecom"]
 cfg-cms-api: ["cms-api"]
 cfg-front-web: ["ecom-line-bdb", "ecom-web-bdb"]
+cfg-chatcenter: ["chatcenter", "chatcenter-migrate", "chatcenter-worker"]
