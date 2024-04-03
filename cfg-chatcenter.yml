@@ -9,3 +9,6 @@ configs:
 - { name: "CC_POSTGRES_PASSWORD", alias: "POSTGRES_PASSWORD", type: "s", required: true, sample: "mypostgrespassword" }
 - { name: "CC_REDIS_URL", alias: "REDIS_URL", type: "s", required: true, sample: "redis://redis:6379" }
 - { name: "CC_SECRET_KEY_BASE", alias: "SECRET_KEY_BASE", type: "s", required: true, sample: "fe7382b387c1358808cf6973.." }
+- { name: "CC_FB_VERIFY_TOKEN", alias: "FB_VERIFY_TOKEN", type: "s", required: true, sample: "fbpamstg.." }
+- { name: "CC_FB_APP_SECRET", alias: "FB_APP_SECRET", type: "s", required: true, sample: "a5dc52e0b31358808cf6973.." }
+- { name: "CC_FB_APP_ID", alias: "FB_APP_ID", type: "s", required: true, sample: "6206f6973.." }
