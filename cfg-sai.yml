@@ -1,0 +1,4 @@
+version: v1
+configs:
+- { name: "SAI_CHATCENTER_URL", alias: "SAI_CHATCENTER_URL", type: "s", required: false, sample: "https://domain" }
+- { name: "SAI_CHATCENTER_TOKEN", alias: "SAI_CHATCENTER_TOKEN", type: "s", required: false, sample: "token.." }
