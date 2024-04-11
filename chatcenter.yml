@@ -65,8 +65,8 @@ metadata:
     name: <name>
 spec:
   ports:
-  - port: 3000
-    name: cc3000
+  - port: 80
+    name: cc80
     targetPort: 3000
     protocol: TCP
   selector:
