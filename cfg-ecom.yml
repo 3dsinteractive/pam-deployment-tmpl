@@ -189,3 +189,4 @@ configs:
 - { name: "ECOM_MQ_RMD_REPLICAS", type: "n", required: false, sample: "2" }
 - { name: "ECOM_ENABLE_SHARING_VOUCHER_BARCODE_INDEX", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_SHARING_VOUCHER_BARCODE_INDEX_LIMIT", type: "n", required: false, sample: "10" }
+- { name: "ECOM_ENABLE_MULTIPLE_LINE_PROVIDER", type: "b", required: false, sample: false, default: false}
