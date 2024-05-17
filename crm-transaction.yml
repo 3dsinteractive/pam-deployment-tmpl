@@ -33,10 +33,10 @@ spec:
                 - key: env
                   operator: In
                   values:
-                  - <clientId>
+                  - c1
               topologyKey: kubernetes.io/hostname
       nodeSelector:
-        env: <clientId>
+        env: c1
         role: worker
       priorityClassName: class-static
       containers:
