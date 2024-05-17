@@ -1,0 +1,97 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  replicas: <replicas>
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 3
+  selector:
+    matchLabels:
+      name: <name>
+  template:
+    metadata:
+      labels:
+        name: <name>
+    spec:
+      terminationGracePeriodSeconds: 10
+      imagePullSecrets:
+      - name: dockerlogin
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 1
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: env
+                  operator: In
+                  values:
+                  - <clientId>
+              topologyKey: kubernetes.io/hostname
+      nodeSelector:
+        env: <clientId>
+        role: worker
+      priorityClassName: class-static
+      containers:
+      - name: <name>
+        image: <image>
+        imagePullPolicy: IfNotPresent
+        readinessProbe:
+          tcpSocket:
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 3
+          failureThreshold: 3
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 30
+          timeoutSeconds: 30
+          failureThreshold: 10
+        env: [ {name: MY_NODE_NAME, valueFrom: { fieldRef: { fieldPath: spec.nodeName }}}, {name: MY_POD_NAME, valueFrom: { fieldRef: { fieldPath: metadata.name }}}, {name: MY_NAMESPACE, valueFrom: { fieldRef: { fieldPath: metadata.namespace }}}, {name: PAM4_ENV, value: <env>}, {name: DEBUG, value: "true"}, {name: PAM4_PROFILER_NAME, value: pam-<name>} <envs>]
+        ports:
+        - name: crmtr8080
+          containerPort: 8080
+        resources:
+          requests:
+            memory: <minMem>
+            cpu: <minCpu>
+          limits:
+            memory: <maxMem>
+            cpu: <maxCpu>
+        volumeMounts:
+        - name: vol-profiler
+          mountPath: /profiler
+      volumes:
+      - name: vol-profiler
+        configMap:
+          name: profiler
+          items:
+          - key: profiler
+            path: profiler.json
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  ports:
+  - port: 8080
+    name: crmtr8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    name: <name>
