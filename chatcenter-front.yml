@@ -32,22 +32,21 @@ spec:
         imagePullPolicy: IfNotPresent
         readinessProbe:
           tcpSocket:
-            port: 3000
+            port: 8000
           initialDelaySeconds: 10
           periodSeconds: 10
           timeoutSeconds: 3
           failureThreshold: 3
         livenessProbe:
           tcpSocket:
-            port: 3000
+            port: 8000
           initialDelaySeconds: 60
           periodSeconds: 30
           timeoutSeconds: 30
           failureThreshold: 10
-        env: [ {name: MY_NODE_NAME, valueFrom: { fieldRef: { fieldPath: spec.nodeName }}}, {name: MY_POD_NAME, valueFrom: { fieldRef: { fieldPath: metadata.name }}}, {name: MY_NAMESPACE, valueFrom: { fieldRef: { fieldPath: metadata.namespace }}} <envs>]
         ports:
-        - name: cc3000
-          containerPort: 3000
+        - name: chatcenter8000
+          containerPort: 8000
         resources:
           requests:
             memory: <minMem>
@@ -66,8 +65,8 @@ metadata:
 spec:
   ports:
   - port: 80
-    name: cc80
-    targetPort: 3000
+    name: chatcenter80
+    targetPort: 8000
     protocol: TCP
   selector:
     name: <name>
