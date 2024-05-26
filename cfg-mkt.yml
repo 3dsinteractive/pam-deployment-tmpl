@@ -145,3 +145,4 @@ configs:
 - { name: "PAM_ENABLE_MANAGE_SERVICE", type: "b", required: false, sample: "false", default: false }
 - { name: "PAM_REQUESTER_ERROR_NAMES", type: "s", required: false, sample: "event", default: "" }
 - { name: "PAM_METRICS_ERROR_NAMES", type: "s", required: false, sample: "invalid", default: "" }
+- { name: "PAM_CUSTOMER_JOURNEY_CAMPAIGN_PUSH_RANGE", type: "b", required: false, sample: true, default: true }
