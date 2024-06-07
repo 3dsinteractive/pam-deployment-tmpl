@@ -146,3 +146,7 @@ configs:
 - { name: "PAM_REQUESTER_ERROR_NAMES", type: "s", required: false, sample: "event", default: "" }
 - { name: "PAM_METRICS_ERROR_NAMES", type: "s", required: false, sample: "invalid", default: "" }
 - { name: "PAM_CUSTOMER_JOURNEY_CAMPAIGN_PUSH_RANGE", type: "b", required: false, sample: true, default: true }
+- { name: "PAM_AZURE_AD_ENDPOINT", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_AZURE_AD_PATH_URL", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_AZURE_AD_PARAM_NAME_APP_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_AZURE_AD_GROUP_NAME", type: "s", required: false, sample: "", default: "" }
