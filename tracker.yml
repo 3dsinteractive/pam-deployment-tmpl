@@ -35,7 +35,7 @@ spec:
             port: 80
           initialDelaySeconds: 10
           periodSeconds: 10
-          timeoutSeconds: 30
+          timeoutSeconds: 3
           failureThreshold: 3
         livenessProbe:
           httpGet:
@@ -43,8 +43,8 @@ spec:
             port: 80
           initialDelaySeconds: 60
           periodSeconds: 10
-          timeoutSeconds: 30
-          failureThreshold: 5
+          timeoutSeconds: 5
+          failureThreshold: 10
         ports:
         - name: tracker80
           containerPort: 80
