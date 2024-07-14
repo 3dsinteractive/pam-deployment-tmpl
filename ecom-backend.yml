@@ -48,7 +48,7 @@ spec:
             port: 8080
           initialDelaySeconds: 10
           periodSeconds: 10
-          timeoutSeconds: 3
+          timeoutSeconds: 30
           failureThreshold: 3
         livenessProbe:
           httpGet:
@@ -57,7 +57,7 @@ spec:
           initialDelaySeconds: 60
           periodSeconds: 30
           timeoutSeconds: 30
-          failureThreshold: 10
+          failureThreshold: 5
         env: [ {name: MY_NODE_NAME, valueFrom: { fieldRef: { fieldPath: spec.nodeName }}}, {name: MY_POD_NAME, valueFrom: { fieldRef: { fieldPath: metadata.name }}}, {name: MY_NAMESPACE, valueFrom: { fieldRef: { fieldPath: metadata.namespace }}}, {name: PAM4_ENV, value: <env>}, {name: DEBUG, value: "true"}, {name: PAM4_PROFILER_NAME, value: pam-<name>} <envs>]
         ports:
         - name: ecom8080
