@@ -70,6 +70,8 @@ spec:
           limits:
             memory: <maxMem>
             cpu: <maxCpu>
+        securityContext:
+          privileged: true
         volumeMounts:
         - name: vol-profiler
           mountPath: /profiler
