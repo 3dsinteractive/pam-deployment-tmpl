@@ -74,7 +74,7 @@ spec:
         - name: vol-profiler
           mountPath: /profiler
         - name: proc-net-dev
-          mountPath: /proc/net/dev
+          mountPath: /host-proc/net/dev
           readOnly: true
       volumes:
       - name: vol-profiler
