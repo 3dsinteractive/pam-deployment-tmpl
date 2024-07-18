@@ -73,8 +73,8 @@ spec:
         volumeMounts:
         - name: vol-profiler
           mountPath: /profiler
-        - name: proc-net-dev
-          mountPath: /host-proc/net/dev
+        - name: rootfs
+          mountPath: /rootfs
           readOnly: true
       volumes:
       - name: vol-profiler
@@ -83,10 +83,10 @@ spec:
           items:
           - key: profiler
             path: profiler.json
-      - name: proc-net-dev
+      - name: rootfs
         hostPath:
-          path: /proc/net/dev
-          type: File
+          path: /
+          type: Directory
 ---
 apiVersion: v1
 kind: Service
