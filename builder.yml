@@ -53,13 +53,11 @@ spec:
           limits:
             memory: <maxMem>
             cpu: <maxCpu>
-        securityContext:
-          privileged: true
         volumeMounts:
         - name: vol-profiler
           mountPath: /profiler
-        - name: rootfs
-          mountPath: /rootfs
+        - name: host-proc
+          mountPath: /host-proc
           readOnly: true
       volumes:
       - name: vol-profiler
@@ -68,11 +66,10 @@ spec:
           items:
           - key: profiler
             path: profiler.json
-      - name: rootfs
+      - name: host-proc
         hostPath:
-          path: /
+          path: /proc
           type: Directory
----
 ---
 apiVersion: v1
 kind: Service
