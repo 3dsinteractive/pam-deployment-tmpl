@@ -52,6 +52,9 @@ spec:
         volumeMounts:
         - name: vol-profiler
           mountPath: /profiler
+        - name: proc-net-dev
+          mountPath: /proc/net/dev
+          readOnly: true
       volumes:
       - name: vol-profiler
         configMap:
@@ -59,6 +62,10 @@ spec:
           items:
           - key: profiler
             path: profiler.json
+      - name: proc-net-dev
+        hostPath:
+          path: /proc/net/dev
+          type: File
 ---
 apiVersion: v1
 kind: Service
