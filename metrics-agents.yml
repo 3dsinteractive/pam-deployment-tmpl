@@ -56,6 +56,9 @@ spec:
         volumeMounts:
         - name: vol-profiler
           mountPath: /profiler
+        - name: host-proc
+          mountPath: /host-proc
+          readOnly: true
       volumes:
       - name: vol-profiler
         configMap:
@@ -63,6 +66,10 @@ spec:
           items:
           - key: profiler
             path: profiler.json
+      - name: host-proc
+        hostPath:
+          path: /proc
+          type: Directory
 ---
 apiVersion: v1
 kind: Service
