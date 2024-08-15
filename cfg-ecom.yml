@@ -190,3 +190,5 @@ configs:
 - { name: "ECOM_ENABLE_SHARING_VOUCHER_BARCODE_INDEX", type: "b", required: false, sample: false, default: false}
 - { name: "ECOM_SHARING_VOUCHER_BARCODE_INDEX_LIMIT", type: "n", required: false, sample: "10" }
 - { name: "ECOM_ENABLE_MULTIPLE_LINE_PROVIDER", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_FRONT_HOST", type: "s", required: false, sample: "https://stgx-crm.pams.ai", default: ""}
+- { name: "CRM_HOST", type: "s", required: false, sample: "https://stgx-crm-api.pams.ai", default: ""}
