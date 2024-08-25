@@ -158,3 +158,4 @@ configs:
 - { name: "PAM_RATELIMIT_LOCAL_CPU", type: "s", required: false, sample: "2.0", default: "2.0" }
 - { name: "PAM_RATELIMIT_LOCAL_CPU_HIGH_PRIORITY", type: "s", required: false, sample: "2.5", default: "2.5" }
 - { name: "PAM_OPEN_AI_API_KEY", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_QDRANT_ENDPOINT", type: "s", required: false, sample: "", default: "" }
