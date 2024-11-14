@@ -161,3 +161,4 @@ configs:
 - { name: "PAM_LLAMA_SERVER_ENDPOINT", type: "s", required: false, sample: "", default: "" }
 - { name: "PAM_LLAMA_SERVER_API_KEY", type: "s", required: false, sample: "", default: "" }
 - { name: "PAM_QDRANT_ENDPOINT", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_TRACKER_QUERY_ALL_PARAM_SPECIFIC_EVENT", type: "n", required: false, sample: 30000, default: 30000 }
