@@ -162,3 +162,8 @@ configs:
 - { name: "PAM_LLAMA_SERVER_API_KEY", type: "s", required: false, sample: "", default: "" }
 - { name: "PAM_QDRANT_ENDPOINT", type: "s", required: false, sample: "", default: "" }
 - { name: "PAM_TRACKER_QUERY_ALL_PARAM_SPECIFIC_EVENT", type: "n", required: false, sample: 30000, default: 30000 }
+- { name: "PAM_CHAT_CASES_MONTHS_LIMIT", type: "n", required: false, sample: 12, default: 12 }
+- { name: "PAM_CHAT_CASES_INDEX_SHARDS", type: "n", required: false, sample: 3, default: 3 }
+- { name: "PAM_CHAT_CASES_INDEX_REPLICAS", type: "n", required: false, sample: 0, default: 0 }
+- { name: "PAM_CHAT_CASES_RETENTION_PERIOD", type: "n", required: false, sample: 12, default: 12 }
+- { name: "PAM_CHAT_CASES_RETENTION_LIMIT", type: "n", required: false, sample: 24, default: 24 }
