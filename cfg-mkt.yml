@@ -167,3 +167,4 @@ configs:
 - { name: "PAM_CHAT_CASES_INDEX_REPLICAS", type: "n", required: false, sample: 0, default: 0 }
 - { name: "PAM_CHAT_CASES_RETENTION_PERIOD", type: "n", required: false, sample: 12, default: 12 }
 - { name: "PAM_CHAT_CASES_RETENTION_LIMIT", type: "n", required: false, sample: 24, default: 24 }
+- { name: "PAM_ENABLE_MIGRATE_CHATCENTER", type: "b", required: false, sample: false, default: false }
