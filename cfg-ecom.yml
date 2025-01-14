@@ -192,3 +192,4 @@ configs:
 - { name: "ECOM_ENABLE_MULTIPLE_LINE_PROVIDER", type: "b", required: false, sample: false, default: false}
 - { name: "CRM_FRONT_HOST", type: "s", required: false, sample: "https://stgx-crm.pams.ai", default: ""}
 - { name: "CRM_HOST", type: "s", required: false, sample: "https://stgx-crm-api.pams.ai", default: ""}
+- { name: "ECOM_LINE_CHANNEL_ACCESS_TOKEN", type: "s", required: false, sample: "", default: ""}
