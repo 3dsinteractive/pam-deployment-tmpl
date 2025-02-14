@@ -168,3 +168,4 @@ configs:
 - { name: "PAM_CHAT_CASES_RETENTION_PERIOD", type: "n", required: false, sample: 12, default: 12 }
 - { name: "PAM_CHAT_CASES_RETENTION_LIMIT", type: "n", required: false, sample: 24, default: 24 }
 - { name: "PAM_ENABLE_MIGRATE_CHATCENTER", type: "b", required: false, sample: false, default: false }
+- { name: "PAM_CHATCENTER_API_ENDPOINT", alias: "PAM4_CHATCENTER_API_ENDPOINT", type: "s", required: true, sample: "https://stgx-chatcenter-api.pams.ai/chatcenter", default: "[REPLACE_PAM_CHATCENTER_API_ENDPOINT]" }
