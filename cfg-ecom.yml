@@ -193,3 +193,4 @@ configs:
 - { name: "CRM_FRONT_HOST", type: "s", required: false, sample: "https://stgx-crm.pams.ai", default: ""}
 - { name: "CRM_HOST", type: "s", required: false, sample: "https://stgx-crm-api.pams.ai", default: ""}
 - { name: "ECOM_LINE_CHANNEL_ACCESS_TOKEN", type: "s", required: false, sample: "", default: ""}
+- { name: "MEMBER_POINT_UPDATE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"*Mobile","is_required":true,"field_name":"mobile"},{"column_name":"*Point","is_required":true,"field_name":"point"}]' }
