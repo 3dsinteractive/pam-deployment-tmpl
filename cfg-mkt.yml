@@ -150,6 +150,7 @@ configs:
 - { name: "PAM_AZURE_AD_ENDPOINT", type: "s", required: false, sample: "", default: "" }
 - { name: "PAM_AZURE_AD_PATH_URL", type: "s", required: false, sample: "", default: "" }
 - { name: "PAM_AZURE_AD_PARAM_NAME_APP_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_AZURE_AD_PRIORITY_GROUP_NAME", type: "s", required: false, sample: "", default: "" }
 - { name: "PAM_AZURE_AD_GROUP_NAME", type: "s", required: false, sample: "", default: "" }
 - { name: "PAM_CLUSTER_OVERLOAD_NETWORK_USAGE_THRESHOLD_MBPS", type: "n", required: false, sample: 1000, default: 1000 }
 - { name: "PAM_MAILER_POOLSIZE", type: "n", required: false, sample: 3, default: 3 }
