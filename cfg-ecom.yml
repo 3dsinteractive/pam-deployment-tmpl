@@ -196,4 +196,4 @@ configs:
 - { name: "MEMBER_POINT_UPDATE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"*Mobile","is_required":true,"field_name":"mobile"},{"column_name":"*Point","is_required":true,"field_name":"point"}]' }
 - { name: "CRM_PRODUCT_SCAN_LANDING_PAGE_ID", type: "s", required: false, sample: "", default: ""}
 - { name: "TRANSACTION_MEMBER_POINT_EXPIRED_TYPE", type: "s", required: false, sample: "", default: ""}
-- { name: "TRANSACTION_MEMBER_POINT_EXPIRATION_MONTH:", type: "n", required: false, sample: "", default: ""}
+- { name: "TRANSACTION_MEMBER_POINT_EXPIRATION_MONTH", type: "n", required: false, sample: "", default: ""}
