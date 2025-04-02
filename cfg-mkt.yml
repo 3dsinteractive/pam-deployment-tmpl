@@ -171,3 +171,4 @@ configs:
 - { name: "PAM_ENABLE_MIGRATE_CHATCENTER", type: "b", required: false, sample: false, default: false }
 - { name: "PAM_CHATCENTER_API_ENDPOINT", type: "s", required: false, sample: "https://stgx-chatcenter-api.pams.ai", default: "[REPLACE_PAM_CHATCENTER_API_ENDPOINT]" }
 - { name: "PAM_CHAT_ENABLE_AUTO_ASSIGN", type: "b", required: false, sample: false, default: true }
+- { name: "PAM_SENDER_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 10, default: 10 }
