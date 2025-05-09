@@ -198,3 +198,4 @@ configs:
 - { name: "TRANSACTION_MEMBER_POINT_EXPIRED_TYPE", type: "s", required: false, sample: "", default: ""}
 - { name: "TRANSACTION_MEMBER_POINT_EXPIRATION_MONTH", type: "n", required: false, sample: "", default: ""}
 - { name: "CRM_ENABLE_CONTENT_READ", type: "b", required: false, sample: true, default: false}
+- { name: "CRM_RESOLVE_AFFILIATE_KEY_NAME", type: "s", required: false, sample: "", default: ""}

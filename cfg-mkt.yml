@@ -172,6 +172,5 @@ configs:
 - { name: "PAM_CHATCENTER_API_ENDPOINT", type: "s", required: false, sample: "https://stgx-chatcenter-api.pams.ai", default: "[REPLACE_PAM_CHATCENTER_API_ENDPOINT]" }
 - { name: "PAM_CHAT_ENABLE_AUTO_ASSIGN", type: "b", required: false, sample: false, default: true }
 - { name: "PAM_SENDER_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 10, default: 10 }
-- { name: "CRM_RESOLVE_AFFILIATE_KEY_NAME", type: "s", required: false, sample: "", default: ""}
 - { name: "PAM_CHAT_AUTO_ASSIGNMENT_TYPE", type: "s", required: false, sample: "AUTO,DEFAULT_CHANNEL", default: "DEFAULT_CHANNEL" }
 - { name: "PAM_CHAT_ENABLE_AUTO_UNASSIGN_WHEN_CASE_CLOSED", type: "b", required: false, sample: false, default: false }
