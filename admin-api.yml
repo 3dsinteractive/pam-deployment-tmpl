@@ -61,7 +61,7 @@ spec:
           failureThreshold: 10
         env: [ {name: MY_NODE_NAME, valueFrom: { fieldRef: { fieldPath: spec.nodeName }}}, {name: MY_POD_NAME, valueFrom: { fieldRef: { fieldPath: metadata.name }}}, {name: MY_NAMESPACE, valueFrom: { fieldRef: { fieldPath: metadata.namespace }}}, {name: PAM4_ENV, value: <env>}, {name: DEBUG, value: "true"}, {name: PAM4_PROFILER_NAME, value: pam-<name>} <envs>]
         ports:
-        - name: connect8080
+        - name: adminapi8080
           containerPort: 8080
         resources:
           requests:
@@ -98,7 +98,7 @@ metadata:
 spec:
   ports:
   - port: 8080
-    name: connect8080
+    name: adminapi8080
     targetPort: 8080
     protocol: TCP
   selector:
