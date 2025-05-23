@@ -200,4 +200,4 @@ configs:
 - { name: "CRM_ENABLE_CONTENT_READ", type: "b", required: false, sample: true, default: false}
 - { name: "CRM_RESOLVE_AFFILIATE_KEY_NAME", type: "s", required: false, sample: "", default: ""}
 - { name: "ECOM_ENABLE_MEMBER_TIER_UPGRADE", type: "b", required: false, sample: false, default: true}
-- { name: "CRM_LINE_CHANNEL_ACCESS_TOKEN", type: "s", required: false, sample: false, default: ""}
+- { name: "CRM_LINE_CHANNEL_ACCESS_TOKEN", type: "s", required: false, sample: "", default: ""}
