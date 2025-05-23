@@ -175,3 +175,5 @@ configs:
 - { name: "PAM_SENDER_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 10, default: 10 }
 - { name: "PAM_CHAT_AUTO_ASSIGNMENT_TYPE", type: "s", required: false, sample: "AUTO,DEFAULT_CHANNEL", default: "DEFAULT_CHANNEL" }
 - { name: "PAM_CHAT_ENABLE_AUTO_UNASSIGN_WHEN_CASE_CLOSED", type: "b", required: false, sample: false, default: false }
+- { name: "PAM_CHAT_SCHEDULE_DAILY_TASK", type: "n", required: false, sample: 3600, default: 3600 }
+- { name: "PAM_CHAT_SCHEDULER_NIGHT_HOUR", type: "n", required: false, sample: 17, default: 17 }
