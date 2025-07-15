@@ -1,36 +1,36 @@
 version: v1
 configs:
-- { name: "CRM_HOST", type: "s", required: true, sample: https://stg-ecom.pams.ai, default: "[REPLACE_ECOM_HOST]" }
-- { name: "PAM_SHIPPING_PROVIDER_KERRY_ENDPOINT", alias: "PAM4_SHIPPING_PROVIDER_KERRY_ENDPOINT", type: "s", required: true, sample: "https://poc-it.th.kerryexpress.com/ediwebapi_uat", default: https://poc-it.th.kerryexpress.com/ediwebapi_uat }
-- { name: "PAM_SHIPPING_PROVIDER_KERRY_APP_ID", alias: "PAM4_SHIPPING_PROVIDER_KERRY_APP_ID", type: "s", required: true, sample: "[NAME]" }
-- { name: "PAM_SHIPPING_PROVIDER_KERRY_APP_KEY", alias: "PAM4_SHIPPING_PROVIDER_KERRY_APP_KEY", type: "s", required: true, sample: "[UUID]" }
-- { name: "PAM_ORDER_EMAIL_INFO_EVENT", alias: "PAM4_ORDER_EMAIL_INFO_EVENT", type: "b", required: true, sample: "true", default: true }
-- { name: "CRM_PAYMENT_EGHL_SERVICE_ID", type: "s", required: true, sample: "[SERVICE_ID]" }
-- { name: "CRM_PAYMENT_EGHL_PAYMENT_URL", type: "s", required: true, sample: "https://test2pay.ghl.com/ipgsg/payment.aspx", default: https://test2pay.ghl.com/ipgsg/payment.aspx }
-- { name: "CRM_PAYMENT_EGHL_PASSWORD", type: "s", required: true, sample: "[UUID]" }
-- { name: "PAM_ORDER_EXPIRED_IN_TIME_MINUTE", alias: "PAM4_ORDER_EXPIRED_IN_TIME_MINUTE", type: "n", required: true, sample: "60", default: 60 }
-- { name: "CRM_PAYMENT_OMISE_PUBLIC_KEY", type: "s", required: true, sample: "[UUID]" }
-- { name: "CRM_PAYMENT_OMISE_SECRET_KEY", type: "s", required: true, sample: "[UUID]" }
-- { name: "PAM_SCHEDULE_TRENDING_SUGGEST_HR", alias: "PAM4_SCHEDULE_TRENDING_SUGGEST_HR", type: "n", required: true, sample: "1", default: 1 }
-- { name: "CRM_VALIDATE_STOCK", type: "b", required: true, sample: "true", default: true }
-- { name: "CRM_SEND_POINT_TO_EXTERNAL", type: "b", required: true, sample: "false", default: true }
-- { name: "CRM_SEEDER_2C2P_IPP", type: "b", required: true, sample: "true", default: true }
-- { name: "CRM_PRODUCT_IS_CALCULATE_POINT", type: "b", required: true, sample: "true", default: true }
-- { name: "CRM_ENABLE_DISPLAY_RELATED_PRODUCT", type: "b", required: true, sample: "true", default: true }
-- { name: "CRM_LANDING_VERIFIED_URL", type: "s", required: true, sample: "https://stg-ecom-bdb.pams.ai", default: "[REPLACE_ECOM_LANDING_VERIFIED_URL]" }
-- { name: "CRM_IS_FLASHSALE_PRODUCT_ENABLED", type: "s", required: true, sample: "true", default: true }
-- { name: "CRM_ORDER_CODE_TYPE", type: "s", required: true, sample: "INCREMENT_PERIOD_DAY", default: INCREMENT_PERIOD_MONTH }
-- { name: "CRM_ORDER_PREFIX_CODE", type: "s", required: true, sample: "ONL", default: ORDER }
-- { name: "CRM_ORDER_CODE_LENGTH", type: "n", required: true, sample: "14", default: 14 }
+- { name: "CRM_HOST", type: "s", required: false, sample: https://stg-ecom.pams.ai, default: "[REPLACE_ECOM_HOST]" }
+- { name: "PAM_SHIPPING_PROVIDER_KERRY_ENDPOINT", alias: "PAM4_SHIPPING_PROVIDER_KERRY_ENDPOINT", type: "s", required: false, sample: "https://poc-it.th.kerryexpress.com/ediwebapi_uat", default: https://poc-it.th.kerryexpress.com/ediwebapi_uat }
+- { name: "PAM_SHIPPING_PROVIDER_KERRY_APP_ID", alias: "PAM4_SHIPPING_PROVIDER_KERRY_APP_ID", type: "s", required: false, sample: "[NAME]" }
+- { name: "PAM_SHIPPING_PROVIDER_KERRY_APP_KEY", alias: "PAM4_SHIPPING_PROVIDER_KERRY_APP_KEY", type: "s", required: false, sample: "[UUID]" }
+- { name: "PAM_ORDER_EMAIL_INFO_EVENT", alias: "PAM4_ORDER_EMAIL_INFO_EVENT", type: "b", required: false, sample: "true", default: true }
+- { name: "CRM_PAYMENT_EGHL_SERVICE_ID", type: "s", required: false, sample: "[SERVICE_ID]" }
+- { name: "CRM_PAYMENT_EGHL_PAYMENT_URL", type: "s", required: false, sample: "https://test2pay.ghl.com/ipgsg/payment.aspx", default: https://test2pay.ghl.com/ipgsg/payment.aspx }
+- { name: "CRM_PAYMENT_EGHL_PASSWORD", type: "s", required: false, sample: "[UUID]" }
+- { name: "PAM_ORDER_EXPIRED_IN_TIME_MINUTE", alias: "PAM4_ORDER_EXPIRED_IN_TIME_MINUTE", type: "n", required: false, sample: "60", default: 60 }
+- { name: "CRM_PAYMENT_OMISE_PUBLIC_KEY", type: "s", required: false, sample: "[UUID]" }
+- { name: "CRM_PAYMENT_OMISE_SECRET_KEY", type: "s", required: false, sample: "[UUID]" }
+- { name: "PAM_SCHEDULE_TRENDING_SUGGEST_HR", alias: "PAM4_SCHEDULE_TRENDING_SUGGEST_HR", type: "n", required: false, sample: "1", default: 1 }
+- { name: "CRM_VALIDATE_STOCK", type: "b", required: false, sample: "true", default: true }
+- { name: "CRM_SEND_POINT_TO_EXTERNAL", type: "b", required: false, sample: "false", default: true }
+- { name: "CRM_SEEDER_2C2P_IPP", type: "b", required: false, sample: "true", default: true }
+- { name: "CRM_PRODUCT_IS_CALCULATE_POINT", type: "b", required: false, sample: "true", default: true }
+- { name: "CRM_ENABLE_DISPLAY_RELATED_PRODUCT", type: "b", required: false, sample: "true", default: true }
+- { name: "CRM_LANDING_VERIFIED_URL", type: "s", required: false, sample: "https://stg-ecom-bdb.pams.ai", default: "[REPLACE_ECOM_LANDING_VERIFIED_URL]" }
+- { name: "CRM_IS_FLASHSALE_PRODUCT_ENABLED", type: "s", required: false, sample: "true", default: true }
+- { name: "CRM_ORDER_CODE_TYPE", type: "s", required: false, sample: "INCREMENT_PERIOD_DAY", default: INCREMENT_PERIOD_MONTH }
+- { name: "CRM_ORDER_PREFIX_CODE", type: "s", required: false, sample: "ONL", default: ORDER }
+- { name: "CRM_ORDER_CODE_LENGTH", type: "n", required: false, sample: "14", default: 14 }
 - { name: "CRM_ADDRESS_DATABASE_VERSION", type: "s", required: false, sample: "version2", default: version2 }
 - { name: "CRM_PAYMENT_2C2P_MERCHANT_ID", type: "s", required: false, sample: "764111111111111" }
 - { name: "CRM_PAYMENT_2C2P_SECRET_KEY", type: "s", required: false, sample: "V4SZ0C5OlxAq" }
-- { name: "CRM_PRODUCT_CREATE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_CREATE_EXCEL_COLUMN_HEADER", type: "s", required: true, default: '[{"column_name":"Product Code","is_required":false,"field_name":"product_code"}]' }
-- { name: "CRM_PRODUCT_UPDATE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_UPDATE_EXCEL_COLUMN_HEADER", type: "s", required: true, default: '[{"column_name":"*Product ID (Do not change)","is_required":true,"field_name":"product_id"}]' }
-- { name: "CRM_PRODUCT_SKU_EXCEL_COLUMN_HEADER", alias: "PRODUCT_SKU_EXCEL_COLUMN_HEADER", type: "s", required: true, default: '[{"column_name":"*Product ID (Do not change)","is_required":true,"field_name":"product_id"}]' }
-- { name: "CRM_PRODUCT_PRICE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_PRICE_EXCEL_COLUMN_HEADER", type: "s", required: true, default: '[{"column_name":"sku","is_required":true,"field_name":"item_no","col_header_name":"A"}]' }
-- { name: "CRM_PRODUCT_PRICE_TEMP_HEADER", alias: "PRODUCT_PRICE_TEMP_HEADER", type: "s", required: true, default: '{"item_no":"sku", "cust_price_grp":"", "price_code":"price code"}' }
-- { name: "CRM_ENABLE_NEW_ECOM_CMS_API", alias: "CRM_ENABLE_NEW_ECOM_CMS_API", type: "b", required: true, default: true }
+- { name: "CRM_PRODUCT_CREATE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_CREATE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"Product Code","is_required":false,"field_name":"product_code"}]' }
+- { name: "CRM_PRODUCT_UPDATE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_UPDATE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"*Product ID (Do not change)","is_required":true,"field_name":"product_id"}]' }
+- { name: "CRM_PRODUCT_SKU_EXCEL_COLUMN_HEADER", alias: "PRODUCT_SKU_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"*Product ID (Do not change)","is_required":true,"field_name":"product_id"}]' }
+- { name: "CRM_PRODUCT_PRICE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_PRICE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"sku","is_required":true,"field_name":"item_no","col_header_name":"A"}]' }
+- { name: "CRM_PRODUCT_PRICE_TEMP_HEADER", alias: "PRODUCT_PRICE_TEMP_HEADER", type: "s", required: false, default: '{"item_no":"sku", "cust_price_grp":"", "price_code":"price code"}' }
+- { name: "CRM_ENABLE_NEW_ECOM_CMS_API", alias: "CRM_ENABLE_NEW_ECOM_CMS_API", type: "b", required: false, default: true }
 - { name: "CRM_PAYMENT_BBL_MERCHANT_ID", type: "s", required: false, sample: ""}
 - { name: "CRM_PAYMENT_BBL_MERCHANT_API_ID", type: "s", required: false, sample: ""}
 - { name: "CRM_PAYMENT_BBL_MERCHANT_API_PASSWORD", type: "s", required: false, sample: ""}
