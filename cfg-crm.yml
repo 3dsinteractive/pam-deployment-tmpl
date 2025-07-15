@@ -1,5 +1,6 @@
 version: v1
 configs:
+- { name: "CRM_AUTHENTICATION", type: "b", required: true, sample: true, default: true }
 - { name: "CRM_HOST", type: "s", required: false, sample: https://stg-ecom.pams.ai, default: "[REPLACE_ECOM_HOST]" }
 - { name: "PAM_SHIPPING_PROVIDER_KERRY_ENDPOINT", alias: "PAM4_SHIPPING_PROVIDER_KERRY_ENDPOINT", type: "s", required: false, sample: "https://poc-it.th.kerryexpress.com/ediwebapi_uat", default: https://poc-it.th.kerryexpress.com/ediwebapi_uat }
 - { name: "PAM_SHIPPING_PROVIDER_KERRY_APP_ID", alias: "PAM4_SHIPPING_PROVIDER_KERRY_APP_ID", type: "s", required: false, sample: "[NAME]" }
