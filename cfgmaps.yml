@@ -4,4 +4,4 @@ cfg-ecom: ["node-daemon", "metrics-agents", "cfg-ecom", "ecom-backend", "ecom-tr
 cfg-cms-api: ["cms-api"]
 cfg-front-web: ["ecom-line-bdb", "ecom-web-bdb"]
 cfg-sai: ["sai"]
-cfg-crm: [ "crm-api", "crm-transaction", "crm-backend", "cfg-crm"]
+cfg-crm: [ "crm", "crm-api", "crm-transaction", "crm-backend", "cfg-crm"]
