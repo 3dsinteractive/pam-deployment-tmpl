@@ -1,0 +1,203 @@
+version: v1
+configs:
+- { name: "CRM_HOST", type: "s", required: true, sample: https://stg-ecom.pams.ai, default: "[REPLACE_ECOM_HOST]" }
+- { name: "PAM_SHIPPING_PROVIDER_KERRY_ENDPOINT", alias: "PAM4_SHIPPING_PROVIDER_KERRY_ENDPOINT", type: "s", required: true, sample: "https://poc-it.th.kerryexpress.com/ediwebapi_uat", default: https://poc-it.th.kerryexpress.com/ediwebapi_uat }
+- { name: "PAM_SHIPPING_PROVIDER_KERRY_APP_ID", alias: "PAM4_SHIPPING_PROVIDER_KERRY_APP_ID", type: "s", required: true, sample: "[NAME]" }
+- { name: "PAM_SHIPPING_PROVIDER_KERRY_APP_KEY", alias: "PAM4_SHIPPING_PROVIDER_KERRY_APP_KEY", type: "s", required: true, sample: "[UUID]" }
+- { name: "PAM_ORDER_EMAIL_INFO_EVENT", alias: "PAM4_ORDER_EMAIL_INFO_EVENT", type: "b", required: true, sample: "true", default: true }
+- { name: "CRM_PAYMENT_EGHL_SERVICE_ID", type: "s", required: true, sample: "[SERVICE_ID]" }
+- { name: "CRM_PAYMENT_EGHL_PAYMENT_URL", type: "s", required: true, sample: "https://test2pay.ghl.com/ipgsg/payment.aspx", default: https://test2pay.ghl.com/ipgsg/payment.aspx }
+- { name: "CRM_PAYMENT_EGHL_PASSWORD", type: "s", required: true, sample: "[UUID]" }
+- { name: "PAM_ORDER_EXPIRED_IN_TIME_MINUTE", alias: "PAM4_ORDER_EXPIRED_IN_TIME_MINUTE", type: "n", required: true, sample: "60", default: 60 }
+- { name: "CRM_PAYMENT_OMISE_PUBLIC_KEY", type: "s", required: true, sample: "[UUID]" }
+- { name: "CRM_PAYMENT_OMISE_SECRET_KEY", type: "s", required: true, sample: "[UUID]" }
+- { name: "PAM_SCHEDULE_TRENDING_SUGGEST_HR", alias: "PAM4_SCHEDULE_TRENDING_SUGGEST_HR", type: "n", required: true, sample: "1", default: 1 }
+- { name: "CRM_VALIDATE_STOCK", type: "b", required: true, sample: "true", default: true }
+- { name: "CRM_SEND_POINT_TO_EXTERNAL", type: "b", required: true, sample: "false", default: true }
+- { name: "CRM_SEEDER_2C2P_IPP", type: "b", required: true, sample: "true", default: true }
+- { name: "CRM_PRODUCT_IS_CALCULATE_POINT", type: "b", required: true, sample: "true", default: true }
+- { name: "CRM_ENABLE_DISPLAY_RELATED_PRODUCT", type: "b", required: true, sample: "true", default: true }
+- { name: "CRM_LANDING_VERIFIED_URL", type: "s", required: true, sample: "https://stg-ecom-bdb.pams.ai", default: "[REPLACE_ECOM_LANDING_VERIFIED_URL]" }
+- { name: "CRM_IS_FLASHSALE_PRODUCT_ENABLED", type: "s", required: true, sample: "true", default: true }
+- { name: "CRM_ORDER_CODE_TYPE", type: "s", required: true, sample: "INCREMENT_PERIOD_DAY", default: INCREMENT_PERIOD_MONTH }
+- { name: "CRM_ORDER_PREFIX_CODE", type: "s", required: true, sample: "ONL", default: ORDER }
+- { name: "CRM_ORDER_CODE_LENGTH", type: "n", required: true, sample: "14", default: 14 }
+- { name: "CRM_ADDRESS_DATABASE_VERSION", type: "s", required: false, sample: "version2", default: version2 }
+- { name: "CRM_PAYMENT_2C2P_MERCHANT_ID", type: "s", required: false, sample: "764111111111111" }
+- { name: "CRM_PAYMENT_2C2P_SECRET_KEY", type: "s", required: false, sample: "V4SZ0C5OlxAq" }
+- { name: "CRM_PRODUCT_CREATE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_CREATE_EXCEL_COLUMN_HEADER", type: "s", required: true, default: '[{"column_name":"Product Code","is_required":false,"field_name":"product_code"}]' }
+- { name: "CRM_PRODUCT_UPDATE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_UPDATE_EXCEL_COLUMN_HEADER", type: "s", required: true, default: '[{"column_name":"*Product ID (Do not change)","is_required":true,"field_name":"product_id"}]' }
+- { name: "CRM_PRODUCT_SKU_EXCEL_COLUMN_HEADER", alias: "PRODUCT_SKU_EXCEL_COLUMN_HEADER", type: "s", required: true, default: '[{"column_name":"*Product ID (Do not change)","is_required":true,"field_name":"product_id"}]' }
+- { name: "CRM_PRODUCT_PRICE_EXCEL_COLUMN_HEADER", alias: "PRODUCT_PRICE_EXCEL_COLUMN_HEADER", type: "s", required: true, default: '[{"column_name":"sku","is_required":true,"field_name":"item_no","col_header_name":"A"}]' }
+- { name: "CRM_PRODUCT_PRICE_TEMP_HEADER", alias: "PRODUCT_PRICE_TEMP_HEADER", type: "s", required: true, default: '{"item_no":"sku", "cust_price_grp":"", "price_code":"price code"}' }
+- { name: "CRM_ENABLE_NEW_ECOM_CMS_API", alias: "CRM_ENABLE_NEW_ECOM_CMS_API", type: "b", required: true, default: true }
+- { name: "CRM_PAYMENT_BBL_MERCHANT_ID", type: "s", required: false, sample: ""}
+- { name: "CRM_PAYMENT_BBL_MERCHANT_API_ID", type: "s", required: false, sample: ""}
+- { name: "CRM_PAYMENT_BBL_MERCHANT_API_PASSWORD", type: "s", required: false, sample: ""}
+- { name: "CRM_PAYMENT_BBL_API_ENDPOINT", type: "s", required: false, sample: ""}
+- { name: "CRM_ENABLE_IPP", type: "b", required: false, sample: "true", default: true }
+- { name: "PAM_IGNOREGEN_MEMBER_CARD_NO", alias: "PAM4_IGNOREGEN_MEMBER_CARD_NO", type: "b", required: false, sample: "false", default: true }
+- { name: "MEMBER_REGISTER_INITIAL_VALUE", type: "b", required: false, sample: "true", default: true }
+- { name: "THIRD_PARTY_POINT_UPDATE", type: "b", required: false, sample: "true", default: false }
+- { name: "THIRD_PARTY_POINT_USE", type: "b", required: false, sample: "true", default: false }
+- { name: "THIRD_PARTY_VERIFIED_OTP", type: "b", required: false, sample: "true", default: false }
+- { name: "PAM_CACHE_EXPIRE_TIME_ALLOW_REQUEST_IPADDRESS", alias: "PAM4_CACHE_EXPIRE_TIME_ALLOW_REQUEST_IPADDRESS", type: "n", required: false, sample: "30", default: 30 }
+- { name: "PAM_CUSTOMER_NAME", alias: "PAM4_CUSTOMER_NAME", type: "s", required: false, sample: "[CUSTOMER_NAME]", default: "[REPLACE_PAM_CUSTOMER_NAME]" }
+- { name: "CRM_IS_ENABLE_VALIDATE_MEMBER_CLASS", type: "b", required: false, sample: "false", default: false}
+- { name: "CRM_VALIDATE_MEMBER_CLASS_LIST", type: "s", required: false, sample: "ENJ,EPC"}
+- { name: "THIRD_PARTY_ADD_POINT_TRANSACTION_TYPE", type: "s", required: false, sample: "4"}
+- { name: "THIRD_PARTY_DEDUCT_POINT_TRANSACTION_TYPE", type: "s", required: false, sample: "5"}
+- { name: "CRM_PICKUP_STOCK_TYPE", type: "s", required: false, sample: "internal", default: internal }
+- { name: "CRM_ENABLE_DELIVERY_STORE", type: "b", required: false, sample: "false", default: false }
+- { name: "CRM_PAYMENT_KTC_MERCHANT_ID", type: "s", required: false, sample: ""}
+- { name: "CRM_PAYMENT_KTC_IPP_MERCHANT_ID", type: "s", required: false, sample: "[MERCHANT_ID]"}
+- { name: "CRM_PAYMENT_KTC_API_ENDPOINT", type: "s", required: false, sample: "https://testpaygate.ktc.co.th/ktc/eng/merchandize/payment/payForm.jsp"}
+- { name: "CRM_KERRY_TRACKING_NO_PREFIX", type: "s", required: false, sample: "JMBS"}
+- { name: "CRM_ENABLE_TRACKING_PER_STORE", type: "b", required: false, sample: "false" }
+- { name: "CRM_NOT_SUPPORTED_SHIPPING_ZIPCODES", type: "s", required: false, sample: "95000,95110"}
+- { name: "CRM_ENABLE_SUM_STORE_STOCK_BY_STORE_ID", type: "b", required: false, sample: "false", default: false }
+- { name: "CRM_ENABLE_FIX_ECOM_MEMBER_POINTS_RATE", type: "b", required: false, sample: "false", default: true }
+- { name: "CRM_MEMBER_POINTS_RATE", type: "n", required: false, default: "40.0" }
+- { name: "CRM_ENABLE_MEMBER_TYPE_B2B_ONLY", type: "b", required: false, sample: "true" }
+- { name: "CRM_ENABLE_MEMBER_TYPE_B2C", type: "b", required: false, sample: "true" }
+- { name: "CRM_REQUEST_OTP_PERIOD_TIME_MINUTE", type: "n", required: false, sample: "3" }
+- { name: "CRM_ENABLE_TRANSACTION_MEMBER_POINT", type: "b", required: false, sample: "true" }
+- { name: "CRM_ENABLE_CAPTCHA_FEATURE", type: "b", required: false, sample: true, default: true }
+- { name: "CRM_CAPTCHA_CONFIG", type: "s", required: false, sample: "", default: '{"ShowLineOptions":[],"CaptchaType":"string","Id":"","VerifyValue":"","DriverAudio":{"Length":6,"Language":"zh"},"DriverString":{"Height":60,"Width":240,"ShowLineOptions":0,"NoiseCount":0,"Source":"1234567890qwertyuioplkjhgfdsazxcvbnm","Length":6,"Fonts":["wqy-microhei.ttc"],"BgColor":{"R":0,"G":0,"B":0,"A":0}},"DriverMath":{"Height":60,"Width":240,"ShowLineOptions":0,"NoiseCount":0,"Length":6,"Fonts":["wqy-microhei.ttc"],"BgColor":{"R":0,"G":0,"B":0,"A":0}},"DriverChinese":{"Height":60,"Width":320,"ShowLineOptions":0,"NoiseCount":0,"Source":"设想,你在,处理,消费者,的音,频输,出音,频可,能无,论什,么都,没有,任何,输出,或者,它可,能是,单声道,立体声,或是,环绕立,体声的,,不想要,的值","Length":2,"Fonts":["wqy-microhei.ttc"],"BgColor":{"R":125,"G":125,"B":0,"A":118}},"DriverDigit":{"Height":80,"Width":240,"Length":5,"MaxSkew":0.7,"DotCount":80}}' }
+- { name: "CRM_ORDER_INVOICE_CN_PREFIX_CODE", type: "s", required: false, sample: "MBCN", default: MBCN }
+- { name: "CRM_ORDER_INVOICE_PREFIX_CODE", type: "s", required: false, sample: "MBIV", default: MBIV }
+- { name: "CRM_FACEBOOK_APP_ID", type: "s", required: false, sample: ""}
+- { name: "CRM_FACEBOOK_APP_SECRET", type: "s", required: false, sample: ""}
+- { name: "SKIP_CHECK_ORDER_PERM", type: "b", required: false, sample: true, default: true}
+- { name: "CRM_ENABLE_PRICE_PROMOTION_IS_NULL", type: "b", required: false, sample: true, default: false}
+- { name: "PAM4_PAYMENT_RESPONSE_2C2P_VERSION", type: "n", required: false, sample: "4.1"}
+- { name: "CRM_ENABLE_INCREMENT_MEMBER_CARD_NO_BY", type: "s", required: false, sample: "maria", default: "maria"}
+- { name: "CRM_MEMBER_CARD_NO_LENGTH", type: "n", required: false, sample: "8", default: "8"}
+- { name: "CRM_MEMBER_CARD_NO_PREFIX_CODE", type: "s", required: false, sample: "TNL", default: ""}
+- { name: "CRM_ORDER_CHECK_DUMMY_MEMBER_CARD_NO", type: "s", required: false, sample: "DUMMY33333", default: ""}
+- { name: "CRM_ENABLE_CHECK_DUMMY_MEMBER_CARD_NO", type: "b", required: false, sample: true, default: false}
+- { name: "CRM_ENABLE_ORDER_EXTERNAL_CALCULATE_POINT", type: "b", required: false, sample: true, default: false}
+- { name: "CRM_ENABLE_ORDER_EXTERNAL_MAPPING_BRAND", type: "b", required: false, sample: true, default: true}
+- { name: "CRM_ENABLE_STOCK_VALIDATE_BOOKING", type: "b", required: false, sample: true, default: false}
+- { name: "CRM_ENABLE_CONVERT_TRANSACTION_TYPE_TO_EARN_OR_BURN", type: "b", required: false, sample: true, default: false}
+- { name: "CRM_ENABLE_ORDER_REQUIRE_TRANSACTION_TYPE", type: "b", required: false, sample: true, default: false}
+- { name: "CRM_ENABLE_PRODUCT_CALUCULATE_TOPUP", type: "b", required: false, sample: true, default: false}
+- { name: "PAM_ECOM_SHIPMENT_TYPE", alias: "PAM4_ECOM_SHIPMENT_TYPE", type: "s", required: false, sample: "ONE_PACKAGE_PER_ORDER", default: "ONE_PACKAGE_PER_ORDER"}
+- { name: "CRM_SHIPPING_PROVIDER_ALIAS", type: "s", required: false, sample: "kerry", default: "kerry"}
+- { name: "CRM_ENABLE_ORDER_INCREMENT_NUMBER_BY_ELS", type: "b", required: false, sample: true, default: false}
+- { name: "CRM_HOST", type: "s", required: false, sample: " https://xyz-ecom.pams.ai", default: ""}
+- { name: "CRM_DISPLAY_NAME", type: "s", required: false, sample: "abc.com", default: ""}
+- { name: "CRM_PAYMENT_KBANK_MERCHANT_ID", type: "s", required: false, sample: "123456", default: ""}
+- { name: "CRM_PAYMENT_KBANK_IPP_MERCHANT_ID", type: "s", required: false, sample: "123456", default: ""}
+- { name: "CRM_PAYMENT_KBANK_API_ENDPOINT", type: "s", required: false, sample: "https://dev-kpaymentgateway-services.kasikornbank.com/", default: ""}
+- { name: "CRM_PAYMENT_KBANK_PUBLIC_KEY", type: "s", required: false, sample: "key-yyyyyyy", default: ""}
+- { name: "CRM_PAYMENT_KBANK_PRIVATE_KEY", type: "s", required: false, sample: "key-xxxxxxx", default: ""}
+- { name: "CRM_SEEDER_KBANK", type: "b", required: false, sample: true, default: false}
+- { name: "CRM_SEEDER_KBANK_PROMPTPAY", type: "b", required: false, sample: true, default: false}
+- { name: "CRM_SEEDER_KBANK_IPP", type: "b", required: false, sample: true, default: false}
+- { name: "CRM_MEMBER_CARD_NO_INCREMENT_BY", type: "s", required: false, sample: "maria", default: "maria"}
+- { name: "CRM_ORDER_INVOICE_LENGTH", type: "n", required: false, sample: "", default: 11}
+- { name: "CRM_ORDER_INVOICE_CN_LENGTH", type: "n", required: false, sample: "", default: 11}
+- { name: "CRM_ORDER_STATUS_CANCEL_ID", type: "s", required: false, sample: "7", default: ""}
+- { name: "CRM_ORDER_STATUS_READY_TO_SHIP_ID", type: "s", required: false, sample: "4", default: ""}
+- { name: "CRM_ORDER_SHIPPING_TYPE_ID", type: "s", required: false, sample: "4", default: ""}
+- { name: "CRM_ORDER_EXTERNAL_WAREHOUSE_CODE", type: "s", required: false, sample: "WB", default: ""}
+- { name: "CRM_ORDER_SELLER_REFERENCE_ID", type: "s", required: false, sample: "PAM-Platform", default: ""}
+- { name: "CRM_ENABLE_DISPLAY_BY_SALE_CHANNEL", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ENABLE_BRAND_PERMISSION", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ENABLE_PARTIAL_BRAND_PERMISSION", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ENABLE_MEMBER_CUMULATIVE_PURCHASE", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ENABLE_VALIDATE_SALE_CHANNEL", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_INDEX_CREATE_ALIAS_X_MONTH_FROM_NOW", type: "n", required: false, sample: "", default: 24}
+- { name: "CRM_INDEX_CLOSE_INDEXES_AFTER_X_MONTH_FROM_NOW", type: "n", required: false, sample: "", default: 25}
+- { name: "CRM_FRONT_HOST", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_ENABLE_VALIDATE_PASSWORD_FORMAT", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_PAYMENT_KBANK_FULL_PAYMENT_TERMINAL_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_PAYMENT_KBANK_IPP_TERMINAL_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_ENABLE_PARAM_TRANSACTION_OPTIONAL_WITH_CONDITION", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_DEFAULT_ECOMMERCE_TYPE", type: "s", required: false, sample: "", default: "app-ecommerce"}
+- { name: "CRM_ENABLE_FIX_TRANSACTION_MEMBER_POINT_EXPIRED_DATE", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ENABLE_TRANSACTION_BIRTHDATE_POINT", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_OTP_NUMBER_ATTEMPTS", type: "n", required: false, sample: 5, default: 5}
+- { name: "CRM_ENABLE_VALIDATE_PASSWORD_FORMAT", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ASYNC_RATE_LIMIT_BY_IP_PER_MIN", type: "n", required: false, sample: 10, default: 10}
+- { name: "CRM_PAYMENT_KBANK_PROMPT_PAY_MERCHANT_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_PAYMENT_KBANK_PROMPT_PAY_TERMINAL_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_CMS_FRONTEND_URL", type: "s", required: false, sample: "https://stgx-ecom-cms.pams.ai", default: "[REPLACE_ECOM_CMS_FRONTEND_URL]" }
+- { name: "CRM_TRANSACTION_POINT_EXPIRED_IN_TIME_DAY", type: "n", required: false, sample: 14, default: 14}
+- { name: "CRM_ENABLE_VOUCHER_TYPE_GIFT_VOUCHER", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_DROP_LEAD_VOUCHER_TRACKING_CONSENT_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_DROP_LEAD_VOUCHER_CONTACTING_CONSENT_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_DROP_LEAD_VOUCHER_DATABASE", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_DROP_LEAD_VOUCHER_LINE_CAMPAIGN_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_DROP_LEAD_VOUCHER_SMS_CAMPAIGN_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_DROP_LEAD_VOUCHER_EMAIL_CAMPAIGN_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_OTP_VALIDATE_EXIST_MEMBER", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_STORE_CODES_TYPE_DELIVERY", type: "s", required: false, sample: "1702", default: ""}
+- { name: "CRM_ENABLE_ORDER_STORE_PERMISSION", type: "b", required: false, sample: false, default: false}
+- { name: "ENABLE_INSERT_OR_UPDATE_MEMBER_EXTERNAL", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ENABLE_VALIDATE_PASSWORD_SPECIAL_CHAR", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ENABLE_LOGIN_WITH_CONTACT_EMAIL", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_RELATED_PRODUCT_SAME_GROUP", type: "b", required: false, sample: true, default: true}
+- { name: "CRM_RELATED_PRODUCT_MORE", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_RELATED_PRODUCT_TYPE", type: "s", required: false, sample: "brand", default: ""}
+- { name: "CRM_RELATED_PRODUCT_DISPLAY_LIMIT", type: "n", required: false, sample: 10, default: 10}
+- { name: "THIRD_PARTY_GET_MEMBER_KEY", type: "s", required: false, sample: "member_card", default: "member_card"}
+- { name: "CRM_ENABLE_SEND_EVENT_UPDATE_MEMBER_CLASS", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ENABLE_SEND_EVENT_DIRECTION_MEMBER_CLASS", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ENABLE_PARAM_BACKEND_REQUIRED_SEO_URL", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ENABLE_EXTERNAL_WHITE_LIST_IP", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_EXTERNAL_WHITE_LIST_IP", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_ENABLE_IGNORE_FILTER_MEMBER_CARD_NO_FOR_THE_BRAIN_MEMBER_DETAIL", type: "b", required: false, sample: false, default: false}
+- { name: "ENABLE_PRE_REGISTER_OR_UPDATE_MEMBER_EXTERNAL", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ENABLE_SEND_CREATE_OR_UPDATE_CUSTOMER_EXTERNAL", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ENABLE_SEND_ORDER_CANCEL_EXTERNAL", type: "b", required: false, sample: false, default: false}
+- { name: "ENABLE_SET_MEMBER_ID_FROM_MOBILE_NO", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ATTRIBUTE_USE_FOR_CUSTOMER_KEY", type: "s", required: false, sample: "member_id", default: "member_id"}
+- { name: "CRM_MQ_PRODUCT_UPDATE_PRICE_PARTITIONS", type: "n", required: false, sample: "50" }
+- { name: "CRM_MQ_PRODUCT_UPDATE_PRICE_REPLICAS", type: "n", required: false, sample: "2" }
+- { name: "CRM_THIRD_PARTY_PERSISTER_ENDPOINT", type: "s", required: false, sample: maria-connect }
+- { name: "CRM_THIRD_PARTY_PERSISTER_PORT", type: "n", required: false, sample: 3306 }
+- { name: "CRM_THIRD_PARTY_PERSISTER_DB", type: "s", required: false, sample: my_database }
+- { name: "CRM_THIRD_PARTY_PERSISTER_USERNAME", type: "s", required: false, sample: my_user }
+- { name: "CRM_THIRD_PARTY_PERSISTER_PASSWORD", type: "s", required: false, sample: "UUID" }
+- { name: "CRM_THIRD_PARTY_PERSISTER_CHARSET", type: "s", required: false, sample: utf8mb4 }
+- { name: "CRM_ENABLE_UPDATE_STOCK_EXTERNAL", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ATTEMPT_REPEAT_CALL_API", type: "n", required: false, sample: 3, default: 1}
+- { name: "CRM_IGNORE_GET_PROVICE_FOR_GEN_PERMISSION", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_IGNORE_GET_TRACKING_NUMBER_FOR_CREATE_UPDATE_STORE", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ENABLE_POSPORTAL_STORE_PERMISSION", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_PERMISSION_ORDER_KEY_PREFIX", type: "s", required: false, sample: ecom-orders, default: "" }
+- { name: "CRM_PERMISSION_STORE_KEY_PREFIX", type: "s", required: false, sample: ecom-stores, default: "" }
+- { name: "CRM_ENABLE_PROMOTION_SKU_IMPORT", type: "b", required: false, sample: false, default: false}
+- { name: "ENABLE_GET_MEMBER_CLASS_IMAGE_URL", type: "b", required: false, sample: false, default: false}
+- { name: "VOUCHER_STORE_MASTER_DATA_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '{"column_headers":[{"column_name":"ID","row_name":"A"},{"column_name":"Store Code","row_name":"B"},{"column_name":"Branch Account","row_name":"C"},{"column_name":"Title TH","row_name":"D"},{"column_name":"Title EN","row_name":"E"}]}' }
+- { name: "VOUCHER_CREATE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"Alias","is_required":false,"field_name":"alias"}]' }
+- { name: "VOUCHER_UPDATE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"*Voucher ID (Do not change)","is_required":true,"field_name":"voucher_id"}]' }
+- { name: "CRM_MQ_VOUCHER_PARTITIONS", type: "n", required: false, sample: "50" }
+- { name: "CRM_MQ_VOUCHER_REPLICAS", type: "n", required: false, sample: "2" }
+- { name: "CRM_VOUCHER_BARCODE_SHARDS", type: "n", required: false, sample: "1" }
+- { name: "CRM_IGNORE_AGGR_REMAINING_VOUCHER_FOR_LIST_VOUCHERS", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ENABLE_AGGR_REMAINING_STORE_STOCK_VOUCHER_FOR_LIST_VOUCHERS", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_ENABLE_AGGR_REMAINING_STORE_STOCK_FOR_DETAIL_VOUCHER", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_IGNORE_GENERATE_PICKUP_TIME_FOR_STORE", type: "b", required: false, sample: false, default: false}
+- { name: "RMD_MASTER_DATA_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '{"column_headers":[{"column_name":"ID","row_name":"A"},{"column_name":"Store Code","row_name":"B"},{"column_name":"Branch Account","row_name":"C"},{"column_name":"Title TH","row_name":"D"},{"column_name":"Title EN","row_name":"E"}]}' }
+- { name: "RMD_CREATE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"Alias","is_required":false,"field_name":"alias"}]' }
+- { name: "RMD_UPDATE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"*Voucher ID (Do not change)","is_required":true,"field_name":"voucher_id"}]' }
+- { name: "CRM_SEND_QUESTIONNAIRE_TO_DEMOGRAPHIC_ATTRIBUTES", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_MQ_RMD_PARTITIONS", type: "n", required: false, sample: "50" }
+- { name: "CRM_MQ_RMD_REPLICAS", type: "n", required: false, sample: "2" }
+- { name: "CRM_ENABLE_SHARING_VOUCHER_BARCODE_INDEX", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_SHARING_VOUCHER_BARCODE_INDEX_LIMIT", type: "n", required: false, sample: "10" }
+- { name: "CRM_ENABLE_MULTIPLE_LINE_PROVIDER", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_FRONT_HOST", type: "s", required: false, sample: "https://stgx-crm.pams.ai", default: ""}
+- { name: "CRM_HOST", type: "s", required: false, sample: "https://stgx-crm-api.pams.ai", default: ""}
+- { name: "CRM_LINE_CHANNEL_ACCESS_TOKEN", type: "s", required: false, sample: "", default: ""}
+- { name: "MEMBER_POINT_UPDATE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"*Mobile","is_required":true,"field_name":"mobile"},{"column_name":"*Point","is_required":true,"field_name":"point"}]' }
+- { name: "CRM_PRODUCT_SCAN_LANDING_PAGE_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "TRANSACTION_MEMBER_POINT_EXPIRED_TYPE", type: "s", required: false, sample: "", default: ""}
+- { name: "TRANSACTION_MEMBER_POINT_EXPIRATION_MONTH", type: "n", required: false, sample: "", default: ""}
+- { name: "CRM_ENABLE_CONTENT_READ", type: "b", required: false, sample: true, default: false}
+- { name: "CRM_RESOLVE_AFFILIATE_KEY_NAME", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_ENABLE_MEMBER_TIER_UPGRADE", type: "b", required: false, sample: false, default: true}
+- { name: "CRM_LINE_CHANNEL_ACCESS_TOKEN", type: "s", required: false, sample: "", default: ""}
