@@ -49,7 +49,7 @@ spec:
               mkdir -p /var/www/html/storage/logs &&
               mkdir -p /var/www/html/bootstrap/cache &&
               touch /var/www/html/storage/logs/laravel.log &&
-              chown -R 33:33 /var/www/html/storage /var/www/html/bootstrap/cache &&
+              chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var &&
               chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
           volumeMounts:
             - name: pvc-event-storage
