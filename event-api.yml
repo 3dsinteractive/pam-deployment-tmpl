@@ -39,6 +39,16 @@ spec:
         env: c1
         role: worker
       priorityClassName: class-static
+      initContainers:
+        - name: init-dir
+          image: busybox
+          volumeMounts:
+            - name: pvc-event
+              mountPath: /pam/<namespace>/event/data
+          command: ["/bin/sh", "-c", "chown 1001 /pam/<namespace>/event/data"]
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            privileged: true  
       containers:
       - name: <name>
         image: <image>
