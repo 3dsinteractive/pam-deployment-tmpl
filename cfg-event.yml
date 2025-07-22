@@ -1,0 +1,57 @@
+version: v1
+configs:
+- { name: "CRM_AUTHENTICATION", alias: "APP_NAME", type: "b", required: false, sample: true, default: true }
+- { name: "EVENT_APP_NAME", alias: "APP_NAME", type: "s", required: false, sample: "" }
+- { name: "EVENT_APP_ENV", alias: "APP_ENV", type: "s", required: false, sample: "event" }
+- { name: "EVENT_APP_DEBUG", alias: "APP_DEBUG", type: "b", required: false, sample: true }
+- { name: "EVENT_APP_LOG_QUERIES", alias: "APP_LOG_QUERIES", type: "b", required: false, sample: true }
+- { name: "EVENT_APP_URL", alias: "APP_URL", type: "s", required: false, sample: "https://stgx-event.pams.ai" }
+- { name: "EVENT_APP_PORT", alias: "APP_PORT", type: "s", required: false, sample: "" }
+- { name: "EVENT_APP_FRONTEND_URL", alias: "APP_FRONTEND_URL", type: "s", required: false, sample: "" }
+- { name: "EVENT_APP_CDN_URL", alias: "APP_CDN_URL", type: "s", required: false, sample: "" }
+- { name: "EVENT_APP_SAAS_MODE_ENABLED", alias: "APP_SAAS_MODE_ENABLED", type: "b", required: false, sample: true }
+- { name: "EVENT_APP_SAAS_STRIPE_APPLICATION_FEE_PERCENT", alias: "APP_SAAS_STRIPE_APPLICATION_FEE_PERCENT", type: "s", required: false, sample: "" }
+- { name: "EVENT_APP_HOMEPAGE_VIEWS_UPDATE_BATCH_SIZE", alias: "APP_HOMEPAGE_VIEWS_UPDATE_BATCH_SIZE", type: "s", required: false, sample: "" }
+- { name: "EVENT_APP_DISABLE_REGISTRATION", alias: "APP_DISABLE_REGISTRATION", type: "b", required: false, sample: true }
+- { name: "EVENT_APP_STRIPE_CONNECT_ACCOUNT_TYPE", alias: "APP_STRIPE_CONNECT_ACCOUNT_TYPE", type: "s", required: false, sample: "express" }
+- { name: "EVENT_APP_PLATFORM_SUPPORT_EMAIL", alias: "APP_PLATFORM_SUPPORT_EMAIL", type: "s", required: false, sample: "support@pams.ai" }
+- { name: "EVENT_STRIPE_PUBLIC_KEY", alias: "STRIPE_PUBLIC_KEY", type: "s", required: false, sample: "" }
+- { name: "EVENT_STRIPE_SECRET_KEY", alias: "STRIPE_SECRET_KEY", type: "s", required: false, sample: "" }
+- { name: "EVENT_STRIPE_WEBHOOK_SECRET", alias: "STRIPE_WEBHOOK_SECRET", type: "s", required: false, sample: "" }
+- { name: "EVENT_CORS_ALLOWED_ORIGINS", alias: "CORS_ALLOWED_ORIGINS", type: "b", required: false, sample: "*" }
+- { name: "EVENT_LOG_CHANNEL", alias: "LOG_CHANNEL", type: "s", required: false, sample: "stderr" }
+- { name: "EVENT_LOG_DEPRECATIONS_CHANNEL", alias: "LOG_DEPRECATIONS_CHANNEL", type: "s", required: false, sample: "" }
+- { name: "EVENT_LOG_LEVEL", alias: "LOG_LEVEL", type: "s", required: false, sample: "debug" }
+- { name: "EVENT_DB_CONNECTION", alias: "DB_CONNECTION", type: "s", required: false, sample: "" }
+- { name: "EVENT_DB_HOST", alias: "DB_HOST", type: "s", required: false, sample: "" }
+- { name: "EVENT_DB_PORT", alias: "DB_PORT", type: "s", required: false, sample: "" }
+- { name: "EVENT_DB_DATABASE", alias: "DB_DATABASE", type: "s", required: false, sample: "" }
+- { name: "EVENT_DB_USERNAME", alias: "DB_USERNAME", type: "s", required: false, sample: "" }
+- { name: "EVENT_DB_PASSWORD", alias: "DB_PASSWORD", type: "s", required: false, sample: "" }
+- { name: "EVENT_BROADCAST_DRIVER", alias: "BROADCAST_DRIVER", type: "s", required: false, sample: "log" }
+- { name: "EVENT_CACHE_DRIVER", alias: "CACHE_DRIVER", type: "s", required: false, sample: "file" }
+- { name: "EVENT_FILESYSTEM_PUBLIC_DISK", alias: "FILESYSTEM_PUBLIC_DISK", type: "s", required: false, sample: "s3-public" }
+- { name: "EVENT_FILESYSTEM_PRIVATE_DISK", alias: "FILESYSTEM_PRIVATE_DISK", type: "s", required: false, sample: "s3-private" }
+- { name: "EVENT_QUEUE_CONNECTION", alias: "QUEUE_CONNECTION", type: "s", required: false, sample: "sync" }
+- { name: "EVENT_SESSION_DRIVER", alias: "SESSION_DRIVER", type: "s", required: false, sample: "file" }
+- { name: "EVENT_SESSION_LIFETIME", alias: "SESSION_LIFETIME", type: "n", required: false, sample: 120 }
+- { name: "EVENT_REDIS_HOST", alias: "REDIS_HOST", type: "s", required: false, sample: "redis" }
+- { name: "EVENT_REDIS_PASSWORDL", alias: "REDIS_PASSWORD", type: "s", required: false, sample: "" }
+- { name: "EVENT_REDIS_PORT", alias: "REDIS_PORT", type: "n", required: false, sample: 6379 }
+- { name: "EVENT_MAIL_MAILER", alias: "MAIL_MAILER", type: "s", required: false, sample: "" }
+- { name: "EVENT_MAIL_HOST", alias: "MAIL_HOST", type: "s", required: false, sample: "" }
+- { name: "EVENT_MAIL_PORT", alias: "MAIL_PORT", type: "s", required: false, sample: "" }
+- { name: "EVENT_MAIL_USERNAME", alias: "MAIL_USERNAME", type: "s", required: false, sample: "" }
+- { name: "EVENT_MAIL_PASSWORD", alias: "MAIL_PASSWORD", type: "s", required: false, sample: "" }
+- { name: "EVENT_MAIL_ENCRYPTION", alias: "MAIL_ENCRYPTION", type: "s", required: false, sample: "" }
+- { name: "EVENT_MAIL_FROM_ADDRESS", alias: "MAIL_FROM_ADDRESS", type: "s", required: false, sample: "support@pams.ai" }
+- { name: "EVENT_MAIL_FROM_NAME", alias: "MAIL_FROM_NAME", type: "s", required: false, sample: "" }
+- { name: "EVENT_AWS_ACCESS_KEY_ID", alias: "AWS_ACCESS_KEY_ID", type: "s", required: false, sample: "" }
+- { name: "EVENT_AWS_SECRET_ACCESS_KEY", alias: "AWS_SECRET_ACCESS_KEY", type: "s", required: false, sample: "" }
+- { name: "EVENT_AWS_DEFAULT_REGION", alias: "AWS_DEFAULT_REGION", type: "s", required: false, sample: "" }
+- { name: "EVENT_AWS_PUBLIC_BUCKET", alias: "AWS_PUBLIC_BUCKET", type: "s", required: false, sample: "" }
+- { name: "EVENT_AWS_PRIVATE_BUCKET", alias: "AWS_PRIVATE_BUCKET", type: "s", required: false, sample: "" }
+- { name: "EVENT_AWS_USE_PATH_STYLE_ENDPOINT", alias: "AWS_USE_PATH_STYLE_ENDPOINT", type: "s", required: false, sample: "" }
+- { name: "EVENT_JWT_SECRET", alias: "JWT_SECRET", type: "s", required: false, sample: "" }
+- { name: "EVENT_JWT_ALGO", alias: "JWT_ALGO", type: "s", required: false, sample: "" }
+
