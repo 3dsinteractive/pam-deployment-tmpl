@@ -40,15 +40,25 @@ spec:
         role: worker
       priorityClassName: class-static
       initContainers:
-        - name: init-dir
+        - name: fix-permissions
           image: busybox
+          command:
+            - /bin/sh
+            - -c
+            - >
+              mkdir -p /var/www/html/storage/logs &&
+              mkdir -p /var/www/html/bootstrap/cache &&
+              touch /var/www/html/storage/logs/laravel.log &&
+              chown -R 33:33 /var/www/html/storage /var/www/html/bootstrap/cache &&
+              chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
           volumeMounts:
-            - name: pvc-event
-              mountPath: /pam/<namespace>/event/data
-          command: ["/bin/sh", "-c", "mkdir -p /pam/stg/event/data/storage/logs /pam/stg/event/data/cache && touch /pam/stg/event/data/storage/logs/laravel.log && chown -R www-data:www-data /pam/stg/event/data/storage /pam/stg/event/data/cache && chmod -R 775 /pam/stg/event/data/storage /pam/stg/event/data/cache"]
-          imagePullPolicy: IfNotPresent
+            - name: pvc-event-storage
+              mountPath: /var/www/html/storage
+            - name: pvc-event-cache
+              mountPath: /var/www/html/bootstrap/cache
           securityContext:
-            privileged: true  
+            runAsUser: 0
+          imagePullPolicy: IfNotPresent
       containers:
       - name: <name>
         image: <image>
