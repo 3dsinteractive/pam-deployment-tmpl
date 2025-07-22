@@ -1,6 +1,5 @@
 version: v1
 configs:
-- { name: "CRM_AUTHENTICATION", alias: "APP_NAME", type: "b", required: false, sample: true, default: true }
 - { name: "EVENT_APP_NAME", alias: "APP_NAME", type: "s", required: false, sample: "" }
 - { name: "EVENT_APP_ENV", alias: "APP_ENV", type: "s", required: false, sample: "event" }
 - { name: "EVENT_APP_DEBUG", alias: "APP_DEBUG", type: "b", required: false, sample: true }
