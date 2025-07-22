@@ -45,7 +45,7 @@ spec:
           volumeMounts:
             - name: pvc-event
               mountPath: /pam/<namespace>/event/data
-          command: ["/bin/sh", "-c", "chown 1001 /pam/<namespace>/event/data"]
+          command: ["/bin/sh", "-c", "chown -R 33:33 /pam/stg/event/data/storage /pam/stg/event/data/cache && chmod -R 775 /pam/stg/event/data/storage /pam/stg/event/data/cache"]
           imagePullPolicy: IfNotPresent
           securityContext:
             privileged: true  
