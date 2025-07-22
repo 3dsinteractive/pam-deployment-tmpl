@@ -101,9 +101,12 @@ spec:
         hostPath:
           path: /proc
           type: Directory
-      - name: pvc-event
+      - name: pvc-event-storage
         persistentVolumeClaim:
-          claimName: pvc-event
+          claimName: pvc-event-storage
+      - name: pvc-event-cache
+        persistentVolumeClaim:
+          claimName: pvc-event-cache
 ---
 apiVersion: v1
 kind: Service
