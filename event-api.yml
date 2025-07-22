@@ -76,6 +76,12 @@ spec:
         - name: host-proc
           mountPath: /host-proc
           readOnly: true
+        - name: pvc-event
+          mountPath: /var/www/html/storage
+          subPath: storage
+        - name: pvc-event
+          mountPath: /var/www/html/bootstrap/cache
+          subPath: cache
       volumes:
       - name: vol-profiler
         configMap:
@@ -87,6 +93,9 @@ spec:
         hostPath:
           path: /proc
           type: Directory
+      - name: pvc-event
+        persistentVolumeClaim:
+          claimName: pvc-event
 ---
 apiVersion: v1
 kind: Service
