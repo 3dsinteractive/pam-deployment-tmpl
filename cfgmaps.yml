@@ -1,6 +1,6 @@
-cfg-shared: ["cfg-shared", "node-daemon", "metrics-agents", "connect", "builder", "sender", "msgscheduler", "ecom", "ecom-backend", "ecom-transaction", "migrate-connect", "migrate-seeder", "util-pamcli", "migrate-connect-ecom", "migrate-seeder-ecom", "crm-api", "crm-transaction", "crm-backend", "chatcenter-api", "sai-api", "migrate-connect-crm", "python-api", "admin-api", "crm-api", "crm-transaction", "crm-backend"]
+cfg-shared: ["cfg-shared", "node-daemon", "metrics-agents", "connect", "builder", "sender", "msgscheduler", "ecom", "ecom-backend", "ecom-transaction", "migrate-connect", "migrate-seeder", "util-pamcli", "migrate-connect-ecom", "migrate-seeder-ecom", "crm-api", "crm-transaction", "crm-backend", "chatcenter-api", "sai-api", "migrate-connect-crm", "python-api", "admin-api"]
 cfg-mkt: ["node-daemon", "metrics-agents", "cfg-mkt", "connect", "builder", "sender", "msgscheduler", "migrate-connect", "migrate-seeder", "util-pamcli", "chatcenter-api", "sai-api", "migrate-connect-crm", "python-api", "admin-api"]
-cfg-ecom: ["node-daemon", "metrics-agents", "cfg-ecom", "ecom-backend", "ecom-transaction", "ecom", "util-pamcli", "migrate-connect-ecom", "migrate-seeder-ecom", "crm-api", "crm-transaction", "crm-backend", "migrate-connect-crm", "crm-api", "crm-transaction", "crm-backend"]
+cfg-ecom: ["node-daemon", "metrics-agents", "cfg-ecom", "ecom-backend", "ecom-transaction", "ecom", "util-pamcli", "migrate-connect-ecom", "migrate-seeder-ecom", "crm-api", "crm-transaction", "crm-backend", "migrate-connect-crm"]
 cfg-cms-api: ["cms-api"]
 cfg-front-web: ["ecom-line-bdb", "ecom-web-bdb"]
 cfg-sai: ["sai"]
