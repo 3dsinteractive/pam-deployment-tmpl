@@ -172,3 +172,5 @@ configs:
 - { name: "CRM_SCAN_API_ENDPOINT", type: "s", required: false, sample: ""}
 - { name: "CRM_ENABLE_VOUCHER_LIMIT_PER_DAY", type: "b", required: false, sample: false, default: false}
 - { name: "CRM_ENABLE_VOUCHER_LIMIT_PER_MONTH", type: "b", required: false, sample: false, default: false}
+- { name: "CRM_TRANSACTION_TITLE_PRODUCT_SCAN_CONTEXT_TH", type: "s", required: false, sample: "" }
+- { name: "CRM_TRANSACTION_TITLE_PRODUCT_SCAN_CONTEXT_EN", type: "s", required: false, sample: "" }
