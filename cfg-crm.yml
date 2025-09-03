@@ -174,3 +174,9 @@ configs:
 - { name: "CRM_ENABLE_VOUCHER_LIMIT_PER_MONTH", type: "b", required: false, sample: false, default: false}
 - { name: "CRM_TRANSACTION_TITLE_PRODUCT_SCAN_CONTEXT_TH", type: "s", required: false, sample: "" }
 - { name: "CRM_TRANSACTION_TITLE_PRODUCT_SCAN_CONTEXT_EN", type: "s", required: false, sample: "" }
+- { name: "CRM_SHIPPING_PROVIDER_DHL_ENDPOINT", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_SHIPPING_PROVIDER_DHL_CREDENTIAL_CLIENT_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_SHIPPING_PROVIDER_DHL_CREDENTIAL_PASSWORD", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_SHIPPING_PROVIDER_DHL_PICKUP_ACCOUNT_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_SHIPPING_PROVIDER_DHL_SOLD_TO_ACCOUNT_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_SHIPPING_PROVIDER_DHL_TIMEOUT", type: "n", required: false, sample: "10", default: "10"}
