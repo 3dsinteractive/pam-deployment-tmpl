@@ -180,3 +180,7 @@ configs:
 - { name: "PAM_TRACKER_PRIORITY_EVENTS", type: "n", required: false, sample: "crm_request_otp_mobile,", default: "" }
 - { name: "PAM_CHAT_VAPID_PUBLIC_KEY", type: "s", alias: "VAPID_PUBLIC_KEY", required: false, sample: "public_vapid_push", default: "DEFAULT_VAPID_PUBLIC_KEY" }
 - { name: "PAM_CHAT_VAPID_PRIVATE_KEY", type: "s", alias: "VAPID_PRIVATE_KEY", required: false, sample: "private_vapid_push", default: "DEFAULT_VAPID_PUBLIC_KEY" }
+- { name: "PAM_TRACKER_RECEIVED_CONSUME_BATCH_SIZE", type: "n", required: false, sample: 500, default: 500 }
+- { name: "PAM_TRACKER_RECEIVED_CONSUME_BATCH_TIMEOUT", type: "n", required: false, sample: 1000, default: 1000 }
+- { name: "PAM_TRACKER_CREATED_CONSUME_BATCH_SIZE", type: "n", required: false, sample: 500, default: 500 }
+- { name: "PAM_TRACKER_CREATED_CONSUME_BATCH_TIMEOUT", type: "n", required: false, sample: 1000, default: 1000 }
