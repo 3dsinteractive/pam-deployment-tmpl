@@ -66,6 +66,12 @@ spec:
           limits:
             memory: <maxMem>
             cpu: <maxCpu>
+        volumeMounts:
+        - name: pvc-aistudio
+          mountPath: /app/public/uploads
+      - name: pvc-aistudio
+        persistentVolumeClaim:
+          claimName: pvc-aistudio
 ---
 apiVersion: v1
 kind: Service
