@@ -44,7 +44,7 @@ spec:
           volumeMounts:
             - name: vol-data
               mountPath: /pam/<namespace>/aistudio/data
-          command: ["/bin/sh", "-c", "chown -R 1001:1001 /pam/<namespace>/aistudio/data"]
+          command: ["/bin/sh", "-c", "chmod -R 775 /pam/<namespace>/aistudio/data && chown -R 1001:1001 /pam/<namespace>/aistudio/data"]
           imagePullPolicy: IfNotPresent
           securityContext:
             privileged: true  
