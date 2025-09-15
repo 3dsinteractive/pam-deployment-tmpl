@@ -43,8 +43,8 @@ spec:
           image: busybox
           volumeMounts:
             - name: vol-data
-              mountPath: /pam/<namespace>/aistudio/data
-          command: ["/bin/sh", "-c", "chmod -R 775 /pam/<namespace>/aistudio/data && chown -R 1001:1001 /pam/<namespace>/aistudio/data"]
+              mountPath: /app/public/uploads
+          command: ["/bin/sh", "-c", "chmod -R 775 /app/public/uploads && chown -R 1001:1001 /app/public/uploads"]
           imagePullPolicy: IfNotPresent
           securityContext:
             privileged: true  
