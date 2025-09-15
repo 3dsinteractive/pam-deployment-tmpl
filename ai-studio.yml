@@ -67,9 +67,10 @@ spec:
             memory: <maxMem>
             cpu: <maxCpu>
         volumeMounts:
-        - name: pvc-aistudio
+        - name: vol-data
           mountPath: /app/public/uploads
-      - name: pvc-aistudio
+      volumes:
+      - name: vol-data
         persistentVolumeClaim:
           claimName: pvc-aistudio
 ---
