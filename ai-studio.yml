@@ -47,8 +47,7 @@ spec:
           command: ["/bin/sh", "-c", "chown -R 1001:1001 /pam/<namespace>/aistudio/data"]
           imagePullPolicy: IfNotPresent
           securityContext:
-            runAsUser: 1001 
-            fsGroup: 1001
+            privileged: true  
       containers:
       - name: <name>
         image: <image>
