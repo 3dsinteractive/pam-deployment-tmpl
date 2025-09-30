@@ -42,7 +42,6 @@ configs:
 - { name: "THIRD_PARTY_POINT_USE", type: "b", required: false, sample: "true", default: false }
 - { name: "THIRD_PARTY_VERIFIED_OTP", type: "b", required: false, sample: "true", default: false }
 - { name: "PAM_CACHE_EXPIRE_TIME_ALLOW_REQUEST_IPADDRESS", alias: "PAM4_CACHE_EXPIRE_TIME_ALLOW_REQUEST_IPADDRESS", type: "n", required: false, sample: "30", default: 30 }
-- { name: "PAM_CUSTOMER_NAME", alias: "PAM4_CUSTOMER_NAME", type: "s", required: false, sample: "[CUSTOMER_NAME]", default: "[REPLACE_PAM_CUSTOMER_NAME]" }
 - { name: "ECOM_IS_ENABLE_VALIDATE_MEMBER_CLASS", type: "b", required: false, sample: "false", default: false}
 - { name: "ECOM_VALIDATE_MEMBER_CLASS_LIST", type: "s", required: false, sample: "ENJ,EPC"}
 - { name: "THIRD_PARTY_ADD_POINT_TRANSACTION_TYPE", type: "s", required: false, sample: "4"}

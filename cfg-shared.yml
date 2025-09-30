@@ -142,3 +142,4 @@ configs:
 - { name: "PAM_METRIC_SKIP_ALERT_CLIENTS", type: "s", required: false, sample: stg }
 - { name: "PAM_METRIC_NOTI_CAMPAIGN_ID", type: "s", required: false, sample: stg }
 - { name: "PAM_ENABLE_DATA_ADAPTER_CAMPAIGN_EXPORT_DELETE_FILE_IF_EMPTY", type: "b", required: false, sample: true, default: false }
+- { name: "PAM_CUSTOMER_NAME", alias: "PAM4_CUSTOMER_NAME", type: "s", required: false, sample: "[CUSTOMER_NAME]", default: "[REPLACE_PAM_CUSTOMER_NAME]" }
