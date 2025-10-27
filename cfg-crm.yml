@@ -181,3 +181,4 @@ configs:
 - { name: "CRM_SHIPPING_PROVIDER_DHL_SOLD_TO_ACCOUNT_ID", type: "s", required: false, sample: "", default: ""}
 - { name: "CRM_SHIPPING_PROVIDER_DHL_TIMEOUT", type: "n", required: false, sample: "10", default: "10"}
 - { name: "CRM_EXCLUSIVE_TIER_FOR_AFFILIATE", type: "s", required: false, sample: "", default: ""}
+- { name: "CRM_ENABLE_FILTER_BANNER_WITH_VIEW_STATE_AND_AFFILIATE", type: "b", required: false, sample: "false", default: false}
