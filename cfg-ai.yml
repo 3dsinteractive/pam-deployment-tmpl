@@ -1,0 +1,183 @@
+version: v1
+configs:
+- { name: "AI_AUTHENTICATION", type: "b", required: false, sample: true, default: true }
+- { name: "AI_PAYMENT_EGHL_SERVICE_ID", type: "s", required: false, sample: "[SERVICE_ID]" }
+- { name: "AI_PAYMENT_EGHL_PAYMENT_URL", type: "s", required: false, sample: "https://test2pay.ghl.com/ipgsg/payment.aspx", default: https://test2pay.ghl.com/ipgsg/payment.aspx }
+- { name: "AI_PAYMENT_EGHL_PASSWORD", type: "s", required: false, sample: "[UUID]" }
+- { name: "AI_PAYMENT_OMISE_PUBLIC_KEY", type: "s", required: false, sample: "[UUID]" }
+- { name: "AI_PAYMENT_OMISE_SECRET_KEY", type: "s", required: false, sample: "[UUID]" }
+- { name: "AI_VALIDATE_STOCK", type: "b", required: false, sample: "true", default: true }
+- { name: "AI_SEND_POINT_TO_EXTERNAL", type: "b", required: false, sample: "false", default: true }
+- { name: "AI_SEEDER_2C2P_IPP", type: "b", required: false, sample: "true", default: true }
+- { name: "AI_PRODUCT_IS_CALCULATE_POINT", type: "b", required: false, sample: "true", default: true }
+- { name: "AI_ENABLE_DISPLAY_RELATED_PRODUCT", type: "b", required: false, sample: "true", default: true }
+- { name: "AI_LANDING_VERIFIED_URL", type: "s", required: false, sample: "https://stg-ecom-bdb.pams.ai", default: "[REPLACE_ECOM_LANDING_VERIFIED_URL]" }
+- { name: "AI_IS_FLASHSALE_PRODUCT_ENABLED", type: "s", required: false, sample: "true", default: true }
+- { name: "AI_ORDER_CODE_TYPE", type: "s", required: false, sample: "INCREMENT_PERIOD_DAY", default: INCREMENT_PERIOD_MONTH }
+- { name: "AI_ORDER_PREFIX_CODE", type: "s", required: false, sample: "ONL", default: ORDER }
+- { name: "AI_ORDER_CODE_LENGTH", type: "n", required: false, sample: "14", default: 14 }
+- { name: "AI_ADDRESS_DATABASE_VERSION", type: "s", required: false, sample: "version2", default: version2 }
+- { name: "AI_PAYMENT_2C2P_MERCHANT_ID", type: "s", required: false, sample: "764111111111111" }
+- { name: "AI_PAYMENT_2C2P_SECRET_KEY", type: "s", required: false, sample: "V4SZ0C5OlxAq" }
+- { name: "AI_PRODUCT_CREATE_EXCEL_COLUMN_HEADER", alias: "AI_PRODUCT_CREATE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"Product Code","is_required":false,"field_name":"product_code"}]' }
+- { name: "AI_PRODUCT_UPDATE_EXCEL_COLUMN_HEADER", alias: "AI_PRODUCT_UPDATE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"*Product ID (Do not change)","is_required":true,"field_name":"product_id"}]' }
+- { name: "AI_PRODUCT_SKU_EXCEL_COLUMN_HEADER", alias: "AI_PRODUCT_SKU_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"*Product ID (Do not change)","is_required":true,"field_name":"product_id"}]' }
+- { name: "AI_PRODUCT_PRICE_EXCEL_COLUMN_HEADER", alias: "AI_PRODUCT_PRICE_EXCEL_COLUMN_HEADER", type: "s", required: false, default: '[{"column_name":"sku","is_required":true,"field_name":"item_no","col_header_name":"A"}]' }
+- { name: "AI_PRODUCT_PRICE_TEMP_HEADER", alias: "AI_PRODUCT_PRICE_TEMP_HEADER", type: "s", required: false, default: '{"item_no":"sku", "cust_price_grp":"", "price_code":"price code"}' }
+- { name: "AI_ENABLE_NEW_ECOM_CMS_API", alias: "AI_ENABLE_NEW_ECOM_CMS_API", type: "b", required: false, default: true }
+- { name: "AI_PAYMENT_BBL_MERCHANT_ID", type: "s", required: false, sample: ""}
+- { name: "AI_PAYMENT_BBL_MERCHANT_API_ID", type: "s", required: false, sample: ""}
+- { name: "AI_PAYMENT_BBL_MERCHANT_API_PASSWORD", type: "s", required: false, sample: ""}
+- { name: "AI_PAYMENT_BBL_API_ENDPOINT", type: "s", required: false, sample: ""}
+- { name: "AI_ENABLE_IPP", type: "b", required: false, sample: "true", default: true }
+- { name: "AI_IS_ENABLE_VALIDATE_MEMBER_CLASS", type: "b", required: false, sample: "false", default: false}
+- { name: "AI_VALIDATE_MEMBER_CLASS_LIST", type: "s", required: false, sample: "ENJ,EPC"}
+- { name: "AI_PICKUP_STOCK_TYPE", type: "s", required: false, sample: "internal", default: internal }
+- { name: "AI_ENABLE_DELIVERY_STORE", type: "b", required: false, sample: "false", default: false }
+- { name: "AI_PAYMENT_KTC_MERCHANT_ID", type: "s", required: false, sample: ""}
+- { name: "AI_PAYMENT_KTC_IPP_MERCHANT_ID", type: "s", required: false, sample: "[MERCHANT_ID]"}
+- { name: "AI_PAYMENT_KTC_API_ENDPOINT", type: "s", required: false, sample: "https://testpaygate.ktc.co.th/ktc/eng/merchandize/payment/payForm.jsp"}
+- { name: "AI_KERRY_TRACKING_NO_PREFIX", type: "s", required: false, sample: "JMBS"}
+- { name: "AI_ENABLE_TRACKING_PER_STORE", type: "b", required: false, sample: "false" }
+- { name: "AI_NOT_SUPPORTED_SHIPPING_ZIPCODES", type: "s", required: false, sample: "95000,95110"}
+- { name: "AI_ENABLE_SUM_STORE_STOCK_BY_STORE_ID", type: "b", required: false, sample: "false", default: false }
+- { name: "AI_ENABLE_FIX_ECOM_MEMBER_POINTS_RATE", type: "b", required: false, sample: "false", default: true }
+- { name: "AI_MEMBER_POINTS_RATE", type: "n", required: false, default: "40.0" }
+- { name: "AI_ENABLE_MEMBER_TYPE_B2B_ONLY", type: "b", required: false, sample: "true" }
+- { name: "AI_ENABLE_MEMBER_TYPE_B2C", type: "b", required: false, sample: "true" }
+- { name: "AI_REQUEST_OTP_PERIOD_TIME_MINUTE", type: "n", required: false, sample: "3" }
+- { name: "AI_ENABLE_TRANSACTION_MEMBER_POINT", type: "b", required: false, sample: "true" }
+- { name: "AI_ENABLE_CAPTCHA_FEATURE", type: "b", required: false, sample: true, default: true }
+- { name: "AI_CAPTCHA_CONFIG", type: "s", required: false, sample: "", default: '{"ShowLineOptions":[],"CaptchaType":"string","Id":"","VerifyValue":"","DriverAudio":{"Length":6,"Language":"zh"},"DriverString":{"Height":60,"Width":240,"ShowLineOptions":0,"NoiseCount":0,"Source":"1234567890qwertyuioplkjhgfdsazxcvbnm","Length":6,"Fonts":["wqy-microhei.ttc"],"BgColor":{"R":0,"G":0,"B":0,"A":0}},"DriverMath":{"Height":60,"Width":240,"ShowLineOptions":0,"NoiseCount":0,"Length":6,"Fonts":["wqy-microhei.ttc"],"BgColor":{"R":0,"G":0,"B":0,"A":0}},"DriverChinese":{"Height":60,"Width":320,"ShowLineOptions":0,"NoiseCount":0,"Source":"设想,你在,处理,消费者,的音,频输,出音,频可,能无,论什,么都,没有,任何,输出,或者,它可,能是,单声道,立体声,或是,环绕立,体声的,,不想要,的值","Length":2,"Fonts":["wqy-microhei.ttc"],"BgColor":{"R":125,"G":125,"B":0,"A":118}},"DriverDigit":{"Height":80,"Width":240,"Length":5,"MaxSkew":0.7,"DotCount":80}}' }
+- { name: "AI_ORDER_INVOICE_CN_PREFIX_CODE", type: "s", required: false, sample: "MBCN", default: MBCN }
+- { name: "AI_ORDER_INVOICE_PREFIX_CODE", type: "s", required: false, sample: "MBIV", default: MBIV }
+- { name: "AI_FACEBOOK_APP_ID", type: "s", required: false, sample: ""}
+- { name: "AI_FACEBOOK_APP_SECRET", type: "s", required: false, sample: ""}
+- { name: "AI_ENABLE_PRICE_PROMOTION_IS_NULL", type: "b", required: false, sample: true, default: false}
+- { name: "AI_ENABLE_INCREMENT_MEMBER_CARD_NO_BY", type: "s", required: false, sample: "maria", default: "maria"}
+- { name: "AI_MEMBER_CARD_NO_LENGTH", type: "n", required: false, sample: "8", default: "8"}
+- { name: "AI_MEMBER_CARD_NO_PREFIX_CODE", type: "s", required: false, sample: "TNL", default: ""}
+- { name: "AI_ORDER_CHECK_DUMMY_MEMBER_CARD_NO", type: "s", required: false, sample: "DUMMY33333", default: ""}
+- { name: "AI_ENABLE_CHECK_DUMMY_MEMBER_CARD_NO", type: "b", required: false, sample: true, default: false}
+- { name: "AI_ENABLE_ORDER_EXTERNAL_CALCULATE_POINT", type: "b", required: false, sample: true, default: false}
+- { name: "AI_ENABLE_ORDER_EXTERNAL_MAPPING_BRAND", type: "b", required: false, sample: true, default: true}
+- { name: "AI_ENABLE_STOCK_VALIDATE_BOOKING", type: "b", required: false, sample: true, default: false}
+- { name: "AI_ENABLE_CONVERT_TRANSACTION_TYPE_TO_EARN_OR_BURN", type: "b", required: false, sample: true, default: false}
+- { name: "AI_ENABLE_ORDER_REQUIRE_TRANSACTION_TYPE", type: "b", required: false, sample: true, default: false}
+- { name: "AI_ENABLE_PRODUCT_CALUCULATE_TOPUP", type: "b", required: false, sample: true, default: false}
+- { name: "AI_SHIPPING_PROVIDER_ALIAS", type: "s", required: false, sample: "kerry", default: "kerry"}
+- { name: "AI_ENABLE_ORDER_INCREMENT_NUMBER_BY_ELS", type: "b", required: false, sample: true, default: false}
+- { name: "AI_DISPLAY_NAME", type: "s", required: false, sample: "abc.com", default: ""}
+- { name: "AI_PAYMENT_KBANK_MERCHANT_ID", type: "s", required: false, sample: "123456", default: ""}
+- { name: "AI_PAYMENT_KBANK_IPP_MERCHANT_ID", type: "s", required: false, sample: "123456", default: ""}
+- { name: "AI_PAYMENT_KBANK_API_ENDPOINT", type: "s", required: false, sample: "https://dev-kpaymentgateway-services.kasikornbank.com/", default: ""}
+- { name: "AI_PAYMENT_KBANK_PUBLIC_KEY", type: "s", required: false, sample: "key-yyyyyyy", default: ""}
+- { name: "AI_PAYMENT_KBANK_PRIVATE_KEY", type: "s", required: false, sample: "key-xxxxxxx", default: ""}
+- { name: "AI_SEEDER_KBANK", type: "b", required: false, sample: true, default: false}
+- { name: "AI_SEEDER_KBANK_PROMPTPAY", type: "b", required: false, sample: true, default: false}
+- { name: "AI_SEEDER_KBANK_IPP", type: "b", required: false, sample: true, default: false}
+- { name: "AI_MEMBER_CARD_NO_INCREMENT_BY", type: "s", required: false, sample: "maria", default: "maria"}
+- { name: "AI_ORDER_INVOICE_LENGTH", type: "n", required: false, sample: "", default: 11}
+- { name: "AI_ORDER_INVOICE_CN_LENGTH", type: "n", required: false, sample: "", default: 11}
+- { name: "AI_ORDER_STATUS_CANCEL_ID", type: "s", required: false, sample: "7", default: ""}
+- { name: "AI_ORDER_STATUS_READY_TO_SHIP_ID", type: "s", required: false, sample: "4", default: ""}
+- { name: "AI_ORDER_SHIPPING_TYPE_ID", type: "s", required: false, sample: "4", default: ""}
+- { name: "AI_ORDER_EXTERNAL_WAREHOUSE_CODE", type: "s", required: false, sample: "WB", default: ""}
+- { name: "AI_ORDER_SELLER_REFERENCE_ID", type: "s", required: false, sample: "PAM-Platform", default: ""}
+- { name: "AI_ENABLE_DISPLAY_BY_SALE_CHANNEL", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_BRAND_PERMISSION", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_PARTIAL_BRAND_PERMISSION", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_MEMBER_CUMULATIVE_PURCHASE", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_VALIDATE_SALE_CHANNEL", type: "b", required: false, sample: false, default: false}
+- { name: "AI_INDEX_CREATE_ALIAS_X_MONTH_FROM_NOW", type: "n", required: false, sample: "", default: 24}
+- { name: "AI_INDEX_CLOSE_INDEXES_AFTER_X_MONTH_FROM_NOW", type: "n", required: false, sample: "", default: 25}
+- { name: "AI_ENABLE_VALIDATE_PASSWORD_FORMAT", type: "b", required: false, sample: false, default: false}
+- { name: "AI_PAYMENT_KBANK_FULL_PAYMENT_TERMINAL_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_PAYMENT_KBANK_IPP_TERMINAL_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_ENABLE_PARAM_TRANSACTION_OPTIONAL_WITH_CONDITION", type: "b", required: false, sample: false, default: false}
+- { name: "AI_DEFAULT_ECOMMERCE_TYPE", type: "s", required: false, sample: "", default: "app-ecommerce"}
+- { name: "AI_ENABLE_FIX_TRANSACTION_MEMBER_POINT_EXPIRED_DATE", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_TRANSACTION_BIRTHDATE_POINT", type: "b", required: false, sample: false, default: false}
+- { name: "AI_OTP_NUMBER_ATTEMPTS", type: "n", required: false, sample: 5, default: 5}
+- { name: "AI_ENABLE_VALIDATE_PASSWORD_FORMAT", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ASYNC_RATE_LIMIT_BY_IP_PER_MIN", type: "n", required: false, sample: 10, default: 10}
+- { name: "AI_PAYMENT_KBANK_PROMPT_PAY_MERCHANT_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_PAYMENT_KBANK_PROMPT_PAY_TERMINAL_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_CMS_FRONTEND_URL", type: "s", required: false, sample: "https://stgx-ecom-cms.pams.ai", default: "[REPLACE_ECOM_CMS_FRONTEND_URL]" }
+- { name: "AI_TRANSACTION_POINT_EXPIRED_IN_TIME_DAY", type: "n", required: false, sample: 14, default: 14}
+- { name: "AI_ENABLE_VOUCHER_TYPE_GIFT_VOUCHER", type: "b", required: false, sample: false, default: false}
+- { name: "AI_DROP_LEAD_VOUCHER_TRACKING_CONSENT_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_DROP_LEAD_VOUCHER_CONTACTING_CONSENT_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_DROP_LEAD_VOUCHER_DATABASE", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_DROP_LEAD_VOUCHER_LINE_CAMPAIGN_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_DROP_LEAD_VOUCHER_SMS_CAMPAIGN_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_DROP_LEAD_VOUCHER_EMAIL_CAMPAIGN_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_OTP_VALIDATE_EXIST_MEMBER", type: "b", required: false, sample: false, default: false}
+- { name: "AI_STORE_CODES_TYPE_DELIVERY", type: "s", required: false, sample: "1702", default: ""}
+- { name: "AI_ENABLE_ORDER_STORE_PERMISSION", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_VALIDATE_PASSWORD_SPECIAL_CHAR", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_LOGIN_WITH_CONTACT_EMAIL", type: "b", required: false, sample: false, default: false}
+- { name: "AI_RELATED_PRODUCT_SAME_GROUP", type: "b", required: false, sample: true, default: true}
+- { name: "AI_RELATED_PRODUCT_MORE", type: "b", required: false, sample: false, default: false}
+- { name: "AI_RELATED_PRODUCT_TYPE", type: "s", required: false, sample: "brand", default: ""}
+- { name: "AI_RELATED_PRODUCT_DISPLAY_LIMIT", type: "n", required: false, sample: 10, default: 10}
+- { name: "AI_ENABLE_SEND_EVENT_UPDATE_MEMBER_CLASS", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_SEND_EVENT_DIRECTION_MEMBER_CLASS", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_PARAM_BACKEND_REQUIRED_SEO_URL", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_EXTERNAL_WHITE_LIST_IP", type: "b", required: false, sample: false, default: false}
+- { name: "AI_EXTERNAL_WHITE_LIST_IP", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_ENABLE_IGNORE_FILTER_MEMBER_CARD_NO_FOR_THE_BRAIN_MEMBER_DETAIL", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_SEND_CREATE_OR_UPDATE_CUSTOMER_EXTERNAL", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_SEND_ORDER_CANCEL_EXTERNAL", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ATTRIBUTE_USE_FOR_CUSTOMER_KEY", type: "s", required: false, sample: "member_id", default: "member_id"}
+- { name: "AI_MQ_PRODUCT_UPDATE_PRICE_PARTITIONS", type: "n", required: false, sample: "50" }
+- { name: "AI_MQ_PRODUCT_UPDATE_PRICE_REPLICAS", type: "n", required: false, sample: "2" }
+- { name: "AI_THIRD_PARTY_PERSISTER_ENDPOINT", type: "s", required: false, sample: maria-connect }
+- { name: "AI_THIRD_PARTY_PERSISTER_PORT", type: "n", required: false, sample: 3306 }
+- { name: "AI_THIRD_PARTY_PERSISTER_DB", type: "s", required: false, sample: my_database }
+- { name: "AI_THIRD_PARTY_PERSISTER_USERNAME", type: "s", required: false, sample: my_user }
+- { name: "AI_THIRD_PARTY_PERSISTER_PASSWORD", type: "s", required: false, sample: "UUID" }
+- { name: "AI_THIRD_PARTY_PERSISTER_CHARSET", type: "s", required: false, sample: utf8mb4 }
+- { name: "AI_ENABLE_UPDATE_STOCK_EXTERNAL", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ATTEMPT_REPEAT_CALL_API", type: "n", required: false, sample: 3, default: 1}
+- { name: "AI_IGNORE_GET_PROVICE_FOR_GEN_PERMISSION", type: "b", required: false, sample: false, default: false}
+- { name: "AI_IGNORE_GET_TRACKING_NUMBER_FOR_CREATE_UPDATE_STORE", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_POSPORTAL_STORE_PERMISSION", type: "b", required: false, sample: false, default: false}
+- { name: "AI_PERMISSION_ORDER_KEY_PREFIX", type: "s", required: false, sample: ecom-orders, default: "" }
+- { name: "AI_PERMISSION_STORE_KEY_PREFIX", type: "s", required: false, sample: ecom-stores, default: "" }
+- { name: "AI_ENABLE_PROMOTION_SKU_IMPORT", type: "b", required: false, sample: false, default: false}
+- { name: "AI_MQ_VOUCHER_PARTITIONS", type: "n", required: false, sample: "50" }
+- { name: "AI_MQ_VOUCHER_REPLICAS", type: "n", required: false, sample: "2" }
+- { name: "AI_VOUCHER_BARCODE_SHARDS", type: "n", required: false, sample: "1" }
+- { name: "AI_IGNORE_AGGR_REMAINING_VOUCHER_FOR_LIST_VOUCHERS", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_AGGR_REMAINING_STORE_STOCK_VOUCHER_FOR_LIST_VOUCHERS", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_AGGR_REMAINING_STORE_STOCK_FOR_DETAIL_VOUCHER", type: "b", required: false, sample: false, default: false}
+- { name: "AI_IGNORE_GENERATE_PICKUP_TIME_FOR_STORE", type: "b", required: false, sample: false, default: false}
+- { name: "AI_SEND_QUESTIONNAIRE_TO_DEMOGRAPHIC_ATTRIBUTES", type: "b", required: false, sample: false, default: false}
+- { name: "AI_MQ_RMD_PARTITIONS", type: "n", required: false, sample: "50" }
+- { name: "AI_MQ_RMD_REPLICAS", type: "n", required: false, sample: "2" }
+- { name: "AI_ENABLE_SHARING_VOUCHER_BARCODE_INDEX", type: "b", required: false, sample: false, default: false}
+- { name: "AI_SHARING_VOUCHER_BARCODE_INDEX_LIMIT", type: "n", required: false, sample: "10" }
+- { name: "AI_ENABLE_MULTIPLE_LINE_PROVIDER", type: "b", required: false, sample: false, default: false}
+- { name: "AI_LINE_CHANNEL_ACCESS_TOKEN", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_ENABLE_MEMBER_TIER_UPGRADE", type: "b", required: false, sample: false, default: true}
+- { name: "AI_FRONT_HOST", type: "s", required: false, sample: "https://stgx-crm.pams.ai", default: ""}
+- { name: "AI_HOST", type: "s", required: false, sample: "https://stgx-crm-api.pams.ai", default: ""}
+- { name: "AI_PRODUCT_SCAN_LANDING_PAGE_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_ENABLE_CONTENT_READ", type: "b", required: false, sample: true, default: false}
+- { name: "AI_RESOLVE_AFFILIATE_KEY_NAME", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_IGNOREGEN_MEMBER_CARD_NO", type: "b", required: false, sample: "false", default: true }
+- { name: "AI_ENABLE_USE_MEMBER_CARD_NO_FROM_OLDMEMBER", type: "b", required: false, sample: "false", default: false }
+- { name: "AI_SCAN_API_ENDPOINT", type: "s", required: false, sample: ""}
+- { name: "AI_ENABLE_VOUCHER_LIMIT_PER_DAY", type: "b", required: false, sample: false, default: false}
+- { name: "AI_ENABLE_VOUCHER_LIMIT_PER_MONTH", type: "b", required: false, sample: false, default: false}
+- { name: "AI_TRANSACTION_TITLE_PRODUCT_SCAN_CONTEXT_TH", type: "s", required: false, sample: "" }
+- { name: "AI_TRANSACTION_TITLE_PRODUCT_SCAN_CONTEXT_EN", type: "s", required: false, sample: "" }
+- { name: "AI_SHIPPING_PROVIDER_DHL_ENDPOINT", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_SHIPPING_PROVIDER_DHL_CREDENTIAL_CLIENT_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_SHIPPING_PROVIDER_DHL_CREDENTIAL_PASSWORD", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_SHIPPING_PROVIDER_DHL_PICKUP_ACCOUNT_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_SHIPPING_PROVIDER_DHL_SOLD_TO_ACCOUNT_ID", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_SHIPPING_PROVIDER_DHL_TIMEOUT", type: "n", required: false, sample: "10", default: "10"}
+- { name: "AI_EXCLUSIVE_TIER_FOR_AFFILIATE", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_STUDIO_BACKEND_URL", type: "s", required: false, sample: "", default: ""}
