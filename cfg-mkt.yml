@@ -178,3 +178,4 @@ configs:
 - { name: "PAM_CHAT_SCHEDULE_DAILY_TASK", type: "n", required: false, sample: 3600, default: 3600 }
 - { name: "PAM_CHAT_SCHEDULER_NIGHT_HOUR", type: "n", required: false, sample: 17, default: 17 }
 - { name: "PAM_TRACKER_PRIORITY_EVENTS", type: "n", required: false, sample: "crm_request_otp_mobile,", default: "" }
+- { name: "PAM_CUSTOMER_JOURNEY_START_EVENT_DELAY_SECONDS", type: "n", required: false, sample: 1000, default: 1000 }
