@@ -183,3 +183,4 @@ configs:
 - { name: "CRM_EXCLUSIVE_TIER_FOR_AFFILIATE", type: "s", required: false, sample: "", default: ""}
 - { name: "CRM_ENABLE_FILTER_BANNER_WITH_VIEW_STATE", type: "b", required: false, sample: "false", default: false}
 - { name: "CRM_ENABLE_FILTER_BANNER_WITH_AFFILIATE", type: "b", required: false, sample: "false", default: false}
+- { name: "CRM_ENABLE_FILTER_TRANSACTION_CDP_WITH_CUSTOMER_ID", type: "b", required: false, sample: "false", default: false}
