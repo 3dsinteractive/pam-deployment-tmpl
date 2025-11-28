@@ -186,4 +186,4 @@ configs:
 - { name: "PAM_TRACKER_CREATED_CONSUME_BATCH_TIMEOUT", type: "n", required: false, sample: 1000, default: 1000 }
 - { name: "PAM_STORY_EXPORT_FILE_ROW_LIMIT", type: "n", alias: PAM4_STORY_EXPORT_FILE_ROW_LIMIT, required: false, sample: 1000, default: 1000 }
 - { name: "PAM_CUSTOMER_JOURNEY_START_EVENT_DELAY_SECONDS", type: "n", required: false, sample: 1000, default: 1000 }
-- { name: "PAM_CARDINALITY_PRECISION_THRESHOLD", type: "n", required: false, sample: 10000, default: 10000 }
+- { name: "PAM4_CARDINALITY_PRECISION_THRESHOLD", type: "n", required: false, sample: 10000, default: 10000 }
