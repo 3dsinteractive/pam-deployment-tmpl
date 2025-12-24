@@ -184,3 +184,7 @@ configs:
 - { name: "CRM_ENABLE_FILTER_BANNER_WITH_VIEW_STATE", type: "b", required: false, sample: "false", default: false}
 - { name: "CRM_ENABLE_FILTER_BANNER_WITH_AFFILIATE", type: "b", required: false, sample: "false", default: false}
 - { name: "CRM_ENABLE_FILTER_TRANSACTION_CDP_WITH_CUSTOMER_ID", type: "b", required: false, sample: "false", default: false}
+- { name: "CRM_TIER_CALCULATION_BASE", type: "s", required: false, sample: "POINT" }
+- { name: "CRM_TIER_EVALUATION_MODE", type: "s", required: false, sample: "NORMAL" }
+
+
