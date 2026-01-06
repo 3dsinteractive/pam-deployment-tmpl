@@ -187,5 +187,6 @@ configs:
 - { name: "CRM_TIER_CALCULATION_BASE", type: "s", required: false, sample: "POINT" }
 - { name: "CRM_TIER_EVALUATION_MODE", type: "s", required: false, sample: "NORMAL" }
 - { name: "CRM_ENABLE_TRANSACTION_CHANNEL_POINT_OVERRIDE", type: "b", required: false, sample: "false", default: false}
+- { name: "CRM_SHOPIFY_SECRET", type: "s", required: false, sample: "", default: ""}
 
 
