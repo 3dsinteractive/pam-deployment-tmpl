@@ -29,8 +29,8 @@ spec:
             httpGet:
               path: /readinez
               port: 8080
-            initialDelaySeconds: 10
-            periodSeconds: 10
+            initialDelaySeconds: 20
+            periodSeconds: 20
             timeoutSeconds: 3
             failureThreshold: 3
           livenessProbe:
