@@ -181,3 +181,4 @@ configs:
 - { name: "AI_SHIPPING_PROVIDER_DHL_TIMEOUT", type: "n", required: false, sample: "10", default: "10"}
 - { name: "AI_EXCLUSIVE_TIER_FOR_AFFILIATE", type: "s", required: false, sample: "", default: ""}
 - { name: "AI_STUDIO_BACKEND_URL", type: "s", required: false, sample: "", default: ""}
+- { name: "AI_OTP_PROVIDER", type: "s", required: false, sample: "INTERNAL", default: "PAM"}
