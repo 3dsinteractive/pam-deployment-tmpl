@@ -57,7 +57,7 @@ spec:
           timeoutSeconds: 30
           failureThreshold: 10
         ports:
-        - name: hnb-partners3000
+        - name: partners3000
           containerPort: 3000
         resources:
           requests:
