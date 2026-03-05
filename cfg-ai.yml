@@ -182,3 +182,4 @@ configs:
 - { name: "AI_EXCLUSIVE_TIER_FOR_AFFILIATE", type: "s", required: false, sample: "", default: ""}
 - { name: "AI_STUDIO_BACKEND_URL", type: "s", required: false, sample: "", default: ""}
 - { name: "AI_OTP_PROVIDER", type: "s", required: false, sample: "INTERNAL", default: "PAM"}
+- { name: "AI_STUDIO_FILE_BASE_CONFIG", type: "s", required: false, sample: '{}', default: ""}
