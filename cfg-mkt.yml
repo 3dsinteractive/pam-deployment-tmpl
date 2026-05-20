@@ -97,6 +97,7 @@ configs:
 - { name: "PAM_EVAL_CONTAINER_IDLE_DURATION", type: "n", required: false, sample: 10, default: 10 }
 - { name: "PAM_GDRIVE_CONFIG", type: "s", required: false, sample: "{json config get from google project console}" }
 - { name: "PAM_EXTERNAL_API_PREFIX_FORMAT_TRANSACTION_ID", type: "s", required: false, sample: "PAM" }
+- { name: "PAM_EXTERNAL_API_HTML_CHARSET", type: "s", required: false, sample: "utf-8", default: "utf-8" }
 - { name: "PAM_ENABLE_EXTERNAL_API_FORMAT_TRANSACTION_ID", type: "b", required: false, sample: true, default: false }
 - { name: "PAM_SCHEDULER_RUN_DATA_ADAPTER", type: "n", required: false, sample: 1800, default: 1800 }
 - { name: "PAM_SCHEDULER_RUN_UPDATE_COUNTER_STAT", type: "n", required: false, sample: 300, default: 300 }
