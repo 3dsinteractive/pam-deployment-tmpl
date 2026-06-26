@@ -191,6 +191,7 @@ configs:
 - { name: "PAM_CHATCENTER_SPEECH_SAMPLE_RATE_HERTZ", type: "n", required: false, sample: 24000, default: 24000 }
 - { name: "PAM_CHATCENTER_SPEECH_CHUNK_MS", type: "n", required: false, sample: 100, default: 100 }
 - { name: "PAM_CHATCENTER_SPEECH_MAX_SESSION_SECONDS", type: "n", required: false, sample: 120, default: 120 }
+- { name: "PAM_CHATCENTER_FRONTEND_URL", type: "s", required: false, sample: "https://stgx-chatcenter-frontend.pams.ai", default: "" }
 - { name: "GOOGLE_CREDENTIALS_JSON_B64", type: "s", required: false, sample: "ewogICJ0e", default: "ewogICJ0e" }
 - { name: "PAM_CHAT_ENABLE_AUTO_ASSIGN", type: "b", required: false, sample: false, default: true }
 - { name: "PAM_SENDER_CONSUMER_SIZE_FACTOR", type: "n", required: false, sample: 10, default: 10 }
