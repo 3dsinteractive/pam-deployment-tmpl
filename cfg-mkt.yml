@@ -43,6 +43,7 @@ configs:
 - { name: "PAM_DELIVERS_DIFF_TIME_MINUTE_QUERY", alias: "PAM4_DELIVERS_DIFF_TIME_MINUTE_QUERY", type: "n", required: true, sample: 60, default: 60 }
 - { name: "PAM_FILE_AGE_IN_DAYS", alias: "PAM4_FILE_AGE_IN_DAYS", type: "n", required: true, sample: "7", default: 7 }
 - { name: "PAM_CMS_FRONTEND_URL", alias: "PAM4_CMS_FRONTEND_URL", type: "s", required: true, sample: "https://stg-cms.pams.ai", default: "[REPLACE_PAM_CMS_FRONTEND_URL]" }
+- { name: "PAM_CMS_FRONTEND_REFERER_ALLOWLIST", alias: "PAM4_CMS_FRONTEND_REFERER_ALLOWLIST", type: "s", required: false, sample: "https://stg-cms.pams.ai,https://cms.pams.ai", default: "" }
 - { name: "PAM_DELIVERY_FREQUENCY_CAPPING", alias: "PAM4_DELIVERY_FREQUENCY_CAPPING", type: "n", required: true, sample: "10", default: 10 }
 - { name: "PAM_DELIVERY_TX_FREQUENCY_CAPPING", alias: "PAM4_DELIVERY_TX_FREQUENCY_CAPPING", type: "n", required: true, sample: "30", default: 30 }
 - { name: "PAM_ORDER_EMAIL_INFO_EVENT", alias: "PAM4_ORDER_EMAIL_INFO_EVENT", type: "b", required: true, sample: "true", default: true }
