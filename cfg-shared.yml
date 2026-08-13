@@ -1,0 +1,145 @@
+version: v1
+configs:
+- { name: "SEAMAN_PORT", type: "n", required: true, sample: 8080, default: 8080 }
+- { name: "SEAMAN_TIMEZONE_NAME", type: "s", required: true, sample: UTC+0, default: UTC+0 }
+- { name: "SEAMAN_TIMEZONE_OFFSET", type: "n", required: true, sample: 0, default: 0 }
+- { name: "SEAMAN_MONITORING", type: "b", required: true, sample: true, default: true }
+- { name: "SEAMAN_PREFIX", type: "s", required: false, sample: "", default: "" }
+- { name: "SEAMAN_PRODUCER_ASYNC", type: "b", required: true, sample: true, default: true }
+- { name: "SEAMAN_DEBUG_KAFKA", type: "b", required: false, sample: false, default: false }
+- { name: "SEAMAN_DEBUG_KAFKA_MODULES", type: "s", required: false, sample: "generic,broker,topic,metadata,feature,queue,msg,protocol,cgrp,security,fetch,interceptor,plugin,consumer,admin,eos,mock,all" }
+- { name: "SEAMAN_AUDIT_LOG", type: "b", required: false, sample: true }
+- { name: "PAM_ELS_VERSION", alias: "PAM4_ELS_VERSION", type: "n", required: true, sample: 6.8, default: 6.8 }
+- { name: "PAM_PARALLELTASK_ENABLED", alias: "PAM4_PARALLELTASK_ENABLED", type: "b", required: true, sample: true, default: true }
+- { name: "PAM_SECRET", alias: "PAM4_SECRET", type: "s", required: true, sample: "UUID", is_from_vault: true }
+- { name: "PAM_ADMINEMAIL_SENDER", alias: "PAM4_ADMINEMAIL_SENDER", type: "s", required: true, sample: contact@3dsinteractive.com, default: contact@3dsinteractive.com }
+- { name: "PAM_ADMINEMAIL_SENDERNAME", alias: "PAM4_ADMINEMAIL_SENDERNAME", type: "s", required: true, sample: PAM Admin, default: PAM Admin }
+- { name: "PAM_TIMEOFDAY_OFFSET", alias: "PAM4_TIMEOFDAY_OFFSET", type: "n", required: true, sample: 7, default: 7 }
+- { name: "PAM_TIMEOFDAY_LOCATIONNAME", alias: "PAM4_TIMEOFDAY_LOCATIONNAME", type: "s", required: true, sample: UTC+7, default: UTC+7 }
+- { name: "PAM_DATADIR", alias: "PAM4_DATADIR", type: "s", required: true, sample: /data, default: /data }
+- { name: "PAM_INDEXER_ENDPOINTS", alias: "PAM4_INDEXER_ENDPOINTS", type: "s", required: true, sample: "http://els1:9200,http://els2:9200,http://els3:9200", default: "http://els1:9200,http://els2:9200,http://els3:9200" }
+- { name: "PAM_INDEXER_SNIFF", alias: "PAM4_INDEXER_SNIFF", type: "b", required: true, sample: false, default: false }
+- { name: "PAM_INDEXER_GZIP", alias: "PAM4_INDEXER_GZIP", type: "b", required: true, sample: true, default: true }
+- { name: "PAM_CONNECT_API_ENDPOINT", alias: "PAM4_CONNECT_API_ENDPOINT", type: "s", required: true, sample: https://stg.pams.ai, default: "[REPLACE_PAM_CONNECT_API_ENDPOINT]" }
+- { name: "PAM_CONNECT_API_APPID", alias: "PAM4_CONNECT_API_APPID", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_CONNECT_API_SECRET", alias: "PAM4_CONNECT_API_SECRET", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_CONNECT_API_TIMEOUT", alias: "PAM4_CONNECT_API_TIMEOUT", type: "n", required: true, sample: 5, default: 50 }
+- { name: "PAM_CACHER_ENDPOINT", alias: "PAM4_CACHER_ENDPOINT", type: "s", required: true, sample: redis:6379, default: redis:6379 }
+- { name: "PAM_CACHER_PASSWORD", alias: "PAM4_CACHER_PASSWORD", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_CACHER_DB", alias: "PAM4_CACHER_DB", type: "n", required: true, sample: 0, default: 0 }
+- { name: "PAM_CONSUMER_ENDPOINT", alias: "PAM4_CONSUMER_ENDPOINT", type: "s", required: true, sample: "kfk1:9092,kfk2:9092,kfk3:9092", default: "kfk1:9092,kfk2:9092,kfk3:9092" }
+- { name: "PAM_PRODUCER_ENDPOINT", alias: "PAM4_PRODUCER_ENDPOINT", type: "s", required: true, sample: "kfk1:9092,kfk2:9092,kfk3:9092", default: "kfk1:9092,kfk2:9092,kfk3:9092" }
+- { name: "PAM_ALLOW_DOMAINS", alias: "PAM4_ALLOW_DOMAINS", type: "s", required: true, sample: "localhost:8080,localhost:8000", default: "*" }
+- { name: "PAM_ALLOW_HEADERS", alias: "PAM4_ALLOW_HEADERS", type: "s", required: true, sample: "Authorization,Authorization-Guest,Origin", default: "Authorization,Authorization-Guest,Origin,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,csrf,Set-Cookie,x-secret,x-timestamp,x-device,ref,x-timestamp,x-zoneoffset,x-device-id,x-contact-id,language,currency" }
+- { name: "PAM_PERSISTER_ENDPOINT", alias: "PAM4_PERSISTER_ENDPOINT", type: "s", required: true, sample: maria-connect }
+- { name: "PAM_PERSISTER_PORT", alias: "PAM4_PERSISTER_PORT", type: "n", required: true, sample: 3306 }
+- { name: "PAM_PERSISTER_DB", alias: "PAM4_PERSISTER_DB", type: "s", required: true, sample: my_database }
+- { name: "PAM_PERSISTER_USERNAME", alias: "PAM4_PERSISTER_USERNAME", type: "s", required: true, sample: my_user }
+- { name: "PAM_PERSISTER_PASSWORD", alias: "PAM4_PERSISTER_PASSWORD", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_PERSISTER_CHARSET", alias: "PAM4_PERSISTER_CHARSET", type: "s", required: true, sample: utf8mb4 }
+- { name: "PAM_CMS_PERSISTER_ENDPOINT", alias: "PAM4_CMS_PERSISTER_ENDPOINT", type: "s", required: true, sample: maria-cms }
+- { name: "PAM_CMS_PERSISTER_PORT", alias: "PAM4_CMS_PERSISTER_PORT", type: "n", required: true, sample: 3306 }
+- { name: "PAM_CMS_PERSISTER_DB", alias: "PAM4_CMS_PERSISTER_DB", type: "s", required: true, sample: my_database }
+- { name: "PAM_CMS_PERSISTER_USERNAME", alias: "PAM4_CMS_PERSISTER_USERNAME", type: "s", required: true, sample: my_user }
+- { name: "PAM_CMS_PERSISTER_PASSWORD", alias: "PAM4_CMS_PERSISTER_PASSWORD", type: "s", required: true,sample: my_password }
+- { name: "PAM_CMS_PERSISTER_CHARSET", alias: "PAM4_CMS_PERSISTER_CHARSET", type: "s", required: true,  sample: utf8mb4 }
+- { name: "PAM_DEFAULT_PAGELIMIT", alias: "PAM4_DEFAULT_PAGELIMIT", type: "n", required: true, sample: 50, default: 50 }
+- { name: "PAM_MAX_PAGELIMIT", alias: "PAM4_MAX_PAGELIMIT", type: "n", required: true, sample: 500, default: 500 }
+- { name: "PAM_MAILER_SERVER", alias: "PAM4_MAILER_SERVER", type: "s", required: true, sample: smtp.mailpam.com, default: smtp.mailpam.com }
+- { name: "PAM_MAILER_PORT", alias: "PAM4_MAILER_PORT", type: "n", required: true, sample: 30587, default: 30587 }
+- { name: "PAM_MAILER_USER", alias: "PAM4_MAILER_USER", type: "s", required: true, sample: pushandmotion, default: "[REPLACE_PAM_MAILER_USER]" }
+- { name: "PAM_MAILER_PASSWORD", alias: "PAM4_MAILER_PASSWORD", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_MAILER_PASSWORD]" }
+- { name: "PAM_FILESTORE_ENDPOINT", alias: "PAM4_FILESTORE_ENDPOINT", type: "s", required: true, sample: s3-ap-southeast-1.amazonaws.com, default: s3-ap-southeast-1.amazonaws.com }
+- { name: "PAM_FILESTORE_ACCESSKEY", alias: "PAM4_FILESTORE_ACCESSKEY", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_ACCESSKEY]" } # , is_from_vault: true
+- { name: "PAM_FILESTORE_SECRET", alias: "PAM4_FILESTORE_SECRET", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_SECRET]" } #, is_from_vault: true
+- { name: "PAM_FILESTORE_ISHTTPS", alias: "PAM4_FILESTORE_ISHTTPS", type: "b", required: true, sample: true, default: true }
+- { name: "PAM_FILESTORE_BUCKETNAME", alias: "PAM4_FILESTORE_BUCKETNAME", type: "s", required: true, sample: pam-staging, default: "[REPLACE_PAM_FILESTORE_BUCKETNAME]" }
+- { name: "PAM_FILESTORE_TIMEOUT", alias: "PAM4_FILESTORE_TIMEOUT", type: "n", required: true, sample: 3, default: 30 }
+- { name: "PAM_FILESTORE_PRIVATE_ENDPOINT", alias: "PAM4_FILESTORE_PRIVATE_ENDPOINT", type: "s", required: false, sample: s3-ap-southeast-1.amazonaws.com, default: s3-ap-southeast-1.amazonaws.com }
+- { name: "PAM_FILESTORE_PRIVATE_ACCESSKEY", alias: "PAM4_FILESTORE_PRIVATE_ACCESSKEY", type: "s", required: false, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_ACCESSKEY]" }
+- { name: "PAM_FILESTORE_PRIVATE_SECRET", alias: "PAM4_FILESTORE_PRIVATE_SECRET", type: "s", required: false, sample: "UUID", default: "[REPLACE_PAM_FILESTORE_SECRET]", is_from_vault: true }
+- { name: "PAM_FILESTORE_PRIVATE_ISHTTPS", alias: "PAM4_FILESTORE_PRIVATE_ISHTTPS", type: "b", required: false, sample: true, default: true }
+- { name: "PAM_FILESTORE_PRIVATE_BUCKETNAME", alias: "PAM4_FILESTORE_PRIVATE_BUCKETNAME", type: "s", required: false, sample: pam-staging, default: "[REPLACE_PAM_FILESTORE_BUCKETNAME]" }
+- { name: "PAM_FILESTORE_PRIVATE_TIMEOUT", alias: "PAM4_FILESTORE_PRIVATE_TIMEOUT", type: "n", required: false, sample: 3, default: 30 }
+- { name: "PAM_PROFILER_VERSION", alias: "PAM4_PROFILER_VERSION", type: "n", required: true, sample: 6.0, default: 6.0 }
+- { name: "PAM_PROFILER_PROJECT", alias: "PAM4_PROFILER_PROJECT", type: "s", required: true, sample: pam6-245009, default: pam6-245009 }
+- { name: "GOOGLE_APPLICATION_CREDENTIALS", type: "s", required: true, sample: /profiler/profiler.json, default: /profiler/profiler.json }
+- { name: "PAM_MQ_PARTITIONS", alias: "PAM4_MQ_PARTITIONS", type: "n", required: true, sample: 5, default: 5 }
+- { name: "PAM_MQ_REPLICATIONS", alias: "PAM4_MQ_REPLICATIONS", type: "n", required: true, sample: 1, default: 1 }
+- { name: "SENTRY_ENDPOINT", type: "s", required: true, sample: https://xyz@logs.pams.ai/2, default: "[REPLACE_SENTRY_ENDPOINT]" }
+- { name: "PAM_HASH_SECRET", alias: "PAM4_HASH_SECRET", type: "s", required: true, sample: "UUID", default: "[REPLACE_PAM_HASH_SECRET]" }
+- { name: "PAM_NLP_API_ENDPOINT", alias: "PAM4_NLP_API_ENDPOINT", type: "s", required: true, sample: http://ecom-nlp:80, default: http://ecom-nlp:80 }
+- { name: "PAM_NLP_API_APPID", alias: "PAM4_NLP_API_APPID", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_NLP_API_SECRET", alias: "PAM4_NLP_API_SECRET", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_NLP_API_TIMEOUT", alias: "PAM4_NLP_API_TIMEOUT", type: "n", required: true, sample: 30, default: 30 }
+- { name: "PAM_ENCRYPTOR_PASSWORD", alias: "PAM4_ENCRYPTOR_PASSWORD", type: "s", required: true, sample: "UUID" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_1", alias: "PAM4_ENCRYPTOR_CONFIGS_1", type: "s", required: false, sample: "members,mobile,false,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_2", alias: "PAM4_ENCRYPTOR_CONFIGS_2", type: "s", required: false, sample: "members,firstname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_3", alias: "PAM4_ENCRYPTOR_CONFIGS_3", type: "s", required: false, sample: "members,lastname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_4", alias: "PAM4_ENCRYPTOR_CONFIGS_4", type: "s", required: false, sample: "members,member_card_no,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_5", alias: "PAM4_ENCRYPTOR_CONFIGS_5", type: "s", required: false, sample: "contacts,mobile,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_6", alias: "PAM4_ENCRYPTOR_CONFIGS_6", type: "s", required: false, sample: "contacts,firstname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_7", alias: "PAM4_ENCRYPTOR_CONFIGS_7", type: "s", required: false, sample: "contacts,lastname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_8", alias: "PAM4_ENCRYPTOR_CONFIGS_8", type: "s", required: false, sample: "contacts,attrs.mobile,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_9", alias: "PAM4_ENCRYPTOR_CONFIGS_9", type: "s", required: false, sample: "contacts,attrs.firstname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_10", alias: "PAM4_ENCRYPTOR_CONFIGS_10", type: "s", required: false, sample: "contacts,attrs.lastname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_11", alias: "PAM4_ENCRYPTOR_CONFIGS_11", type: "s", required: false, sample: "contacts,attrs.third_party_id,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_12", alias: "PAM4_ENCRYPTOR_CONFIGS_12", type: "s", required: false, sample: "contacts,typed_attrs.mobile,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_13", alias: "PAM4_ENCRYPTOR_CONFIGS_13", type: "s", required: false, sample: "contacts,typed_attrs.firstname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_14", alias: "PAM4_ENCRYPTOR_CONFIGS_14", type: "s", required: false, sample: "contacts,typed_attrs.lastname,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_15", alias: "PAM4_ENCRYPTOR_CONFIGS_15", type: "s", required: false, sample: "contacts,typed_attrs.third_party_id,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_16", alias: "PAM4_ENCRYPTOR_CONFIGS_16", type: "s", required: false, sample: "contacts,infobip-tesco,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_17", alias: "PAM4_ENCRYPTOR_CONFIGS_17", type: "s", required: false, sample: "contacts,attrs.infobip-tesco,true,7,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_18", alias: "PAM4_ENCRYPTOR_CONFIGS_18", type: "s", required: false, sample: "voucher_barcode_*,barcode,true,15,prefix" }
+- { name: "PAM_ENCRYPTOR_CONFIGS_19", alias: "PAM4_ENCRYPTOR_CONFIGS_19", type: "s", required: false, sample: "delivers,contact_media,true,7,prefix" }
+- { name: "ECOM_AUTHENTICATION", type: "b", required: true, sample: true, default: true }
+- { name: "PAM_SHORT_LINK_BASE_URL", alias: "PAM4_SHORT_LINK_BASE_URL", type: "s", required: true, sample: shorturl.ai, default: "[REPLACE_PAM_SHORT_LINK_BASE_URL]" }
+- { name: "PAM_ENABLE_ELSDBPROXY", alias: "PAM4_ENABLE_ELSDBPROXY", type: "b", required: true, sample: true, default: false }
+- { name: "PAM_ELSDBPROXY_SERVERS", alias: "PAM4_ELSDBPROXY_SERVERS", type: "s", required: true, sample: elsdb1:9305 }
+- { name: "PAM_CMS_API_ENDPOINT", alias: "PAM4_CMS_API_ENDPOINT", type: "s", required: true, sample: "https://stg-mkt.pams.ai/api", default: "[REPLACE_PAM_CMS_API_ENDPOINT]" }
+- { name: "PAM_CONNECT_API_INTERNAL", alias: "PAM_CONNECT_API_INTERNAL", type: "s", required: true, sample: "http://connect-api:8080", default: "http://connect-api:8080" }
+- { name: "PAM_BUILDER_API_INTERNAL", alias: "PAM_BUILDER_API_INTERNAL", type: "s", required: true, sample: "http://builder-api:8080", default: "http://builder-api:8080" }
+- { name: "PAM_SENDER_API_INTERNAL", alias: "PAM_SENDER_API_INTERNAL", type: "s", required: true, sample: "http://sender-api:8080", default: "http://sender-api:8080" }
+- { name: "PAM_MKT_BACKEND_API_INTERNAL", alias: "PAM_MKT_BACKEND_API_INTERNAL", type: "s", required: true, sample: "http://mkt-backend-api:8080", default: "http://mkt-backend-api:8080" }
+- { name: "PAM_ENABLE_PTASK_MANAGER", alias: "PAM_ENABLE_PTASK_MANAGER", type: "b", required: false, sample: true, default: true }
+- { name: "PAM_ENABLE_MIGRATE_ECOM", alias: "PAM_ENABLE_MIGRATE_ECOM", type: "b", required: false, sample: true, default: "[REPLACE_PAM_ENABLE_MIGRATE_ECOM]" }
+- { name: "PAM_FILESTORE_CDN", alias: "PAM4_FILESTORE_CDN", type: "s", required: false, sample: https://d3ci6p10x5fu7q.cloudfront.net, default: "[REPLACE_PAM_FILESTORE_CDN]" }
+- { name: "PAM_INDEXER_AUTH_USER", alias: "PAM4_INDEXER_AUTH_USER", type: "s", required: false, sample: admin }
+- { name: "PAM_INDEXER_AUTH_PASSWORD", alias: "PAM4_INDEXER_AUTH_PASSWORD", type: "s", required: false, sample: UUID }
+- { name: "PAM_INDEXER_CPUCORES_PER_NODE", alias: "PAM_INDEXER_CPUCORES_PER_NODE", type: "n", required: false, sample: 4, default: "[REPLACE_PAM_INDEXER_CPUCORES_PER_NODE]" }
+- { name: "PAM_MAX_ACTIVE_TRIGGER", type: "n", required: true, sample: 100, default: 100 }
+- { name: "PAM_MAX_ACTIVE_STATIC_TRIGGER", type: "n", required: false, sample: 80, default: 80 }
+- { name: "PAM_MAX_ACTIVE_REALTIME_TRIGGER", type: "n", required: false, sample: 20, default: 20 }
+- { name: "PAM_METRIC_TRACKER_ENDPOINT", type: "s", required: false, sample: "https://stgx.pams.ai", default: "" }
+- { name: "PAM_METRIC_TRACKER_TOKEN", type: "s", required: false, sample: "[TOKEN]", default: "" }
+- { name: "PAM_CLIENT_NAME_ALIAS", type: "s", required: false, sample: "boodabest", default: "" }
+- { name: "PAM_MONITORING_CLIENTS", type: "s", required: false, sample: "demox,stgx.boodabest", default: "" }
+- { name: "PAM_RATELIMIT_MEMORY_PERCENT", type: "n", required: false, sample: 95, default: 95 }
+- { name: "PAM_PRIORITY_RATELIMIT_MEMORY_PERCENT", type: "n", required: false, sample: 95, default: 95 }
+- { name: "PAM_METRICS_RETENTION_PERIOD_IN_DAY", type: "n", required: false, sample: 7, default: -1 }
+- { name: "PAM_SERVER_NEGATE_STATUS", type: "b", required: false, sample: true, default: false }
+- { name: "PAM_METRIC_ALERT_CAMPAIGN_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_METRIC_RESOLVE_CAMPAIGN_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_CERTIFICATE_DOMAINS", type: "s", required: false, sample: "3dsinteractive:pams.ai,jaymart:jaymartstore.com", default: "" }
+- { name: "PAM_GENERAL_TOPIC_RETENTION_PERIOD_IN_DAY", type: "n", required: false, sample: 7, default: 7 }
+- { name: "PAM_SCHEDULER_HOURLY_INTERVAL_RUNNING_TIME", type: "n", required: false, sample: 3600, default: 3600 }
+- { name: "PAM_ENABLE_SECURITY_EXPORT_FILE", alias: "PAM_ENABLE_SECURITY_EXPORT_FILE", type: "b", required: false, sample: true, default: false }
+- { name: "PAM_ENABLE_VERIFY_OTP", alias: "PAM4_ENABLE_VERIFY_OTP", type: "b", required: false, sample: false, default: false}
+- { name: "PAM_ELS_MAX_CONCURRENT_SEARCHES", type: "n", required: false, sample: 10, default: 10 }
+- { name: "PAM_ELS_SCALABLE_INDEX_SHARDS", type: "n", required: false, sample: 3, default: 3 }
+- { name: "PAM_MOBILE_COUNTRY_CODE", type: "s", required: false, sample: "+66", default: "" }
+- { name: "PAM_THIRD_PARTY_PERSISTER_ENDPOINT", type: "s", required: false, sample: maria-connect }
+- { name: "PAM_THIRD_PARTY_PERSISTER_PORT", type: "n", required: false, sample: 3306 }
+- { name: "PAM_THIRD_PARTY_PERSISTER_DB", type: "s", required: false, sample: my_database }
+- { name: "PAM_THIRD_PARTY_PERSISTER_USERNAME", type: "s", required: false, sample: my_user }
+- { name: "PAM_THIRD_PARTY_PERSISTER_PASSWORD", type: "s", required: false, sample: "UUID" }
+- { name: "PAM_THIRD_PARTY_PERSISTER_CHARSET", type: "s", required: false, sample: utf8mb4 }
+- { name: "PAM_EMAIL_ALERT", type: "s", required: false, sample: "devops@3dsinteractive.com", default: "devops@3dsinteractive.com" }
+- { name: "PAM_ENABLE_MAINTENANCE_MODE", type: "b", required: false, sample: true, default: false }
+- { name: "PAM_IS_IN_SIT_TEST", type: "b", required: false, sample: true, default: false }
+- { name: "SEAMAN_KAFKA_ADMIN_OPERATION_READ_TIMEOUT", type: "s", required: false, sample: 30s }
+- { name: "PAM_METRIC_SKIP_ALERT_CLIENTS", type: "s", required: false, sample: stg }
+- { name: "PAM_METRIC_SKIP_ALERT_CLIENTS", type: "s", required: false, sample: stg }
+- { name: "PAM_METRIC_NOTI_CAMPAIGN_ID", type: "s", required: false, sample: stg }
+- { name: "PAM_ENABLE_DATA_ADAPTER_CAMPAIGN_EXPORT_DELETE_FILE_IF_EMPTY", type: "b", required: false, sample: true, default: false }
+- { name: "PAM_CUSTOMER_NAME", alias: "PAM4_CUSTOMER_NAME", type: "s", required: false, sample: "[CUSTOMER_NAME]", default: "[REPLACE_PAM_CUSTOMER_NAME]" }

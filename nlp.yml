@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  replicas: <replicas>
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 3
+  selector:
+    matchLabels:
+      name: <name>
+  template:
+    metadata:
+      labels:
+        name: <name>
+    spec:
+      imagePullSecrets:
+      - name: dockerlogin
+      nodeSelector:
+        env: c1
+        role: worker
+      containers:
+      - name: <name>
+        image: <image>
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: APP_ENV
+          value: production
+        - name: APP_SENTRY_ENDPOINT
+          value: https://875cd4c29f824154af134416b59de8e8@logs.pams.ai/9
+        - name: APP_RELEASE
+          value: staging
+        ports:
+        - name: nlp80
+          containerPort: 80
+        resources:
+          requests:
+            memory: <minMem>
+            cpu: <minCpu>
+          limits:
+            memory: <maxMem>
+            cpu: <maxCpu>
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  ports:
+  - port: 80
+    name: nlp80
+    targetPort: 80
+    protocol: TCP
+  selector:
+    name: <name>

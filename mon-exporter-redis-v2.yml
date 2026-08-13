@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prom-redis-exporter
+  namespace: <namespace>
+  labels:
+    name: prom-redis-exporter
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      name: prom-redis-exporter
+  template:
+    metadata:
+      labels:
+        name: prom-redis-exporter
+    spec:
+      nodeSelector:
+        env: c1
+        role: worker
+      priorityClassName: class-monitor
+      containers:
+      - name: prom-redis-exporter
+        image: 3dsinteractive/redis_exporter:1.5.1
+        imagePullPolicy: Always
+        env:
+        - name: REDIS_ADDR
+          value: "redis://<redisEndpoint>"
+        - name: REDIS_EXPORTER_INCL_SYSTEM_METRICS
+          value: "true"
+        resources:
+          requests:
+            memory: <minMem>
+            cpu: <minCpu>
+          limits:
+            memory: <maxMem>
+            cpu: <maxCpu>
+        livenessProbe:
+          tcpSocket:
+            port: 9121
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+          periodSeconds: 300
+        readinessProbe:
+          tcpSocket:
+            port: 9121
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+          periodSeconds: 30
+          failureThreshold: 5
+        ports:
+        - containerPort: 9121
+          name: exporter9121
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prom-redis-exporter
+  namespace: <namespace>
+  labels:
+    name: prom-redis-exporter
+spec:
+  ports:
+  - port: 9121
+    name: exporter9121
+    targetPort: 9121
+    protocol: TCP
+  selector:
+    name: prom-redis-exporter

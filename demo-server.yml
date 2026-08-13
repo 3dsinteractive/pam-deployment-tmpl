@@ -1,0 +1,94 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  replicas: <replicas>
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 3
+  selector:
+    matchLabels:
+      name: <name>
+  template:
+    metadata:
+      labels:
+        name: <name>
+    spec:
+      terminationGracePeriodSeconds: 60
+      imagePullSecrets:
+      - name: dockerlogin
+      nodeSelector:
+        env: c1
+        role: worker
+      priorityClassName: class-static
+      containers:
+      - name: <name>
+        image: <image>
+        imagePullPolicy: IfNotPresent
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 3
+          failureThreshold: 3
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 30
+          timeoutSeconds: 30
+          failureThreshold: 10
+        env: 
+        - name: PAM_ENDPOINT
+          value: <endpoint>
+        - name: USERS
+          value: <users>
+        - name: CUSTOMER_DATABASE
+          value: <customerDatabase>
+        - name: PAM_AUTH_TOKEN
+          value: <authToken>
+        ports:
+        - name: demo8080
+          containerPort: 8080
+        resources:
+          requests:
+            memory: <minMem>
+            cpu: <minCpu>
+          limits:
+            memory: <maxMem>
+            cpu: <maxCpu>
+        volumeMounts:
+        - name: vol-profiler
+          mountPath: /profiler
+      volumes:
+      - name: vol-profiler
+        configMap:
+          name: profiler
+          items:
+          - key: profiler
+            path: profiler.json
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  ports:
+  - port: 8080
+    name: demo8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    name: <name>

@@ -1,0 +1,24 @@
+version: v1
+configs:
+- { name: "PAM4_HOST", type: "s", required: true, sample: ":8080" }
+- { name: "PAM4_LOG_LEVEL", type: "s", required: true, sample: "debug" }
+- { name: "PAM4_DB_DRIVER", type: "s", required: true, sample: "mysql" }
+- { name: "PAM4_DB_USER", type: "s", required: true, sample: "my_user" }
+- { name: "PAM4_DB_PASSWORD", type: "s", required: true, sample: "my_password" }
+- { name: "PAM4_DB_HOST", type: "s", required: true, sample: "maria-cms" }
+- { name: "PAM4_DB_PORT", type: "n", required: true, sample: "3306" }
+- { name: "PAM4_DB_NAME", type: "s", required: true, sample: "my_database" }
+- { name: "PAM4_CONNECT_ENDPOINT", type: "s", required: true, sample: "https://stg.pams.ai" }
+- { name: "PAM4_CONNECT_SECRET", type: "s", required: true, sample: "SECRET" }
+- { name: "PAM4_JWT_SECRET", type: "s", required: true, sample: "SECRET" }
+- { name: "PAM4_MINIO_TYPE", type: "s", required: true, sample: "S3" }
+- { name: "PAM4_MINIO_ENDPOINT", type: "s", required: true, sample: "s3-ap-southeast-1.amazonaws.com" }
+- { name: "PAM4_MINIO_ACCESS_KEY", type: "s", required: true, sample: "KEY" }
+- { name: "PAM4_MINIO_SECRET_KEY", type: "s", required: true, sample: "SECRET" }
+- { name: "PAM4_MINIO_BUCKET", type: "s", required: true, sample: "bucket-name" }
+- { name: "PAM4_MINIO_HTTPS", type: "s", required: true, sample: "false" }
+- { name: "PAM4_X_SECRET", type: "s", required: true, sample: "SECRET" }
+- { name: "PAM4_INFORM", type: "s", required: true, sample: "true" }
+- { name: "PAM4_RELEASE", type: "s", required: true, sample: "staging" }
+- { name: "PAM4_SENTRY_ENDPOINT", type: "s", required: true, sample: "https://676925c5039644@logs.pams.ai/6" }
+- { name: "PAM4_MAX_ACTIVE_TRIGGERS", type: "n", required: true, sample: "100" }

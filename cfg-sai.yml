@@ -1,0 +1,9 @@
+version: v1
+configs:
+- { name: "SAI_CHATCENTER_URL", alias: "CHATCENTER_URL", type: "s", required: false, sample: "https://domain" }
+- { name: "SAI_CHATCENTER_TOKEN", alias: "CHATCENTER_TOKEN", type: "s", required: false, sample: "token.." }
+- { name: "SAI_OPEN_AI_API_KEY", alias: "OPEN_AI_API_KEY", type: "s", required: false, sample: "sk-.." }
+- { name: "SAI_QDRANT_ENDPOINT", alias: "QDRANT_ENDPOINT", type: "s", required: false, sample: "http://qdrant:6333" }
+- { name: "SAI_QDRANT_TIMEOUT_SECONDS", alias: "QDRANT_TIMEOUT_SECONDS", type: "n", required: false, sample: 10 }
+- { name: "SAI_REDIS_ENDPOINT", alias: "REDIS_ENDPOINT", type: "s", required: false, sample: "redis" }
+- { name: "SAI_REDIS_PORT", alias: "REDIS_PORT", type: "n", required: false, sample: 6379 }

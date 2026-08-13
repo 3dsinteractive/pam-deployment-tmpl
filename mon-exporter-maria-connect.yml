@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prom-maria-connect-exporter
+  namespace: <namespace>
+  labels:
+    name: prom-maria-connect-exporter
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      name: prom-maria-connect-exporter
+  template:
+    metadata:
+      labels:
+        name: prom-maria-connect-exporter
+    spec:
+      nodeSelector:
+        env: c1
+        role: worker
+      priorityClassName: class-monitor
+      containers:
+      - name: prom-maria-connect-exporter
+        image: 3dsinteractive/mariadb_exporter:0.12.1
+        imagePullPolicy: Always
+        args: ["--collect.auto_increment.columns", "--no-collect.info_schema.innodb_cmp", "--no-collect.info_schema.innodb_cmpmem", "--no-collect.slave_status"]
+        env:
+        - name: DATA_SOURCE_NAME
+          value: "my_user:<password>@(maria-connect:3306)/my_database"
+        resources:
+          requests:
+            memory: <minMem>
+            cpu: <minCpu>
+          limits:
+            memory: <maxMem>
+            cpu: <maxCpu>
+        livenessProbe:
+          tcpSocket:
+            port: 9104
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+          periodSeconds: 300
+        readinessProbe:
+          tcpSocket:
+            port: 9104
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+          periodSeconds: 30
+          failureThreshold: 10
+        ports:
+        - containerPort: 9104
+          name: exporter9104
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prom-maria-connect-exporter
+  namespace: <namespace>
+  labels:
+    name: prom-maria-connect-exporter
+spec:
+  ports:
+  - port: 9104
+    name: "exporter9104"
+    targetPort: 9104
+    protocol: TCP
+  selector:
+    name: prom-maria-connect-exporter

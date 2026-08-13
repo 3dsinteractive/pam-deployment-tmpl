@@ -1,0 +1,99 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      name: <name>
+  template:
+    metadata:
+      labels:
+        name: <name>
+    spec:
+      nodeSelector:
+        env: c1
+        db: <nodeLabel>
+      priorityClassName: class-storage
+      initContainers:
+        - name: init-dir
+          image: busybox
+          volumeMounts:
+            - name: vol-data
+              mountPath: /pam/<namespace>/<name>
+          command: ["/bin/sh", "-c", "chown 1001 /pam/<namespace>/<name>"]
+      containers:
+      - name: <name>
+        image: 3dsinteractive/zookeeper:3.0
+        imagePullPolicy: Always
+        env:
+        - name: ZOO_SERVER_ID
+          value: <zooServerID>
+        - name: ALLOW_ANONYMOUS_LOGIN
+          value: "yes"
+        - name: ZOO_SERVERS
+          value: <zooServers>
+        - name: ZOO_HEAP_SIZE
+          value: <zooHeapSize>
+        resources:
+          requests:
+            memory: <minMem>
+            cpu: <minCpu>
+          limits:
+            memory: <maxMem>
+            cpu: <maxCpu>
+        livenessProbe:
+          tcpSocket:
+            port: 2181
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+          periodSeconds: 300
+        readinessProbe:
+          tcpSocket:
+            port: 2181
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+          periodSeconds: 30
+          failureThreshold: 5
+        ports:
+        - containerPort: 2181
+          name: zk2181
+        - containerPort: 2888
+          name: zk2888
+        - containerPort: 3888
+          name: zk3888
+        volumeMounts:
+        - mountPath: /bitnami/zookeeper
+          name: vol-data
+      volumes:
+      - name: vol-data
+        persistentVolumeClaim:
+          claimName: pvc-<name>
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  selector:
+    name: <name>
+  ports:
+  - name: zk2181
+    port: 2181
+    protocol: TCP
+  - name: zk2888
+    port: 2888
+    protocol: TCP
+  - name: zk3888
+    port: 3888
+    protocol: TCP
+  clusterIP: None

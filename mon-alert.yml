@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    app: monitor
+    name: <name>
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      name: <name>
+  template:
+    metadata:
+      labels:
+        name: <name>
+    spec:
+      nodeSelector:
+        env: c1
+        monitor: <nodeLabel>
+      priorityClassName: class-monitor
+      containers:
+      - name: <name>
+        image: 3dsinteractive/alertmanager:0
+        ports:
+        - name: alert9093
+          containerPort: 9093
+        resources:
+          requests:
+            memory: <minMem>
+            cpu: <minCpu>
+          limits:
+            memory: <maxMem>
+            cpu: <maxCpu>
+        livenessProbe:
+          httpGet:
+            path: /#/status
+            port: 9093
+          initialDelaySeconds: 30
+          timeoutSeconds: 30
+          failureThreshold: 5
+        readinessProbe:
+          httpGet:
+            path: /#/status
+            port: 9093
+          initialDelaySeconds: 30
+          timeoutSeconds: 30
+          failureThreshold: 10
+        volumeMounts:
+          - name: config-vol
+            mountPath: /opt/bitnami/alertmanager/conf
+      volumes:
+        - name: config-vol
+          configMap:
+            name: alertmanager
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    app: monitor
+    name: <name>
+spec:
+  selector:
+    name: <name>
+  ports:
+  - port: 9093
+    name: alert9093
+    targetPort: 9093
+    protocol: TCP
+  clusterIP: None

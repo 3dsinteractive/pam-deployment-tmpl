@@ -1,0 +1,115 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      name: <name>
+  template:
+    metadata:
+      labels:
+        name: <name>
+    spec:
+      nodeSelector:
+        env: c1
+        db: <nodeLabel>
+      priorityClassName: class-storage
+      initContainers:
+        - name: init-dir
+          image: busybox
+          volumeMounts:
+            - name: vol-data
+              mountPath: /pam/<namespace>/<name>/data
+          command: ["/bin/sh", "-c", "chown 1001 /pam/<namespace>/<name>/data"]
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            privileged: true  
+      containers:
+      - name: <name>
+        image: 3dsinteractive/elasticsearch:6.8.23-custom
+        imagePullPolicy: Always
+        env:
+        - name: ELASTICSEARCH_CLUSTER_NAME
+          value: <namespace>
+        - name: ELASTICSEARCH_MINIMUM_MASTER_NODES
+          value: <minimumMasterNode>
+        - name: ELASTICSEARCH_CLUSTER_HOSTS
+          value: <clusters>
+        - name: ELASTICSEARCH_NODE_NAME
+          value: <name>
+        - name: ELASTICSEARCH_HEAP_SIZE
+          value: <heapSize>
+        - name: ELASTICSEARCH_CUSTOM_MAX_CLAUSE_COUNT
+          value: <maxClauseCount>
+        - name: ELASTICSEARCH_CUSTOM_QUERY_CACHE_SIZE
+          value: <queryCacheSize>
+        - name: ELASTICSEARCH_CUSTOM_MEMORY_LOCK
+          value: "false"
+        - name: ELASTICSEARCH_CUSTOM_BULK_QUEUE_SIZE
+          value: <bulkQueueSize>
+        - name: ELASTICSEARCH_CUSTOM_INDEX_QUEUE_SIZE
+          value: <indexQueueSize>
+        - name: ELASTICSEARCH_SNAPSHOT_S3_KEY
+          value: <snapshotS3Key>
+        - name: ELASTICSEARCH_SNAPSHOT_S3_SECRET
+          value: <snapshotS3Secret>
+        - name: ELASTICSEARCH_PLUGINS
+          value: "analysis-icu"
+        resources:
+          requests:
+            memory: <minMem>
+            cpu: <minCpu>
+          limits:
+            memory: <maxMem>
+            cpu: <maxCpu>
+        livenessProbe:
+          tcpSocket:
+            port: 9300
+          initialDelaySeconds: 60
+          timeoutSeconds: 3
+          periodSeconds: 300
+        readinessProbe:
+          tcpSocket:
+            port: 9300
+          initialDelaySeconds: 60
+          timeoutSeconds: 3
+          periodSeconds: 30
+          failureThreshold: 5
+        ports:
+        - containerPort: 9300
+          name: els9300
+        - containerPort: 9200
+          name: els9200
+        volumeMounts:
+        - mountPath: /bitnami/elasticsearch/data
+          name: vol-data
+      volumes:
+      - name: vol-data
+        persistentVolumeClaim:
+          claimName: pvc-<name>
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  selector:
+    name: <name>
+  ports:
+  - name: els9300
+    port: 9300
+    protocol: TCP
+  - name: els9200
+    port: 9200
+    protocol: TCP
+  clusterIP: None

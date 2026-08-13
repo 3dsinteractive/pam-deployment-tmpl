@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: <namespace>-pv-<name>
+  namespace: <namespace>
+  labels:
+    name: <namespace>-pv-<name>
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 5Gi
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /pam/<namespace>/<name>/data

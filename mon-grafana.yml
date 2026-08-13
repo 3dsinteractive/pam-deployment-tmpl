@@ -1,0 +1,119 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    app: monitor
+    name: <name>
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      name: <name>
+  template:
+    metadata:
+      labels:
+        name: <name>
+    spec:
+      nodeSelector:
+        env: c1
+        monitor: <nodeLabel>
+      priorityClassName: class-monitor
+      containers:
+      - name: grafana
+        image: 3dsinteractive/grafana:6.0
+        ports:
+        - name: grafana3000
+          containerPort: 3000
+        env:
+        - name: GF_SECURITY_ADMIN_PASSWORD
+          value: <password>
+        resources:
+          requests:
+            memory: <minMem>
+            cpu: <minCpu>
+          limits:
+            memory: <maxMem>
+            cpu: <maxCpu>
+        livenessProbe:
+          tcpSocket:
+            port: 3000
+          initialDelaySeconds: 30
+          timeoutSeconds: 1
+          periodSeconds: 300
+        readinessProbe:
+          tcpSocket:
+            port: 3000
+          initialDelaySeconds: 30
+          timeoutSeconds: 1
+          periodSeconds: 30
+          failureThreshold: 10
+        volumeMounts:
+          - name: dashboards-vol
+            mountPath: /var/lib/grafana/dashboards
+            readOnly: true
+          - name: storage-vol
+            mountPath: /var/lib/grafana
+          - name: dashboards-provider-vol
+            mountPath: /opt/bitnami/grafana/conf/provisioning/dashboards
+            readOnly: true
+          - name: datasources-provider-vol
+            mountPath: /opt/bitnami/grafana/conf/provisioning/datasources
+            readOnly: true
+      volumes:
+        - name: dashboards-vol
+          projected:
+            sources:
+            - configMap:
+                name: grafana-dashboard-servers
+            - configMap:
+                name: grafana-dashboard-els
+            - configMap:
+                name: grafana-dashboard-kfk
+            - configMap:
+                name: grafana-dashboard-redis
+            - configMap:
+                name: grafana-dashboard-mariadb
+            - configMap:
+                name: grafana-dashboard-k8s-pods
+            - configMap:
+                name: grafana-dashboard-pam-summary
+            - configMap:
+                name: grafana-dashboard-golang
+            - configMap:
+                name: grafana-dashboard-alerts
+        - name: storage-vol
+          emptyDir: {}
+        - name: dashboards-provider-vol
+          configMap:
+            name: grafana-dashboards-provider
+            items:
+              - key: providers.yaml
+                path: providers.yaml
+        - name: datasources-provider-vol
+          configMap:
+            name: <datasource>
+            items:
+              - key: providers.yaml
+                path: providers.yaml
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    app: monitor
+    name: <name>
+spec:
+  selector:
+    name: <name>
+  ports:
+  - port: 3000
+    name: grafana3000
+    targetPort: 3000
+    protocol: TCP
+  clusterIP: None

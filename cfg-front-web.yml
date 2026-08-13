@@ -1,0 +1,3 @@
+version: v1
+configs:
+- { name: "APP_LINE_ACCESS_TOKEN", type: "s", required: false, sample: "[TOKEN]", default: "Nm/GrxANAa8Dt0TOO+3a7QSEqY0ANibb" }

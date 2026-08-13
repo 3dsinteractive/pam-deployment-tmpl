@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-util
+  namespace: <namespace>
+  labels:
+    name: client-util
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      name: client-util
+  template:
+    metadata:
+      labels:
+        name: client-util
+    spec:
+      nodeSelector:
+        env: c1
+        role: worker
+      imagePullSecrets:
+      - name: dockerlogin
+      priorityClassName: class-monitor
+      containers:
+        - name: <name>
+          image: 3dsinteractive/util:2.0
+          stdin: true
+          tty: true
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: <minMem>
+              cpu: <minCpu>
+            limits:
+              memory: <maxMem>
+              cpu: <maxCpu>

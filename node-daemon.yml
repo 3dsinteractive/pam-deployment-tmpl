@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: node-daemon
+  namespace: <namespace>
+  labels:
+    name: node-daemon
+spec:
+  selector: 
+    matchLabels:
+      name: node-daemon
+  template:
+    metadata:
+      labels:
+        name: node-daemon
+    spec:
+      imagePullSecrets:
+      - name: dockerlogin
+      priorityClassName: class-monitor
+      containers:
+      - name: node-daemon
+        image: <image>
+        imagePullPolicy: IfNotPresent
+        readinessProbe:
+          httpGet:
+            path: /readinez
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 3
+          failureThreshold: 3
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 30
+          timeoutSeconds: 30
+          failureThreshold: 10
+        env: [ {name: MY_NODE_NAME, valueFrom: { fieldRef: { fieldPath: spec.nodeName }}}, {name: MY_POD_NAME, valueFrom: { fieldRef: { fieldPath: metadata.name }}}, {name: MY_NAMESPACE, valueFrom: { fieldRef: { fieldPath: metadata.namespace }}}, {name: PAM4_ENV, value: node-daemon}, {name: DEBUG, value: "true"}, {name: PAM4_PROFILER_NAME, value: pam-node-daemon} <envs>]
+        ports:
+        - name: connect8080
+          containerPort: 8080
+        resources:
+          requests:
+            memory: <minMem>
+            cpu: <minCpu>
+          limits:
+            memory: <maxMem>
+            cpu: <maxCpu>
+        volumeMounts:
+        - name: vol-profiler
+          mountPath: /profiler
+        - name: host-proc
+          mountPath: /host-proc
+          readOnly: true
+      volumes:
+      - name: vol-profiler
+        configMap:
+          name: profiler
+          items:
+          - key: profiler
+            path: profiler.json
+      - name: host-proc
+        hostPath:
+          path: /proc
+          type: Directory

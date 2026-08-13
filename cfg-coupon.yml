@@ -1,0 +1,30 @@
+version: v1
+configs:
+- { name: "PAM_3RD_PARTY_AUTH_API_ENABLED", alias: "PAM4_3RD_PARTY_AUTH_API_ENABLED", type: "b", required: true, sample: "true" }
+- { name: "PAM_3RD_PARTY_AUTH_API_ENDPOINT", alias: "PAM4_3RD_PARTY_AUTH_API_ENDPOINT", type: "s", required: true, sample: "[URL]" }
+- { name: "PAM_3RD_PARTY_AUTH_API_AUTHORIZATION", alias: "PAM4_3RD_PARTY_AUTH_API_AUTHORIZATION", type: "s", required: true, sample: "[UUID]" }
+- { name: "PAM_3RD_PARTY_AUTH_API_CONTENT_TYPE", alias: "PAM4_3RD_PARTY_AUTH_API_CONTENT_TYPE", type: "s", required: true, sample: "application/x-www-form-urlencoded" }
+- { name: "PAM_3RD_PARTY_AUTH_API_BODY", alias: "PAM4_3RD_PARTY_AUTH_API_BODY", type: "s", required: true, sample: "grant_type=client_credentials&scope=service-api%2Fcoupon" }
+- { name: "PAM_3RD_PARTY_AUTH_API_TIME_OUT", alias: "PAM4_3RD_PARTY_AUTH_API_TIME_OUT", type: "n", required: true, sample: "5" }
+- { name: "PAM_3RD_PARTY_AUTH_CACHE_EXPIRE_TIME", alias: "PAM4_3RD_PARTY_AUTH_CACHE_EXPIRE_TIME", type: "s", required: true, sample: "3600" }
+- { name: "PAM_3RD_PARTY_GET_COUPONS_STATUS_API_ENDPOINT", alias: "PAM4_3RD_PARTY_GET_COUPONS_STATUS_API_ENDPOINT", type: "s", required: true, sample: "[URL]" }
+- { name: "PAM_3RD_PARTY_GET_COUPONS_STATUS_AUTH_BODY", alias: "PAM4_3RD_PARTY_GET_COUPONS_STATUS_AUTH_BODY", type: "s", required: true, sample: "grant_type=client_credentials&scope=service-api%2Fcoupon" }
+- { name: "PAM_3RD_PARTY_GET_CUSTOMER_API_ENDPOINT", alias: "PAM4_3RD_PARTY_GET_CUSTOMER_API_ENDPOINT", type: "s", required: true, sample: "[URL]" }
+- { name: "PAM_3RD_PARTY_GET_CUSTOMER_AUTH_BODY", alias: "PAM4_3RD_PARTY_GET_CUSTOMER_AUTH_BODY", type: "s", required: true, sample: "grant_type=client_credentials&scope=service-api%2Fcustomer" }
+- { name: "PAM_3RD_PARTY_TIMEOUT", alias: "PAM4_3RD_PARTY_TIMEOUT", type: "n", required: true, sample: "5" }
+- { name: "PAM_SCHEDULE_UPDATE_COUPON_CLICKSHOW_STATUS", alias: "PAM4_SCHEDULE_UPDATE_COUPON_CLICKSHOW_STATUS", type: "n", required: true, sample: "3600" }
+- { name: "PAM_SCHEDULE_UPDATE_COUPON_CLICKSHOW_STATUS_START_TIME", alias: "PAM4_SCHEDULE_UPDATE_COUPON_CLICKSHOW_STATUS_START_TIME", type: "s", required: true, sample: "22:00:00" }
+- { name: "PAM_SCHEDULE_UPDATE_COUPON_CLICKSHOW_STATUS_DURATION_HOUR", alias: "PAM4_SCHEDULE_UPDATE_COUPON_CLICKSHOW_STATUS_DURATION_HOUR", type: "n", required: true, sample: "4" }
+- { name: "PAM_REDIRECT_LINK_NOT_AVAILABLE_PAGE", alias: "PAM4_REDIRECT_LINK_NOT_AVAILABLE_PAGE", type: "s", required: true, sample: "[URL]" }
+- { name: "PAM_COUPON_MEDIA_ALIAS", alias: "PAM4_COUPON_MEDIA_ALIAS", type: "s", required: true, sample: "[NAME]" }
+- { name: "PAM_COUPON_MEDIA_REFRESH", alias: "PAM4_COUPON_MEDIA_REFRESH", type: "s", required: true, sample: "third-party-id" }
+- { name: "PAM_COUPON_MEMBER_IMPORTER_WORKER", alias: "PAM4_COUPON_MEMBER_IMPORTER_WORKER", type: "n", required: true, sample: "7" }
+- { name: "PAM_MQ_COUPON_MEMBER_PARTITIONS", alias: "PAM4_MQ_COUPON_MEMBER_PARTITIONS", type: "n", required: true, sample: "50" }
+- { name: "PAM_MQ_COUPON_MEMBER_REPLICAS", alias: "PAM4_MQ_COUPON_MEMBER_REPLICAS", type: "n", required: true, sample: "2" }
+- { name: "SAML_ISSUER_URL", type: "s", required: false, sample: "[URL]" }
+- { name: "SAML_SSO_URL", type: "s", required: false, sample: "[URL]" }
+- { name: "SAML_SLO_URL", type: "s", required: false, sample: "[URL]" }
+- { name: "SAML_TIMEOUT", type: "n", required: false, sample: "10" }
+- { name: "SAML_ACS_URL", type: "s", required: false, sample: "/backend/api/saml/login" }
+- { name: "SAML_ACS_REDIRECT", type: "s", required: false, sample: "/provider/login" }
+- { name: "SAML_X509_CERT", type: "s", required: false, sample: "[CERT]" }

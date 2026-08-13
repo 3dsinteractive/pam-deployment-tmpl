@@ -1,0 +1,65 @@
+version: v1
+attrs:
+# Dynamic variable (is the variable that will be replaced by param user specify) must set replace = true
+- { name: "replicas", alias: "replicas", doublequote: false, replace: true }
+- { name: "env", alias: "env", doublequote: true, replace: true }
+- { name: "minMem", alias: "minMem", doublequote: false, replace: true }
+- { name: "maxMem", alias: "maxMem", doublequote: false, replace: true }
+- { name: "minCpu", alias: "minCpu", doublequote: false, replace: true }
+- { name: "maxCpu", alias: "maxCpu", doublequote: false, replace: true }
+- { name: "nodeLabel", alias: "nodeLabel", doublequote: false, replace: true }
+- { name: "password", alias: "password", doublequote: false, replace: true }
+- { name: "datasource", alias: "datasource", doublequote: false, replace: true }
+- { name: "promURL", alias: "promURL", doublequote: false, replace: true }
+- { name: "monitorServices", alias: "monitorServices", doublequote: false, replace: true }
+- { name: "slackHookAlert", alias: "slackHookAlert", doublequote: false, replace: true }
+- { name: "slackHookCritical", alias: "slackHookCritical", doublequote: false, replace: true }
+- { name: "topicsInclude", alias: "topicsInclude", doublequote: false, replace: true }
+- { name: "topicsExclude", alias: "topicsExclude", doublequote: false, replace: true }
+- { name: "maxMemory", alias: "maxMemory", doublequote: true, replace: true}
+# Use in els
+- { name: "minimumMasterNode", alias: "minimumMasterNode", doublequote: true, replace: true }
+- { name: "clusters", alias: "clusters", doublequote: true, replace: true }
+- { name: "heapSize", alias: "heapSize", doublequote: true, replace: true }
+- { name: "maxClauseCount", alias: "maxClauseCount", doublequote: true, replace: true }
+- { name: "queryCacheSize", alias: "queryCacheSize", doublequote: true, replace: true }
+- { name: "bulkQueueSize", alias: "bulkQueueSize", doublequote: true, replace: true }
+- { name: "indexQueueSize", alias: "indexQueueSize", doublequote: true, replace: true }
+- { name: "snapshotS3Key", alias: "snapshotS3Key", doublequote: true, replace: true }
+- { name: "snapshotS3Secret", alias: "snapshotS3Secret", doublequote: true, replace: true }
+# Use in zk
+- { name: "zooServerID", alias: "zooServerID", doublequote: true, replace: true }
+- { name: "zooServers", alias: "zooServers", doublequote: true, replace: true }
+- { name: "zooHeapSize", alias: "zooHeapSize", doublequote: true, replace: true }
+# Use in kfk
+- { name: "kafkaBrokerID", alias: "kafkaBrokerID", doublequote: true, replace: true }
+- { name: "kafkaPortNumber", alias: "kafkaPortNumber", doublequote: true, replace: true }
+- { name: "kafkaNumPartitions", alias: "kafkaNumPartitions", doublequote: true, replace: true }
+- { name: "kafkaZookeeperConnect", alias: "kafkaZookeeperConnect", doublequote: true, replace: true }
+- { name: "kafkaNumNetworkThreads", alias: "kafkaNumNetworkThreads", doublequote: true, replace: true }
+- { name: "kafkaNumIOThreads", alias: "kafkaNumIOThreads", doublequote: true, replace: true }
+- { name: "kafkaSocketSendBuffeBytes", alias: "kafkaSocketSendBuffeBytes", doublequote: true, replace: true }
+- { name: "kafkaSocketReceiveBufferBytes", alias: "kafkaSocketReceiveBufferBytes", doublequote: true, replace: true }
+- { name: "kafkaSocketRequestMaxBytes", alias: "kafkaSocketRequestMaxBytes", doublequote: true, replace: true }
+- { name: "kafkaMaxMessageBytes", alias: "kafkaMaxMessageBytes", doublequote: true, replace: true }
+- { name: "kafkaHeapOpts", alias: "kafkaHeapOpts", doublequote: true, replace: true }
+# Use in kibana
+- { name: "kibanaElsUrl", alias: "kibanaElsUrl", doublequote: true, replace: true }
+# Use in migrate and seeder
+- { name: "tag", alias: "tag", doublequote: false, replace: true }
+# Use in exporter
+- { name: "kafkaEndpoint", alias: "kafkaEndpoint", doublequote: true, replace: true }
+- { name: "kafkaVersion", alias: "kafkaVersion", doublequote: true, replace: true }
+- { name: "elsEndpoint", alias: "elsEndpoint", doublequote: false, replace: true }
+- { name: "redisEndpoint", alias: "redisEndpoint", doublequote: false, replace: true }
+# Use in demo-server
+- { name: "endpoint", alias: "endpoint", doublequote: true, replace: true }
+- { name: "users", alias: "users", doublequote: true, replace: true }
+- { name: "customerDatabase", alias: "customerDatabase", doublequote: true, replace: true }
+- { name: "authToken", alias: "authToken", doublequote: true, replace: true }
+# Custom variable (is the variable that replace by pamctl) must set replace = false
+- { name: "name", alias: "name", doublequote: false, replace: false }
+- { name: "namespace", alias: "namespace", doublequote: false, replace: false }
+- { name: "image", alias: "image", doublequote: true, replace: false }
+- { name: "envs", alias: "envs", doublequote: false, replace: false }
+- { name: "timestamp", alias: "timestamp", doublequote: false, replace: false }

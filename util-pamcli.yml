@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pamcli
+  namespace: <namespace>
+  labels:
+    name: pamcli
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      name: pamcli
+  template:
+    metadata:
+      labels:
+        name: pamcli
+    spec:
+      nodeSelector:
+        env: c1
+        role: worker
+      imagePullSecrets:
+      - name: dockerlogin
+      priorityClassName: class-monitor
+      containers:
+        - name: <name>
+          image: 3dsinteractive/pamcli:<timestamp>
+          stdin: true
+          tty: true
+          imagePullPolicy: Always
+          env: [{name: DEBUG, value: "true"} <envs>]
+          resources:
+            requests:
+              memory: <minMem>
+              cpu: <minCpu>
+            limits:
+              memory: <maxMem>
+              cpu: <maxCpu>

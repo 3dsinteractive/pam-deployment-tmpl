@@ -1,0 +1,20 @@
+kind: PriorityClass
+apiVersion: scheduling.k8s.io/v1
+metadata:
+  name: class-monitor
+value: 9000
+description: "Use this class for monitoring service such as phpmyadmin, kibana, prometheus"
+---
+kind: PriorityClass
+apiVersion: scheduling.k8s.io/v1
+metadata:
+  name: class-storage
+value: 8000
+description: "Use this class for storage"
+---
+kind: PriorityClass
+apiVersion: scheduling.k8s.io/v1
+metadata:
+  name: class-static
+value: 5000
+description: "Use this class for pam static services such as api, loadbalance"

@@ -1,0 +1,265 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prom-alert-rules
+  namespace: <namespace>
+  labels:
+    app: monitor
+    name: prom-alert-rules
+data:
+  alert.rules: |-
+    groups:
+    - name: AllNodes
+      rules:
+      - alert: NodeIsDown
+        expr: up{job="prometheus-node-exporter"} == 0
+        for: 1m
+        labels:
+          service: node
+          severity: critical
+        annotations:
+          title: 'Node is down ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})'
+          description: 'Node has been down for more than 1 minute.'
+      - alert: NodeOutOfMemory
+        expr: node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100 < 10
+        for: 5m
+        labels:
+          service: node
+          severity: warning
+        annotations:
+          title: 'Node out of memory ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})'
+          description: 'Node memory is filling up (< 10% left), VALUE = {{ $value }}'
+      - alert: HostMemoryUnderMemoryPressure
+        expr: rate(node_vmstat_pgmajfault[1m]) > 1000
+        for: 5m
+        labels:
+          service: node
+          severity: warning
+        annotations:
+          title: "Host memory under memory pressure ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "The node is under heavy memory pressure. High rate of major page faults, VALUE = {{ $value }}"
+      - alert: HostHighCpuLoad
+        expr: 100 - (avg by(instance,namespace) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 98
+        for: 1m
+        labels:
+          service: app
+          severity: critical
+        annotations:
+          title: "Host high CPU load ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "CPU load is > 98%, VALUE = {{ $value }}"
+      - alert: HostUnusualNetworkThroughputIn
+        expr: sum by (instance,namespace) (irate(node_network_receive_bytes_total[2m])) / 1024 / 1024 > 100
+        for: 5m
+        labels:
+          service: node
+          severity: warning
+        annotations:
+          title: "Host unusual network throughput in ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Host network interfaces are probably receiving too much data (> 100 MB/s), VALUE = {{ $value }}"
+      - alert: HostUnusualNetworkThroughputOut
+        expr: sum by (instance,namespace) (irate(node_network_transmit_bytes_total[2m])) / 1024 / 1024 > 100
+        for: 5m
+        labels:
+          service: node
+          severity: warning
+        annotations:
+          title: "Host unusual network throughput out ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Host network interfaces are probably sending too much data (> 100 MB/s), VALUE = {{ $value }}"
+      - alert: HostUnusualDiskReadRate
+        expr: sum by (instance,namespace) (irate(node_disk_read_bytes_total[2m])) / 1024 / 1024 > 50
+        for: 5m
+        labels:
+          service: node
+          severity: warning
+        annotations:
+          title: "Host unusual disk read rate ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Disk is probably reading too much data (> 50 MB/s), VALUE = {{ $value }}"
+      - alert: HostUnusualDiskWriteRate
+        expr: sum by (instance,namespace) (irate(node_disk_written_bytes_total[2m])) / 1024 / 1024 > 50
+        for: 5m
+        labels:
+          service: node
+          severity: warning
+        annotations:
+          title: "Host unusual disk write rate ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Disk is probably writing too much data (> 50 MB/s), VALUE = {{ $value }}"
+      - alert: HostOutOfDiskSpace
+        expr: (node_filesystem_avail_bytes{mountpoint="/"}  * 100) / node_filesystem_size_bytes{mountpoint="/"} < 10
+        for: 5m
+        labels:
+          service: node
+          severity: warning
+        annotations:
+          title: "Host out of disk space ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Disk is almost full (< 10% left), VALUE = {{ $value }}"
+      - alert: HostDiskWillFillIn4Hours
+        expr: predict_linear(node_filesystem_free_bytes{fstype!~"tmpfs"}[1h], 4 * 3600) < 0
+        for: 5m
+        labels:
+          service: node
+          severity: warning
+        annotations:
+          title: "Host disk will fill in 4 hours ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Disk will fill in 4 hours at current write rate, VALUE = {{ $value }}"
+      - alert: HostOutOfInodes
+        expr: node_filesystem_files_free{mountpoint ="/"} / node_filesystem_files{mountpoint ="/"} * 100 < 10
+        for: 5m
+        labels:
+          service: node
+          severity: warning
+        annotations:
+          title: "Host out of inodes ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Disk is almost running out of available inodes (< 10% left), VALUE = {{ $value }}"
+      - alert: HostUnusualDiskReadLatency
+        expr: rate(node_disk_read_time_seconds_total[1m]) / rate(node_disk_reads_completed_total[1m]) > 100
+        for: 5m
+        labels:
+          service: node
+          severity: warning
+        annotations:
+          title: "Host unusual disk read latency ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Disk latency is growing (read operations > 100ms), VALUE = {{ $value }}"
+      - alert: HostUnusualDiskWriteLatency
+        expr: rate(node_disk_write_time_seconds_total[1m]) / rate(node_disk_writes_completed_total[1m]) > 100
+        for: 5m
+        labels:
+          service: node
+          severity: warning
+        annotations:
+          title: "Host unusual disk write latency ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Disk latency is growing (write operations > 100ms), VALUE = {{ $value }}"
+      - alert: ElasticsearchNodeIsDown
+        expr: up{job="els-metric"} == 0
+        for: 1m
+        labels:
+          service: database
+          severity: critical
+        annotations:
+          title: 'Elasticsearch Node is down ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})'
+          description: 'Elasticsearch Node has been down for more than 1 minute.'
+      - alert: ElasticsearchHeapUsageTooHigh
+        expr: (elasticsearch_jvm_memory_used_bytes{area="heap"} / elasticsearch_jvm_memory_max_bytes{area="heap"}) * 100 > 90
+        for: 5m
+        labels:
+          service: database
+          severity: critical
+        annotations:
+          title: "Elasticsearch Heap Usage Too High ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "The heap usage is over 90% for 5m, VALUE = {{ $value }}"
+      - alert: ElasticsearchHeapUsageWarning
+        expr: (elasticsearch_jvm_memory_used_bytes{area="heap"} / elasticsearch_jvm_memory_max_bytes{area="heap"}) * 100 > 80
+        for: 5m
+        labels:
+          service: database
+          severity: warning
+        annotations:
+          title: "Elasticsearch Heap Usage warning ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "The heap usage is over 80% for 5m, VALUE = {{ $value }}"
+      - alert: ElasticsearchClusterRed
+        expr: elasticsearch_cluster_health_status{color="red"} == 1
+        for: 1m
+        labels:
+          service: database
+          severity: critical
+        annotations:
+          title: "Elasticsearch Cluster Red ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Elastic Cluster Red status, VALUE = {{ $value }}"
+      - alert: ElasticsearchClusterYellow
+        expr: elasticsearch_cluster_health_status{color="yellow"} == 1
+        for: 5m
+        labels:
+          service: database
+          severity: warning
+        annotations:
+          title: "Elasticsearch Cluster Yellow ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Elastic Cluster Yellow status, VALUE = {{ $value }}"
+      - alert: ElasticsearchHealthyNodes
+        expr: elasticsearch_cluster_health_number_of_nodes < 3
+        for: 1m
+        labels:
+          service: database
+          severity: critical
+        annotations:
+          title: "Elasticsearch Healthy Nodes ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Number Healthy Nodes less then 3, VALUE = {{ $value }}"
+      - alert: ElasticsearchHealthyDataNodes
+        expr: elasticsearch_cluster_health_number_of_data_nodes < 3
+        for: 1m
+        labels:
+          service: database
+          severity: critical
+        annotations:
+          title: "Elasticsearch Healthy Data Nodes ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Number Healthy Data Nodes less then 3, VALUE = {{ $value }}"
+      - alert: ElasticsearchRelocationShards
+        expr: elasticsearch_cluster_health_relocating_shards > 0
+        for: 10m
+        labels:
+          service: database
+          severity: critical
+        annotations:
+          title: "Elasticsearch relocation shards ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Number of relocation shards for 10 min\n  VALUE = {{ $value }}"
+      - alert: ElasticsearchInitializingShards
+        expr: elasticsearch_cluster_health_initializing_shards > 0
+        for: 10m
+        labels:
+          service: database
+          severity: warning
+        annotations:
+          title: "Elasticsearch initializing shards ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Number of initializing shards for 10 min, VALUE = {{ $value }}"
+      - alert: ElasticsearchUnassignedShards
+        expr: elasticsearch_cluster_health_unassigned_shards > 0
+        for: 2m
+        labels:
+          service: database
+          severity: critical
+        annotations:
+          title: "Elasticsearch unassigned shards ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Number of unassigned shards for 2 min, VALUE = {{ $value }}"
+      - alert: ElasticsearchPendingTasks
+        expr: elasticsearch_cluster_health_number_of_pending_tasks > 3
+        for: 5m
+        labels:
+          service: database
+          severity: warning
+        annotations:
+          title: "Elasticsearch pending tasks ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Number of pending tasks for 5 min. Cluster works slowly, VALUE = {{ $value }}"
+      - alert: RedisDown
+        expr: redis_up == 0
+        for: 1m
+        labels:
+          service: database
+          severity: critical
+        annotations:
+          title: "Redis down ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Redis instance is down, VALUE = {{ $value }}"
+      - alert: RedisOutOfMemory
+        expr: redis_memory_used_bytes / redis_total_system_memory_bytes * 100 > 90
+        for: 5m
+        labels:
+          service: database
+          severity: warning
+        annotations:
+          title: "Redis out of memory ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Redis is running out of memory (> 90%), VALUE = {{ $value }}"
+      - alert: RedisRejectedConnections
+        expr: increase(redis_rejected_connections_total[1m]) > 0
+        for: 5m
+        labels:
+          service: database
+          severity: critical
+        annotations:
+          title: "Redis rejected connections ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})"
+          description: "Some connections to Redis has been rejected, VALUE = {{ $value }}"
+      - alert: ServiceIsDown
+        expr: up{job="seaman-metric"} == 0
+        for: 1m
+        labels:
+          service: app
+          severity: critical
+        annotations:
+          title: 'Application service is down ({{ $labels.namespace }} - {{ $labels.pod }} - {{ $labels.instance }})'
+          description: 'Application service has been down for more than 1 minute.'
