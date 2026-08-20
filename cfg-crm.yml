@@ -191,4 +191,4 @@ configs:
 - { name: "CRM_ENABLE_ASSIGN_VOUCHER_FOR_OLD_MEMBER", type: "b", required: false, sample: "false", default: false}
 - { name: "CRM_ENABLE_OLD_MEMBER_POINT_BALANCE_EVENT", type: "b", required: false, sample: false, default: false}
 - { name: "CRM_OLD_MEMBER_TRANSACTION_DATABASE", type: "s", required: false, sample: "", default: "crm-old-member-transaction"}
-- { name: "CRM_OLD_MEMBER_TRANSACTION_DATABASE_KEY", type: "s", required: false, sample: "", default: "customer"}
+- { name: "CRM_OLD_MEMBER_TRANSACTION_DATABASE_KEY", type: "s", required: false, sample: "", default: ""}
