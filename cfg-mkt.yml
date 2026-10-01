@@ -215,3 +215,5 @@ configs:
 - { name: "PAM_CUSTOMER_JOURNEY_START_EVENT_DELAY_SECONDS", type: "n", required: false, sample: 1000, default: 1000 }
 - { name: "PAM_CARDINALITY_PRECISION_THRESHOLD", alias: "PAM4_CARDINALITY_PRECISION_THRESHOLD", type: "n", required: false, sample: 10000, default: 10000 }
 - { name: "PAM_CHAT_CASES_CLOSED_IN_MINUTE", type: "n", required: false, sample: 60, default: 60 }
+- { name: "PAM_CHAT_LOGIN_ACCESS_TOKEN_EXPIRE_TIME", type: "n", required: false, sample: 3600, default: 0 }
+- { name: "PAM_CHAT_LOGIN_REFRESH_TOKEN_EXPIRE_TIME", type: "n", required: false, sample: 2592000, default: 0 }
