@@ -1,0 +1,87 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  replicas: <replicas>
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      name: <name>
+  template:
+    metadata:
+      labels:
+        name: <name>
+    spec:
+      imagePullSecrets:
+      - name: dockerlogin
+      nodeSelector:
+        env: c1
+        role: worker
+      priorityClassName: class-static
+      containers:
+      - name: <name>
+        image: <image>
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: NODE_ENV
+          value: <env>
+        - name: NITRO_HOST
+          value: "0.0.0.0"
+        - name: PORT
+          value: "3000"
+        - name: MISTRAL_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: business-card-scanner
+              key: MISTRAL_API_KEY
+        - name: GOOGLE_SHEET_API_URL
+          valueFrom:
+            secretKeyRef:
+              name: business-card-scanner
+              key: GOOGLE_SHEET_API_URL
+        ports:
+        - name: http
+          containerPort: 3000
+        readinessProbe:
+          tcpSocket:
+            port: http
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 3
+        livenessProbe:
+          tcpSocket:
+            port: http
+          initialDelaySeconds: 60
+          periodSeconds: 30
+          timeoutSeconds: 3
+        resources:
+          requests:
+            memory: <minMem>
+            cpu: <minCpu>
+          limits:
+            memory: <maxMem>
+            cpu: <maxCpu>
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: <name>
+  namespace: <namespace>
+  labels:
+    name: <name>
+spec:
+  ports:
+  - name: http
+    port: 80
+    targetPort: http
+    protocol: TCP
+  selector:
+    name: <name>
