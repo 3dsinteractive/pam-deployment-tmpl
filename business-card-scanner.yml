@@ -38,15 +38,9 @@ spec:
         - name: PORT
           value: "3000"
         - name: MISTRAL_API_KEY
-          valueFrom:
-            secretKeyRef:
-              name: business-card-scanner
-              key: MISTRAL_API_KEY
+          value: <mistralApiKey>
         - name: GOOGLE_SHEET_API_URL
-          valueFrom:
-            secretKeyRef:
-              name: business-card-scanner
-              key: GOOGLE_SHEET_API_URL
+          value: <googleSheetApiUrl>
         ports:
         - name: http
           containerPort: 3000

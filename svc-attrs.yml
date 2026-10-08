@@ -57,6 +57,9 @@ attrs:
 - { name: "users", alias: "users", doublequote: true, replace: true }
 - { name: "customerDatabase", alias: "customerDatabase", doublequote: true, replace: true }
 - { name: "authToken", alias: "authToken", doublequote: true, replace: true }
+# Use in business-card-scanner
+- { name: "mistralApiKey", alias: "mistralApiKey", doublequote: true, replace: true }
+- { name: "googleSheetApiUrl", alias: "googleSheetApiUrl", doublequote: true, replace: true }
 # Custom variable (is the variable that replace by pamctl) must set replace = false
 - { name: "name", alias: "name", doublequote: false, replace: false }
 - { name: "namespace", alias: "namespace", doublequote: false, replace: false }
