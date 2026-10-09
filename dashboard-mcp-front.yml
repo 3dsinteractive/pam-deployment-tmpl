@@ -45,7 +45,7 @@ spec:
           timeoutSeconds: 30
           failureThreshold: 10
         ports:
-        - name: dashboardmcp8000
+        - name: dbmcp8000
           containerPort: 8000
         resources:
           requests:
@@ -65,7 +65,7 @@ metadata:
 spec:
   ports:
   - port: 80
-    name: dashboardmcp80
+    name: dbmcp80
     targetPort: 8000
     protocol: TCP
   selector:
