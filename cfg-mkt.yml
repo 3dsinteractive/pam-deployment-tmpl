@@ -215,6 +215,7 @@ configs:
 - { name: "PAM_CUSTOMER_JOURNEY_START_EVENT_DELAY_SECONDS", type: "n", required: false, sample: 1000, default: 1000 }
 - { name: "PAM_CARDINALITY_PRECISION_THRESHOLD", alias: "PAM4_CARDINALITY_PRECISION_THRESHOLD", type: "n", required: false, sample: 10000, default: 10000 }
 - { name: "PAM_CHAT_CASES_CLOSED_IN_MINUTE", type: "n", required: false, sample: 60, default: 60 }
+- { name: "PAM_CHAT_AUTO_CLOSE_ONLY_WAITING_FOR_CUSTOMER", type: "b", required: false, sample: false, default: false }
 - { name: "PAM_GOOGLE_OAUTH_CLIENT_ID", type: "s", alias: "GOOGLE_OAUTH_CLIENT_ID", required: false, sample: "", default: "" }
 - { name: "PAM_GOOGLE_OAUTH_CLIENT_SECRET", type: "s", alias: "GOOGLE_OAUTH_CLIENT_SECRET", required: false, sample: "", default: "" }
 - { name: "PAM_GOOGLE_OAUTH_REDIRECT_URL", type: "s", alias: "GOOGLE_OAUTH_REDIRECT_URL", required: false, sample: "", default: "" }
