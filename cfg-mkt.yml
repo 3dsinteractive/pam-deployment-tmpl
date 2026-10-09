@@ -215,3 +215,15 @@ configs:
 - { name: "PAM_CUSTOMER_JOURNEY_START_EVENT_DELAY_SECONDS", type: "n", required: false, sample: 1000, default: 1000 }
 - { name: "PAM_CARDINALITY_PRECISION_THRESHOLD", alias: "PAM4_CARDINALITY_PRECISION_THRESHOLD", type: "n", required: false, sample: 10000, default: 10000 }
 - { name: "PAM_CHAT_CASES_CLOSED_IN_MINUTE", type: "n", required: false, sample: 60, default: 60 }
+- { name: "PAM_GOOGLE_OAUTH_CLIENT_ID", type: "s", alias: "GOOGLE_OAUTH_CLIENT_ID", required: false, sample: "", default: "" }
+- { name: "PAM_GOOGLE_OAUTH_CLIENT_SECRET", type: "s", alias: "GOOGLE_OAUTH_CLIENT_SECRET", required: false, sample: "", default: "" }
+- { name: "PAM_GOOGLE_OAUTH_REDIRECT_URL", type: "s", alias: "GOOGLE_OAUTH_REDIRECT_URL", required: false, sample: "", default: "" }
+- { name: "PAM_GOOGLE_OAUTH_TOKEN_DIR", type: "s", alias: "GOOGLE_OAUTH_TOKEN_DIR", required: false, sample: "", default: "" }
+- { name: "PAM_GOOGLE_OAUTH_ENCRYPTION_KEY", type: "s", alias: "GOOGLE_OAUTH_ENCRYPTION_KEY", required: false, sample: "", default: "" }
+- { name: "PAM_MCP_SERVER_ADDR", type: "s", alias: "PAM_MCP_SERVER_ADDR", required: false, sample: "", default: "" }
+- { name: "PAM_MCP_SERVER_URL", type: "s", alias: "PAM_MCP_SERVER_URL", required: false, sample: "", default: "" }
+- { name: "PAM_MCP_PAM_API_ENDPOINT", type: "s", alias: "PAM_MCP_PAM_API_ENDPOINT", required: false, sample: "", default: "" }
+- { name: "PAM_MCP_PAM_API_TIMEOUT_SECONDS", alias: "PAM_MCP_PAM_API_TIMEOUT_SECONDS", type: "n", required: false, sample: 30, default: 30 }
+- { name: "PAM_MCP_PAM_CREATE_TIMEOUT_SECONDS", alias: "PAM_MCP_PAM_CREATE_TIMEOUT_SECONDS", type: "n", required: false, sample: 120, default: 120 }
+- { name: "PAM_CONTACT_READ_DIAGNOSTICS", alias: "PAM_CONTACT_READ_DIAGNOSTICS", type: "b", required: false, sample: false, default: true }
+- { name: "PAM_MCP_SKIP_PERMISSION", alias: "PAM_MCP_SKIP_PERMISSION", type: "b", required: false, sample: false, default: true }
