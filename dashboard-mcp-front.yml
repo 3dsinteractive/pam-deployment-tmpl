@@ -31,7 +31,7 @@ spec:
         image: <image>
         imagePullPolicy: IfNotPresent
         env:
-        - name: HOST
+        - name: MCP_HTTP_BIND_HOST
           value: "0.0.0.0"
         readinessProbe:
           tcpSocket:
