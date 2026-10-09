@@ -30,6 +30,9 @@ spec:
       - name: <name>
         image: <image>
         imagePullPolicy: IfNotPresent
+        env:
+        - name: HOST
+          value: "0.0.0.0"
         readinessProbe:
           tcpSocket:
             port: 8000
