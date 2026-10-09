@@ -32,21 +32,21 @@ spec:
         imagePullPolicy: IfNotPresent
         readinessProbe:
           tcpSocket:
-            port: 3100
+            port: 3001
           initialDelaySeconds: 10
           periodSeconds: 10
           timeoutSeconds: 3
           failureThreshold: 3
         livenessProbe:
           tcpSocket:
-            port: 3100
+            port: 3001
           initialDelaySeconds: 60
           periodSeconds: 30
           timeoutSeconds: 30
           failureThreshold: 10
         ports:
-        - name: elsmcp3100
-          containerPort: 3100
+        - name: elsmcp3001
+          containerPort: 3001
         resources:
           requests:
             memory: <minMem>
@@ -65,8 +65,8 @@ metadata:
 spec:
   ports:
   - port: 80
-    name: elsmcp3100
-    targetPort: 3100
+    name: elsmcp3001
+    targetPort: 3001
     protocol: TCP
   selector:
     name: <name>
