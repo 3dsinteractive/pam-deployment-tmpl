@@ -44,6 +44,9 @@ spec:
           periodSeconds: 30
           timeoutSeconds: 30
           failureThreshold: 10
+        env: 
+        - name: META_ADS_ACCESS_TOKEN
+          value: <metaAdsAccessToken>
         ports:
         - name: madsmcp8000
           containerPort: 8000
