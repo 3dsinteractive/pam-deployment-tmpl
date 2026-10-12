@@ -66,3 +66,6 @@ attrs:
 - { name: "image", alias: "image", doublequote: true, replace: false }
 - { name: "envs", alias: "envs", doublequote: false, replace: false }
 - { name: "timestamp", alias: "timestamp", doublequote: false, replace: false }
+# Use in Meta Ads MCP
+- { name: "metaAdsAccessToken", alias: "metaAdsAccessToken", doublequote: true, replace: true }
+
