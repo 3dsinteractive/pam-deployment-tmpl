@@ -30,17 +30,7 @@ spec:
       - name: <name>
         image: <image>
         imagePullPolicy: IfNotPresent
-        env:
-        - name: NODE_ENV
-          value: <env>
-        - name: NITRO_HOST
-          value: "0.0.0.0"
-        - name: PORT
-          value: "3000"
-        - name: MISTRAL_API_KEY
-          value: <mistralApiKey>
-        - name: GOOGLE_SHEET_API_URL
-          value: <googleSheetApiUrl>
+        env: [ {name: NODE_ENV, value: <env>}, {name: NITRO_HOST, value: "0.0.0.0"}, {name: PORT, value: "3000"} <envs>]
         ports:
         - name: http
           containerPort: 3000

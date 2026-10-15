@@ -1,0 +1,4 @@
+version: v1
+configs:
+- { name: "MISTRAL_API_KEY", type: "s", required: true, sample: "[MISTRAL_API_KEY]" }
+- { name: "GOOGLE_SHEET_API_URL", type: "s", required: true, sample: "https://example.com/google-sheet-api" }
