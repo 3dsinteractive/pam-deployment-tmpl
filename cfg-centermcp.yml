@@ -1,5 +1,6 @@
 version: v1
 configs:
+- { name: "CENTREMCP_SECRET_KEY", alias: "CENTREMCP_SECRET_KEY", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_SESSION_SECRET", alias: "CENTREMCP_SESSION_SECRET", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_COOKIE_SECURE", alias: "CENTREMCP_COOKIE_SECURE", type: "b", required: false, sample: true, default: true }
 - { name: "CENTREMCP_ADMIN_EMAIL", alias: "CENTREMCP_ADMIN_EMAIL", type: "s", required: false, sample: "admin@example.com", default: "" }
