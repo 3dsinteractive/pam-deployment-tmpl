@@ -1,5 +1,9 @@
 version: v1
 configs:
+- { name: "CENTREMCP_SESSION_SECRET", alias: "CENTREMCP_SESSION_SECRET", type: "s", required: false, sample: "", default: "" }
+- { name: "CENTREMCP_COOKIE_SECURE", alias: "CENTREMCP_COOKIE_SECURE", type: "b", required: false, sample: true, default: true }
+- { name: "CENTREMCP_ADMIN_EMAIL", alias: "CENTREMCP_ADMIN_EMAIL", type: "s", required: false, sample: "admin@example.com", default: "" }
+- { name: "CENTREMCP_ADMIN_PASSWORD", alias: "CENTREMCP_ADMIN_PASSWORD", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_MCP_WORK_DIR", alias: "CENTREMCP_MCP_WORK_DIR", type: "s", required: false, sample: "/tmp/centermcp-repositories", default: "/tmp/centermcp-repositories" }
 - { name: "CENTREMCP_DOCKER_HUB_USERNAME", alias: "CENTREMCP_DOCKER_HUB_USERNAME", type: "s", required: false, sample: "dockerhub-username", default: "" }
 - { name: "CENTREMCP_DOCKER_HUB_TOKEN", alias: "CENTREMCP_DOCKER_HUB_TOKEN", type: "s", required: false, sample: "", default: "" }
