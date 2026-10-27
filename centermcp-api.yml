@@ -59,7 +59,7 @@ spec:
           periodSeconds: 30
           timeoutSeconds: 30
           failureThreshold: 10
-        env: [ {name: MY_NODE_NAME, valueFrom: { fieldRef: { fieldPath: spec.nodeName }}}, {name: MY_POD_NAME, valueFrom: { fieldRef: { fieldPath: metadata.name }}}, {name: MY_NAMESPACE, valueFrom: { fieldRef: { fieldPath: metadata.namespace }}}, {name: PAM4_ENV, value: <env>}, {name: DEBUG, value: "true"}, {name: PAM4_PROFILER_NAME, value: pam-<name>} <envs>]
+        env: [ {name: MY_NODE_NAME, valueFrom: { fieldRef: { fieldPath: spec.nodeName }}}, {name: MY_POD_NAME, valueFrom: { fieldRef: { fieldPath: metadata.name }}}, {name: MY_NAMESPACE, valueFrom: { fieldRef: { fieldPath: metadata.namespace }}}, {name: PAM4_ENV, value: <env>}, {name: DEBUG, value: "true"}, {name: PAM4_PROFILER_NAME, value: pam-<name>}, {name: DOCKER_HOST, value: "tcp://127.0.0.1:2375"} <envs>]
         ports:
         - name: cmcpapi8080
           containerPort: 8080
@@ -73,7 +73,34 @@ spec:
         volumeMounts:
         - name: vol-profiler
           mountPath: /profiler
+      - name: dind
+        image: docker:29-dind
+        # Keep dockerd first so the entrypoint does not add a public TCP listener.
+        args:
+        - dockerd
+        - --host=unix:///var/run/docker.sock
+        - --host=tcp://127.0.0.1:2375
+        - --tls=false
+        securityContext:
+          privileged: true
+        env:
+        - name: DOCKER_TLS_CERTDIR
+          value: ""
+        resources:
+          requests:
+            cpu: 200m
+            memory: 512Mi
+          # Keep API + dind limits within the namespace's pod LimitRange.
+          limits:
+            cpu: 500m
+            memory: 2Gi
+        volumeMounts:
+        - name: docker-graph
+          mountPath: /var/lib/docker
       volumes:
+      - name: docker-graph
+        emptyDir:
+          sizeLimit: 20Gi
       - name: vol-profiler
         configMap:
           name: profiler
