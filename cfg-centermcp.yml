@@ -10,7 +10,7 @@ configs:
 - { name: "CENTREMCP_DOCKER_HUB_TOKEN", alias: "CENTREMCP_DOCKER_HUB_TOKEN", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_MCP_INGRESS_DOMAIN", alias: "CENTREMCP_MCP_INGRESS_DOMAIN", type: "s", required: false, sample: "centermcp.com", default: "centermcp.com" }
 - { name: "CENTREMCP_MCP_INGRESS_CLASS", alias: "CENTREMCP_MCP_INGRESS_CLASS", type: "s", required: false, sample: "nginx", default: "nginx" }
-- { name: "CENTREMCP_MCP_INGRESS_TLS_SECRET", alias: "CENTREMCP_MCP_INGRESS_TLS_SECRET", type: "s", required: false, sample: "tls-star-centermcp-com", default: "tls-star-centermcp-com" }
+- { name: "CENTREMCP_MCP_INGRESS_TLS_SECRET", alias: "CENTREMCP_MCP_INGRESS_TLS_SECRET", type: "s", required: false, sample: "tls-centermcp-com", default: "tls-centermcp-com" }
 - { name: "CENTREMCP_MCP_CONTAINER_PORT", alias: "CENTREMCP_MCP_CONTAINER_PORT", type: "n", required: false, sample: 8000, default: 8000 }
 - { name: "CENTREMCP_MCP_ENDPOINT_PATH", alias: "CENTREMCP_MCP_ENDPOINT_PATH", type: "s", required: false, sample: "/mcp", default: "/mcp" }
 - { name: "CENTREMCP_MCP_PULL_SECRET", alias: "CENTREMCP_MCP_PULL_SECRET", type: "s", required: false, sample: "dockerlogin", default: "dockerlogin" }
