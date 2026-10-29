@@ -183,8 +183,8 @@ configs:
 - { name: "PAM_CHATCENTER_DEPLOYMENT_REF", type: "s", required: false, sample: "", default: "" }
 - { name: "PAM_CENTRAL_CONTROL_API_ENDPOINT", type: "s", required: false, sample: "", default: "" }
 - { name: "PAM_CENTRAL_CONTROL_KEY", type: "s", required: false, sample: "", default: "" }
-- { name: "PAM_CHAT_DEFAULT_CHANNEL_PREFER_ONLINE", type: "s", required: false, sample: "", default: "" }
-- { name: "PAM_CHATCENTER_STORE_FACEBOOK_RAW_EVENT", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_CHAT_DEFAULT_CHANNEL_PREFER_ONLINE", type: "b", required: false, sample: false, default: true }
+- { name: "PAM_CHATCENTER_STORE_FACEBOOK_RAW_EVENT", type: "b", required: false, sample: false, default: false }
 - { name: "PAM_CHATCENTER_SPEECH_TO_TEXT_ENABLED", type: "b", required: false, sample: true, default: true }
 - { name: "PAM_CHATCENTER_SPEECH_PROVIDER", type: "s", required: false, sample: "google", default: "google" }
 - { name: "PAM_CHATCENTER_SPEECH_GOOGLE_PROJECT_ID", type: "s", required: false, sample: "speech-booda", default: "speech-booda" }
