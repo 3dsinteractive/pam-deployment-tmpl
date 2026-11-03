@@ -19,3 +19,15 @@ configs:
 - { name: "CENTREMCP_K8S_NAMESPACE", alias: "CENTREMCP_K8S_NAMESPACE", type: "s", required: false, sample: "boodabest", default: "" }
 - { name: "CENTREMCP_K8S_TOKEN", alias: "CENTREMCP_K8S_TOKEN", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_K8S_NODE_SELECTORS", alias: "CENTREMCP_K8S_NODE_SELECTORS", type: "s", required: false, sample: "{\"role\":\"worker\"}", default: "{}" }
+- { name: "CENTREMCP_BILLING_MODE", alias: "CENTREMCP_BILLING_MODE", type: "s", required: false, sample: "", default: "" }
+- { name: "CENTREMCP_BILLING_PUBLIC_URL", alias: "CENTREMCP_BILLING_PUBLIC_URL", type: "s", required: false, sample: "", default: "" }
+- { name: "CENTREMCP_BILLING_ENFORCE_NEW_SINCE", alias: "CENTREMCP_BILLING_ENFORCE_NEW_SINCE", type: "s", required: false, sample: "", default: "" }
+- { name: "CENTREMCP_AIRWALLEX_ENV", alias: "CENTREMCP_AIRWALLEX_ENV", type: "s", required: false, sample: "", default: "" }
+- { name: "CENTREMCP_AIRWALLEX_SANDBOX_CLIENT_ID", alias: "CENTREMCP_AIRWALLEX_SANDBOX_CLIENT_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "CENTREMCP_AIRWALLEX_SANDBOX_API_KEY", alias: "CENTREMCP_AIRWALLEX_SANDBOX_API_KEY", type: "s", required: false, sample: "", default: "" }
+- { name: "CENTREMCP_AIRWALLEX_SANDBOX_WEBHOOK_SECRET", alias: "CENTREMCP_AIRWALLEX_SANDBOX_WEBHOOK_SECRET", type: "s", required: false, sample: "", default: "" }
+- { name: "CENTREMCP_AIRWALLEX_SANDBOX_LEGAL_ENTITY_ID", alias: "CENTREMCP_AIRWALLEX_SANDBOX_LEGAL_ENTITY_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "CENTREMCP_AIRWALLEX_SANDBOX_PAYMENT_ACCOUNT_ID", alias: "CENTREMCP_AIRWALLEX_SANDBOX_PAYMENT_ACCOUNT_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_STARTER", alias: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_STARTER", type: "s", required: false, sample: "", default: "" }
+- { name: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_GROWTH", alias: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_GROWTH", type: "s", required: false, sample: "", default: "" }
+- { name: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_SCALE", alias: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_SCALE", type: "s", required: false, sample: "", default: "" }
