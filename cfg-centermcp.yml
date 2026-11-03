@@ -23,6 +23,7 @@ configs:
 - { name: "CENTREMCP_BILLING_MODE", alias: "CENTREMCP_BILLING_MODE", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_BILLING_PUBLIC_URL", alias: "CENTREMCP_BILLING_PUBLIC_URL", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_BILLING_ENFORCE_NEW_SINCE", alias: "CENTREMCP_BILLING_ENFORCE_NEW_SINCE", type: "s", required: false, sample: "", default: "" }
+- { name: "CENTREMCP_BILLING_TRIAL_DAYS", alias: "CENTREMCP_BILLING_TRIAL_DAYS", type: "n", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_AIRWALLEX_ENV", alias: "CENTREMCP_AIRWALLEX_ENV", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_AIRWALLEX_SANDBOX_CLIENT_ID", alias: "CENTREMCP_AIRWALLEX_SANDBOX_CLIENT_ID", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_AIRWALLEX_SANDBOX_API_KEY", alias: "CENTREMCP_AIRWALLEX_SANDBOX_API_KEY", type: "s", required: false, sample: "", default: "" }
