@@ -32,3 +32,13 @@ configs:
 - { name: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_STARTER", alias: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_STARTER", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_GROWTH", alias: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_GROWTH", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_SCALE", alias: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_SCALE", type: "s", required: false, sample: "", default: "" }
+- { name: "CENTREMCP_MCP_GATEWAY_URL", alias: "CENTREMCP_MCP_GATEWAY_URL", type: "s", required: false, sample: "https://centermcp.com", default: "" }
+- { name: "CENTREMCP_GATEWAY_LISTEN", alias: "CENTREMCP_GATEWAY_LISTEN", type: "s", required: false, sample: ":8080", default: "" }
+- { name: "CENTREMCP_GATEWAY_POLL_SECONDS", alias: "CENTREMCP_GATEWAY_POLL_SECONDS", type: "n", required: false, sample: 2, default: 2 }
+- { name: "CENTREMCP_GATEWAY_MAX_STALE_SECONDS", alias: "CENTREMCP_GATEWAY_MAX_STALE_SECONDS", type: "n", required: false, sample: 10, default: 10 }
+- { name: "CENTREMCP_GATEWAY_DRAIN_SECONDS", alias: "CENTREMCP_GATEWAY_DRAIN_SECONDS", type: "n", required: false, sample: 30, default: 30 }
+- { name: "CENTREMCP_GATEWAY_STREAM_SECONDS", alias: "CENTREMCP_GATEWAY_STREAM_SECONDS", type: "n", required: false, sample: 3600, default: 3600 }
+- { name: "CENTREMCP_GATEWAY_MAX_CONCURRENT", alias: "CENTREMCP_GATEWAY_MAX_CONCURRENT", type: "n", required: false, sample: 10000, default: 10000 }
+- { name: "CENTREMCP_GATEWAY_MAX_PER_RUNTIME", alias: "CENTREMCP_GATEWAY_MAX_PER_RUNTIME", type: "n", required: false, sample: 100, default: 100 }
+- { name: "CENTREMCP_GATEWAY_MAX_ROUTES", alias: "CENTREMCP_GATEWAY_MAX_ROUTES", type: "n", required: false, sample: 100000, default: 100000 }
+- { name: "CENTREMCP_GATEWAY_MAX_BODY_BYTES", alias: "CENTREMCP_GATEWAY_MAX_BODY_BYTES", type: "n", required: false, sample: 8388608, default: 8388608 }
