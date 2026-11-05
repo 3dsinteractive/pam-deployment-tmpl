@@ -43,3 +43,8 @@ configs:
 - { name: "CENTREMCP_GATEWAY_MAX_PER_RUNTIME", alias: "CENTREMCP_GATEWAY_MAX_PER_RUNTIME", type: "n", required: false, sample: 100, default: 100 }
 - { name: "CENTREMCP_GATEWAY_MAX_ROUTES", alias: "CENTREMCP_GATEWAY_MAX_ROUTES", type: "n", required: false, sample: 100000, default: 100000 }
 - { name: "CENTREMCP_GATEWAY_MAX_BODY_BYTES", alias: "CENTREMCP_GATEWAY_MAX_BODY_BYTES", type: "n", required: false, sample: 8388608, default: 8388608 }
+- { name: "CENTREMCP_DEDICATED_IDLE_ENABLED", alias: "CENTREMCP_DEDICATED_IDLE_ENABLED", type: "b", required: false, sample: false, default: false }
+- { name: "CENTREMCP_DEDICATED_IDLE_SECONDS", alias: "CENTREMCP_DEDICATED_IDLE_SECONDS", type: "n", required: false, sample: 1800, default: 1800 }
+- { name: "CENTREMCP_DEDICATED_IDLE_SCAN_SECONDS", alias: "CENTREMCP_DEDICATED_IDLE_SCAN_SECONDS", type: "n", required: false, sample: 30, default: 30 }
+- { name: "CENTREMCP_DEDICATED_WAKE_WAIT_SECONDS", alias: "CENTREMCP_DEDICATED_WAKE_WAIT_SECONDS", type: "n", required: false, sample: 60, default: 60 }
+- { name: "CENTREMCP_DEDICATED_WAKE_WORKERS", alias: "CENTREMCP_DEDICATED_WAKE_WORKERS", type: "n", required: false, sample: 4, default: 4 }
