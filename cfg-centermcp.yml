@@ -30,6 +30,7 @@ configs:
 - { name: "CENTREMCP_AIRWALLEX_SANDBOX_WEBHOOK_SECRET", alias: "CENTREMCP_AIRWALLEX_SANDBOX_WEBHOOK_SECRET", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_AIRWALLEX_SANDBOX_LEGAL_ENTITY_ID", alias: "CENTREMCP_AIRWALLEX_SANDBOX_LEGAL_ENTITY_ID", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_AIRWALLEX_SANDBOX_PAYMENT_ACCOUNT_ID", alias: "CENTREMCP_AIRWALLEX_SANDBOX_PAYMENT_ACCOUNT_ID", type: "s", required: false, sample: "", default: "" }
+- { name: "CENTREMCP_AIRWALLEX_SANDBOX_CHECKOUT_PAYMENT_METHODS", alias: "CENTREMCP_AIRWALLEX_SANDBOX_CHECKOUT_PAYMENT_METHODS", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_STARTER", alias: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_STARTER", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_GROWTH", alias: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_GROWTH", type: "s", required: false, sample: "", default: "" }
 - { name: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_SCALE", alias: "CENTREMCP_AIRWALLEX_SANDBOX_PRICE_SCALE", type: "s", required: false, sample: "", default: "" }
