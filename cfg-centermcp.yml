@@ -51,3 +51,6 @@ configs:
 - { name: "CENTREMCP_DEDICATED_WAKE_WORKERS", alias: "CENTREMCP_DEDICATED_WAKE_WORKERS", type: "n", required: false, sample: 4, default: 4 }
 - { name: "TICKETS_API_ENABLED", alias: "TICKETS_API_ENABLED", type: "b", required: false, sample: false, default: false }
 - { name: "TICKETS_SEED_KEY", alias: "TICKETS_SEED_KEY", type: "s", required: false, sample: "abc1234", default: "" }
+- { name: "TICKETS_JWT_SECRET", alias: "TICKETS_JWT_SECRET", type: "s", required: false, sample: "abc1234", default: "" }
+- { name: "TICKETS_PUBLIC_API_URL", alias: "TICKETS_PUBLIC_API_URL", type: "s", required: false, sample: "https://api.centermcp.com", default: "" }
+- { name: "TICKETS_DEFAULT_CURRENCY", alias: "TICKETS_DEFAULT_CURRENCY", type: "s", required: false, sample: "THB", default: "" }
