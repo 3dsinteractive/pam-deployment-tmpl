@@ -235,4 +235,5 @@ configs:
 - { name: "MICROSOFT_OIDC_TENANT_ID", type: "s", required: false, sample: "", default: "" }
 - { name: "MICROSOFT_OIDC_CLIENT_ID", type: "s", required: false, sample: "", default: "" }
 - { name: "MICROSOFT_OIDC_CLIENT_SECRET", type: "s", required: false, sample: "", default: "" }
+- { name: "PAM_ENABLE_ADMIN_BUSINESS_UNIT_ALIASES", type: "b", required: false, sample: false, default: false }
 
