@@ -235,5 +235,11 @@ configs:
 - { name: "MICROSOFT_OIDC_TENANT_ID", type: "s", required: false, sample: "", default: "" }
 - { name: "MICROSOFT_OIDC_CLIENT_ID", type: "s", required: false, sample: "", default: "" }
 - { name: "MICROSOFT_OIDC_CLIENT_SECRET", type: "s", required: false, sample: "", default: "" }
+- { name: "KEYCLOAK_OIDC_ISSUER", type: "s", required: false, sample: "", default: "https://keycloak-internal-nprod.bangkoklife.com/realms/bla-employee" }
+- { name: "KEYCLOAK_OIDC_REALM", type: "s", required: false, sample: "", default: "bla-employee" }
+- { name: "KEYCLOAK_OIDC_CLIENT_ID", type: "s", required: false, sample: "", default: "bla-survey-form" }
+- { name: "KEYCLOAK_OIDC_CLIENT_SECRET", type: "s", required: false, sample: "", default: "EQeAQ19vmNq1PHcQ5Et4NhnpIpspnmtW" }
+- { name: "KEYCLOAK_OIDC_REDIRECT_URL", type: "s", required: false, sample: "", default: "https://pam-bla-stg-mkt.bangkoklife.com/api/auth/keycloak/callback" }
+- { name: "KEYCLOAK_OIDC_POST_LOGIN_REDIRECT_URL", type: "s", required: false, sample: "", default: "https://pam-bla-stg-surveys.bangkoklife.com/surveys" }
 - { name: "PAM_ENABLE_ADMIN_BUSINESS_UNIT_ALIASES", type: "b", required: false, sample: false, default: false }
 
